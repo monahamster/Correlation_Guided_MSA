@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+
+# Virtual envs / conda
+.venv/
+venv/
+env/
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log
+corr-*
+
+# Model checkpoints / weights
+*.pth
+*.pt
+*.bin
+*.ckpt
+
+# Local pretrained assets and caches
+pretrained-model/
+pre_trained_models/
+
+# Datasets and large local assets
+datasets/
+BERT_EN/
+*.pkl
+
+# Generated analysis / visualization outputs
+visualizations/
+GLoMo_MSA/analysis/outputs/
+
+# Temporary experiment folders
+20260518/
+
+# Build / package artifacts
+build/
+dist/
+*.egg-info/
