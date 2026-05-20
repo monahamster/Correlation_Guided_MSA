@@ -4,6 +4,10 @@ This repository contains the code for the paper **"Correlation-Guided Reliabilit
 
 The current public codebase focuses on the main sentiment analysis experiments on **CMU-MOSI** and **CMU-MOSEI**, together with correlation pretraining, archived experiment records, and figure-generation scripts.
 
+## Framework
+
+![Framework](framework.png)
+
 ## Repository Structure
 
 - `Correlation_Guided_MSA/`
