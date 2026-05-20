@@ -46,6 +46,8 @@ GLoMo_MSA/analysis/outputs/
 
 # Temporary experiment folders
 20260518/
+experiments/mustard_*/
+experiments/urfunny_*/
 
 # Build / package artifacts
 build/
