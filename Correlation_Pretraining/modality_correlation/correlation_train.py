@@ -33,7 +33,7 @@ dataset_specific_configs = {
         "out_dim": 64,  # Output dimension
     }
     ,
-    "glomo_mosi": {
+    "cgmsa_mosi": {
         "text_in_dim": 768,
         "audio_in_dim": 74,
         "vision_in_dim": 47,
@@ -44,7 +44,7 @@ dataset_specific_configs = {
         "dropout": 0.1,
         "out_dim": 64,
     },
-    "glomo_mosei": {
+    "cgmsa_mosei": {
         "text_in_dim": 768,
         "audio_in_dim": 74,
         "vision_in_dim": 35,
@@ -55,7 +55,7 @@ dataset_specific_configs = {
         "dropout": 0.1,
         "out_dim": 64,
     },
-    "glomo_mustard": {
+    "cgmsa_mustard": {
         "text_in_dim": 768,
         "audio_in_dim": 60,
         "vision_in_dim": 36,
@@ -66,7 +66,7 @@ dataset_specific_configs = {
         "dropout": 0.1,
         "out_dim": 64,
     },
-    "glomo_urfunny": {
+    "cgmsa_urfunny": {
         "text_in_dim": 768,
         "audio_in_dim": 60,
         "vision_in_dim": 36,

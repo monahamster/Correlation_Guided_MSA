@@ -40,7 +40,7 @@ if torch.cuda.is_available():
         pass
 
 
-from GLoMo import GLoMo
+from correlation_guided_msa_model import GLoMo
 from modality_text_aug import ModalityTextAugmentor
 
 parser = argparse.ArgumentParser()
@@ -88,7 +88,7 @@ parser.add_argument("--layers", type=int, default=2)
 parser.add_argument("--adam_epsilon", default=1e-8, type=float, help="Epsilon for Adam optimizer.")
 parser.add_argument("--load", type=int, default=0)
 parser.add_argument("--test", type=int, default=0)
-parser.add_argument("--model_path", type=str, default='glomo.pth')
+parser.add_argument("--model_path", type=str, default='correlation_guided_msa.pth')
 parser.add_argument('--cos', action='store_true',
                     help='use cosine lr schedule')
 parser.add_argument("--cls_task", type=str, choices=["binary", "seven"], default="seven")

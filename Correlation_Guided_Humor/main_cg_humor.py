@@ -33,7 +33,7 @@ from transformers import BertTokenizer, XLNetTokenizer, get_linear_schedule_with
 from transformers.optimization import AdamW
 
 from global_configs_class import *
-from GLoMo_humor import GLoMo
+from correlation_guided_humor_model import GLoMo
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--dataset", type=str,
@@ -83,7 +83,7 @@ parser.add_argument('--wd', '--weight-decay', default=1e-4, type=float,
                     dest='weight_decay') # 0.01
 parser.add_argument('--schedule', default=[80, 100], nargs='*', type=int,
                     help='learning rate schedule (when to drop lr by 10x)')# needs to adjust based on n_epochs []
-parser.add_argument("--model_path", type=str, default='glomo.pth')
+parser.add_argument("--model_path", type=str, default='correlation_guided_humor.pth')
 parser.add_argument('--cos', action='store_true',
                     help='use cosine lr schedule')
 parser.add_argument("--use_correlation", action="store_true")

@@ -36,7 +36,7 @@ def main():
     if args.cache_dir is None:
         args.cache_dir = os.path.join("pre_trained_models", "glomo_cache")
     if args.model_save_name is None:
-        args.model_save_name = f"correlation_glomo_{args.dataset}_{time.strftime('%m%d%H')}"
+        args.model_save_name = f"correlation_guided_{args.dataset}_{time.strftime('%m%d%H')}"
     if args.save_dir is None:
         args.save_dir = os.path.join(repo_root, "pretrained-model")
     if args.max_seq_length is None:
@@ -48,10 +48,10 @@ def main():
         }[args.dataset]
 
     dataset_name_map = {
-        "mosi": "glomo_mosi",
-        "mosei": "glomo_mosei",
-        "mustard": "glomo_mustard",
-        "urfunny": "glomo_urfunny",
+        "mosi": "cgmsa_mosi",
+        "mosei": "cgmsa_mosei",
+        "mustard": "cgmsa_mustard",
+        "urfunny": "cgmsa_urfunny",
     }
     dataset_name = dataset_name_map[args.dataset]
 

@@ -425,7 +425,7 @@ class Trainer():
 
     
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='GLoMo')
+    parser = argparse.ArgumentParser(description='Correlation-Guided MER')
     parser.add_argument("--gran_t", type=int, default=3)
     parser.add_argument("--gran_a", type=int, default=3)
     parser.add_argument("--gran_v", type=int, default=3)

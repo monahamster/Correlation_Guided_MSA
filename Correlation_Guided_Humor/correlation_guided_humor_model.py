@@ -1,6 +1,10 @@
 import logging
+import math
+import os
 import sys
 from typing import Optional, Tuple
+from modules.transformer import TransformerEncoder
+
 import torch
 import torch.nn as nn
 import torch.utils.checkpoint
@@ -11,39 +15,29 @@ from torch.nn import L1Loss, MSELoss
 from torch.autograd import Function
 from math import pi, log
 from functools import wraps
+from MoE import MoE, MLP
 from torch import nn, einsum
 import torch.nn.functional as F
-import os
-from MoE import MoE, MLP
+
+
 from transformers import BertPreTrainedModel
 from transformers.models.bert.modeling_bert import BertEmbeddings, BertEncoder, BertPooler
 from transformers.activations import gelu, gelu_new
 from transformers import BertConfig
-import math
 import numpy as np
+
 import torch.optim as optim
 from itertools import chain
+
 from transformers.modeling_utils import (
     PreTrainedModel,
     apply_chunking_to_forward,
     find_pruneable_heads_and_indices,
     prune_linear_layer,
 )
-from modules.transformer import TransformerEncoder
 
+# from global_configs_class import ACOUSTIC_DIM, VISUAL_DIM, TEXT_DIM, DEVICE# *
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
-
-DEVICE = torch.device("cuda:0")
-
-# MOSI SETTING
-# ACOUSTIC_DIM = 74
-# VISUAL_DIM = 35 # MOSI 47, MOSEI 35
-# TEXT_DIM = 768
-# MOSI SETTING
-# ACOUSTIC_DIM = 74
-# VISUAL_DIM = 35
-# TEXT_DIM = 768
 logger = logging.getLogger(__name__)
 
 _CONFIG_FOR_DOC = "BertConfig"
@@ -51,12 +45,10 @@ _TOKENIZER_FOR_DOC = "BertTokenizer"
 
 BERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
     "bert-base-uncased",
-    "bert-large-uncased",
+    "bert-base-cased",
+    # See all BERT models at https://huggingface.co/models?filter=bert
 ]
-
-
-   
-    
+# ori_output : output
 class GLoMo_BertModel(BertPreTrainedModel):
     def __init__(self, config, args):
         super().__init__(config)
@@ -68,6 +60,7 @@ class GLoMo_BertModel(BertPreTrainedModel):
         self.gran_t = args.gran_t
         self.linear1 = nn.Linear(in_features=args.TEXT_DIM, out_features=self.d_l)
         self.proj_l = nn.Conv1d(args.TEXT_DIM, self.d_l, kernel_size=3, stride=1, padding=1, bias=False)
+        nn.init.xavier_uniform_(self.proj_l.weight)
         self.avgmaxpooling_t = nn.AdaptiveMaxPool1d(self.gran_t)
         self.init_weights()
 
@@ -194,8 +187,7 @@ class GLoMo_BertModel(BertPreTrainedModel):
             token_type_ids=token_type_ids,
             inputs_embeds=inputs_embeds,
         )
-
-
+        
         encoder_outputs = self.encoder(
             embedding_output,
             attention_mask=extended_attention_mask,
@@ -205,21 +197,13 @@ class GLoMo_BertModel(BertPreTrainedModel):
             output_attentions=output_attentions,
             output_hidden_states=output_hidden_states,
         )
-        # for coarsed representations, use the 'cls' or 'avg(all_sequence)' for representations
-        # use the cls, compute self_attention between the two coarsed embeddings
         last_sequence_output = encoder_outputs[0]# 36*60*768:bsz*msl*dim
         last2_sequence_output = encoder_outputs.hidden_states[-2]
-        # print('last2_sequence_output_shape', last2_sequence_output[:,0].shape)#[bsz, 768]
-        # attn_outputs_t = self.attention_t(last_sequence_output[:,0], last2_sequence_output[:,0])
         attn_outputs_t = self.linear1(last_sequence_output[:,0])
-        # attn_outputs_t = self.linear1(attn_outputs_t)
-        
-        # get the fine-grained representations of the embeddings
         last12_fine_output = torch.concat((last_sequence_output, last2_sequence_output), dim=1)# concat on the msl dim, bsz*msl*dim
         outputs = last12_fine_output.transpose(1,2)# bsz*dim*msl
         outputs_t = self.proj_l(outputs)# 
         fine_output = self.avgmaxpooling_t(outputs_t)
-        # print('pooled_output_shape',fine_output.shape)#[bsz,d_l,gran_t]  
         
         return attn_outputs_t, fine_output
 
@@ -237,6 +221,7 @@ class Audio_Video_network(nn.Module):
         self.modality_dim = modality_dim # for 
         self.grans = grans
         self.projs = nn.Conv1d(self.modality_dim, self.d_l, kernel_size=3, stride=1, padding=1, bias=False)
+        nn.init.xavier_uniform_(self.projs.weight)
         self.avgmaxpoolings_c = nn.AdaptiveMaxPool1d(1)
         self.avgmaxpoolings_f = nn.AdaptiveMaxPool1d(self.grans)
         
@@ -261,11 +246,9 @@ class Audio_Video_network(nn.Module):
         return coarsed, fine_output
 
 
-
-
 # Attention implementation     
 class Attention(nn.Module):
-    def __init__(self, dim, hidden_dim, dropout=0.3):
+    def __init__(self, dim, hidden_dim, dropout=0.3):# layers,0.1
         super(Attention, self).__init__()
         self.dim = dim
         self.scale = dim ** -0.5
@@ -280,9 +263,7 @@ class Attention(nn.Module):
         attention = self.attention_mlp(multi_hidden1) # [bsz, 64]  
         attention = self.fc_att(attention)# [bsz, 2]
         attention = torch.unsqueeze(attention, 2) * self.scale # [bsz, 2, 1]
-        # print('attention1_shape',attention.shape)
         attention = attention.softmax(dim = 1)
-        # print('attention2_shape',attention.shape)
         multi_hidden2 = torch.stack([feas1, feas2, feas3], dim=2) # [bsz, 768, 2]
         fused_feat = torch.matmul(multi_hidden2, attention) # 
         fused_feat = fused_feat.squeeze() # [bsz, 64]
@@ -293,8 +274,7 @@ class Attention(nn.Module):
 class GLoMo(BertPreTrainedModel):
     def __init__(self, config, args = None):
         super().__init__(config)
-        self.num_labels = config.num_labels# here is 1
-        self.num_classes = args.num_classes
+        self.num_labels = args.num_labels# here is 1
         self.d_l = args.d_l
         self.gran_t = args.gran_t
         self.gran_a = args.gran_a
@@ -349,24 +329,20 @@ class GLoMo(BertPreTrainedModel):
         self.fc_all = nn.Linear(in_features=self.d_l*2, out_features=self.d_l)
         self.attn_cs = Attention(self.d_l, self.d_l)
         self.attn_fs = Attention(self.d_l, self.d_l)
-        self.regressor = nn.Linear(in_features=self.d_l*2, out_features=self.num_labels)
-        self.classifier = nn.Linear(in_features=self.d_l*2, out_features=self.num_classes)
+        self.classifier = nn.Linear(in_features=self.d_l*2, out_features= self.num_labels)
         
         encoder_layer = nn.TransformerEncoderLayer(d_model=self.d_l, nhead=self.num_heads)
         self.transformer_encoder = nn.TransformerEncoder(encoder_layer, num_layers=2) # num_layers 
 
-        # --- Correlation module (fusion scaling / MoE routing) ---
+        # Correlation-guided fusion scaling (CorMulT-style)
         self.use_correlation = getattr(args, "use_correlation", False)
         self.use_fusion_correlation = getattr(args, "use_fusion_correlation", self.use_correlation)
         self.use_moe_reliability = getattr(args, "use_moe_reliability", False)
-        self.drop_text = getattr(args, "drop_text", False)
-        self.drop_audio = getattr(args, "drop_audio", False)
-        self.drop_visual = getattr(args, "drop_visual", False)
         self.corr_alpha = getattr(args, "corr_alpha", 1.0)
         self.corr_model = None
         corr_model_path = getattr(args, "corr_model_path", None)
         if (self.use_fusion_correlation or self.use_moe_reliability) and corr_model_path:
-            corr_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "CorMulT-main", "modality_correlation"))
+            corr_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Correlation_Pretraining", "modality_correlation"))
             if corr_dir not in sys.path:
                 sys.path.append(corr_dir)
             try:
@@ -395,7 +371,6 @@ class GLoMo(BertPreTrainedModel):
         self.init_custom()
 
     def init_custom(self):
-        # initialize custom modules that are not part of the BERT checkpoint
         for conv in (self.audio_network.projs, self.video_network.projs):
             nn.init.kaiming_uniform_(conv.weight, a=math.sqrt(5))
         for encoder in (self.audio_network.encoder, self.video_network.encoder):
@@ -419,21 +394,17 @@ class GLoMo(BertPreTrainedModel):
         for moe in (self.moe_t, self.moe_a, self.moe_v):
             nn.init.xavier_uniform_(moe.w_gate)
             nn.init.xavier_uniform_(moe.w_noise)
-            if hasattr(moe, "w_rel"):
-                nn.init.xavier_uniform_(moe.w_rel)
             if hasattr(moe, "mean"):
                 nn.init.constant_(moe.mean, 0.1)
             if hasattr(moe, "std"):
                 nn.init.constant_(moe.std, 1.0)
 
-    # Compute sample-wise reliability scales from the frozen correlation model.
     def _corr_scales(self, input_ids, acoustic, visual, token_type_ids=None, position_ids=None):
-        if not (self.use_fusion_correlation or self.use_moe_reliability) or self.corr_model is None:
+        if not self.use_fusion_correlation or self.corr_model is None:
             return None
         if token_type_ids is None:
             token_type_ids = torch.zeros_like(input_ids)
         with torch.no_grad():
-            # Use BERT embeddings as correlation model text input.
             text_emb = self.bert.embeddings(
                 input_ids=input_ids,
                 token_type_ids=token_type_ids,
@@ -483,21 +454,10 @@ class GLoMo(BertPreTrainedModel):
             output_attentions=output_attentions,
             output_hidden_states=output_hidden_states,
         )
-        if self.drop_text:
-            coarsed_t = torch.zeros_like(coarsed_t)
-            finegrained_t = torch.zeros_like(finegrained_t)
-        if self.drop_audio:
-            acoustic = torch.zeros_like(acoustic)
-        if self.drop_visual:
-            visual = torch.zeros_like(visual)
-        finegrained_t = torch.nan_to_num(finegrained_t, nan=0.0, posinf=0.0, neginf=0.0)
         coarsed_a, finegrained_a = self.audio_network(acoustic)
         coarsed_v, finegrained_v = self.video_network(visual)
-        finegrained_a = torch.nan_to_num(finegrained_a, nan=0.0, posinf=0.0, neginf=0.0)
-        finegrained_v = torch.nan_to_num(finegrained_v, nan=0.0, posinf=0.0, neginf=0.0)
-        # --- MoE routing reliability bias (2B) ---
         moe_scales = None
-        if getattr(self, "use_moe_reliability", False):
+        if self.use_moe_reliability:
             moe_scales = self._corr_scales(
                 input_ids=input_ids,
                 acoustic=acoustic,
@@ -519,7 +479,6 @@ class GLoMo(BertPreTrainedModel):
         all_feas = torch.stack((coarsed_t, fine_ts, coarsed_a, fine_as, coarsed_v, fine_vs), dim=0)
         # multimodal fusion modules-->
         h = self.transformer_encoder(all_feas)
-        # --- Correlation-guided fusion scaling (CorMulT-style) ---
         if self.use_fusion_correlation:
             scales = self._corr_scales(
                 input_ids=input_ids,
@@ -536,7 +495,6 @@ class GLoMo(BertPreTrainedModel):
                 h[3] = h[3] * scale_a.view(-1, 1)
                 h[4] = h[4] * scale_v.view(-1, 1)
                 h[5] = h[5] * scale_v.view(-1, 1)
-        # h = torch.cat((h[0], h[1], h[2], h[3], h[4], h[5]), dim=1)
         attn_weights_cs, attn_cs = self.attn_cs(h[0], h[2], h[4])
         attn_weights_fs, attn_fs = self.attn_fs(h[1], h[3], h[5])
         fea_cfs = self.fc_all(torch.cat((attn_cs,attn_fs),dim=1))
@@ -550,14 +508,12 @@ class GLoMo(BertPreTrainedModel):
         feas_cf_all = feas_cf_all.view(-1,fea_modality_t.shape[1])
         
         outputs = torch.cat((fea_cfs, feas_cf_all), dim=1)
-        reg_logits = self.regressor(outputs)
-        cls_logits = self.classifier(outputs)
-
+        logits = self.classifier(outputs)
         
         moes = moe_loss_ts + moe_loss_as + moe_loss_vs
         all_losses = moes
         
-        return all_losses, reg_logits, cls_logits, outputs
+        return all_losses, logits, outputs
 
 
     def test(self,
@@ -571,8 +527,7 @@ class GLoMo(BertPreTrainedModel):
         inputs_embeds=None,
         labels=None,
         output_attentions=None,
-        output_hidden_states=None,
-        return_analysis=False,):
+        output_hidden_states=None,):
 
         coarsed_t, finegrained_t = self.bert(
             input_ids,
@@ -583,18 +538,11 @@ class GLoMo(BertPreTrainedModel):
             inputs_embeds=inputs_embeds,
             output_attentions=output_attentions,
             output_hidden_states=output_hidden_states,)
-        if self.drop_text:
-            coarsed_t = torch.zeros_like(coarsed_t)
-            finegrained_t = torch.zeros_like(finegrained_t)
-        if self.drop_audio:
-            acoustic = torch.zeros_like(acoustic)
-        if self.drop_visual:
-            visual = torch.zeros_like(visual)
 
         coarsed_a, finegrained_a = self.audio_network(acoustic)
         coarsed_v, finegrained_v = self.video_network(visual)
         moe_scales = None
-        if getattr(self, "use_moe_reliability", False):
+        if self.use_moe_reliability:
             moe_scales = self._corr_scales(
                 input_ids=input_ids,
                 acoustic=acoustic,
@@ -612,7 +560,6 @@ class GLoMo(BertPreTrainedModel):
 
         all_feas = torch.stack((coarsed_t, fine_ts, coarsed_a, fine_as, coarsed_v, fine_vs), dim=0)
         h = self.transformer_encoder(all_feas)
-        # --- Correlation-guided fusion scaling (CorMulT-style) ---
         if self.use_fusion_correlation:
             scales = self._corr_scales(
                 input_ids=input_ids,
@@ -643,19 +590,10 @@ class GLoMo(BertPreTrainedModel):
         feas_cf_all = feas_cf_all.squeeze() # [bsz, 64]
         feas_cf_all = feas_cf_all.view(-1,fea_modality_t.shape[1])
         outputs = torch.cat((fea_cfs, feas_cf_all), dim=1)
-        reg_logits = self.regressor(outputs)
-        cls_logits = self.classifier(outputs)
+        logits = self.classifier(outputs)
+        
+        return logits, outputs
 
-        if not return_analysis:
-            return reg_logits, cls_logits, outputs
 
-        analysis = {
-            "repr": outputs,
-            "r_t": r_t,
-            "r_a": r_a,
-            "r_v": r_v,
-            "reg_logits": reg_logits,
-            "cls_logits": cls_logits,
-        }
-        return reg_logits, cls_logits, outputs, analysis
-  
+
+
