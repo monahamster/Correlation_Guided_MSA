@@ -6,8 +6,13 @@ import argparse
 import os
 import random
 import pickle
+import json
+import math
+import shlex
+import sys
 import numpy as np
 from typing import *
+from pathlib import Path
 
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
@@ -81,7 +86,26 @@ parser.add_argument('--schedule', default=[80, 100], nargs='*', type=int,
 parser.add_argument("--model_path", type=str, default='glomo.pth')
 parser.add_argument('--cos', action='store_true',
                     help='use cosine lr schedule')
+parser.add_argument("--use_correlation", action="store_true")
+parser.add_argument("--use_fusion_correlation", action="store_true")
+parser.add_argument("--corr_model_path", type=str, default=None)
+parser.add_argument("--corr_alpha", type=float, default=1.0)
+parser.add_argument("--use_moe_reliability", action="store_true")
+parser.add_argument("--moe_reliability_lambda", type=float, default=0.1)
+parser.add_argument("--experiment_root", type=str, default="../experiments")
+parser.add_argument("--experiment_tag", type=str, default="")
+parser.add_argument("--log_path", type=str, default="")
+parser.add_argument(
+    "--save_best_by",
+    type=str,
+    choices=["acc2", "f1_weighted", "f1_average", "valid_loss"],
+    default="acc2",
+)
+parser.add_argument("--best_model_path", type=str, default="")
 args = parser.parse_args()
+
+if args.use_correlation and not args.use_fusion_correlation:
+    args.use_fusion_correlation = True
 
 def str2bool(s):
     if isinstance(s, bool):
@@ -113,6 +137,79 @@ def seed(s):
 
 def return_unk():
     return 0
+
+
+def resolve_experiment_tag():
+    tag = args.experiment_tag.strip()
+    if tag:
+        return tag
+    return f"{args.dataset}_baseline_seed{args.seed}"
+
+
+def resolve_experiment_dir():
+    base_dir = Path(__file__).resolve().parent
+    return (base_dir / args.experiment_root / resolve_experiment_tag()).resolve()
+
+
+def resolve_best_model_path():
+    if args.best_model_path.strip():
+        return Path(args.best_model_path).resolve()
+    experiment_dir = resolve_experiment_dir()
+    experiment_dir.mkdir(parents=True, exist_ok=True)
+    return experiment_dir / "best_model.pt"
+
+
+def resolve_metrics_path():
+    experiment_dir = resolve_experiment_dir()
+    experiment_dir.mkdir(parents=True, exist_ok=True)
+    return experiment_dir / "metrics.json"
+
+
+def resolve_command_path():
+    experiment_dir = resolve_experiment_dir()
+    experiment_dir.mkdir(parents=True, exist_ok=True)
+    return experiment_dir / "command.sh"
+
+
+def write_command_script():
+    command_path = resolve_command_path()
+    cmd = "python " + " ".join(shlex.quote(arg) for arg in sys.argv)
+    with command_path.open("w", encoding="utf-8") as f:
+        f.write("#!/usr/bin/env bash\n")
+        f.write("set -euo pipefail\n")
+        f.write(cmd + "\n")
+    os.chmod(command_path, 0o755)
+    return command_path
+
+
+def write_metrics_summary(metrics: Dict[str, Any]):
+    metrics_path = resolve_metrics_path()
+    with metrics_path.open("w", encoding="utf-8") as f:
+        json.dump(metrics, f, ensure_ascii=False, indent=2)
+    return metrics_path
+
+
+def metric_direction(metric_name):
+    return "min" if metric_name == "valid_loss" else "max"
+
+
+def metric_value(metric_name, metrics):
+    mapping = {
+        "acc2": metrics["acc2"],
+        "f1_weighted": metrics["f1_weighted"],
+        "f1_average": metrics["f1_average"],
+        "valid_loss": metrics["valid_loss"],
+    }
+    return mapping[metric_name]
+
+
+def is_better(metric_name, candidate, best_value):
+    direction = metric_direction(metric_name)
+    if best_value is None:
+        return True
+    if direction == "min":
+        return candidate < best_value
+    return candidate > best_value
 
 
 class InputFeatures(object):
@@ -425,7 +522,7 @@ def prep_for_training(num_train_optimization_steps: int):
     print('total parameter for the model: ', total_para)
     
     if args.load:
-        model.load_state_dict(torch.load(args.model_path))
+        model.load_state_dict(torch.load(args.model_path, map_location=DEVICE))
 
     model.to(DEVICE)
 
@@ -435,7 +532,7 @@ def adjust_learning_rate(optimizer, epoch, args):#
     """Decay the learning rate based on schedule"""
     lr = args.learning_rate
     if args.cos:  # cosine lr schedule
-        lr *= 0.5 * (1. + math.cos(math.pi * epoch / args.epochs))
+        lr *= 0.5 * (1. + math.cos(math.pi * epoch / args.n_epochs))
     else:  # stepwise lr schedule
         for milestone in args.schedule:
             lr *= 0.1 if epoch >= milestone else 1.
@@ -471,7 +568,7 @@ def train_epoch(model: nn.Module, train_dataloader: DataLoader, epoch=None):
         )
 
         loss_fct = CrossEntropyLoss()# BCEWithLogitsLoss
-        loss_all = loss_fct(logits.view(-1, 2), label_ids.type(torch.cuda.LongTensor).view(-1)) + moe_losses
+        loss_all = loss_fct(logits.view(-1, 2), label_ids.long().view(-1)) + moe_losses
         
         optimizer.zero_grad()
         loss_all.backward()
@@ -508,7 +605,7 @@ def eval_epoch(model: nn.Module, dev_dataloader: DataLoader):
 
 
             loss_fct = CrossEntropyLoss()# BCEWithLogitsLoss
-            loss = loss_fct(logits.view(-1, 2), label_ids.type(torch.cuda.LongTensor).view(-1)) # binary classification
+            loss = loss_fct(logits.view(-1, 2), label_ids.long().view(-1)) # binary classification
             
             if args.gradient_accumulation_step > 1:
                 loss = loss / args.gradient_accumulation_step
@@ -577,7 +674,11 @@ def train(
     valid_losses = []
     test_accuracies = []
     f1_score = []
-    best_loss = 9e+9
+    best_value = None
+    best_epoch = None
+    best_metrics = None
+    best_model_path = resolve_best_model_path()
+    best_model_path.parent.mkdir(parents=True, exist_ok=True)
     for epoch_i in range(int(args.n_epochs)):
         train_loss = train_epoch(model, train_dataloader, epoch_i)
         valid_loss = eval_epoch(model, validation_dataloader)
@@ -598,10 +699,53 @@ def train(
             )
         )
 
+        current_metrics = {
+            "train_loss": train_loss,
+            "valid_loss": valid_loss,
+            "acc2": acc2,
+            "f1_weighted": f1_weighted,
+            "f1_average": f1_average,
+        }
+        tracked_value = metric_value(args.save_best_by, current_metrics)
+        if is_better(args.save_best_by, tracked_value, best_value):
+            best_value = tracked_value
+            best_epoch = epoch_i
+            best_metrics = dict(current_metrics)
+            torch.save(model.state_dict(), best_model_path)
+            print(
+                "Saved best model at epoch {} by {}={:.4f} -> {}".format(
+                    epoch_i,
+                    args.save_best_by,
+                    tracked_value,
+                    best_model_path,
+                )
+            )
+
+    summary = {
+        "dataset": args.dataset,
+        "seed": args.seed,
+        "save_best_by": args.save_best_by,
+        "best_epoch": best_epoch,
+        "best_value": best_value,
+        "train_loss": None if best_metrics is None else best_metrics["train_loss"],
+        "valid_loss": None if best_metrics is None else best_metrics["valid_loss"],
+        "acc2": None if best_metrics is None else best_metrics["acc2"],
+        "f1_weighted": None if best_metrics is None else best_metrics["f1_weighted"],
+        "f1_average": None if best_metrics is None else best_metrics["f1_average"],
+        "experiment_dir": str(resolve_experiment_dir()),
+        "log_path": args.log_path,
+        "checkpoint_path": str(best_model_path),
+    }
+    metrics_path = write_metrics_summary(summary)
+    print(f"Metrics summary saved to: {metrics_path}")
+    return summary
+
 
 
 def main():
     set_random_seed(args.seed)
+    command_path = write_command_script()
+    print(f"Command script saved to: {command_path}")
 
     (
         train_data_loader,
@@ -612,13 +756,32 @@ def main():
 
     model = prep_for_training(
         num_train_optimization_steps)#
-
-    train(
-        model,
-        train_data_loader,
-        dev_data_loader,
-        test_data_loader
-    )
+    if args.test:
+        acc2, f1_weighted, f1_average = test_score_model(model, test_data_loader)
+        summary = {
+            "dataset": args.dataset,
+            "seed": args.seed,
+            "save_best_by": args.save_best_by,
+            "best_epoch": None,
+            "best_value": None,
+            "train_loss": None,
+            "valid_loss": None,
+            "acc2": acc2,
+            "f1_weighted": f1_weighted,
+            "f1_average": f1_average,
+            "experiment_dir": str(resolve_experiment_dir()),
+            "log_path": args.log_path,
+            "checkpoint_path": args.model_path if args.load else "",
+        }
+        metrics_path = write_metrics_summary(summary)
+        print(f"Metrics summary saved to: {metrics_path}")
+    else:
+        train(
+            model,
+            train_data_loader,
+            dev_data_loader,
+            test_data_loader
+        )
 
 
 if __name__ == "__main__":

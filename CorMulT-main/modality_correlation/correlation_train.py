@@ -55,6 +55,28 @@ dataset_specific_configs = {
         "dropout": 0.1,
         "out_dim": 64,
     },
+    "glomo_mustard": {
+        "text_in_dim": 768,
+        "audio_in_dim": 60,
+        "vision_in_dim": 36,
+        "d_model": 128,
+        "num_layers": 3,
+        "num_heads": 4,
+        "dim_feedforward": 256,
+        "dropout": 0.1,
+        "out_dim": 64,
+    },
+    "glomo_urfunny": {
+        "text_in_dim": 768,
+        "audio_in_dim": 60,
+        "vision_in_dim": 36,
+        "d_model": 128,
+        "num_layers": 3,
+        "num_heads": 4,
+        "dim_feedforward": 256,
+        "dropout": 0.1,
+        "out_dim": 64,
+    },
 }
 
 predefined_max_len = 1000

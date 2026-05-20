@@ -1,0 +1,15 @@
+{
+  "dataset": "urfunny",
+  "seed": 5576,
+  "save_best_by": "acc2",
+  "best_epoch": 10,
+  "best_value": 0.7233400402414487,
+  "train_loss": 0.1959763873900686,
+  "valid_loss": 0.8474839553236961,
+  "acc2": 0.7233400402414487,
+  "f1_weighted": 0.7235784564002753,
+  "f1_average": 0.7233400402414487,
+  "experiment_dir": "/data01/lyw/GLoMo/experiments/urfunny_only_moe_weak_seed5576",
+  "log_path": "/data01/lyw/GLoMo/experiments/urfunny_only_moe_weak_seed5576/train.log",
+  "checkpoint_path": "/data01/lyw/GLoMo/experiments/urfunny_only_moe_weak_seed5576/best_model.pt"
+}

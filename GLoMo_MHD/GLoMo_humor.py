@@ -1,4 +1,7 @@
 import logging
+import math
+import os
+import sys
 from typing import Optional, Tuple
 from modules.transformer import TransformerEncoder
 
@@ -286,9 +289,39 @@ class GLoMo(BertPreTrainedModel):
         self.embed_dropout = args.embed_dropout
         self.audio_network = Audio_Video_network(args.ACOUSTIC_DIM, args.gran_a, args)
         self.video_network = Audio_Video_network(args.VISUAL_DIM, args.gran_v, args)
-        self.moe_t = MoE(input_size=args.d_l*self.gran_t, output_size=args.d_l, num_experts=args.experts_t, hidden_size=args.d_l, model=MLP, k=args.k)
-        self.moe_a = MoE(input_size=args.d_l*self.gran_a, output_size=args.d_l, num_experts=args.experts_a, hidden_size=args.d_l, model=MLP, k=args.k)
-        self.moe_v = MoE(input_size=args.d_l*self.gran_v, output_size=args.d_l, num_experts=args.experts_v, hidden_size=args.d_l, model=MLP, k=args.k) 
+        self.moe_t = MoE(
+            input_size=args.d_l * self.gran_t,
+            output_size=args.d_l,
+            num_experts=args.experts_t,
+            hidden_size=args.d_l,
+            model=MLP,
+            k=args.k,
+            use_reliability=getattr(args, "use_moe_reliability", False),
+            reliability_dim=1,
+            reliability_lambda=getattr(args, "moe_reliability_lambda", 0.1),
+        )
+        self.moe_a = MoE(
+            input_size=args.d_l * self.gran_a,
+            output_size=args.d_l,
+            num_experts=args.experts_a,
+            hidden_size=args.d_l,
+            model=MLP,
+            k=args.k,
+            use_reliability=getattr(args, "use_moe_reliability", False),
+            reliability_dim=1,
+            reliability_lambda=getattr(args, "moe_reliability_lambda", 0.1),
+        )
+        self.moe_v = MoE(
+            input_size=args.d_l * self.gran_v,
+            output_size=args.d_l,
+            num_experts=args.experts_v,
+            hidden_size=args.d_l,
+            model=MLP,
+            k=args.k,
+            use_reliability=getattr(args, "use_moe_reliability", False),
+            reliability_dim=1,
+            reliability_lambda=getattr(args, "moe_reliability_lambda", 0.1),
+        )
         ## multimodal fusion
         self.fc_ts = nn.Linear(in_features=self.d_l*2, out_features=self.d_l)
         self.fc_as = nn.Linear(in_features=self.d_l*2, out_features=self.d_l)
@@ -300,7 +333,100 @@ class GLoMo(BertPreTrainedModel):
         
         encoder_layer = nn.TransformerEncoderLayer(d_model=self.d_l, nhead=self.num_heads)
         self.transformer_encoder = nn.TransformerEncoder(encoder_layer, num_layers=2) # num_layers 
+
+        # Correlation-guided fusion scaling (CorMulT-style)
+        self.use_correlation = getattr(args, "use_correlation", False)
+        self.use_fusion_correlation = getattr(args, "use_fusion_correlation", self.use_correlation)
+        self.use_moe_reliability = getattr(args, "use_moe_reliability", False)
+        self.corr_alpha = getattr(args, "corr_alpha", 1.0)
+        self.corr_model = None
+        corr_model_path = getattr(args, "corr_model_path", None)
+        if (self.use_fusion_correlation or self.use_moe_reliability) and corr_model_path:
+            corr_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "CorMulT-main", "modality_correlation"))
+            if corr_dir not in sys.path:
+                sys.path.append(corr_dir)
+            try:
+                from correlation_models import CorrelationModel
+                self.corr_model = CorrelationModel(
+                    text_in_dim=args.TEXT_DIM,
+                    audio_in_dim=args.ACOUSTIC_DIM,
+                    vision_in_dim=args.VISUAL_DIM,
+                    d_model=128,
+                    num_layers=3,
+                    num_heads=4,
+                    dim_feedforward=256,
+                    dropout=0.1,
+                    out_dim=64,
+                )
+                state = torch.load(corr_model_path, map_location="cpu")
+                self.corr_model.load_state_dict(state, strict=True)
+                self.corr_model.eval()
+                for p in self.corr_model.parameters():
+                    p.requires_grad = False
+            except Exception as exc:
+                logger.warning("Failed to load correlation model: %s", exc)
+                self.corr_model = None
+
         self.init_weights()
+        self.init_custom()
+
+    def init_custom(self):
+        for conv in (self.audio_network.projs, self.video_network.projs):
+            nn.init.kaiming_uniform_(conv.weight, a=math.sqrt(5))
+        for encoder in (self.audio_network.encoder, self.video_network.encoder):
+            for layer in encoder.layers:
+                nn.init.xavier_uniform_(layer.self_attn.in_proj_weight)
+                if layer.self_attn.in_proj_bias is not None:
+                    nn.init.constant_(layer.self_attn.in_proj_bias, 0.0)
+                nn.init.xavier_uniform_(layer.self_attn.out_proj.weight)
+                if layer.self_attn.out_proj.bias is not None:
+                    nn.init.constant_(layer.self_attn.out_proj.bias, 0.0)
+                nn.init.xavier_uniform_(layer.fc1.weight)
+                nn.init.constant_(layer.fc1.bias, 0.0)
+                nn.init.xavier_uniform_(layer.fc2.weight)
+                nn.init.constant_(layer.fc2.bias, 0.0)
+                for ln in layer.layer_norms:
+                    nn.init.constant_(ln.bias, 0.0)
+                    nn.init.constant_(ln.weight, 1.0)
+            if encoder.normalize:
+                nn.init.constant_(encoder.layer_norm.bias, 0.0)
+                nn.init.constant_(encoder.layer_norm.weight, 1.0)
+        for moe in (self.moe_t, self.moe_a, self.moe_v):
+            nn.init.xavier_uniform_(moe.w_gate)
+            nn.init.xavier_uniform_(moe.w_noise)
+            if hasattr(moe, "mean"):
+                nn.init.constant_(moe.mean, 0.1)
+            if hasattr(moe, "std"):
+                nn.init.constant_(moe.std, 1.0)
+
+    def _corr_scales(self, input_ids, acoustic, visual, token_type_ids=None, position_ids=None):
+        if not self.use_fusion_correlation or self.corr_model is None:
+            return None
+        if token_type_ids is None:
+            token_type_ids = torch.zeros_like(input_ids)
+        with torch.no_grad():
+            text_emb = self.bert.embeddings(
+                input_ids=input_ids,
+                token_type_ids=token_type_ids,
+                position_ids=position_ids,
+            )
+            F_T, F_A, F_V = self.corr_model(text_emb, acoustic, visual)
+            F_T_mean = F_T.mean(dim=1)
+            F_A_mean = F_A.mean(dim=1)
+            F_V_mean = F_V.mean(dim=1)
+            cor_ta = F.cosine_similarity(F_T_mean, F_A_mean, dim=-1)
+            cor_tv = F.cosine_similarity(F_T_mean, F_V_mean, dim=-1)
+            cor_av = F.cosine_similarity(F_A_mean, F_V_mean, dim=-1)
+            cor_ta = (cor_ta + 1.0) / 2.0
+            cor_tv = (cor_tv + 1.0) / 2.0
+            cor_av = (cor_av + 1.0) / 2.0
+            r_t = (cor_ta + cor_tv) / 2.0
+            r_a = (cor_ta + cor_av) / 2.0
+            r_v = (cor_tv + cor_av) / 2.0
+            scale_t = 1.0 + self.corr_alpha * (r_t - 0.5)
+            scale_a = 1.0 + self.corr_alpha * (r_a - 0.5)
+            scale_v = 1.0 + self.corr_alpha * (r_v - 0.5)
+        return scale_t, scale_a, scale_v
 
     def forward(
         self,
@@ -330,9 +456,22 @@ class GLoMo(BertPreTrainedModel):
         )
         coarsed_a, finegrained_a = self.audio_network(acoustic)
         coarsed_v, finegrained_v = self.video_network(visual)
-        fine_ts, moe_loss_ts = self.moe_t(torch.flatten(finegrained_t, start_dim=1))
-        fine_as, moe_loss_as = self.moe_a(torch.flatten(finegrained_a, start_dim=1))
-        fine_vs, moe_loss_vs = self.moe_v(torch.flatten(finegrained_v, start_dim=1))
+        moe_scales = None
+        if self.use_moe_reliability:
+            moe_scales = self._corr_scales(
+                input_ids=input_ids,
+                acoustic=acoustic,
+                visual=visual,
+                token_type_ids=token_type_ids,
+                position_ids=position_ids,
+            )
+        if moe_scales is not None:
+            r_t, r_a, r_v = moe_scales
+        else:
+            r_t = r_a = r_v = None
+        fine_ts, moe_loss_ts = self.moe_t(torch.flatten(finegrained_t, start_dim=1), reliability=r_t)
+        fine_as, moe_loss_as = self.moe_a(torch.flatten(finegrained_a, start_dim=1), reliability=r_a)
+        fine_vs, moe_loss_vs = self.moe_v(torch.flatten(finegrained_v, start_dim=1), reliability=r_v)
         
    
         ## Coarsed_guided fusion module##
@@ -340,6 +479,22 @@ class GLoMo(BertPreTrainedModel):
         all_feas = torch.stack((coarsed_t, fine_ts, coarsed_a, fine_as, coarsed_v, fine_vs), dim=0)
         # multimodal fusion modules-->
         h = self.transformer_encoder(all_feas)
+        if self.use_fusion_correlation:
+            scales = self._corr_scales(
+                input_ids=input_ids,
+                acoustic=acoustic,
+                visual=visual,
+                token_type_ids=token_type_ids,
+                position_ids=position_ids,
+            )
+            if scales is not None:
+                scale_t, scale_a, scale_v = scales
+                h[0] = h[0] * scale_t.view(-1, 1)
+                h[1] = h[1] * scale_t.view(-1, 1)
+                h[2] = h[2] * scale_a.view(-1, 1)
+                h[3] = h[3] * scale_a.view(-1, 1)
+                h[4] = h[4] * scale_v.view(-1, 1)
+                h[5] = h[5] * scale_v.view(-1, 1)
         attn_weights_cs, attn_cs = self.attn_cs(h[0], h[2], h[4])
         attn_weights_fs, attn_fs = self.attn_fs(h[1], h[3], h[5])
         fea_cfs = self.fc_all(torch.cat((attn_cs,attn_fs),dim=1))
@@ -386,12 +541,41 @@ class GLoMo(BertPreTrainedModel):
 
         coarsed_a, finegrained_a = self.audio_network(acoustic)
         coarsed_v, finegrained_v = self.video_network(visual)
-        fine_ts, moe_loss_ts = self.moe_t(torch.flatten(finegrained_t, start_dim=1))
-        fine_as, moe_loss_as = self.moe_a(torch.flatten(finegrained_a, start_dim=1))
-        fine_vs, moe_loss_vs = self.moe_v(torch.flatten(finegrained_v, start_dim=1))
+        moe_scales = None
+        if self.use_moe_reliability:
+            moe_scales = self._corr_scales(
+                input_ids=input_ids,
+                acoustic=acoustic,
+                visual=visual,
+                token_type_ids=token_type_ids,
+                position_ids=position_ids,
+            )
+        if moe_scales is not None:
+            r_t, r_a, r_v = moe_scales
+        else:
+            r_t = r_a = r_v = None
+        fine_ts, moe_loss_ts = self.moe_t(torch.flatten(finegrained_t, start_dim=1), reliability=r_t)
+        fine_as, moe_loss_as = self.moe_a(torch.flatten(finegrained_a, start_dim=1), reliability=r_a)
+        fine_vs, moe_loss_vs = self.moe_v(torch.flatten(finegrained_v, start_dim=1), reliability=r_v)
 
         all_feas = torch.stack((coarsed_t, fine_ts, coarsed_a, fine_as, coarsed_v, fine_vs), dim=0)
         h = self.transformer_encoder(all_feas)
+        if self.use_fusion_correlation:
+            scales = self._corr_scales(
+                input_ids=input_ids,
+                acoustic=acoustic,
+                visual=visual,
+                token_type_ids=token_type_ids,
+                position_ids=position_ids,
+            )
+            if scales is not None:
+                scale_t, scale_a, scale_v = scales
+                h[0] = h[0] * scale_t.view(-1, 1)
+                h[1] = h[1] * scale_t.view(-1, 1)
+                h[2] = h[2] * scale_a.view(-1, 1)
+                h[3] = h[3] * scale_a.view(-1, 1)
+                h[4] = h[4] * scale_v.view(-1, 1)
+                h[5] = h[5] * scale_v.view(-1, 1)
         
         attn_weights_cs, attn_cs = self.attn_cs(h[0], h[2], h[4])
         attn_weights_fs, attn_fs = self.attn_fs(h[1], h[3], h[5])

@@ -1,0 +1,15 @@
+{
+  "dataset": "sarcasm",
+  "seed": 5576,
+  "save_best_by": "acc2",
+  "best_epoch": 4,
+  "best_value": 0.7941176470588235,
+  "train_loss": 0.5298361811372969,
+  "valid_loss": 0.6672583818435669,
+  "acc2": 0.7941176470588235,
+  "f1_weighted": 0.7941176470588235,
+  "f1_average": 0.7941176470588235,
+  "experiment_dir": "/data01/lyw/GLoMo/experiments/mustard_baseline_seed5576",
+  "log_path": "/data01/lyw/GLoMo/experiments/mustard_baseline_seed5576/train.log",
+  "checkpoint_path": "/data01/lyw/GLoMo/experiments/mustard_baseline_seed5576/best_model.pt"
+}

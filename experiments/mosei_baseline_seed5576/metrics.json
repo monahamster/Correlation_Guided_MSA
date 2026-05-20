@@ -1,0 +1,20 @@
+{
+  "dataset": "mosei",
+  "seed": 5576,
+  "save_best_by": "acc2",
+  "best_epoch": 26,
+  "best_value": 0.8348050829205256,
+  "mae": 0.5641052450982472,
+  "corr": 0.7461642774949889,
+  "acc2": 0.8348050829205256,
+  "acc2_non_zero": 0.8519337016574585,
+  "f1": 0.8364155825516386,
+  "f1_non_zero": 0.8501400869557989,
+  "acc7": 0.5089381865173379,
+  "valid_mse": 0.5372471193472544,
+  "valid_mae": 0.5527660051981608,
+  "experiment_dir": "/data01/lyw/GLoMo/experiments/mosei_baseline_seed5576",
+  "analysis_dir": "/data01/lyw/GLoMo/experiments/mosei_baseline_seed5576/analysis",
+  "log_path": "/data01/lyw/GLoMo/experiments/mosei_baseline_seed5576/train.log",
+  "checkpoint_path": "/data01/lyw/GLoMo/experiments/mosei_baseline_seed5576/best_model.pt"
+}

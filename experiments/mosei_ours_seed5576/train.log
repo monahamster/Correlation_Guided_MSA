@@ -1,0 +1,228 @@
+Using device: cuda:0, visible GPUs: 6
+GPU name: NVIDIA GeForce RTX 3090
+Seed: 5576
+Command script saved to: /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/command.sh
+train labels: n=16265 min=-3.000 max=3.000 mean=0.146 std=1.125
+dev labels: n=1869 min=-3.000 max=3.000 mean=0.190 std=1.038
+test labels: n=4643 min=-3.000 max=3.000 mean=0.141 std=1.108
+BERT load: missing=3 unexpected=10
+BERT missing keys (first 5): ['linear1.weight', 'linear1.bias', 'proj_l.weight']
+BERT unexpected keys (first 5): ['pooler.dense.weight', 'pooler.dense.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias']
+conv audio std 0.03875073790550232
+conv video std 0.056293025612831116
+total parameter for the model:  117281879
+epoch:0, train_loss:2.1786, valid_mse:0.5998, valid_mae:0.5811, test_acc2:0.8034
+current mae:0.6072, current corr:0.6930, acc7:0.4751, acc5:0.4751,acc2_non_zero:0.8436, f_score_non_zero:0.8442, acc2:0.8034, f_score:0.8097
+Saved best model at epoch 0 by acc2=0.8034 -> /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/best_model.pt
+epoch:1, train_loss:1.7448, valid_mse:0.5357, valid_mae:0.5367, test_acc2:0.8288
+current mae:0.5593, current corr:0.7347, acc7:0.5288, acc5:0.5406,acc2_non_zero:0.8550, f_score_non_zero:0.8532, acc2:0.8288, f_score:0.8311
+Saved best model at epoch 1 by acc2=0.8288 -> /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/best_model.pt
+epoch:2, train_loss:1.5598, valid_mse:0.5596, valid_mae:0.5534, test_acc2:0.8428
+current mae:0.5691, current corr:0.7440, acc7:0.5197, acc5:0.5354,acc2_non_zero:0.8536, f_score_non_zero:0.8504, acc2:0.8428, f_score:0.8424
+Saved best model at epoch 2 by acc2=0.8428 -> /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/best_model.pt
+epoch:3, train_loss:1.4382, valid_mse:0.5136, valid_mae:0.5270, test_acc2:0.8434
+current mae:0.5413, current corr:0.7571, acc7:0.5389, acc5:0.5552,acc2_non_zero:0.8566, f_score_non_zero:0.8540, acc2:0.8434, f_score:0.8437
+Saved best model at epoch 3 by acc2=0.8434 -> /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/best_model.pt
+epoch:4, train_loss:1.3269, valid_mse:0.5003, valid_mae:0.5234, test_acc2:0.8361
+current mae:0.5377, current corr:0.7570, acc7:0.5406, acc5:0.5572,acc2_non_zero:0.8544, f_score_non_zero:0.8529, acc2:0.8361, f_score:0.8380
+epoch:5, train_loss:1.2218, valid_mse:0.5226, valid_mae:0.5316, test_acc2:0.8441
+current mae:0.5439, current corr:0.7500, acc7:0.5363, acc5:0.5533,acc2_non_zero:0.8541, f_score_non_zero:0.8519, acc2:0.8441, f_score:0.8446
+Saved best model at epoch 5 by acc2=0.8441 -> /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/best_model.pt
+epoch:6, train_loss:1.1234, valid_mse:0.5611, valid_mae:0.5622, test_acc2:0.8447
+current mae:0.5688, current corr:0.7492, acc7:0.5208, acc5:0.5389,acc2_non_zero:0.8561, f_score_non_zero:0.8539, acc2:0.8447, f_score:0.8453
+Saved best model at epoch 6 by acc2=0.8447 -> /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/best_model.pt
+epoch:7, train_loss:1.0221, valid_mse:0.5880, valid_mae:0.5737, test_acc2:0.8389
+current mae:0.5792, current corr:0.7478, acc7:0.5059, acc5:0.5240,acc2_non_zero:0.8539, f_score_non_zero:0.8522, acc2:0.8389, f_score:0.8404
+epoch:8, train_loss:0.9430, valid_mse:0.5465, valid_mae:0.5561, test_acc2:0.8456
+current mae:0.5629, current corr:0.7537, acc7:0.5109, acc5:0.5277,acc2_non_zero:0.8511, f_score_non_zero:0.8480, acc2:0.8456, f_score:0.8450
+Saved best model at epoch 8 by acc2=0.8456 -> /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/best_model.pt
+epoch:9, train_loss:0.8589, valid_mse:0.5786, valid_mae:0.5680, test_acc2:0.8367
+current mae:0.5734, current corr:0.7435, acc7:0.5150, acc5:0.5328,acc2_non_zero:0.8470, f_score_non_zero:0.8447, acc2:0.8367, f_score:0.8375
+epoch:10, train_loss:0.7897, valid_mse:0.5479, valid_mae:0.5510, test_acc2:0.8408
+current mae:0.5595, current corr:0.7446, acc7:0.5167, acc5:0.5331,acc2_non_zero:0.8461, f_score_non_zero:0.8434, acc2:0.8408, f_score:0.8407
+epoch:11, train_loss:0.7152, valid_mse:0.5763, valid_mae:0.5689, test_acc2:0.8404
+current mae:0.5784, current corr:0.7435, acc7:0.5083, acc5:0.5257,acc2_non_zero:0.8519, f_score_non_zero:0.8494, acc2:0.8404, f_score:0.8408
+epoch:12, train_loss:0.6722, valid_mse:0.5459, valid_mae:0.5524, test_acc2:0.8456
+current mae:0.5630, current corr:0.7479, acc7:0.5163, acc5:0.5328,acc2_non_zero:0.8481, f_score_non_zero:0.8441, acc2:0.8456, f_score:0.8440
+epoch:13, train_loss:0.6123, valid_mse:0.5690, valid_mae:0.5639, test_acc2:0.8359
+current mae:0.5691, current corr:0.7467, acc7:0.5137, acc5:0.5320,acc2_non_zero:0.8517, f_score_non_zero:0.8502, acc2:0.8359, f_score:0.8377
+epoch:14, train_loss:0.5735, valid_mse:0.5307, valid_mae:0.5449, test_acc2:0.8318
+current mae:0.5583, current corr:0.7429, acc7:0.5154, acc5:0.5311,acc2_non_zero:0.8506, f_score_non_zero:0.8495, acc2:0.8318, f_score:0.8344
+epoch:15, train_loss:0.5310, valid_mse:0.5382, valid_mae:0.5518, test_acc2:0.8443
+current mae:0.5637, current corr:0.7462, acc7:0.5169, acc5:0.5339,acc2_non_zero:0.8459, f_score_non_zero:0.8425, acc2:0.8443, f_score:0.8432
+epoch:16, train_loss:0.4920, valid_mse:0.5543, valid_mae:0.5567, test_acc2:0.8359
+current mae:0.5677, current corr:0.7442, acc7:0.5096, acc5:0.5272,acc2_non_zero:0.8461, f_score_non_zero:0.8435, acc2:0.8359, f_score:0.8362
+epoch:17, train_loss:0.4598, valid_mse:0.5434, valid_mae:0.5563, test_acc2:0.8441
+current mae:0.5642, current corr:0.7468, acc7:0.5132, acc5:0.5307,acc2_non_zero:0.8503, f_score_non_zero:0.8473, acc2:0.8441, f_score:0.8436
+epoch:18, train_loss:0.4348, valid_mse:0.5512, valid_mae:0.5575, test_acc2:0.8113
+current mae:0.5675, current corr:0.7421, acc7:0.5081, acc5:0.5242,acc2_non_zero:0.8470, f_score_non_zero:0.8475, acc2:0.8113, f_score:0.8171
+epoch:19, train_loss:0.4134, valid_mse:0.5873, valid_mae:0.5775, test_acc2:0.8199
+current mae:0.5831, current corr:0.7443, acc7:0.4980, acc5:0.5160,acc2_non_zero:0.8530, f_score_non_zero:0.8534, acc2:0.8199, f_score:0.8251
+epoch:20, train_loss:0.3925, valid_mse:0.5341, valid_mae:0.5470, test_acc2:0.8380
+current mae:0.5632, current corr:0.7435, acc7:0.5107, acc5:0.5292,acc2_non_zero:0.8550, f_score_non_zero:0.8537, acc2:0.8380, f_score:0.8400
+epoch:21, train_loss:0.3683, valid_mse:0.5552, valid_mae:0.5593, test_acc2:0.8283
+current mae:0.5696, current corr:0.7450, acc7:0.5042, acc5:0.5238,acc2_non_zero:0.8544, f_score_non_zero:0.8537, acc2:0.8283, f_score:0.8318
+epoch:22, train_loss:0.3527, valid_mse:0.5440, valid_mae:0.5520, test_acc2:0.7997
+current mae:0.5643, current corr:0.7418, acc7:0.5094, acc5:0.5275,acc2_non_zero:0.8475, f_score_non_zero:0.8485, acc2:0.7997, f_score:0.8070
+epoch:23, train_loss:0.3318, valid_mse:0.5320, valid_mae:0.5472, test_acc2:0.8320
+current mae:0.5606, current corr:0.7490, acc7:0.5139, acc5:0.5341,acc2_non_zero:0.8500, f_score_non_zero:0.8487, acc2:0.8320, f_score:0.8342
+epoch:24, train_loss:0.3141, valid_mse:0.5370, valid_mae:0.5472, test_acc2:0.8324
+current mae:0.5595, current corr:0.7475, acc7:0.5178, acc5:0.5378,acc2_non_zero:0.8514, f_score_non_zero:0.8504, acc2:0.8324, f_score:0.8350
+epoch:25, train_loss:0.3010, valid_mse:0.5590, valid_mae:0.5601, test_acc2:0.8215
+current mae:0.5776, current corr:0.7462, acc7:0.5005, acc5:0.5236,acc2_non_zero:0.8517, f_score_non_zero:0.8515, acc2:0.8215, f_score:0.8259
+epoch:26, train_loss:0.2922, valid_mse:0.5436, valid_mae:0.5518, test_acc2:0.8027
+current mae:0.5698, current corr:0.7442, acc7:0.5061, acc5:0.5309,acc2_non_zero:0.8445, f_score_non_zero:0.8453, acc2:0.8027, f_score:0.8094
+epoch:27, train_loss:0.2837, valid_mse:0.5476, valid_mae:0.5575, test_acc2:0.7952
+current mae:0.5740, current corr:0.7425, acc7:0.5012, acc5:0.5206,acc2_non_zero:0.8472, f_score_non_zero:0.8484, acc2:0.7952, f_score:0.8030
+epoch:28, train_loss:0.2761, valid_mse:0.5615, valid_mae:0.5698, test_acc2:0.8398
+current mae:0.5809, current corr:0.7526, acc7:0.4941, acc5:0.5160,acc2_non_zero:0.8544, f_score_non_zero:0.8524, acc2:0.8398, f_score:0.8408
+epoch:29, train_loss:0.2736, valid_mse:0.5246, valid_mae:0.5404, test_acc2:0.7835
+current mae:0.5549, current corr:0.7476, acc7:0.5191, acc5:0.5391,acc2_non_zero:0.8442, f_score_non_zero:0.8455, acc2:0.7835, f_score:0.7922
+epoch:30, train_loss:0.2571, valid_mse:0.5210, valid_mae:0.5457, test_acc2:0.8180
+current mae:0.5618, current corr:0.7485, acc7:0.5122, acc5:0.5292,acc2_non_zero:0.8522, f_score_non_zero:0.8518, acc2:0.8180, f_score:0.8225
+epoch:31, train_loss:0.2536, valid_mse:0.5114, valid_mae:0.5377, test_acc2:0.7984
+current mae:0.5549, current corr:0.7479, acc7:0.5210, acc5:0.5391,acc2_non_zero:0.8456, f_score_non_zero:0.8465, acc2:0.7984, f_score:0.8056
+epoch:32, train_loss:0.2468, valid_mse:0.5346, valid_mae:0.5550, test_acc2:0.8372
+current mae:0.5671, current corr:0.7537, acc7:0.5096, acc5:0.5288,acc2_non_zero:0.8528, f_score_non_zero:0.8505, acc2:0.8372, f_score:0.8381
+epoch:33, train_loss:0.2374, valid_mse:0.5087, valid_mae:0.5318, test_acc2:0.8137
+current mae:0.5521, current corr:0.7492, acc7:0.5223, acc5:0.5415,acc2_non_zero:0.8530, f_score_non_zero:0.8528, acc2:0.8137, f_score:0.8188
+epoch:34, train_loss:0.2342, valid_mse:0.5465, valid_mae:0.5557, test_acc2:0.8230
+current mae:0.5733, current corr:0.7505, acc7:0.5005, acc5:0.5232,acc2_non_zero:0.8483, f_score_non_zero:0.8477, acc2:0.8230, f_score:0.8266
+epoch:35, train_loss:0.2274, valid_mse:0.5231, valid_mae:0.5414, test_acc2:0.7919
+current mae:0.5593, current corr:0.7497, acc7:0.5199, acc5:0.5404,acc2_non_zero:0.8461, f_score_non_zero:0.8470, acc2:0.7919, f_score:0.7996
+epoch:36, train_loss:0.2192, valid_mse:0.5167, valid_mae:0.5362, test_acc2:0.8064
+current mae:0.5525, current corr:0.7551, acc7:0.5236, acc5:0.5419,acc2_non_zero:0.8517, f_score_non_zero:0.8521, acc2:0.8064, f_score:0.8127
+epoch:37, train_loss:0.2189, valid_mse:0.5280, valid_mae:0.5457, test_acc2:0.8169
+current mae:0.5572, current corr:0.7542, acc7:0.5124, acc5:0.5341,acc2_non_zero:0.8517, f_score_non_zero:0.8517, acc2:0.8169, f_score:0.8219
+epoch:38, train_loss:0.2064, valid_mse:0.5308, valid_mae:0.5456, test_acc2:0.7982
+current mae:0.5601, current corr:0.7530, acc7:0.5081, acc5:0.5281,acc2_non_zero:0.8506, f_score_non_zero:0.8516, acc2:0.7982, f_score:0.8058
+epoch:39, train_loss:0.2038, valid_mse:0.5386, valid_mae:0.5422, test_acc2:0.7926
+current mae:0.5584, current corr:0.7492, acc7:0.5163, acc5:0.5354,acc2_non_zero:0.8436, f_score_non_zero:0.8451, acc2:0.7926, f_score:0.8008
+epoch:40, train_loss:0.2068, valid_mse:0.5165, valid_mae:0.5405, test_acc2:0.8204
+current mae:0.5544, current corr:0.7548, acc7:0.5210, acc5:0.5384,acc2_non_zero:0.8519, f_score_non_zero:0.8515, acc2:0.8204, f_score:0.8246
+epoch:41, train_loss:0.1985, valid_mse:0.5318, valid_mae:0.5467, test_acc2:0.8208
+current mae:0.5573, current corr:0.7552, acc7:0.5204, acc5:0.5391,acc2_non_zero:0.8550, f_score_non_zero:0.8547, acc2:0.8208, f_score:0.8253
+epoch:42, train_loss:0.1964, valid_mse:0.5240, valid_mae:0.5458, test_acc2:0.8288
+current mae:0.5641, current corr:0.7516, acc7:0.5068, acc5:0.5270,acc2_non_zero:0.8536, f_score_non_zero:0.8527, acc2:0.8288, f_score:0.8319
+epoch:43, train_loss:0.1882, valid_mse:0.5282, valid_mae:0.5480, test_acc2:0.7969
+current mae:0.5627, current corr:0.7537, acc7:0.5092, acc5:0.5305,acc2_non_zero:0.8483, f_score_non_zero:0.8492, acc2:0.7969, f_score:0.8043
+epoch:44, train_loss:0.1860, valid_mse:0.5193, valid_mae:0.5374, test_acc2:0.8197
+current mae:0.5512, current corr:0.7550, acc7:0.5277, acc5:0.5488,acc2_non_zero:0.8547, f_score_non_zero:0.8545, acc2:0.8197, f_score:0.8244
+epoch:45, train_loss:0.1858, valid_mse:0.5138, valid_mae:0.5340, test_acc2:0.7984
+current mae:0.5535, current corr:0.7528, acc7:0.5199, acc5:0.5380,acc2_non_zero:0.8472, f_score_non_zero:0.8482, acc2:0.7984, f_score:0.8057
+epoch:46, train_loss:0.1791, valid_mse:0.5034, valid_mae:0.5316, test_acc2:0.8167
+current mae:0.5501, current corr:0.7492, acc7:0.5234, acc5:0.5410,acc2_non_zero:0.8530, f_score_non_zero:0.8529, acc2:0.8167, f_score:0.8216
+epoch:47, train_loss:0.1789, valid_mse:0.5344, valid_mae:0.5484, test_acc2:0.8195
+current mae:0.5597, current corr:0.7551, acc7:0.5167, acc5:0.5374,acc2_non_zero:0.8561, f_score_non_zero:0.8562, acc2:0.8195, f_score:0.8246
+epoch:48, train_loss:0.1712, valid_mse:0.5433, valid_mae:0.5506, test_acc2:0.8163
+current mae:0.5665, current corr:0.7511, acc7:0.5128, acc5:0.5337,acc2_non_zero:0.8544, f_score_non_zero:0.8547, acc2:0.8163, f_score:0.8218
+epoch:49, train_loss:0.1718, valid_mse:0.5389, valid_mae:0.5495, test_acc2:0.7919
+current mae:0.5613, current corr:0.7520, acc7:0.5180, acc5:0.5387,acc2_non_zero:0.8464, f_score_non_zero:0.8473, acc2:0.7919, f_score:0.7996
+epoch:50, train_loss:0.1697, valid_mse:0.5247, valid_mae:0.5446, test_acc2:0.8268
+current mae:0.5615, current corr:0.7539, acc7:0.5216, acc5:0.5412,acc2_non_zero:0.8528, f_score_non_zero:0.8515, acc2:0.8268, f_score:0.8298
+epoch:51, train_loss:0.1633, valid_mse:0.5288, valid_mae:0.5500, test_acc2:0.8165
+current mae:0.5663, current corr:0.7476, acc7:0.5081, acc5:0.5255,acc2_non_zero:0.8522, f_score_non_zero:0.8525, acc2:0.8165, f_score:0.8218
+epoch:52, train_loss:0.1588, valid_mse:0.5262, valid_mae:0.5456, test_acc2:0.8314
+current mae:0.5628, current corr:0.7538, acc7:0.5143, acc5:0.5333,acc2_non_zero:0.8577, f_score_non_zero:0.8575, acc2:0.8314, f_score:0.8352
+epoch:53, train_loss:0.1572, valid_mse:0.5238, valid_mae:0.5449, test_acc2:0.7967
+current mae:0.5561, current corr:0.7517, acc7:0.5201, acc5:0.5376,acc2_non_zero:0.8500, f_score_non_zero:0.8508, acc2:0.7967, f_score:0.8041
+epoch:54, train_loss:0.1511, valid_mse:0.5267, valid_mae:0.5436, test_acc2:0.8195
+current mae:0.5583, current corr:0.7541, acc7:0.5197, acc5:0.5402,acc2_non_zero:0.8525, f_score_non_zero:0.8523, acc2:0.8195, f_score:0.8241
+epoch:55, train_loss:0.1489, valid_mse:0.5154, valid_mae:0.5411, test_acc2:0.8329
+current mae:0.5534, current corr:0.7565, acc7:0.5193, acc5:0.5423,acc2_non_zero:0.8511, f_score_non_zero:0.8494, acc2:0.8329, f_score:0.8347
+epoch:56, train_loss:0.1459, valid_mse:0.5200, valid_mae:0.5423, test_acc2:0.8159
+current mae:0.5589, current corr:0.7526, acc7:0.5160, acc5:0.5344,acc2_non_zero:0.8544, f_score_non_zero:0.8547, acc2:0.8159, f_score:0.8214
+epoch:57, train_loss:0.1461, valid_mse:0.5205, valid_mae:0.5425, test_acc2:0.8006
+current mae:0.5558, current corr:0.7503, acc7:0.5232, acc5:0.5415,acc2_non_zero:0.8489, f_score_non_zero:0.8499, acc2:0.8006, f_score:0.8079
+epoch:58, train_loss:0.1430, valid_mse:0.5263, valid_mae:0.5436, test_acc2:0.8075
+current mae:0.5565, current corr:0.7512, acc7:0.5163, acc5:0.5350,acc2_non_zero:0.8511, f_score_non_zero:0.8516, acc2:0.8075, f_score:0.8137
+epoch:59, train_loss:0.1403, valid_mse:0.5361, valid_mae:0.5517, test_acc2:0.8184
+current mae:0.5611, current corr:0.7565, acc7:0.5117, acc5:0.5318,acc2_non_zero:0.8525, f_score_non_zero:0.8523, acc2:0.8184, f_score:0.8232
+epoch:60, train_loss:0.1361, valid_mse:0.5171, valid_mae:0.5389, test_acc2:0.8191
+current mae:0.5483, current corr:0.7550, acc7:0.5298, acc5:0.5488,acc2_non_zero:0.8508, f_score_non_zero:0.8508, acc2:0.8191, f_score:0.8238
+epoch:61, train_loss:0.1324, valid_mse:0.5451, valid_mae:0.5540, test_acc2:0.7881
+current mae:0.5664, current corr:0.7494, acc7:0.5171, acc5:0.5382,acc2_non_zero:0.8470, f_score_non_zero:0.8484, acc2:0.7881, f_score:0.7967
+epoch:62, train_loss:0.1305, valid_mse:0.5384, valid_mae:0.5511, test_acc2:0.8068
+current mae:0.5577, current corr:0.7514, acc7:0.5186, acc5:0.5378,acc2_non_zero:0.8470, f_score_non_zero:0.8477, acc2:0.8068, f_score:0.8132
+epoch:63, train_loss:0.1275, valid_mse:0.5304, valid_mae:0.5512, test_acc2:0.8191
+current mae:0.5617, current corr:0.7533, acc7:0.5204, acc5:0.5404,acc2_non_zero:0.8492, f_score_non_zero:0.8487, acc2:0.8191, f_score:0.8233
+epoch:64, train_loss:0.1279, valid_mse:0.5247, valid_mae:0.5412, test_acc2:0.7939
+current mae:0.5555, current corr:0.7503, acc7:0.5204, acc5:0.5393,acc2_non_zero:0.8475, f_score_non_zero:0.8486, acc2:0.7939, f_score:0.8016
+epoch:65, train_loss:0.1273, valid_mse:0.5166, valid_mae:0.5409, test_acc2:0.8195
+current mae:0.5561, current corr:0.7517, acc7:0.5193, acc5:0.5369,acc2_non_zero:0.8517, f_score_non_zero:0.8517, acc2:0.8195, f_score:0.8243
+epoch:66, train_loss:0.1239, valid_mse:0.5220, valid_mae:0.5426, test_acc2:0.7909
+current mae:0.5602, current corr:0.7480, acc7:0.5186, acc5:0.5372,acc2_non_zero:0.8436, f_score_non_zero:0.8451, acc2:0.7909, f_score:0.7991
+epoch:67, train_loss:0.1212, valid_mse:0.5145, valid_mae:0.5374, test_acc2:0.8003
+current mae:0.5523, current corr:0.7519, acc7:0.5257, acc5:0.5438,acc2_non_zero:0.8492, f_score_non_zero:0.8501, acc2:0.8003, f_score:0.8075
+epoch:68, train_loss:0.1157, valid_mse:0.5251, valid_mae:0.5437, test_acc2:0.8154
+current mae:0.5567, current corr:0.7550, acc7:0.5253, acc5:0.5436,acc2_non_zero:0.8519, f_score_non_zero:0.8518, acc2:0.8154, f_score:0.8204
+epoch:69, train_loss:0.1167, valid_mse:0.5209, valid_mae:0.5395, test_acc2:0.8006
+current mae:0.5541, current corr:0.7519, acc7:0.5234, acc5:0.5417,acc2_non_zero:0.8459, f_score_non_zero:0.8468, acc2:0.8006, f_score:0.8076
+epoch:70, train_loss:0.1131, valid_mse:0.5306, valid_mae:0.5493, test_acc2:0.7930
+current mae:0.5686, current corr:0.7507, acc7:0.5188, acc5:0.5389,acc2_non_zero:0.8472, f_score_non_zero:0.8483, acc2:0.7930, f_score:0.8009
+epoch:71, train_loss:0.1154, valid_mse:0.5142, valid_mae:0.5395, test_acc2:0.8068
+current mae:0.5597, current corr:0.7517, acc7:0.5201, acc5:0.5391,acc2_non_zero:0.8506, f_score_non_zero:0.8510, acc2:0.8068, f_score:0.8131
+epoch:72, train_loss:0.1130, valid_mse:0.5080, valid_mae:0.5361, test_acc2:0.8135
+current mae:0.5555, current corr:0.7538, acc7:0.5214, acc5:0.5410,acc2_non_zero:0.8514, f_score_non_zero:0.8510, acc2:0.8135, f_score:0.8183
+epoch:73, train_loss:0.1094, valid_mse:0.5252, valid_mae:0.5447, test_acc2:0.8225
+current mae:0.5543, current corr:0.7525, acc7:0.5262, acc5:0.5458,acc2_non_zero:0.8547, f_score_non_zero:0.8542, acc2:0.8225, f_score:0.8267
+epoch:74, train_loss:0.1080, valid_mse:0.5275, valid_mae:0.5474, test_acc2:0.7885
+current mae:0.5643, current corr:0.7502, acc7:0.5195, acc5:0.5378,acc2_non_zero:0.8453, f_score_non_zero:0.8468, acc2:0.7885, f_score:0.7971
+epoch:75, train_loss:0.1080, valid_mse:0.5257, valid_mae:0.5447, test_acc2:0.8161
+current mae:0.5583, current corr:0.7540, acc7:0.5173, acc5:0.5359,acc2_non_zero:0.8561, f_score_non_zero:0.8563, acc2:0.8161, f_score:0.8216
+epoch:76, train_loss:0.1062, valid_mse:0.5268, valid_mae:0.5456, test_acc2:0.7988
+current mae:0.5545, current corr:0.7509, acc7:0.5279, acc5:0.5468,acc2_non_zero:0.8459, f_score_non_zero:0.8465, acc2:0.7988, f_score:0.8057
+epoch:77, train_loss:0.1036, valid_mse:0.5174, valid_mae:0.5406, test_acc2:0.8337
+current mae:0.5487, current corr:0.7560, acc7:0.5320, acc5:0.5503,acc2_non_zero:0.8544, f_score_non_zero:0.8533, acc2:0.8337, f_score:0.8362
+epoch:78, train_loss:0.0989, valid_mse:0.5050, valid_mae:0.5328, test_acc2:0.7984
+current mae:0.5507, current corr:0.7527, acc7:0.5279, acc5:0.5466,acc2_non_zero:0.8453, f_score_non_zero:0.8460, acc2:0.7984, f_score:0.8054
+epoch:79, train_loss:0.0980, valid_mse:0.5131, valid_mae:0.5374, test_acc2:0.8109
+current mae:0.5537, current corr:0.7511, acc7:0.5283, acc5:0.5466,acc2_non_zero:0.8503, f_score_non_zero:0.8502, acc2:0.8109, f_score:0.8162
+epoch:80, train_loss:0.0890, valid_mse:0.5193, valid_mae:0.5398, test_acc2:0.8062
+current mae:0.5559, current corr:0.7523, acc7:0.5236, acc5:0.5423,acc2_non_zero:0.8486, f_score_non_zero:0.8491, acc2:0.8062, f_score:0.8124
+epoch:81, train_loss:0.0840, valid_mse:0.5197, valid_mae:0.5397, test_acc2:0.8096
+current mae:0.5538, current corr:0.7536, acc7:0.5260, acc5:0.5438,acc2_non_zero:0.8506, f_score_non_zero:0.8508, acc2:0.8096, f_score:0.8154
+epoch:82, train_loss:0.0812, valid_mse:0.5192, valid_mae:0.5413, test_acc2:0.8038
+current mae:0.5558, current corr:0.7526, acc7:0.5249, acc5:0.5425,acc2_non_zero:0.8478, f_score_non_zero:0.8483, acc2:0.8038, f_score:0.8102
+epoch:83, train_loss:0.0799, valid_mse:0.5141, valid_mae:0.5379, test_acc2:0.8036
+current mae:0.5558, current corr:0.7525, acc7:0.5229, acc5:0.5412,acc2_non_zero:0.8467, f_score_non_zero:0.8473, acc2:0.8036, f_score:0.8101
+epoch:84, train_loss:0.0790, valid_mse:0.5111, valid_mae:0.5371, test_acc2:0.8092
+current mae:0.5530, current corr:0.7538, acc7:0.5253, acc5:0.5432,acc2_non_zero:0.8506, f_score_non_zero:0.8507, acc2:0.8092, f_score:0.8149
+epoch:85, train_loss:0.0771, valid_mse:0.5177, valid_mae:0.5394, test_acc2:0.8021
+current mae:0.5551, current corr:0.7538, acc7:0.5255, acc5:0.5443,acc2_non_zero:0.8461, f_score_non_zero:0.8467, acc2:0.8021, f_score:0.8086
+epoch:86, train_loss:0.0758, valid_mse:0.5126, valid_mae:0.5373, test_acc2:0.8083
+current mae:0.5517, current corr:0.7547, acc7:0.5264, acc5:0.5445,acc2_non_zero:0.8497, f_score_non_zero:0.8500, acc2:0.8083, f_score:0.8142
+epoch:87, train_loss:0.0756, valid_mse:0.5209, valid_mae:0.5423, test_acc2:0.8062
+current mae:0.5558, current corr:0.7536, acc7:0.5247, acc5:0.5432,acc2_non_zero:0.8489, f_score_non_zero:0.8493, acc2:0.8062, f_score:0.8123
+epoch:88, train_loss:0.0749, valid_mse:0.5247, valid_mae:0.5432, test_acc2:0.8068
+current mae:0.5541, current corr:0.7540, acc7:0.5244, acc5:0.5432,acc2_non_zero:0.8492, f_score_non_zero:0.8495, acc2:0.8068, f_score:0.8129
+epoch:89, train_loss:0.0752, valid_mse:0.5196, valid_mae:0.5417, test_acc2:0.8075
+current mae:0.5531, current corr:0.7537, acc7:0.5251, acc5:0.5438,acc2_non_zero:0.8492, f_score_non_zero:0.8495, acc2:0.8075, f_score:0.8135
+epoch:90, train_loss:0.0736, valid_mse:0.5161, valid_mae:0.5409, test_acc2:0.8083
+current mae:0.5561, current corr:0.7539, acc7:0.5221, acc5:0.5415,acc2_non_zero:0.8489, f_score_non_zero:0.8492, acc2:0.8083, f_score:0.8142
+epoch:91, train_loss:0.0726, valid_mse:0.5127, valid_mae:0.5390, test_acc2:0.8075
+current mae:0.5536, current corr:0.7542, acc7:0.5223, acc5:0.5412,acc2_non_zero:0.8486, f_score_non_zero:0.8489, acc2:0.8075, f_score:0.8133
+epoch:92, train_loss:0.0726, valid_mse:0.5146, valid_mae:0.5387, test_acc2:0.8057
+current mae:0.5551, current corr:0.7530, acc7:0.5236, acc5:0.5425,acc2_non_zero:0.8481, f_score_non_zero:0.8485, acc2:0.8057, f_score:0.8120
+epoch:93, train_loss:0.0726, valid_mse:0.5158, valid_mae:0.5386, test_acc2:0.8064
+current mae:0.5527, current corr:0.7544, acc7:0.5236, acc5:0.5421,acc2_non_zero:0.8492, f_score_non_zero:0.8495, acc2:0.8064, f_score:0.8125
+epoch:94, train_loss:0.0716, valid_mse:0.5176, valid_mae:0.5400, test_acc2:0.8019
+current mae:0.5534, current corr:0.7537, acc7:0.5232, acc5:0.5421,acc2_non_zero:0.8494, f_score_non_zero:0.8501, acc2:0.8019, f_score:0.8086
+epoch:95, train_loss:0.0718, valid_mse:0.5161, valid_mae:0.5401, test_acc2:0.8044
+current mae:0.5536, current corr:0.7538, acc7:0.5247, acc5:0.5430,acc2_non_zero:0.8489, f_score_non_zero:0.8494, acc2:0.8044, f_score:0.8108
+epoch:96, train_loss:0.0713, valid_mse:0.5110, valid_mae:0.5383, test_acc2:0.8075
+current mae:0.5528, current corr:0.7540, acc7:0.5242, acc5:0.5421,acc2_non_zero:0.8506, f_score_non_zero:0.8508, acc2:0.8075, f_score:0.8135
+epoch:97, train_loss:0.0697, valid_mse:0.5180, valid_mae:0.5417, test_acc2:0.8094
+current mae:0.5541, current corr:0.7542, acc7:0.5251, acc5:0.5438,acc2_non_zero:0.8503, f_score_non_zero:0.8506, acc2:0.8094, f_score:0.8152
+epoch:98, train_loss:0.0702, valid_mse:0.5163, valid_mae:0.5395, test_acc2:0.8070
+current mae:0.5534, current corr:0.7539, acc7:0.5242, acc5:0.5434,acc2_non_zero:0.8494, f_score_non_zero:0.8498, acc2:0.8070, f_score:0.8131
+epoch:99, train_loss:0.0702, valid_mse:0.5163, valid_mae:0.5405, test_acc2:0.8124
+current mae:0.5522, current corr:0.7549, acc7:0.5257, acc5:0.5440,acc2_non_zero:0.8530, f_score_non_zero:0.8530, acc2:0.8124, f_score:0.8178
+Loading best model from epoch 8 by acc2=0.8456 for analysis export.
+Analysis files exported to: /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/analysis
+  predictions: /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/analysis/predictions.csv
+  repr: /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/analysis/repr.npz
+  repr meta: /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/analysis/repr_meta.json
+  cases: /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/analysis/cases.csv
+Metrics summary saved to: /data01/lyw/GLoMo/experiments/mosei_ours_seed5576/metrics.json
+Total runtime: 8354044.65341568 ms

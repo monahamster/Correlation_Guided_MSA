@@ -1,0 +1,20 @@
+{
+  "dataset": "mosi",
+  "seed": 5576,
+  "save_best_by": "acc2",
+  "best_epoch": 26,
+  "best_value": 0.8306569343065694,
+  "mae": 0.8682798483762483,
+  "corr": 0.738858795015697,
+  "acc2": 0.8306569343065694,
+  "acc2_non_zero": 0.8549618320610687,
+  "f1": 0.828403169221469,
+  "f1_non_zero": 0.8536350649561132,
+  "acc7": 0.3416058394160584,
+  "valid_mse": 1.3313977718353271,
+  "valid_mae": 0.9332843720912933,
+  "experiment_dir": "/data01/lyw/GLoMo/experiments/mosi_ours_audio_desc_seed5576",
+  "analysis_dir": "/data01/lyw/GLoMo/experiments/mosi_ours_audio_desc_seed5576/analysis",
+  "log_path": "/data01/lyw/GLoMo/experiments/mosi_ours_audio_desc_seed5576/train.log",
+  "checkpoint_path": "/data01/lyw/GLoMo/experiments/mosi_ours_audio_desc_seed5576/best_model.pt"
+}

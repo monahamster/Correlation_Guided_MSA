@@ -1,0 +1,20 @@
+{
+  "dataset": "mosi",
+  "seed": 5576,
+  "save_best_by": "acc2",
+  "best_epoch": 40,
+  "best_value": 0.8379562043795621,
+  "mae": 0.7907935084217657,
+  "corr": 0.754498118879025,
+  "acc2": 0.8379562043795621,
+  "acc2_non_zero": 0.8610687022900764,
+  "f1": 0.8375035768998014,
+  "f1_non_zero": 0.8612275531553525,
+  "acc7": 0.36496350364963503,
+  "valid_mse": 1.1224625706672668,
+  "valid_mae": 0.806154727935791,
+  "experiment_dir": "/data01/lyw/GLoMo/experiments/mosi_baseline_seed5576",
+  "analysis_dir": "/data01/lyw/GLoMo/experiments/mosi_baseline_seed5576/analysis",
+  "log_path": "/data01/lyw/GLoMo/experiments/mosi_baseline_seed5576/train.log",
+  "checkpoint_path": "/data01/lyw/GLoMo/experiments/mosi_baseline_seed5576/best_model.pt"
+}

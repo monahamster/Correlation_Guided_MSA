@@ -1,9 +1,10 @@
 import os
 import torch
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
-
-DEVICE = torch.device("cuda:1")
+if torch.cuda.is_available():
+    DEVICE = torch.device("cuda:0")
+else:
+    DEVICE = torch.device("cpu")
 
 # MOSI SETTING
 #ACOUSTIC_DIM = 74

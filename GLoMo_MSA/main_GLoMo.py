@@ -6,6 +6,8 @@ import json
 import os
 import random
 import pickle
+import shlex
+import sys
 import numpy as np
 from typing import *
 import time
@@ -39,6 +41,7 @@ if torch.cuda.is_available():
 
 
 from GLoMo import GLoMo
+from modality_text_aug import ModalityTextAugmentor
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--dataset", type=str,
@@ -102,6 +105,13 @@ parser.add_argument("--drop_audio", action="store_true")
 parser.add_argument("--drop_visual", action="store_true")
 parser.add_argument("--analysis_output_dir", type=str, default="analysis/outputs")
 parser.add_argument("--analysis_tag", type=str, default="")
+parser.add_argument("--experiment_root", type=str, default="../experiments")
+parser.add_argument("--experiment_tag", type=str, default="")
+parser.add_argument("--log_path", type=str, default="")
+parser.add_argument("--use_modality_text_aug", action="store_true")
+parser.add_argument("--use_audio_desc", action="store_true")
+parser.add_argument("--use_visual_desc", action="store_true")
+parser.add_argument("--visual_desc_version", type=str, choices=["v1", "v2"], default="v1")
 parser.add_argument(
     "--save_best_by",
     type=str,
@@ -360,27 +370,65 @@ def extract_analysis_record(example):
 
 
 def resolve_analysis_output_dir():
+    return resolve_experiment_dir() / "analysis"
+
+
+def resolve_experiment_tag():
+    tag = args.experiment_tag.strip() or args.analysis_tag.strip()
+    if tag:
+        return tag
+    tag_parts = [args.dataset]
+    if args.test:
+        tag_parts.append("test")
+    elif args.use_fusion_correlation or args.use_moe_reliability:
+        tag_parts.append("ours")
+    else:
+        tag_parts.append("baseline")
+    tag_parts.append(f"seed{args.seed}")
+    return "_".join(tag_parts)
+
+
+def resolve_experiment_dir():
     base_dir = Path(__file__).resolve().parent
-    output_dir = base_dir / args.analysis_output_dir
-    tag = args.analysis_tag.strip()
-    if not tag:
-        tag_parts = [args.dataset]
-        if args.test:
-            tag_parts.append("test")
-        if args.load:
-            model_name = Path(args.model_path).stem
-            tag_parts.append(model_name)
-        tag_parts.append(f"seed{args.seed}")
-        tag = "_".join(tag_parts)
-    return output_dir / tag
+    return (base_dir / args.experiment_root / resolve_experiment_tag()).resolve()
 
 
 def resolve_best_model_path():
     if args.best_model_path.strip():
         return Path(args.best_model_path)
-    output_dir = resolve_analysis_output_dir()
-    output_dir.mkdir(parents=True, exist_ok=True)
-    return output_dir / "best_model.pt"
+    experiment_dir = resolve_experiment_dir()
+    experiment_dir.mkdir(parents=True, exist_ok=True)
+    return experiment_dir / "best_model.pt"
+
+
+def resolve_metrics_path():
+    experiment_dir = resolve_experiment_dir()
+    experiment_dir.mkdir(parents=True, exist_ok=True)
+    return experiment_dir / "metrics.json"
+
+
+def resolve_command_path():
+    experiment_dir = resolve_experiment_dir()
+    experiment_dir.mkdir(parents=True, exist_ok=True)
+    return experiment_dir / "command.sh"
+
+
+def write_command_script():
+    command_path = resolve_command_path()
+    cmd = "python " + " ".join(shlex.quote(arg) for arg in sys.argv)
+    with command_path.open("w", encoding="utf-8") as f:
+        f.write("#!/usr/bin/env bash\n")
+        f.write("set -euo pipefail\n")
+        f.write(cmd + "\n")
+    os.chmod(command_path, 0o755)
+    return command_path
+
+
+def write_metrics_summary(metrics: Dict[str, Any]):
+    metrics_path = resolve_metrics_path()
+    with metrics_path.open("w", encoding="utf-8") as f:
+        json.dump(metrics, f, ensure_ascii=False, indent=2)
+    return metrics_path
 
 
 def metric_direction(metric_name):
@@ -417,6 +465,24 @@ def set_up_data_loader():
     train_data = data["train"]
     dev_data = data["dev"]
     test_data = data["test"]
+
+    if args.use_modality_text_aug:
+        use_audio_desc = args.use_audio_desc or (not args.use_audio_desc and not args.use_visual_desc)
+        use_visual_desc = args.use_visual_desc or (not args.use_audio_desc and not args.use_visual_desc)
+        augmentor = ModalityTextAugmentor.from_training_examples(
+            train_data,
+            use_audio_desc=use_audio_desc,
+            use_visual_desc=use_visual_desc,
+            visual_desc_version=args.visual_desc_version,
+        )
+        train_data = augmentor.augment_split(train_data)
+        dev_data = augmentor.augment_split(dev_data)
+        test_data = augmentor.augment_split(test_data)
+        print(
+            "Using modality text augmentation: audio_desc={}, visual_desc={}, visual_desc_version={}".format(
+                use_audio_desc, use_visual_desc, args.visual_desc_version
+            )
+        )
 
     # Quick label sanity check
     for name, split in (("train", train_data), ("dev", dev_data), ("test", test_data)):
@@ -895,6 +961,7 @@ def train(
     f1_scores = []
     best_value = None
     best_epoch = None
+    best_metrics = None
     best_model_path = resolve_best_model_path()
     best_model_path.parent.mkdir(parents=True, exist_ok=True)
     for epoch_i in range(int(args.n_epochs)):
@@ -938,6 +1005,7 @@ def train(
         if is_better(args.save_best_by, tracked_value, best_value):
             best_value = tracked_value
             best_epoch = epoch_i
+            best_metrics = dict(current_metrics)
             torch.save(model.state_dict(), best_model_path)
             print(
                 "Saved best model at epoch {} by {}={:.4f} -> {}".format(
@@ -948,6 +1016,7 @@ def train(
                 )
             )
 
+    analysis_info = None
     if test_examples is not None:
         if best_model_path.exists():
             print(
@@ -958,13 +1027,43 @@ def train(
                 )
             )
             model.load_state_dict(torch.load(best_model_path, map_location=DEVICE))
-        export_analysis_files(model, test_data_loader, test_examples)
+        analysis_info = export_analysis_files(model, test_data_loader, test_examples)
+
+    summary = {
+        "dataset": args.dataset,
+        "seed": args.seed,
+        "save_best_by": args.save_best_by,
+        "use_modality_text_aug": args.use_modality_text_aug,
+        "use_audio_desc": args.use_audio_desc,
+        "use_visual_desc": args.use_visual_desc,
+        "visual_desc_version": args.visual_desc_version,
+        "best_epoch": best_epoch,
+        "best_value": best_value,
+        "mae": None if best_metrics is None else best_metrics["test_mae"],
+        "corr": None if best_metrics is None else best_metrics["test_corr"],
+        "acc2": None if best_metrics is None else best_metrics["test_acc2"],
+        "acc2_non_zero": None if best_metrics is None else best_metrics["test_acc2_non_zero"],
+        "f1": None if best_metrics is None else best_metrics["test_f_score"],
+        "f1_non_zero": None if best_metrics is None else best_metrics["test_f_score_non_zero"],
+        "acc7": None if best_metrics is None else best_metrics["test_acc7"],
+        "valid_mse": None if best_metrics is None else best_metrics["valid_mse"],
+        "valid_mae": None if best_metrics is None else best_metrics["valid_mae"],
+        "experiment_dir": str(resolve_experiment_dir()),
+        "analysis_dir": None if analysis_info is None else analysis_info["output_dir"],
+        "log_path": args.log_path,
+        "checkpoint_path": str(best_model_path),
+    }
+    metrics_path = write_metrics_summary(summary)
+    print(f"Metrics summary saved to: {metrics_path}")
+    return summary
 
 
 def main():
 
     set_random_seed(args.seed)
     start_time = time.time()
+    command_path = write_command_script()
+    print(f"Command script saved to: {command_path}")
 
     (
         train_data_loader,
@@ -988,7 +1087,33 @@ def main():
                 test_mae, test_corr, test_acc7, test_acc5, test_acc2_non_zero, test_f_score_non_zero, test_acc2, test_f_score
             )
         )
-        export_analysis_files(model, test_data_loader, test_examples)
+        analysis_info = export_analysis_files(model, test_data_loader, test_examples)
+        summary = {
+            "dataset": args.dataset,
+            "seed": args.seed,
+            "save_best_by": args.save_best_by,
+            "use_modality_text_aug": args.use_modality_text_aug,
+            "use_audio_desc": args.use_audio_desc,
+            "use_visual_desc": args.use_visual_desc,
+            "visual_desc_version": args.visual_desc_version,
+            "best_epoch": None,
+            "best_value": None,
+            "mae": test_mae,
+            "corr": test_corr,
+            "acc2": test_acc2,
+            "acc2_non_zero": test_acc2_non_zero,
+            "f1": test_f_score,
+            "f1_non_zero": test_f_score_non_zero,
+            "acc7": test_acc7,
+            "valid_mse": None,
+            "valid_mae": None,
+            "experiment_dir": str(resolve_experiment_dir()),
+            "analysis_dir": analysis_info["output_dir"],
+            "log_path": args.log_path,
+            "checkpoint_path": args.model_path if args.load else "",
+        }
+        metrics_path = write_metrics_summary(summary)
+        print(f"Metrics summary saved to: {metrics_path}")
     else:
         train(
             model,

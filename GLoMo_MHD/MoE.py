@@ -141,9 +141,11 @@ class MoE(nn.Module):
     k: an integer - how many experts to use for each batch element
     """
 
-    def __init__(self, input_size, output_size, num_experts, hidden_size, model=MLP,noisy_gating=True, k=4,all_mode=False):
+    def __init__(self, input_size, output_size, num_experts, hidden_size, model=MLP, noisy_gating=True, k=4, all_mode=False, use_reliability=False, reliability_dim=1, reliability_lambda=0.1):
         super(MoE, self).__init__()
         self.noisy_gating = noisy_gating
+        self.use_reliability = use_reliability
+        self.reliability_lambda = reliability_lambda
         self.num_experts = num_experts
         self.output_size = output_size
         self.input_size = input_size
@@ -153,6 +155,8 @@ class MoE(nn.Module):
         self.experts = nn.ModuleList([model(self.input_size, self.output_size, self.hidden_size) for i in range(self.num_experts)])
         self.w_gate = nn.Parameter(torch.zeros(input_size, num_experts), requires_grad=True)# 
         self.w_noise = nn.Parameter(torch.zeros(input_size, num_experts), requires_grad=True)
+        if self.use_reliability:
+            self.w_rel = nn.Parameter(torch.zeros(reliability_dim, num_experts), requires_grad=True)
 
         self.softplus = nn.Softplus()
         self.softmax = nn.Softmax(1)
@@ -215,12 +219,13 @@ class MoE(nn.Module):
         threshold_if_out = torch.unsqueeze(torch.gather(top_values_flat, 0, threshold_positions_if_out), 1)
         # is each value currently in the top k.
         normal = Normal(self.mean, self.std)
+        noise_stddev = torch.clamp(torch.nan_to_num(noise_stddev, nan=0.0, posinf=0.0, neginf=0.0), min=1e-6)
         prob_if_in = normal.cdf((clean_values - threshold_if_in)/noise_stddev)
         prob_if_out = normal.cdf((clean_values - threshold_if_out)/noise_stddev)
         prob = torch.where(is_in, prob_if_in, prob_if_out)
         return prob
 
-    def noisy_top_k_gating(self, x, train, noise_epsilon=1e-2):
+    def noisy_top_k_gating(self, x, train, noise_epsilon=1e-2, reliability=None):
         """Noisy top-k gating.
           See paper: https://arxiv.org/abs/1701.06538.
           Args:
@@ -231,9 +236,16 @@ class MoE(nn.Module):
             gates: a Tensor with shape [batch_size, num_experts]
             load: a Tensor with shape [num_experts]
         """
+        x = torch.nan_to_num(x, nan=0.0, posinf=0.0, neginf=0.0)
         clean_logits = x @ self.w_gate
+        if self.use_reliability and reliability is not None:
+            if reliability.dim() == 1:
+                reliability = reliability.unsqueeze(1)
+            rel_logits = reliability @ self.w_rel
+            clean_logits = clean_logits + self.reliability_lambda * rel_logits
         if self.noisy_gating and train:
             raw_noise_stddev = x @ self.w_noise
+            raw_noise_stddev = torch.nan_to_num(raw_noise_stddev, nan=0.0, posinf=0.0, neginf=0.0)
             noise_stddev = ((self.softplus(raw_noise_stddev) + noise_epsilon))
             noisy_logits = clean_logits + (torch.randn_like(clean_logits) * noise_stddev)
             logits = noisy_logits
@@ -255,7 +267,7 @@ class MoE(nn.Module):
             load = self._gates_to_load(gates)
         return gates, load
 
-    def forward(self, x, loss_coef=1e-2):
+    def forward(self, x, loss_coef=1e-2, reliability=None):
         """Args:
         x: tensor shape [batch_size, input_size]
         train: a boolean scalar.
@@ -266,7 +278,7 @@ class MoE(nn.Module):
         training loss of the model.  The backpropagation of this loss
         encourages all experts to be approximately equally used across a batch.
         """
-        gates, load = self.noisy_top_k_gating(x, self.training)
+        gates, load = self.noisy_top_k_gating(x, self.training, reliability=reliability)
         # calculate importance loss
         importance = gates.sum(0)
         #
