@@ -185,3 +185,7 @@ Historical experiment records are preserved as originally produced. Some archive
 ## License
 
 See `LICENSE` for repository licensing terms. Review any third-party component licenses before redistributing derived assets, datasets, or checkpoints.
+
+## Code Origin
+
+This repository is developed for the paper **"Correlation-Guided Reliability Modeling for Robust Multimodal Sentiment Analysis"** and is built on top of earlier open-source multimodal learning implementations. The repository structure, training pipeline organization, experiment archival format, and paper-specific components have been substantially adapted for the current work, while the original upstream license is preserved.
