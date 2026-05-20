@@ -1,0 +1,17 @@
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+tqdm
+einops
+
+torch
+torchvision
+transformers
+torchsummary
+
+gpustat
+wandb
+
+mmsdk
