@@ -3,7 +3,6 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from correlation_dataset import UnifiedMultimodalDataset
 from correlation_models import CorrelationModel
 from correlation_loss import TripleLoss
 import os
@@ -138,11 +137,13 @@ def pretrain_correlation_model(args, train_dataset=None, valid_dataset=None):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     if train_dataset is None:
+        from correlation_dataset import UnifiedMultimodalDataset
         train_data = UnifiedMultimodalDataset(args.data_path, data=args.dataset_name, split_type='train', for_correlation=True, if_align=False, max_samples=200)
     else:
         train_data = train_dataset
 
     if valid_dataset is None:
+        from correlation_dataset import UnifiedMultimodalDataset
         valid_data = UnifiedMultimodalDataset(args.data_path, data=args.dataset_name, split_type='valid', for_correlation=True, if_align=False, max_samples=50)
     else:
         valid_data = valid_dataset
