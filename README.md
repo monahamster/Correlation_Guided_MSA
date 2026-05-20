@@ -1,117 +1,183 @@
-# Correlation_Guided_MSA
+# Correlation-Guided Reliability Modeling for Robust Multimodal Sentiment Analysis
 
-This repository contains the codebase for the current project built around correlation-guided multimodal sentiment analysis and related extensions.
+This repository contains the code for the paper **"Correlation-Guided Reliability Modeling for Robust Multimodal Sentiment Analysis"**.
 
-## Overview
+The current public codebase focuses on the main sentiment analysis experiments on **CMU-MOSI** and **CMU-MOSEI**, together with correlation pretraining, archived experiment records, and figure-generation scripts.
 
-The repository is organized around three layers:
+## Repository Structure
 
-- source code for the main models and training entry points
-- archived experiment records used to support reproducibility
-- script-based figure generation linked to specific experiment outputs
-
-The current paper-facing codebase focuses on CMU-MOSI and CMU-MOSEI.
+- `Correlation_Guided_MSA/`
+  - Main training and evaluation code for CMU-MOSI and CMU-MOSEI.
+- `Correlation_Pretraining/`
+  - Correlation pretraining utilities and related components.
+- `figure_scripts/`
+  - Scripts used to generate paper figures.
+- `experiments/`
+  - Archived experiment records for reproducibility.
+- `datasets/`
+  - Local dataset files expected by the training scripts.
 
 ## Installation
 
-Create a Python environment and install the dependencies:
+Create a Python environment and install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-If your environment already provides PyTorch separately, adjust the installation order as needed for your platform.
+If your environment installs PyTorch separately, adjust the installation order as needed for your platform.
 
-## Repository Structure
+## Data Preparation
 
-- `Correlation_Guided_MSA/`
-  - Main codebase for CMU-MOSI and CMU-MOSEI experiments.
-- `Correlation_Pretraining/`
-  - Correlation pretraining utilities and related components.
-- `figure_scripts/`
-  - Figure generation scripts used in the paper.
-- `experiments/`
-  - Experiment records kept for reproducibility and submission archiving.
-- `datasets/`
-  - Local dataset files used by the code.
+Place the required dataset files under `datasets/`.
 
-## Main Entry Points
+Expected files for the main paper experiments:
 
-### Sentiment Analysis
+- `datasets/mosi.pkl`
+- `datasets/mosei.pkl`
+
+## Main Training Entry Point
+
+The main sentiment analysis entry point is:
 
 - `Correlation_Guided_MSA/main_cgmsa.py`
 
-### Correlation Pretraining
+Typical workflow:
 
-- `Correlation_Pretraining/modality_correlation/main_correlation_glomo.py`
+1. prepare dataset files under `datasets/`
+2. optionally pretrain correlation modules
+3. run baseline and proposed-model experiments
+4. generate figures from archived experiment outputs
 
-## Minimal Usage
+## Example Commands
 
-Typical workflows in this repository follow the pattern below:
-
-1. prepare datasets under `datasets/`
-2. optionally pretrain correlation modules in `Correlation_Pretraining/`
-3. run sentiment experiments from `Correlation_Guided_MSA/`
-4. generate paper figures with `figure_scripts/`
-
-Examples:
+### MOSI Baseline
 
 ```bash
 cd Correlation_Guided_MSA
-python main_cgmsa.py ...
+python main_cgmsa.py \
+  --dataset mosi \
+  --max_seq_length 60 \
+  --train_batch_size 240 \
+  --d_l 48 \
+  --layers 4 \
+  --VISUAL_DIM 47 \
+  --learning_rate 4e-5 \
+  --n_epochs 70 \
+  --save_best_by acc2
 ```
+
+### MOSI Ours
+
+```bash
+cd Correlation_Guided_MSA
+python main_cgmsa.py \
+  --dataset mosi \
+  --max_seq_length 60 \
+  --train_batch_size 240 \
+  --d_l 48 \
+  --layers 4 \
+  --VISUAL_DIM 47 \
+  --learning_rate 4e-5 \
+  --n_epochs 70 \
+  --use_fusion_correlation \
+  --corr_model_path /path/to/correlation_checkpoint.pt \
+  --corr_alpha 0.2 \
+  --use_moe_reliability \
+  --moe_reliability_lambda 0.05 \
+  --save_best_by acc2
+```
+
+### MOSEI Baseline
+
+```bash
+cd Correlation_Guided_MSA
+python main_cgmsa.py \
+  --dataset mosei \
+  --max_seq_length 80 \
+  --train_batch_size 64 \
+  --d_l 192 \
+  --layers 3 \
+  --VISUAL_DIM 35 \
+  --learning_rate 1e-5 \
+  --n_epochs 100 \
+  --save_best_by acc2
+```
+
+### MOSEI Ours
+
+```bash
+cd Correlation_Guided_MSA
+python main_cgmsa.py \
+  --dataset mosei \
+  --max_seq_length 80 \
+  --train_batch_size 64 \
+  --d_l 192 \
+  --layers 3 \
+  --VISUAL_DIM 35 \
+  --learning_rate 1e-5 \
+  --n_epochs 100 \
+  --use_fusion_correlation \
+  --corr_model_path /path/to/correlation_checkpoint.pt \
+  --corr_alpha 0.2 \
+  --use_moe_reliability \
+  --moe_reliability_lambda 0.1 \
+  --save_best_by acc2
+```
+
+Additional ablation and extension runs are archived under `experiments/`.
+
+## Correlation Pretraining
+
+The correlation pretraining entry point is:
+
+- `Correlation_Pretraining/modality_correlation/main_correlation_glomo.py`
+
+Example:
 
 ```bash
 cd Correlation_Pretraining/modality_correlation
-python main_correlation_glomo.py ...
+python main_correlation_glomo.py --dataset mosi --build_cache
 ```
+
+Pretrained checkpoints used by the main model are expected to be provided locally and referenced through `--corr_model_path`.
+
+## Figure Generation
+
+Paper figures are generated from `figure_scripts/`.
+
+Example:
 
 ```bash
 cd figure_scripts
 bash generate_all_figures.sh
 ```
 
-## Experiment Records
+Selected figure scripts read archived analysis outputs from the corresponding experiment directories under `experiments/`.
 
-The `experiments/` directory is kept as an archival record for submission and reproducibility:
+## Reproducibility
 
-- one result corresponds to one experiment record
-- one table corresponds to one reproducible experiment group
-- one figure corresponds to one generation script
+This repository is organized to support reproducibility:
 
-Historical experiment directory names and recorded command files are preserved as-is and are not renamed retroactively.
+- each reported result corresponds to an archived experiment record
+- each table corresponds to a reproducible experiment group
+- each figure corresponds to a dedicated generation script
 
-Each archived experiment may contain:
+Archived experiment records may contain:
 
 - `command.sh`
 - `train.log`
 - `metrics.json`
-- selected analysis outputs used by figure-generation scripts
+- selected analysis outputs required for figure generation
 
-These records are preserved as experiment evidence rather than rewritten to follow later repository renaming.
-
-## Reproducibility Notes
-
-- Each reported result is intended to correspond to a concrete archived experiment record.
-- Each paper figure is intended to correspond to a dedicated generation script in `figure_scripts/`.
-- Some archived metadata files contain local absolute paths from the original training environment. These paths are preserved for traceability and should be adapted when reproducing runs in a different environment.
-- Historical experiment commands may reference earlier script names from before the repository renaming. They are preserved intentionally as part of the original experiment record.
-
-## Data and Checkpoints
-
-- Datasets are expected to be prepared locally under `datasets/`.
-- Large checkpoints and intermediate artifacts are not all tracked in the repository.
-- Only selected analysis files required for paper figures are included in version control.
-
-## Availability
-
-The manuscript PDF is managed separately from the tracked code submission. The repository is structured to support code release, experiment traceability, and figure reproducibility.
-
-## License
-
-See `LICENSE` for the repository license and review third-party component licenses before redistributing derived assets or checkpoints.
+Historical experiment records are preserved as originally produced. Some archived files may therefore contain local absolute paths or earlier script names from the original training environment. These are intentionally kept for traceability.
 
 ## Notes
 
-- The current manuscript PDF is managed separately and is not part of the tracked code submission by default.
-- Historical experiment metadata may still contain older absolute paths or script names. These records are intentionally preserved for traceability.
+- Large checkpoints and many intermediate artifacts are not tracked in full.
+- Only selected analysis files required by the paper figures are included in version control.
+- The manuscript PDF is managed separately from the tracked code submission.
+
+## License
+
+See `LICENSE` for repository licensing terms. Review any third-party component licenses before redistributing derived assets, datasets, or checkpoints.
