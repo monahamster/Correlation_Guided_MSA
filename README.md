@@ -10,7 +10,7 @@ The repository is organized around three layers:
 - archived experiment records used to support reproducibility
 - script-based figure generation linked to specific experiment outputs
 
-The current paper-facing codebase focuses primarily on CMU-MOSI and CMU-MOSEI, with additional auxiliary branches for humor/sarcasm and multimodal emotion recognition.
+The current paper-facing codebase focuses on CMU-MOSI and CMU-MOSEI.
 
 ## Installation
 
@@ -26,10 +26,6 @@ If your environment already provides PyTorch separately, adjust the installation
 
 - `Correlation_Guided_MSA/`
   - Main codebase for CMU-MOSI and CMU-MOSEI experiments.
-- `Correlation_Guided_Humor/`
-  - Auxiliary codebase for humor/sarcasm task experiments.
-- `Correlation_Guided_MER/`
-  - Auxiliary codebase for multimodal emotion recognition experiments.
 - `Correlation_Pretraining/`
   - Correlation pretraining utilities and related components.
 - `figure_scripts/`
@@ -44,14 +40,6 @@ If your environment already provides PyTorch separately, adjust the installation
 ### Sentiment Analysis
 
 - `Correlation_Guided_MSA/main_cgmsa.py`
-
-### Humor / Sarcasm
-
-- `Correlation_Guided_Humor/main_cg_humor.py`
-
-### Emotion Recognition
-
-- `Correlation_Guided_MER/main_cg_mer.py`
 
 ### Correlation Pretraining
 
