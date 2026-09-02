@@ -363,6 +363,7 @@ class GLoMo(BertPreTrainedModel):
         self.drop_audio = getattr(args, "drop_audio", False)
         self.drop_visual = getattr(args, "drop_visual", False)
         self.corr_alpha = getattr(args, "corr_alpha", 1.0)
+        self.correlation_control = getattr(args, "correlation_control", "none")
         self.corr_model = None
         corr_model_path = getattr(args, "corr_model_path", None)
         if (self.use_fusion_correlation or self.use_moe_reliability) and corr_model_path:
@@ -455,6 +456,18 @@ class GLoMo(BertPreTrainedModel):
             scale_t = 1.0 + self.corr_alpha * (r_t - 0.5)
             scale_a = 1.0 + self.corr_alpha * (r_a - 0.5)
             scale_v = 1.0 + self.corr_alpha * (r_v - 0.5)
+            control = self.correlation_control
+            if control == "neutral":
+                scale_t = torch.ones_like(scale_t)
+                scale_a = torch.ones_like(scale_a)
+                scale_v = torch.ones_like(scale_v)
+            elif control == "shuffle" and scale_t.size(0) > 1:
+                # Deterministic cyclic permutation: every sample receives a
+                # different sample's correlation scales while the scale
+                # distribution remains unchanged.
+                scale_t = torch.roll(scale_t, shifts=1, dims=0)
+                scale_a = torch.roll(scale_a, shifts=1, dims=0)
+                scale_v = torch.roll(scale_v, shifts=1, dims=0)
         return scale_t, scale_a, scale_v
 
     def forward(
@@ -606,6 +619,15 @@ class GLoMo(BertPreTrainedModel):
             r_t, r_a, r_v = moe_scales
         else:
             r_t = r_a = r_v = None
+        # _corr_scales returns the modulation scales used by the model. Convert
+        # them back to the underlying [0, 1] correlation reliabilities only
+        # for analysis export; routing continues to receive the original scales.
+        if r_t is not None and self.corr_alpha != 0:
+            reliability_t = (r_t - 1.0) / self.corr_alpha + 0.5
+            reliability_a = (r_a - 1.0) / self.corr_alpha + 0.5
+            reliability_v = (r_v - 1.0) / self.corr_alpha + 0.5
+        else:
+            reliability_t = reliability_a = reliability_v = None
         fine_ts, moe_loss_ts = self.moe_t(torch.flatten(finegrained_t, start_dim=1), reliability=r_t)
         fine_as, moe_loss_as = self.moe_a(torch.flatten(finegrained_a, start_dim=1), reliability=r_a)
         fine_vs, moe_loss_vs = self.moe_v(torch.flatten(finegrained_v, start_dim=1), reliability=r_v)
@@ -651,9 +673,12 @@ class GLoMo(BertPreTrainedModel):
 
         analysis = {
             "repr": outputs,
-            "r_t": r_t,
-            "r_a": r_a,
-            "r_v": r_v,
+            "r_t": reliability_t,
+            "r_a": reliability_a,
+            "r_v": reliability_v,
+            "scale_t": r_t,
+            "scale_a": r_a,
+            "scale_v": r_v,
             "reg_logits": reg_logits,
             "cls_logits": cls_logits,
         }

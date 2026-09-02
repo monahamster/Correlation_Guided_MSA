@@ -89,6 +89,39 @@ parser.add_argument("--adam_epsilon", default=1e-8, type=float, help="Epsilon fo
 parser.add_argument("--load", type=int, default=0)
 parser.add_argument("--test", type=int, default=0)
 parser.add_argument("--model_path", type=str, default='correlation_guided_msa.pth')
+parser.add_argument(
+    "--test_audio_noise_std",
+    type=float,
+    default=0.0,
+    help=(
+        "Test-time acoustic corruption strength. Gaussian noise is scaled by "
+        "each segment's acoustic-feature standard deviation."
+    ),
+)
+parser.add_argument(
+    "--test_visual_mask_ratio",
+    type=float,
+    default=0.0,
+    help="Test-time probability of masking each non-padding visual frame.",
+)
+parser.add_argument(
+    "--test_corruption_seed",
+    type=int,
+    default=20260831,
+    help="Fixed RNG seed used only for deterministic test-time corruptions.",
+)
+parser.add_argument(
+    "--export_analysis",
+    action="store_true",
+    help="Export per-example representations during --test; disabled by default to limit disk use.",
+)
+parser.add_argument(
+    "--profile_inference",
+    action="store_true",
+    help="Profile single-sample model-forward latency and peak GPU memory during --test.",
+)
+parser.add_argument("--profile_warmup", type=int, default=20)
+parser.add_argument("--profile_repeats", type=int, default=100)
 parser.add_argument('--cos', action='store_true',
                     help='use cosine lr schedule')
 parser.add_argument("--cls_task", type=str, choices=["binary", "seven"], default="seven")
@@ -98,6 +131,15 @@ parser.add_argument("--use_correlation", action="store_true")
 parser.add_argument("--use_fusion_correlation", action="store_true")
 parser.add_argument("--corr_model_path", type=str, default=None)
 parser.add_argument("--corr_alpha", type=float, default=1.0)
+parser.add_argument(
+    "--correlation_control",
+    choices=["none", "neutral", "shuffle"],
+    default="none",
+    help=(
+        "Test-time correlation control: neutral removes correlation modulation; "
+        "shuffle cyclically assigns each sample another sample's scales."
+    ),
+)
 parser.add_argument("--use_moe_reliability", action="store_true")
 parser.add_argument("--moe_reliability_lambda", type=float, default=0.1)
 parser.add_argument("--drop_text", action="store_true")
@@ -116,7 +158,12 @@ parser.add_argument(
     "--save_best_by",
     type=str,
     choices=["acc2", "acc2_non_zero", "f1", "f1_non_zero", "corr", "mae", "valid_mse", "valid_mae"],
-    default="acc2",
+    default="valid_mae",
+    help=(
+        "Validation metric used for checkpoint selection. "
+        "For the sentiment-regression experiments, use valid_mae to avoid "
+        "selecting checkpoints on the test set."
+    ),
 )
 parser.add_argument("--best_model_path", type=str, default="")
 args = parser.parse_args()
@@ -691,6 +738,7 @@ def test_epoch(model: nn.Module, test_dataloader: DataLoader):
     model.eval()
     preds = []
     labels = []
+    corruption_generator = make_test_corruption_generator()
     
     with torch.no_grad():
         for batch in tqdm(test_dataloader):
@@ -699,6 +747,9 @@ def test_epoch(model: nn.Module, test_dataloader: DataLoader):
             input_ids, visual, acoustic, input_mask, segment_ids, label_ids = batch
             visual = torch.squeeze(visual, 1)
             acoustic = torch.squeeze(acoustic, 1)
+            visual, acoustic = apply_test_time_corruption(
+                visual, acoustic, corruption_generator
+            )
             reg_logits, _, _ = model.test(
                 input_ids,
                  visual,
@@ -722,6 +773,44 @@ def test_epoch(model: nn.Module, test_dataloader: DataLoader):
     return preds, labels
 
 
+def make_test_corruption_generator():
+    """Create a reproducible generator so metrics and reliability export use identical noise."""
+    if args.test_audio_noise_std <= 0 and args.test_visual_mask_ratio <= 0:
+        return None
+    generator_device = DEVICE.type if DEVICE.type == "cuda" else "cpu"
+    generator = torch.Generator(device=generator_device)
+    generator.manual_seed(args.test_corruption_seed)
+    return generator
+
+
+def apply_test_time_corruption(visual, acoustic, generator):
+    """Apply isolated, deterministic feature-level corruptions during evaluation only."""
+    if generator is None:
+        return visual, acoustic
+
+    if args.test_audio_noise_std > 0:
+        # Scale noise per utterance, avoiding severity changes caused by raw feature magnitude.
+        scale = acoustic.detach().std(dim=(1, 2), keepdim=True).clamp_min(1e-6)
+        noise = torch.randn(
+            acoustic.shape,
+            device=acoustic.device,
+            dtype=acoustic.dtype,
+            generator=generator,
+        )
+        acoustic = acoustic + args.test_audio_noise_std * scale * noise
+
+    if args.test_visual_mask_ratio > 0:
+        valid_frames = visual.detach().abs().sum(dim=-1, keepdim=True) > 0
+        mask = torch.rand(
+            (visual.size(0), visual.size(1), 1),
+            device=visual.device,
+            generator=generator,
+        ) < args.test_visual_mask_ratio
+        visual = visual.masked_fill(mask & valid_frames, 0.0)
+
+    return visual, acoustic
+
+
 def collect_test_outputs(model: nn.Module, test_dataloader: DataLoader):
     model.eval()
     reg_preds = []
@@ -731,6 +820,7 @@ def collect_test_outputs(model: nn.Module, test_dataloader: DataLoader):
     reliabilities_a = []
     reliabilities_v = []
     labels = []
+    corruption_generator = make_test_corruption_generator()
 
     with torch.no_grad():
         for batch in tqdm(test_dataloader, desc="Test analysis"):
@@ -738,6 +828,9 @@ def collect_test_outputs(model: nn.Module, test_dataloader: DataLoader):
             input_ids, visual, acoustic, input_mask, segment_ids, label_ids = batch
             visual = torch.squeeze(visual, 1)
             acoustic = torch.squeeze(acoustic, 1)
+            visual, acoustic = apply_test_time_corruption(
+                visual, acoustic, corruption_generator
+            )
             reg_logits, cls_logits, _, analysis = model.test(
                 input_ids,
                 visual,
@@ -774,6 +867,47 @@ def collect_test_outputs(model: nn.Module, test_dataloader: DataLoader):
         "r_a": np.concatenate(reliabilities_a, axis=0),
         "r_v": np.concatenate(reliabilities_v, axis=0),
     }
+
+
+def collect_reliability_summary(model: nn.Module, test_dataloader: DataLoader):
+    """Summarize modality reliabilities without writing large representation files."""
+    model.eval()
+    values = {"r_t": [], "r_a": [], "r_v": []}
+    corruption_generator = make_test_corruption_generator()
+    with torch.no_grad():
+        for batch in tqdm(test_dataloader, desc="Reliability summary"):
+            batch = tuple(t.to(DEVICE) for t in batch)
+            input_ids, visual, acoustic, input_mask, segment_ids, _ = batch
+            visual = torch.squeeze(visual, 1)
+            acoustic = torch.squeeze(acoustic, 1)
+            visual, acoustic = apply_test_time_corruption(
+                visual, acoustic, corruption_generator
+            )
+            _, _, _, analysis = model.test(
+                input_ids,
+                visual,
+                acoustic,
+                token_type_ids=segment_ids,
+                attention_mask=input_mask,
+                return_analysis=True,
+            )
+            for key in values:
+                score = analysis.get(key)
+                if score is not None:
+                    values[key].append(score.detach().cpu().view(-1).numpy())
+
+    summary = {}
+    for key, chunks in values.items():
+        if not chunks:
+            summary[key] = {"mean": None, "std": None, "count": 0}
+            continue
+        merged = np.concatenate(chunks)
+        summary[key] = {
+            "mean": float(np.mean(merged)),
+            "std": float(np.std(merged)),
+            "count": int(merged.size),
+        }
+    return summary
 
 
 def export_analysis_files(
@@ -949,6 +1083,59 @@ def test_score_model(model: nn.Module, test_dataloader: DataLoader, use_zero=Fal
     return mae, corr, mult_a7, mult_a5, acc2_non_zero, f_score_non_zero, acc2, f_score
 
 
+def profile_inference(model: nn.Module, test_dataloader: DataLoader):
+    """Profile a deterministic batch-1 forward pass, excluding data loading."""
+    model.eval()
+    batch = next(iter(test_dataloader))
+    batch = tuple(t.to(DEVICE) for t in batch)
+    input_ids, visual, acoustic, input_mask, segment_ids, _ = batch
+    input_ids = input_ids[:1]
+    visual = torch.squeeze(visual[:1], 1)
+    acoustic = torch.squeeze(acoustic[:1], 1)
+    input_mask = input_mask[:1]
+    segment_ids = segment_ids[:1]
+
+    def forward_once():
+        model.test(
+            input_ids,
+            visual,
+            acoustic,
+            token_type_ids=segment_ids,
+            attention_mask=input_mask,
+        )
+
+    with torch.no_grad():
+        for _ in range(args.profile_warmup):
+            forward_once()
+        if DEVICE.type == "cuda":
+            torch.cuda.synchronize(DEVICE)
+            torch.cuda.reset_peak_memory_stats(DEVICE)
+        start = time.perf_counter()
+        for _ in range(args.profile_repeats):
+            forward_once()
+        if DEVICE.type == "cuda":
+            torch.cuda.synchronize(DEVICE)
+        elapsed_s = time.perf_counter() - start
+
+    total_parameters = sum(p.numel() for p in model.parameters())
+    trainable_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    profile = {
+        "protocol": "single-sample forward pass; excludes data loading and checkpoint loading",
+        "device": str(DEVICE),
+        "warmup_iterations": args.profile_warmup,
+        "timed_iterations": args.profile_repeats,
+        "total_parameters": int(total_parameters),
+        "trainable_parameters": int(trainable_parameters),
+        "latency_ms_per_sample": 1000.0 * elapsed_s / args.profile_repeats,
+        "throughput_samples_per_second": args.profile_repeats / elapsed_s,
+        "peak_gpu_memory_mib": (
+            float(torch.cuda.max_memory_allocated(DEVICE)) / (1024.0 ** 2)
+            if DEVICE.type == "cuda" else None
+        ),
+    }
+    return profile
+
+
 def train(
     model,
     train_dataloader,
@@ -1087,7 +1274,24 @@ def main():
                 test_mae, test_corr, test_acc7, test_acc5, test_acc2_non_zero, test_f_score_non_zero, test_acc2, test_f_score
             )
         )
-        analysis_info = export_analysis_files(model, test_data_loader, test_examples)
+        reliability_summary = collect_reliability_summary(model, test_data_loader)
+        reliability_path = resolve_experiment_dir() / "reliability.json"
+        with reliability_path.open("w", encoding="utf-8") as f:
+            json.dump(reliability_summary, f, ensure_ascii=False, indent=2)
+        print(f"Reliability summary saved to: {reliability_path}")
+
+        efficiency_profile = None
+        efficiency_path = None
+        if args.profile_inference:
+            efficiency_profile = profile_inference(model, test_data_loader)
+            efficiency_path = resolve_experiment_dir() / "efficiency.json"
+            with efficiency_path.open("w", encoding="utf-8") as f:
+                json.dump(efficiency_profile, f, ensure_ascii=False, indent=2)
+            print(f"Efficiency profile saved to: {efficiency_path}")
+
+        analysis_info = None
+        if args.export_analysis:
+            analysis_info = export_analysis_files(model, test_data_loader, test_examples)
         summary = {
             "dataset": args.dataset,
             "seed": args.seed,
@@ -1108,9 +1312,16 @@ def main():
             "valid_mse": None,
             "valid_mae": None,
             "experiment_dir": str(resolve_experiment_dir()),
-            "analysis_dir": analysis_info["output_dir"],
+            "analysis_dir": None if analysis_info is None else analysis_info["output_dir"],
             "log_path": args.log_path,
             "checkpoint_path": args.model_path if args.load else "",
+            "test_audio_noise_std": args.test_audio_noise_std,
+            "test_visual_mask_ratio": args.test_visual_mask_ratio,
+            "test_corruption_seed": args.test_corruption_seed,
+            "correlation_control": args.correlation_control,
+            "reliability_path": str(reliability_path),
+            "efficiency_path": None if efficiency_path is None else str(efficiency_path),
+            "efficiency_profile": efficiency_profile,
         }
         metrics_path = write_metrics_summary(summary)
         print(f"Metrics summary saved to: {metrics_path}")

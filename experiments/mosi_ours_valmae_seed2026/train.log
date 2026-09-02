@@ -1,0 +1,200 @@
+Using device: cuda:0, visible GPUs: 0
+GPU name: NVIDIA GeForce RTX 3090
+Seed: 2026
+Command script saved to: /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/command.sh
+train labels: n=1281 min=-3.000 max=3.000 mean=0.235 std=1.509
+dev labels: n=229 min=-3.000 max=3.000 mean=0.310 std=1.649
+test labels: n=685 min=-3.000 max=3.000 mean=-0.315 std=1.588
+BERT load: missing=3 unexpected=10
+BERT missing keys (first 5): ['linear1.weight', 'linear1.bias', 'proj_l.weight']
+BERT unexpected keys (first 5): ['pooler.dense.weight', 'pooler.dense.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias']
+conv audio std 0.03885459154844284
+conv video std 0.04830261692404747
+total parameter for the model:  111150839
+epoch:0, train_loss:3.3038, valid_mse:2.8029, valid_mae:1.4362, test_acc2:0.4964
+current mae:1.4167, current corr:0.1876, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.4824, f_score_non_zero:0.3946, acc2:0.4964, f_score:0.4096
+Saved best model at epoch 0 by valid_mae=1.4362 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:1, train_loss:3.2586, valid_mse:2.7152, valid_mae:1.4082, test_acc2:0.5314
+current mae:1.4094, current corr:0.4083, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.5160, f_score_non_zero:0.4505, acc2:0.5314, f_score:0.4651
+Saved best model at epoch 1 by valid_mae=1.4082 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:2, train_loss:3.2282, valid_mse:2.6345, valid_mae:1.3860, test_acc2:0.6409
+current mae:1.3894, current corr:0.6252, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.6366, f_score_non_zero:0.6266, acc2:0.6409, f_score:0.6294
+Saved best model at epoch 2 by valid_mae=1.3860 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:3, train_loss:3.2002, valid_mse:2.6048, valid_mae:1.3777, test_acc2:0.6993
+current mae:1.3808, current corr:0.6307, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.7023, f_score_non_zero:0.7010, acc2:0.6993, f_score:0.6969
+Saved best model at epoch 3 by valid_mae=1.3777 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:4, train_loss:3.1458, valid_mse:2.5289, valid_mae:1.3527, test_acc2:0.7781
+current mae:1.3635, current corr:0.6597, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.7954, f_score_non_zero:0.7964, acc2:0.7781, f_score:0.7784
+Saved best model at epoch 4 by valid_mae=1.3527 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:5, train_loss:3.1223, valid_mse:2.4699, valid_mae:1.3403, test_acc2:0.8088
+current mae:1.3443, current corr:0.6684, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.8244, f_score_non_zero:0.8250, acc2:0.8088, f_score:0.8087
+Saved best model at epoch 5 by valid_mae=1.3403 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:6, train_loss:3.0900, valid_mse:2.4191, valid_mae:1.3270, test_acc2:0.7854
+current mae:1.3291, current corr:0.6507, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.7969, f_score_non_zero:0.7981, acc2:0.7854, f_score:0.7859
+Saved best model at epoch 6 by valid_mae=1.3270 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:7, train_loss:3.0311, valid_mse:2.2947, valid_mae:1.2825, test_acc2:0.8000
+current mae:1.2993, current corr:0.6607, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.8183, f_score_non_zero:0.8184, acc2:0.8000, f_score:0.7994
+Saved best model at epoch 7 by valid_mae=1.2825 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:8, train_loss:3.0037, valid_mse:2.2404, valid_mae:1.2667, test_acc2:0.8088
+current mae:1.2703, current corr:0.6812, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.8290, f_score_non_zero:0.8282, acc2:0.8088, f_score:0.8072
+Saved best model at epoch 8 by valid_mae=1.2667 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:9, train_loss:2.9798, valid_mse:2.1917, valid_mae:1.2519, test_acc2:0.8234
+current mae:1.2436, current corr:0.6931, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.8427, f_score_non_zero:0.8424, acc2:0.8234, f_score:0.8223
+Saved best model at epoch 9 by valid_mae=1.2519 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:10, train_loss:2.9239, valid_mse:2.0984, valid_mae:1.2260, test_acc2:0.8146
+current mae:1.2268, current corr:0.6776, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.8351, f_score_non_zero:0.8353, acc2:0.8146, f_score:0.8141
+Saved best model at epoch 10 by valid_mae=1.2260 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:11, train_loss:2.8676, valid_mse:2.0588, valid_mae:1.2135, test_acc2:0.8029
+current mae:1.2097, current corr:0.6725, acc7:0.1547, acc5:0.1547,acc2_non_zero:0.8244, f_score_non_zero:0.8240, acc2:0.8029, f_score:0.8017
+Saved best model at epoch 11 by valid_mae=1.2135 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:12, train_loss:2.8313, valid_mse:2.0227, valid_mae:1.1982, test_acc2:0.8058
+current mae:1.1920, current corr:0.6749, acc7:0.1752, acc5:0.1752,acc2_non_zero:0.8275, f_score_non_zero:0.8265, acc2:0.8058, f_score:0.8040
+Saved best model at epoch 12 by valid_mae=1.1982 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:13, train_loss:2.8041, valid_mse:1.9849, valid_mae:1.1953, test_acc2:0.8117
+current mae:1.1624, current corr:0.6951, acc7:0.2234, acc5:0.2234,acc2_non_zero:0.8366, f_score_non_zero:0.8349, acc2:0.8117, f_score:0.8088
+Saved best model at epoch 13 by valid_mae=1.1953 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:14, train_loss:2.7628, valid_mse:1.9034, valid_mae:1.1651, test_acc2:0.8102
+current mae:1.1429, current corr:0.6950, acc7:0.2263, acc5:0.2263,acc2_non_zero:0.8351, f_score_non_zero:0.8338, acc2:0.8102, f_score:0.8078
+Saved best model at epoch 14 by valid_mae=1.1651 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:15, train_loss:2.7269, valid_mse:1.8931, valid_mae:1.1584, test_acc2:0.8015
+current mae:1.1257, current corr:0.7040, acc7:0.2204, acc5:0.2204,acc2_non_zero:0.8275, f_score_non_zero:0.8232, acc2:0.8015, f_score:0.7957
+Saved best model at epoch 15 by valid_mae=1.1584 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:16, train_loss:2.6813, valid_mse:1.8965, valid_mae:1.1668, test_acc2:0.8000
+current mae:1.1054, current corr:0.6978, acc7:0.2672, acc5:0.2672,acc2_non_zero:0.8290, f_score_non_zero:0.8249, acc2:0.8000, f_score:0.7940
+epoch:17, train_loss:2.6364, valid_mse:1.8040, valid_mae:1.1403, test_acc2:0.8029
+current mae:1.0899, current corr:0.7032, acc7:0.3124, acc5:0.3124,acc2_non_zero:0.8305, f_score_non_zero:0.8269, acc2:0.8029, f_score:0.7977
+Saved best model at epoch 17 by valid_mae=1.1403 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:18, train_loss:2.5944, valid_mse:1.6960, valid_mae:1.0951, test_acc2:0.8175
+current mae:1.0584, current corr:0.7185, acc7:0.3314, acc5:0.3314,acc2_non_zero:0.8397, f_score_non_zero:0.8381, acc2:0.8175, f_score:0.8150
+Saved best model at epoch 18 by valid_mae=1.0951 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:19, train_loss:2.5442, valid_mse:1.6736, valid_mae:1.0866, test_acc2:0.8117
+current mae:1.0408, current corr:0.7208, acc7:0.3343, acc5:0.3343,acc2_non_zero:0.8321, f_score_non_zero:0.8307, acc2:0.8117, f_score:0.8095
+Saved best model at epoch 19 by valid_mae=1.0866 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:20, train_loss:2.4923, valid_mse:1.5920, valid_mae:1.0451, test_acc2:0.8073
+current mae:1.0201, current corr:0.7209, acc7:0.3285, acc5:0.3285,acc2_non_zero:0.8275, f_score_non_zero:0.8263, acc2:0.8073, f_score:0.8053
+Saved best model at epoch 20 by valid_mae=1.0451 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:21, train_loss:2.4307, valid_mse:1.5592, valid_mae:1.0365, test_acc2:0.7985
+current mae:1.0193, current corr:0.7354, acc7:0.3139, acc5:0.3139,acc2_non_zero:0.8168, f_score_non_zero:0.8163, acc2:0.7985, f_score:0.7973
+Saved best model at epoch 21 by valid_mae=1.0365 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:22, train_loss:2.4136, valid_mse:1.4885, valid_mae:1.0054, test_acc2:0.8058
+current mae:0.9961, current corr:0.7002, acc7:0.3109, acc5:0.3109,acc2_non_zero:0.8260, f_score_non_zero:0.8248, acc2:0.8058, f_score:0.8039
+Saved best model at epoch 22 by valid_mae=1.0054 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:23, train_loss:2.3396, valid_mse:1.4565, valid_mae:1.0015, test_acc2:0.8088
+current mae:0.9722, current corr:0.7024, acc7:0.3255, acc5:0.3255,acc2_non_zero:0.8275, f_score_non_zero:0.8269, acc2:0.8088, f_score:0.8074
+Saved best model at epoch 23 by valid_mae=1.0015 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:24, train_loss:2.2969, valid_mse:1.4343, valid_mae:0.9746, test_acc2:0.8131
+current mae:0.9459, current corr:0.7248, acc7:0.3255, acc5:0.3255,acc2_non_zero:0.8336, f_score_non_zero:0.8334, acc2:0.8131, f_score:0.8122
+Saved best model at epoch 24 by valid_mae=0.9746 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:25, train_loss:2.2604, valid_mse:1.4098, valid_mae:0.9567, test_acc2:0.8190
+current mae:0.9162, current corr:0.7222, acc7:0.3416, acc5:0.3416,acc2_non_zero:0.8382, f_score_non_zero:0.8381, acc2:0.8190, f_score:0.8183
+Saved best model at epoch 25 by valid_mae=0.9567 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:26, train_loss:2.2012, valid_mse:1.3057, valid_mae:0.9340, test_acc2:0.8161
+current mae:0.9033, current corr:0.7263, acc7:0.3504, acc5:0.3504,acc2_non_zero:0.8366, f_score_non_zero:0.8372, acc2:0.8161, f_score:0.8160
+Saved best model at epoch 26 by valid_mae=0.9340 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:27, train_loss:2.1584, valid_mse:1.3187, valid_mae:0.9225, test_acc2:0.8219
+current mae:0.8791, current corr:0.7308, acc7:0.3328, acc5:0.3328,acc2_non_zero:0.8427, f_score_non_zero:0.8428, acc2:0.8219, f_score:0.8213
+Saved best model at epoch 27 by valid_mae=0.9225 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:28, train_loss:2.1207, valid_mse:1.2743, valid_mae:0.9130, test_acc2:0.8102
+current mae:0.8828, current corr:0.7333, acc7:0.3358, acc5:0.3358,acc2_non_zero:0.8290, f_score_non_zero:0.8287, acc2:0.8102, f_score:0.8093
+Saved best model at epoch 28 by valid_mae=0.9130 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:29, train_loss:2.0793, valid_mse:1.2725, valid_mae:0.8990, test_acc2:0.7679
+current mae:0.9711, current corr:0.6922, acc7:0.3022, acc5:0.3022,acc2_non_zero:0.7771, f_score_non_zero:0.7773, acc2:0.7679, f_score:0.7674
+Saved best model at epoch 29 by valid_mae=0.8990 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:30, train_loss:2.0465, valid_mse:1.2188, valid_mae:0.8778, test_acc2:0.8117
+current mae:0.8497, current corr:0.7437, acc7:0.3416, acc5:0.3416,acc2_non_zero:0.8275, f_score_non_zero:0.8279, acc2:0.8117, f_score:0.8116
+Saved best model at epoch 30 by valid_mae=0.8778 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:31, train_loss:1.9961, valid_mse:1.2034, valid_mae:0.8676, test_acc2:0.8117
+current mae:0.8185, current corr:0.7526, acc7:0.3387, acc5:0.3387,acc2_non_zero:0.8366, f_score_non_zero:0.8354, acc2:0.8117, f_score:0.8094
+Saved best model at epoch 31 by valid_mae=0.8676 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:32, train_loss:1.9463, valid_mse:1.1698, valid_mae:0.8432, test_acc2:0.8234
+current mae:0.8103, current corr:0.7503, acc7:0.3358, acc5:0.3401,acc2_non_zero:0.8427, f_score_non_zero:0.8424, acc2:0.8234, f_score:0.8223
+Saved best model at epoch 32 by valid_mae=0.8432 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:33, train_loss:1.9213, valid_mse:1.2518, valid_mae:0.8572, test_acc2:0.7985
+current mae:0.8745, current corr:0.7140, acc7:0.3431, acc5:0.3693,acc2_non_zero:0.8137, f_score_non_zero:0.8148, acc2:0.7985, f_score:0.7990
+epoch:34, train_loss:1.8905, valid_mse:1.1562, valid_mae:0.8187, test_acc2:0.8204
+current mae:0.8047, current corr:0.7458, acc7:0.3752, acc5:0.4000,acc2_non_zero:0.8382, f_score_non_zero:0.8383, acc2:0.8204, f_score:0.8200
+Saved best model at epoch 34 by valid_mae=0.8187 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:35, train_loss:1.8439, valid_mse:1.2466, valid_mae:0.8386, test_acc2:0.8102
+current mae:0.8317, current corr:0.7246, acc7:0.3547, acc5:0.3825,acc2_non_zero:0.8336, f_score_non_zero:0.8337, acc2:0.8102, f_score:0.8096
+epoch:36, train_loss:1.8116, valid_mse:1.1466, valid_mae:0.8068, test_acc2:0.8175
+current mae:0.7989, current corr:0.7443, acc7:0.3869, acc5:0.4234,acc2_non_zero:0.8382, f_score_non_zero:0.8382, acc2:0.8175, f_score:0.8169
+Saved best model at epoch 36 by valid_mae=0.8068 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:37, train_loss:1.8079, valid_mse:1.1818, valid_mae:0.8298, test_acc2:0.8190
+current mae:0.7864, current corr:0.7494, acc7:0.4365, acc5:0.4920,acc2_non_zero:0.8443, f_score_non_zero:0.8429, acc2:0.8190, f_score:0.8166
+epoch:38, train_loss:1.7654, valid_mse:1.1445, valid_mae:0.8203, test_acc2:0.8044
+current mae:0.7877, current corr:0.7495, acc7:0.4321, acc5:0.4861,acc2_non_zero:0.8305, f_score_non_zero:0.8288, acc2:0.8044, f_score:0.8015
+epoch:39, train_loss:1.7424, valid_mse:1.1476, valid_mae:0.8069, test_acc2:0.8190
+current mae:0.7741, current corr:0.7560, acc7:0.4394, acc5:0.5182,acc2_non_zero:0.8427, f_score_non_zero:0.8420, acc2:0.8190, f_score:0.8173
+epoch:40, train_loss:1.6947, valid_mse:1.0987, valid_mae:0.8075, test_acc2:0.8131
+current mae:0.7625, current corr:0.7683, acc7:0.4438, acc5:0.5124,acc2_non_zero:0.8336, f_score_non_zero:0.8327, acc2:0.8131, f_score:0.8114
+epoch:41, train_loss:1.6828, valid_mse:1.1750, valid_mae:0.8040, test_acc2:0.8058
+current mae:0.8322, current corr:0.7396, acc7:0.4292, acc5:0.5036,acc2_non_zero:0.8214, f_score_non_zero:0.8224, acc2:0.8058, f_score:0.8063
+Saved best model at epoch 41 by valid_mae=0.8040 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:42, train_loss:1.6704, valid_mse:1.0470, valid_mae:0.7682, test_acc2:0.8175
+current mae:0.7500, current corr:0.7730, acc7:0.4438, acc5:0.5197,acc2_non_zero:0.8382, f_score_non_zero:0.8377, acc2:0.8175, f_score:0.8164
+Saved best model at epoch 42 by valid_mae=0.7682 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:43, train_loss:1.6510, valid_mse:1.1248, valid_mae:0.7748, test_acc2:0.8204
+current mae:0.7582, current corr:0.7677, acc7:0.4321, acc5:0.5139,acc2_non_zero:0.8397, f_score_non_zero:0.8392, acc2:0.8204, f_score:0.8193
+epoch:44, train_loss:1.6323, valid_mse:1.1912, valid_mae:0.8078, test_acc2:0.8219
+current mae:0.7730, current corr:0.7574, acc7:0.4453, acc5:0.5241,acc2_non_zero:0.8504, f_score_non_zero:0.8491, acc2:0.8219, f_score:0.8194
+epoch:45, train_loss:1.6065, valid_mse:1.1834, valid_mae:0.7939, test_acc2:0.8102
+current mae:0.7870, current corr:0.7606, acc7:0.4365, acc5:0.5182,acc2_non_zero:0.8275, f_score_non_zero:0.8279, acc2:0.8102, f_score:0.8100
+epoch:46, train_loss:1.6050, valid_mse:1.2579, valid_mae:0.8052, test_acc2:0.8248
+current mae:0.7707, current corr:0.7713, acc7:0.4438, acc5:0.5285,acc2_non_zero:0.8473, f_score_non_zero:0.8474, acc2:0.8248, f_score:0.8242
+epoch:47, train_loss:1.5655, valid_mse:1.2356, valid_mae:0.8038, test_acc2:0.8234
+current mae:0.7694, current corr:0.7675, acc7:0.4482, acc5:0.5314,acc2_non_zero:0.8412, f_score_non_zero:0.8414, acc2:0.8234, f_score:0.8229
+epoch:48, train_loss:1.5444, valid_mse:1.2153, valid_mae:0.7964, test_acc2:0.8190
+current mae:0.7473, current corr:0.7750, acc7:0.4453, acc5:0.5299,acc2_non_zero:0.8397, f_score_non_zero:0.8388, acc2:0.8190, f_score:0.8173
+epoch:49, train_loss:1.5485, valid_mse:1.3018, valid_mae:0.8433, test_acc2:0.8175
+current mae:0.7932, current corr:0.7564, acc7:0.4423, acc5:0.5270,acc2_non_zero:0.8443, f_score_non_zero:0.8428, acc2:0.8175, f_score:0.8149
+epoch:50, train_loss:1.5250, valid_mse:1.2182, valid_mae:0.7963, test_acc2:0.8219
+current mae:0.7663, current corr:0.7638, acc7:0.4277, acc5:0.5109,acc2_non_zero:0.8397, f_score_non_zero:0.8397, acc2:0.8219, f_score:0.8213
+epoch:51, train_loss:1.5118, valid_mse:1.2100, valid_mae:0.8055, test_acc2:0.8190
+current mae:0.7687, current corr:0.7629, acc7:0.4496, acc5:0.5314,acc2_non_zero:0.8412, f_score_non_zero:0.8412, acc2:0.8190, f_score:0.8183
+epoch:52, train_loss:1.4784, valid_mse:1.1188, valid_mae:0.7758, test_acc2:0.8175
+current mae:0.7569, current corr:0.7633, acc7:0.4350, acc5:0.5153,acc2_non_zero:0.8382, f_score_non_zero:0.8383, acc2:0.8175, f_score:0.8170
+epoch:53, train_loss:1.4526, valid_mse:1.1732, valid_mae:0.7923, test_acc2:0.8161
+current mae:0.7576, current corr:0.7637, acc7:0.4423, acc5:0.5241,acc2_non_zero:0.8336, f_score_non_zero:0.8331, acc2:0.8161, f_score:0.8149
+epoch:54, train_loss:1.4434, valid_mse:1.1666, valid_mae:0.7793, test_acc2:0.8234
+current mae:0.7531, current corr:0.7668, acc7:0.4423, acc5:0.5124,acc2_non_zero:0.8473, f_score_non_zero:0.8469, acc2:0.8234, f_score:0.8221
+epoch:55, train_loss:1.4138, valid_mse:1.1043, valid_mae:0.7684, test_acc2:0.8161
+current mae:0.7539, current corr:0.7719, acc7:0.4307, acc5:0.5036,acc2_non_zero:0.8382, f_score_non_zero:0.8376, acc2:0.8161, f_score:0.8147
+epoch:56, train_loss:1.4041, valid_mse:1.0834, valid_mae:0.7663, test_acc2:0.8146
+current mae:0.7582, current corr:0.7708, acc7:0.4380, acc5:0.5109,acc2_non_zero:0.8321, f_score_non_zero:0.8322, acc2:0.8146, f_score:0.8142
+Saved best model at epoch 56 by valid_mae=0.7663 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:57, train_loss:1.3936, valid_mse:1.0671, valid_mae:0.7567, test_acc2:0.8234
+current mae:0.7693, current corr:0.7704, acc7:0.4409, acc5:0.5109,acc2_non_zero:0.8382, f_score_non_zero:0.8387, acc2:0.8234, f_score:0.8234
+Saved best model at epoch 57 by valid_mae=0.7567 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:58, train_loss:1.3887, valid_mse:1.1040, valid_mae:0.7706, test_acc2:0.8073
+current mae:0.7455, current corr:0.7713, acc7:0.4350, acc5:0.5066,acc2_non_zero:0.8321, f_score_non_zero:0.8307, acc2:0.8073, f_score:0.8049
+epoch:59, train_loss:1.3644, valid_mse:1.0939, valid_mae:0.7613, test_acc2:0.8248
+current mae:0.7349, current corr:0.7803, acc7:0.4423, acc5:0.5182,acc2_non_zero:0.8458, f_score_non_zero:0.8453, acc2:0.8248, f_score:0.8236
+epoch:60, train_loss:1.3460, valid_mse:1.0809, valid_mae:0.7620, test_acc2:0.8102
+current mae:0.7494, current corr:0.7709, acc7:0.4190, acc5:0.4949,acc2_non_zero:0.8336, f_score_non_zero:0.8327, acc2:0.8102, f_score:0.8084
+epoch:61, train_loss:1.3343, valid_mse:1.0726, valid_mae:0.7605, test_acc2:0.8219
+current mae:0.7447, current corr:0.7720, acc7:0.4321, acc5:0.5139,acc2_non_zero:0.8427, f_score_non_zero:0.8418, acc2:0.8219, f_score:0.8202
+epoch:62, train_loss:1.3123, valid_mse:1.1030, valid_mae:0.7741, test_acc2:0.8131
+current mae:0.7440, current corr:0.7709, acc7:0.4482, acc5:0.5255,acc2_non_zero:0.8366, f_score_non_zero:0.8361, acc2:0.8131, f_score:0.8117
+epoch:63, train_loss:1.3113, valid_mse:1.2319, valid_mae:0.8120, test_acc2:0.8161
+current mae:0.7466, current corr:0.7704, acc7:0.4380, acc5:0.5153,acc2_non_zero:0.8397, f_score_non_zero:0.8380, acc2:0.8161, f_score:0.8133
+epoch:64, train_loss:1.2872, valid_mse:1.0939, valid_mae:0.7781, test_acc2:0.8277
+current mae:0.7584, current corr:0.7696, acc7:0.4307, acc5:0.5007,acc2_non_zero:0.8412, f_score_non_zero:0.8413, acc2:0.8277, f_score:0.8274
+epoch:65, train_loss:1.2888, valid_mse:1.0325, valid_mae:0.7507, test_acc2:0.8277
+current mae:0.7396, current corr:0.7740, acc7:0.4657, acc5:0.5372,acc2_non_zero:0.8443, f_score_non_zero:0.8446, acc2:0.8277, f_score:0.8275
+Saved best model at epoch 65 by valid_mae=0.7507 -> /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/best_model.pt
+epoch:66, train_loss:1.2757, valid_mse:1.0815, valid_mae:0.7808, test_acc2:0.8161
+current mae:0.7530, current corr:0.7732, acc7:0.4628, acc5:0.5285,acc2_non_zero:0.8305, f_score_non_zero:0.8309, acc2:0.8161, f_score:0.8159
+epoch:67, train_loss:1.2559, valid_mse:1.0879, valid_mae:0.7689, test_acc2:0.8190
+current mae:0.7487, current corr:0.7704, acc7:0.4453, acc5:0.5182,acc2_non_zero:0.8382, f_score_non_zero:0.8384, acc2:0.8190, f_score:0.8186
+epoch:68, train_loss:1.2406, valid_mse:1.0781, valid_mae:0.7681, test_acc2:0.8219
+current mae:0.7436, current corr:0.7683, acc7:0.4526, acc5:0.5255,acc2_non_zero:0.8427, f_score_non_zero:0.8422, acc2:0.8219, f_score:0.8206
+epoch:69, train_loss:1.2162, valid_mse:1.1774, valid_mae:0.7979, test_acc2:0.8204
+current mae:0.7584, current corr:0.7608, acc7:0.4438, acc5:0.5212,acc2_non_zero:0.8458, f_score_non_zero:0.8447, acc2:0.8204, f_score:0.8184
+Loading best model from epoch 65 by valid_mae=0.7507 for analysis export.
+Analysis files exported to: /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/analysis
+  predictions: /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/analysis/predictions.csv
+  repr: /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/analysis/repr.npz
+  repr meta: /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/analysis/repr_meta.json
+  cases: /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/analysis/cases.csv
+Metrics summary saved to: /data01/lyw/GLoMo/experiments/mosi_ours_valmae_seed2026/metrics.json
+Total runtime: 471845.4086780548 ms

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -euo pipefail
+python main_cgmsa.py --dataset mosei --max_seq_length 80 --train_batch_size 64 --d_l 192 --layers 3 --VISUAL_DIM 35 --learning_rate 1e-5 --n_epochs 100 --use_fusion_correlation --use_moe_reliability --corr_model_path /data01/lyw/GLoMo/pretrained-model/correlation_glomo_mosei_012112.pt --corr_alpha 0.2 --moe_reliability_lambda 0.1 --seed 42 --test 1 --load 1 --model_path /data01/lyw/GLoMo/experiments/mosei_ours_valmae_seed42/best_model.pt --test_audio_noise_std 0.0 --test_visual_mask_ratio 0.1 --test_corruption_seed 20260831 --experiment_tag mosei_ours_valmae_seed42_corrupt_visual_m010 --log_path /data01/lyw/GLoMo/experiments/mosei_ours_valmae_seed42_corrupt_visual_m010/test.log

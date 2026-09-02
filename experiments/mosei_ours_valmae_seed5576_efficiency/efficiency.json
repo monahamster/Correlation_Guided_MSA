@@ -1,0 +1,11 @@
+{
+  "protocol": "single-sample forward pass; excludes data loading and checkpoint loading",
+  "device": "cuda:0",
+  "warmup_iterations": 20,
+  "timed_iterations": 100,
+  "total_parameters": 117281879,
+  "trainable_parameters": 115952151,
+  "latency_ms_per_sample": 32.77121904771775,
+  "throughput_samples_per_second": 30.514580447676142,
+  "peak_gpu_memory_mib": 472.74169921875
+}
