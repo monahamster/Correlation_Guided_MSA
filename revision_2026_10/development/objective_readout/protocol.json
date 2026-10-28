@@ -1,0 +1,33 @@
+{
+  "version": "objective-readout-cross-v1-20261020",
+  "datasets": [
+    "mosi",
+    "mosei"
+  ],
+  "pretraining_seeds": [
+    5576,
+    42,
+    2026
+  ],
+  "objectives": [
+    "sentence",
+    "word_sentence"
+  ],
+  "readouts": [
+    "sentence",
+    "aligned_word_mean"
+  ],
+  "epochs": 20,
+  "selection": "Per run: minimum original sentence dev loss over five fixed same-length donor maps; earliest tie. Readouts evaluated on the same selected checkpoint.",
+  "comparison": "Within each dataset hold architecture, positional mode, optimizer, examples, initialization, order, donors and dropout schedule fixed between objectives.",
+  "dataset_positional_mode": {
+    "mosi": false,
+    "mosei": true
+  },
+  "pretraining_labels": "No sentiment labels; train/dev only",
+  "readout_metric": "Per-pair utterance-level matched-vs-same-length-negative AUC; report all three pairs and seeds, five donor maps are not independent training seeds.",
+  "configuration_selection": "Use this objective/readout comparison to characterize candidates; final dataset configuration requires paired downstream dev-MAE comparison at fixed budget. No test-based selection.",
+  "mosi_evidence": "/data01/lyw/GLoMo_mosi_regularization_20261020/word_readout_diagnostic_v2.json",
+  "mosei_sentence_seed5576_reference": "/data01/lyw/GLoMo_length_pretrain_20261020",
+  "scope": "Pretraining/readout factorial comparison; no new downstream training in this stage"
+}

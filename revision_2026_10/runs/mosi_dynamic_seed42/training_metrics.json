@@ -1,0 +1,15 @@
+{
+  "protocol": "mosi-word-downstream-v3-replicates-dev-20261020",
+  "dataset": "mosi",
+  "seed": 42,
+  "evaluation_split": "dev",
+  "test_evaluated": false,
+  "best_epoch": 66,
+  "epoch_index": "zero_based",
+  "valid_mae": 0.7523786386548171,
+  "valid_mse": 1.084415918874949,
+  "reloaded_dev_mae": 0.752378635059668,
+  "correlation_control": "none",
+  "checkpoint_path": "/data01/lyw/GLoMo_mosi_downstream_word_replicates_20261020/runs/mosi-word-downstream-v3-replicates-dev-20261020_mosi_dynamic_seed42/best_model.pt",
+  "checkpoint_sha256": "44c9d4a9db3d9905358e4f0102eac8549462429c66142c10a7802ab398382745"
+}

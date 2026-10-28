@@ -1,0 +1,12 @@
+[
+  {
+    "readout": "sentence",
+    "root": "/data01/lyw/GLoMo_mosei_readout_replicates_20261020/sentence",
+    "pilot_root": "/data01/lyw/GLoMo_mosei_downstream_20261020"
+  },
+  {
+    "readout": "word",
+    "root": "/data01/lyw/GLoMo_mosei_readout_replicates_20261020/word",
+    "pilot_root": "/data01/lyw/GLoMo_mosei_downstream_cross_20261020/sentence_word"
+  }
+]

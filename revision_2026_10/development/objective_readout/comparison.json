@@ -1,0 +1,1069 @@
+{
+  "scope": "Three pretrained seeds per dataset; both objectives and both readouts at existing sentence-loss-selected checkpoints. MOSI no extra positions; MOSEI with positions. AUC uses utterances; five donor maps averaged within seed. Final configuration selection awaits downstream dev comparison.",
+  "paired_mosei_checks": {
+    "5576": {
+      "train": true,
+      "dev": true,
+      "initial_state_sha256": true,
+      "anchor_order_sha256": true,
+      "train_donors_sha256": true,
+      "dev_maps": true
+    },
+    "42": {
+      "train": true,
+      "dev": true,
+      "initial_state_sha256": true,
+      "anchor_order_sha256": true,
+      "train_donors_sha256": true,
+      "dev_maps": true
+    },
+    "2026": {
+      "train": true,
+      "dev": true,
+      "initial_state_sha256": true,
+      "anchor_order_sha256": true,
+      "train_donors_sha256": true,
+      "dev_maps": true
+    }
+  },
+  "summary": {
+    "mosi": {
+      "sentence": {
+        "sentence_auc": {
+          "text_audio": {
+            "mean": 0.5012431350269189,
+            "sample_sd": 0.008366243187269242,
+            "per_seed": {
+              "5576": 0.5070692313935558,
+              "42": 0.4916565213862512,
+              "2026": 0.5050036523009496
+            }
+          },
+          "text_visual": {
+            "mean": 0.5024551578605633,
+            "sample_sd": 0.01071908905665857,
+            "per_seed": {
+              "5576": 0.5141993344696048,
+              "42": 0.49319860400941484,
+              "2026": 0.4999675351026703
+            }
+          },
+          "audio_visual": {
+            "mean": 0.5000081162243325,
+            "sample_sd": 0.006121312135163089,
+            "per_seed": {
+              "5576": 0.5014203392581771,
+              "42": 0.5052998944890836,
+              "2026": 0.49330411492573656
+            }
+          }
+        },
+        "word_average_auc": {
+          "text_audio": {
+            "mean": 0.49686307929551177,
+            "sample_sd": 0.0183451753077311,
+            "per_seed": {
+              "5576": 0.47932391851310774,
+              "42": 0.4953453453453454,
+              "2026": 0.5159199740280821
+            }
+          },
+          "text_visual": {
+            "mean": 0.5208005302599897,
+            "sample_sd": 0.024164422496878286,
+            "per_seed": {
+              "5576": 0.5486689392094798,
+              "42": 0.5080634688742798,
+              "2026": 0.5056691826962096
+            }
+          },
+          "audio_visual": {
+            "mean": 0.5148824500175851,
+            "sample_sd": 0.018615243186301134,
+            "per_seed": {
+              "5576": 0.5218975732489246,
+              "42": 0.4937789140491843,
+              "2026": 0.5289708627546466
+            }
+          }
+        }
+      },
+      "word_sentence": {
+        "sentence_auc": {
+          "text_audio": {
+            "mean": 0.5132375618862106,
+            "sample_sd": 0.013953110989142379,
+            "per_seed": {
+              "5576": 0.5283053323593865,
+              "42": 0.5106444282119958,
+              "2026": 0.5007629250872495
+            }
+          },
+          "text_visual": {
+            "mean": 0.507768579390201,
+            "sample_sd": 0.009755622589486276,
+            "per_seed": {
+              "5576": 0.5190284879474069,
+              "42": 0.5018504991477964,
+              "2026": 0.5024267510753997
+            }
+          },
+          "audio_visual": {
+            "mean": 0.5065795525254985,
+            "sample_sd": 0.006949773106331575,
+            "per_seed": {
+              "5576": 0.5133836539241945,
+              "42": 0.4994927359792225,
+              "2026": 0.5068622676730785
+            }
+          }
+        },
+        "word_average_auc": {
+          "text_audio": {
+            "mean": 0.563568974379785,
+            "sample_sd": 0.010902174287966889,
+            "per_seed": {
+              "5576": 0.5735127018910803,
+              "42": 0.5652828504179854,
+              "2026": 0.5519113708302897
+            }
+          },
+          "text_visual": {
+            "mean": 0.545736276817358,
+            "sample_sd": 0.027672067297709626,
+            "per_seed": {
+              "5576": 0.5748234721207695,
+              "42": 0.5197386575764955,
+              "2026": 0.5426467007548089
+            }
+          },
+          "audio_visual": {
+            "mean": 0.671769066363661,
+            "sample_sd": 0.008061110998517449,
+            "per_seed": {
+              "5576": 0.6806387468549631,
+              "42": 0.6697792386981577,
+              "2026": 0.6648892135378622
+            }
+          }
+        }
+      }
+    },
+    "mosei": {
+      "sentence": {
+        "sentence_auc": {
+          "text_audio": {
+            "mean": 0.7034453064133567,
+            "sample_sd": 0.009379436477477,
+            "per_seed": {
+              "5576": 0.6938911360135686,
+              "42": 0.712639653164697,
+              "2026": 0.7038051300618042
+            }
+          },
+          "text_visual": {
+            "mean": 0.6685689400287863,
+            "sample_sd": 0.003645648065522306,
+            "per_seed": {
+              "5576": 0.6725380548867096,
+              "42": 0.6653697446903611,
+              "2026": 0.6677990205092881
+            }
+          },
+          "audio_visual": {
+            "mean": 0.7214568769617714,
+            "sample_sd": 0.008366029483705524,
+            "per_seed": {
+              "5576": 0.7128285684695335,
+              "42": 0.7220087621127416,
+              "2026": 0.7295333003030391
+            }
+          }
+        },
+        "word_average_auc": {
+          "text_audio": {
+            "mean": 0.7052128001092468,
+            "sample_sd": 0.009684931771199829,
+            "per_seed": {
+              "5576": 0.6947173141378935,
+              "42": 0.7138044157123599,
+              "2026": 0.7071166704774867
+            }
+          },
+          "text_visual": {
+            "mean": 0.6690426483831461,
+            "sample_sd": 0.005005587737368898,
+            "per_seed": {
+              "5576": 0.6744864501681016,
+              "42": 0.6646385836487421,
+              "2026": 0.6680029113325945
+            }
+          },
+          "audio_visual": {
+            "mean": 0.7219039908609174,
+            "sample_sd": 0.008474234432126785,
+            "per_seed": {
+              "5576": 0.7132201409821703,
+              "42": 0.7223400595979734,
+              "2026": 0.7301517720026084
+            }
+          }
+        }
+      },
+      "word_sentence": {
+        "sentence_auc": {
+          "text_audio": {
+            "mean": 0.7055213856810901,
+            "sample_sd": 0.0070470858774322,
+            "per_seed": {
+              "5576": 0.6989128404742935,
+              "42": 0.7129374422101341,
+              "2026": 0.7047138743588427
+            }
+          },
+          "text_visual": {
+            "mean": 0.6664911298741798,
+            "sample_sd": 0.005311432207497618,
+            "per_seed": {
+              "5576": 0.6604105529781916,
+              "42": 0.6702251405676181,
+              "2026": 0.6688376960767297
+            }
+          },
+          "audio_visual": {
+            "mean": 0.7322676807942418,
+            "sample_sd": 0.0037871271678719906,
+            "per_seed": {
+              "5576": 0.7354894828540355,
+              "42": 0.7280960521721818,
+              "2026": 0.7332175073565083
+            }
+          }
+        },
+        "word_average_auc": {
+          "text_audio": {
+            "mean": 0.7177936509348175,
+            "sample_sd": 0.006783967575945277,
+            "per_seed": {
+              "5576": 0.7111828393181377,
+              "42": 0.7247384376517813,
+              "2026": 0.7174596758345337
+            }
+          },
+          "text_visual": {
+            "mean": 0.6679320023482683,
+            "sample_sd": 0.005199539849035346,
+            "per_seed": {
+              "5576": 0.6619615519342087,
+              "42": 0.67146541185975,
+              "2026": 0.6703690432508466
+            }
+          },
+          "audio_visual": {
+            "mean": 0.7330006109743774,
+            "sample_sd": 0.00391688512701597,
+            "per_seed": {
+              "5576": 0.7363871246115187,
+              "42": 0.728711081223827,
+              "2026": 0.7339036270877868
+            }
+          }
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "seed": 5576,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5283053323593865,
+          "word_average_auc": 0.5735127018910803,
+          "word_auc_each": [
+            0.5801680058436816,
+            0.5843072802532262,
+            0.5691705218732246,
+            0.5594310526742958,
+            0.5744866488109732
+          ],
+          "aligned_word_cosine_mean": 0.02922450378537178,
+          "within_sample_one_word_shift_auc": 0.5504626247869492,
+          "alignment_drop_mean": 0.0067266798578202724,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5190284879474069,
+          "word_average_auc": 0.5748234721207695,
+          "word_auc_each": [
+            0.5723155588020453,
+            0.562860157454752,
+            0.5685618050482916,
+            0.5967453940426914,
+            0.5736344452560669
+          ],
+          "aligned_word_cosine_mean": 0.024625765159726143,
+          "within_sample_one_word_shift_auc": 0.5267226686145605,
+          "alignment_drop_mean": 0.003249476896598935,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5133836539241945,
+          "word_average_auc": 0.6806387468549631,
+          "word_auc_each": [
+            0.6705624543462382,
+            0.684542650758867,
+            0.6806671536401265,
+            0.6888848307767227,
+            0.678536644752861
+          ],
+          "aligned_word_cosine_mean": 0.05774199962615967,
+          "within_sample_one_word_shift_auc": 0.6442253063874686,
+          "alignment_drop_mean": 0.032389573752880096,
+          "shift_eligible": 222
+        }
+      },
+      "dataset": "mosi"
+    },
+    {
+      "seed": 5576,
+      "family": "sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5070692313935558,
+          "word_average_auc": 0.47932391851310774,
+          "word_auc_each": [
+            0.48786624462300143,
+            0.4975042610177745,
+            0.46743364986608227,
+            0.46272623975326677,
+            0.48108919730541355
+          ],
+          "aligned_word_cosine_mean": 0.011148271150887012,
+          "within_sample_one_word_shift_auc": 0.4926751075399724,
+          "alignment_drop_mean": -0.001577305723913014,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5141993344696048,
+          "word_average_auc": 0.5486689392094798,
+          "word_auc_each": [
+            0.5560628195763331,
+            0.539221654086519,
+            0.5449030111192272,
+            0.5676690203717231,
+            0.5354881908935962
+          ],
+          "aligned_word_cosine_mean": 0.01929198019206524,
+          "within_sample_one_word_shift_auc": 0.49738251765278796,
+          "alignment_drop_mean": -0.0006669011781923473,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5014203392581771,
+          "word_average_auc": 0.5218975732489246,
+          "word_auc_each": [
+            0.5496915834753673,
+            0.4999391283175067,
+            0.527412547682818,
+            0.5035102670237805,
+            0.5289343397451506
+          ],
+          "aligned_word_cosine_mean": 0.0109575679525733,
+          "within_sample_one_word_shift_auc": 0.5287517246976706,
+          "alignment_drop_mean": 0.006294482387602329,
+          "shift_eligible": 222
+        }
+      },
+      "dataset": "mosi"
+    },
+    {
+      "seed": 42,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5106444282119958,
+          "word_average_auc": 0.5652828504179854,
+          "word_auc_each": [
+            0.5552714877039201,
+            0.5637123610096583,
+            0.5801274247220193,
+            0.5614195276357439,
+            0.5658834510185861
+          ],
+          "aligned_word_cosine_mean": 0.0041177719831466675,
+          "within_sample_one_word_shift_auc": 0.5779157535914293,
+          "alignment_drop_mean": 0.007937727496027946,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5018504991477964,
+          "word_average_auc": 0.5197386575764955,
+          "word_auc_each": [
+            0.5191948705462219,
+            0.5142439737034332,
+            0.528629981332684,
+            0.5231921110299489,
+            0.5134323512701892
+          ],
+          "aligned_word_cosine_mean": 0.0592062883079052,
+          "within_sample_one_word_shift_auc": 0.515806346887428,
+          "alignment_drop_mean": 0.0016769941430538893,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.4994927359792225,
+          "word_average_auc": 0.6697792386981577,
+          "word_auc_each": [
+            0.6476747017287557,
+            0.6825744663582501,
+            0.6921110299488678,
+            0.6714552390228066,
+            0.6550807564321077
+          ],
+          "aligned_word_cosine_mean": 0.03999490290880203,
+          "within_sample_one_word_shift_auc": 0.6093255417579743,
+          "alignment_drop_mean": 0.017661038786172867,
+          "shift_eligible": 222
+        }
+      },
+      "dataset": "mosi"
+    },
+    {
+      "seed": 42,
+      "family": "sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.4916565213862512,
+          "word_average_auc": 0.4953453453453454,
+          "word_auc_each": [
+            0.4955157860563267,
+            0.49446067689310935,
+            0.504200146092038,
+            0.48867786705624544,
+            0.4938722506290074
+          ],
+          "aligned_word_cosine_mean": 0.03964722156524658,
+          "within_sample_one_word_shift_auc": 0.5300503205908611,
+          "alignment_drop_mean": 0.0015595692675560713,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.49319860400941484,
+          "word_average_auc": 0.5080634688742798,
+          "word_auc_each": [
+            0.5064118172226282,
+            0.5092524957389822,
+            0.5087655222790358,
+            0.5170237805372941,
+            0.4988637285934583
+          ],
+          "aligned_word_cosine_mean": 0.12002045661211014,
+          "within_sample_one_word_shift_auc": 0.5003652300949598,
+          "alignment_drop_mean": 0.00029288369114510715,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5052998944890836,
+          "word_average_auc": 0.4937789140491843,
+          "word_auc_each": [
+            0.4641465790114439,
+            0.5065132700267836,
+            0.5120931742553364,
+            0.4795268241214187,
+            0.506614722830939
+          ],
+          "aligned_word_cosine_mean": 0.033181872218847275,
+          "within_sample_one_word_shift_auc": 0.4532911289668047,
+          "alignment_drop_mean": -0.007410512305796146,
+          "shift_eligible": 222
+        }
+      },
+      "dataset": "mosi"
+    },
+    {
+      "seed": 2026,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5007629250872495,
+          "word_average_auc": 0.5519113708302897,
+          "word_auc_each": [
+            0.5610542975407841,
+            0.5546221897573249,
+            0.540641993344696,
+            0.5455320185049914,
+            0.5577063550036523
+          ],
+          "aligned_word_cosine_mean": 0.02304539829492569,
+          "within_sample_one_word_shift_auc": 0.5467697427156886,
+          "alignment_drop_mean": 0.00478628184646368,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5024267510753997,
+          "word_average_auc": 0.5426467007548089,
+          "word_auc_each": [
+            0.5347171495820144,
+            0.5602629656683711,
+            0.5365230094959824,
+            0.5458769580391202,
+            0.5358534209885562
+          ],
+          "aligned_word_cosine_mean": 0.016942931339144707,
+          "within_sample_one_word_shift_auc": 0.4860806752698644,
+          "alignment_drop_mean": -0.0013807177310809493,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5068622676730785,
+          "word_average_auc": 0.6648892135378622,
+          "word_auc_each": [
+            0.6648608067526987,
+            0.6714349484619755,
+            0.6664840516191868,
+            0.6543705868030193,
+            0.6672956740524307
+          ],
+          "aligned_word_cosine_mean": -0.02038472332060337,
+          "within_sample_one_word_shift_auc": 0.6093255417579742,
+          "alignment_drop_mean": 0.018873941153287888,
+          "shift_eligible": 222
+        }
+      },
+      "dataset": "mosi"
+    },
+    {
+      "seed": 2026,
+      "family": "sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5050036523009496,
+          "word_average_auc": 0.5159199740280821,
+          "word_auc_each": [
+            0.5241254768281796,
+            0.5186876065254444,
+            0.5076698319941563,
+            0.5091510429348267,
+            0.5199659118578037
+          ],
+          "aligned_word_cosine_mean": -0.012750155292451382,
+          "within_sample_one_word_shift_auc": 0.5029421313205097,
+          "alignment_drop_mean": -0.00028907967498525977,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.4999675351026703,
+          "word_average_auc": 0.5056691826962096,
+          "word_auc_each": [
+            0.4954143332521711,
+            0.5192557422287152,
+            0.5113018423829234,
+            0.5002231961691421,
+            0.5021507994480968
+          ],
+          "aligned_word_cosine_mean": 0.043075382709503174,
+          "within_sample_one_word_shift_auc": 0.486587939290642,
+          "alignment_drop_mean": -0.001220006844960153,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.49330411492573656,
+          "word_average_auc": 0.5289708627546466,
+          "word_auc_each": [
+            0.5402970538105674,
+            0.5166382598815031,
+            0.5372331791250711,
+            0.4948664881097314,
+            0.55581933284636
+          ],
+          "aligned_word_cosine_mean": -0.06229081749916077,
+          "within_sample_one_word_shift_auc": 0.5422246570895219,
+          "alignment_drop_mean": 0.003628550795838237,
+          "shift_eligible": 222
+        }
+      },
+      "dataset": "mosi"
+    },
+    {
+      "dataset": "mosei",
+      "seed": 5576,
+      "family": "sentence",
+      "checkpoint": "best",
+      "checkpoint_path": "/data01/lyw/GLoMo_length_pretrain_20261020/runs/mosei_same_length/best_correlation.pt",
+      "checkpoint_sha256": "2bfb5d27e0fbae49fea8267080269c5b2d6d6a0975acdd1fe8dc947aec566408",
+      "selected_epoch": 15,
+      "sentence_selection_loss": 0.280175918340683,
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.6938911360135686,
+          "word_average_auc": 0.6947173141378935,
+          "sentence_auc_each": [
+            0.6962784115278213,
+            0.6965964261298125,
+            0.6970108348736793,
+            0.6868231790042083,
+            0.6927468285323217
+          ],
+          "word_auc_each": [
+            0.6965389052207469,
+            0.6977020898881111,
+            0.6974796087660143,
+            0.6880335566368657,
+            0.6938324101777296
+          ],
+          "aligned_word_cosine_mean": 0.13221475481987,
+          "within_sample_one_word_shift_auc": 0.5070917112800368,
+          "alignment_drop_mean": 0.0031988555565476418,
+          "shift_eligible": 1867
+        },
+        "text_visual": {
+          "sentence_auc": 0.6725380548867096,
+          "word_average_auc": 0.6744864501681016,
+          "sentence_auc_each": [
+            0.6775581527784034,
+            0.6699963766130598,
+            0.6794531870169713,
+            0.6648645361074956,
+            0.670818021917618
+          ],
+          "word_auc_each": [
+            0.6787467269742079,
+            0.67160667517957,
+            0.6812618681701093,
+            0.6675265636148262,
+            0.6732904169017947
+          ],
+          "aligned_word_cosine_mean": 0.13931988179683685,
+          "within_sample_one_word_shift_auc": 0.50423546105232,
+          "alignment_drop_mean": 0.002106185769662261,
+          "shift_eligible": 1867
+        },
+        "audio_visual": {
+          "sentence_auc": 0.7128285684695335,
+          "word_average_auc": 0.7132201409821703,
+          "sentence_auc_each": [
+            0.7245081245056573,
+            0.7175657380793294,
+            0.7057029471074442,
+            0.7058403661370822,
+            0.7105256665181546
+          ],
+          "word_auc_each": [
+            0.7246656256481859,
+            0.718640131118984,
+            0.7063673781568006,
+            0.7053658544982069,
+            0.7110617154886739
+          ],
+          "aligned_word_cosine_mean": 0.15590588748455048,
+          "within_sample_one_word_shift_auc": 0.5005079340124721,
+          "alignment_drop_mean": 0.0002964084269478917,
+          "shift_eligible": 1867
+        }
+      },
+      "original_sentence_auc_reproduced": true
+    },
+    {
+      "dataset": "mosei",
+      "seed": 5576,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "checkpoint_path": "/data01/lyw/GLoMo_objective_readout_cross_20261020/mosei_seed5576_word_sentence/runs/mosei_same_length/best_correlation.pt",
+      "checkpoint_sha256": "ac5dbd234a7804cec1c56d4e7e5f0767132643edb54e570ea04f1e151b452ad8",
+      "selected_epoch": 20,
+      "sentence_selection_loss": 0.28057473301887514,
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.6989128404742935,
+          "word_average_auc": 0.7111828393181377,
+          "sentence_auc_each": [
+            0.7015172610063605,
+            0.7028062457666189,
+            0.7020104203214916,
+            0.6927748000467053,
+            0.6954554752302916
+          ],
+          "word_auc_each": [
+            0.7133809126402271,
+            0.7145548555823541,
+            0.7145763721318799,
+            0.7056352416982696,
+            0.707766814537958
+          ],
+          "aligned_word_cosine_mean": 0.20016324520111084,
+          "within_sample_one_word_shift_auc": 0.5250626203313032,
+          "alignment_drop_mean": 0.013798070140182972,
+          "shift_eligible": 1867
+        },
+        "text_visual": {
+          "sentence_auc": 0.6604105529781916,
+          "word_average_auc": 0.6619615519342087,
+          "sentence_auc_each": [
+            0.6666647540844866,
+            0.6562547605365826,
+            0.6708665058758828,
+            0.651250011116884,
+            0.6570167332771226
+          ],
+          "word_auc_each": [
+            0.6679121401823284,
+            0.6579878468790532,
+            0.6721226420371984,
+            0.6529753515015253,
+            0.6588097790709384
+          ],
+          "aligned_word_cosine_mean": 0.18747687339782715,
+          "within_sample_one_word_shift_auc": 0.5019466739574299,
+          "alignment_drop_mean": 0.0011733036953955889,
+          "shift_eligible": 1867
+        },
+        "audio_visual": {
+          "sentence_auc": 0.7354894828540355,
+          "word_average_auc": 0.7363871246115187,
+          "sentence_auc_each": [
+            0.7420050956927025,
+            0.7432920722416716,
+            0.7302222028413894,
+            0.728834098509649,
+            0.7330939449847648
+          ],
+          "word_auc_each": [
+            0.7429258605687427,
+            0.7442453988293276,
+            0.7311050985902643,
+            0.7295550463624265,
+            0.7341042187068325
+          ],
+          "aligned_word_cosine_mean": 0.22143781185150146,
+          "within_sample_one_word_shift_auc": 0.5008212149735676,
+          "alignment_drop_mean": 0.00044934271136298776,
+          "shift_eligible": 1867
+        }
+      },
+      "original_sentence_auc_reproduced": true
+    },
+    {
+      "dataset": "mosei",
+      "seed": 42,
+      "family": "sentence",
+      "checkpoint": "best",
+      "checkpoint_path": "/data01/lyw/GLoMo_objective_readout_cross_20261020/mosei_seed42_sentence/runs/mosei_same_length/best_correlation.pt",
+      "checkpoint_sha256": "cb10bcf9ab0bb4de7a3c0ddb0b94a99888f63451144f98a0dd4e62b34eb4c768",
+      "selected_epoch": 20,
+      "sentence_selection_loss": 0.27879226207733154,
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.712639653164697,
+          "word_average_auc": 0.7138044157123599,
+          "sentence_auc_each": [
+            0.7145844049770361,
+            0.7117614336792524,
+            0.7139047688993482,
+            0.7097449026576956,
+            0.7132027556101534
+          ],
+          "word_auc_each": [
+            0.7151693682368105,
+            0.7128742696207264,
+            0.7150262114606323,
+            0.7114441362955789,
+            0.7145080929480512
+          ],
+          "aligned_word_cosine_mean": 0.14642328023910522,
+          "within_sample_one_word_shift_auc": 0.5106459583743702,
+          "alignment_drop_mean": 0.0049784015864133835,
+          "shift_eligible": 1867
+        },
+        "text_visual": {
+          "sentence_auc": 0.6653697446903611,
+          "word_average_auc": 0.6646385836487421,
+          "sentence_auc_each": [
+            0.6717111021666018,
+            0.6599033935615025,
+            0.669811334287138,
+            0.6597392940104524,
+            0.6656835994261106
+          ],
+          "word_auc_each": [
+            0.6710311792015868,
+            0.659343676386505,
+            0.6689793610388076,
+            0.6579823960198399,
+            0.665856305596971
+          ],
+          "aligned_word_cosine_mean": 0.10992134362459183,
+          "within_sample_one_word_shift_auc": 0.49986128997739043,
+          "alignment_drop_mean": 6.355888763209805e-05,
+          "shift_eligible": 1867
+        },
+        "audio_visual": {
+          "sentence_auc": 0.7220087621127416,
+          "word_average_auc": 0.7223400595979734,
+          "sentence_auc_each": [
+            0.7312244437183008,
+            0.7283680500469204,
+            0.7148111894090379,
+            0.7141933775503208,
+            0.7214467498391279
+          ],
+          "word_auc_each": [
+            0.731205796042045,
+            0.7288363936082651,
+            0.7150049817984335,
+            0.7146638727666181,
+            0.721989253774505
+          ],
+          "aligned_word_cosine_mean": 0.17110201716423035,
+          "within_sample_one_word_shift_auc": 0.49964727203144055,
+          "alignment_drop_mean": -0.00017066595319192857,
+          "shift_eligible": 1867
+        }
+      },
+      "original_sentence_auc_reproduced": true
+    },
+    {
+      "dataset": "mosei",
+      "seed": 42,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "checkpoint_path": "/data01/lyw/GLoMo_objective_readout_cross_20261020/mosei_seed42_word_sentence/runs/mosei_same_length/best_correlation.pt",
+      "checkpoint_sha256": "941963b5a897f7d31f9c676809851c02e2dfd56c750c9d796f89eaa112adca31",
+      "selected_epoch": 20,
+      "sentence_selection_loss": 0.27810987234115603,
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.7129374422101341,
+          "word_average_auc": 0.7247384376517813,
+          "sentence_auc_each": [
+            0.7161774903039256,
+            0.710983969023054,
+            0.7166783955768861,
+            0.7092313743423466,
+            0.7116159818044582
+          ],
+          "word_auc_each": [
+            0.7276581473562329,
+            0.7221915093400473,
+            0.7285649981969131,
+            0.7217106861799776,
+            0.7235668471857357
+          ],
+          "aligned_word_cosine_mean": 0.21562425792217255,
+          "within_sample_one_word_shift_auc": 0.5238238408532718,
+          "alignment_drop_mean": 0.013188529759645462,
+          "shift_eligible": 1867
+        },
+        "text_visual": {
+          "sentence_auc": 0.6702251405676181,
+          "word_average_auc": 0.67146541185975,
+          "sentence_auc_each": [
+            0.6770483539983057,
+            0.6664154489973145,
+            0.6725556984573209,
+            0.6647190842327012,
+            0.6703871171524481
+          ],
+          "word_auc_each": [
+            0.6781376651789645,
+            0.6677291060676955,
+            0.6737187396810215,
+            0.6659531300698371,
+            0.6717884183012313
+          ],
+          "aligned_word_cosine_mean": 0.17475666105747223,
+          "within_sample_one_word_shift_auc": 0.5017140083352244,
+          "alignment_drop_mean": 0.001060575246810913,
+          "shift_eligible": 1867
+        },
+        "audio_visual": {
+          "sentence_auc": 0.7280960521721818,
+          "word_average_auc": 0.728711081223827,
+          "sentence_auc_each": [
+            0.7363637432943673,
+            0.7361878813629099,
+            0.7201663716986799,
+            0.7191120607719163,
+            0.7286502037330352
+          ],
+          "word_auc_each": [
+            0.7368646485673277,
+            0.736763090453566,
+            0.7209165820588126,
+            0.7196757943694919,
+            0.7293352906699364
+          ],
+          "aligned_word_cosine_mean": 0.2213466912508011,
+          "within_sample_one_word_shift_auc": 0.5007340012261565,
+          "alignment_drop_mean": 0.0003962642513215542,
+          "shift_eligible": 1867
+        }
+      },
+      "original_sentence_auc_reproduced": true
+    },
+    {
+      "dataset": "mosei",
+      "seed": 2026,
+      "family": "sentence",
+      "checkpoint": "best",
+      "checkpoint_path": "/data01/lyw/GLoMo_objective_readout_cross_20261020/mosei_seed2026_sentence/runs/mosei_same_length/best_correlation.pt",
+      "checkpoint_sha256": "3dc1a65b73fdcb128863a9ff91aed582356a12ab2f7c002c4c1b9f113e14f766",
+      "selected_epoch": 18,
+      "sentence_selection_loss": 0.2761539161205292,
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.7038051300618042,
+          "word_average_auc": 0.7071166704774867,
+          "sentence_auc_each": [
+            0.7060862285763303,
+            0.7066006175536601,
+            0.7047843338863565,
+            0.6987837985546044,
+            0.7027706717380696
+          ],
+          "word_auc_each": [
+            0.709210718454802,
+            0.7095882621771479,
+            0.708042226371888,
+            0.7030386245014973,
+            0.7057035208820982
+          ],
+          "aligned_word_cosine_mean": 0.14548751711845398,
+          "within_sample_one_word_shift_auc": 0.5117585074285169,
+          "alignment_drop_mean": 0.0051310015842318535,
+          "shift_eligible": 1867
+        },
+        "text_visual": {
+          "sentence_auc": 0.6677990205092881,
+          "word_average_auc": 0.6680029113325945,
+          "sentence_auc_each": [
+            0.6737150101457703,
+            0.6603618395100653,
+            0.6717894224068756,
+            0.6609783603758109,
+            0.6721504701079184
+          ],
+          "word_auc_each": [
+            0.6741315705445896,
+            0.661062131475298,
+            0.6711476554563531,
+            0.6611585256171736,
+            0.6725146735695583
+          ],
+          "aligned_word_cosine_mean": 0.1226479709148407,
+          "within_sample_one_word_shift_auc": 0.5056948568848225,
+          "alignment_drop_mean": 0.0026666149497032166,
+          "shift_eligible": 1867
+        },
+        "audio_visual": {
+          "sentence_auc": 0.7295333003030391,
+          "word_average_auc": 0.7301517720026084,
+          "sentence_auc_each": [
+            0.7377080973087387,
+            0.737416906671823,
+            0.7284858172946583,
+            0.7200071492321891,
+            0.7240485310077864
+          ],
+          "word_auc_each": [
+            0.7377941635068418,
+            0.7383452740620291,
+            0.7287187698041908,
+            0.7208462946636949,
+            0.7250543579762854
+          ],
+          "aligned_word_cosine_mean": 0.16134151816368103,
+          "within_sample_one_word_shift_auc": 0.49996485630244125,
+          "alignment_drop_mean": -5.3066847613081336e-05,
+          "shift_eligible": 1867
+        }
+      },
+      "original_sentence_auc_reproduced": true
+    },
+    {
+      "dataset": "mosei",
+      "seed": 2026,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "checkpoint_path": "/data01/lyw/GLoMo_objective_readout_cross_20261020/mosei_seed2026_word_sentence/runs/mosei_same_length/best_correlation.pt",
+      "checkpoint_sha256": "a1d10e1cd9c09b426947485b5043b7951e43efdc6472da22341babc99c8a01a6",
+      "selected_epoch": 18,
+      "sentence_selection_loss": 0.275104159116745,
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.7047138743588427,
+          "word_average_auc": 0.7174596758345337,
+          "sentence_auc_each": [
+            0.7079168566099845,
+            0.7039446146801968,
+            0.708046242794466,
+            0.7016538193740176,
+            0.7020078383355487
+          ],
+          "word_auc_each": [
+            0.7199956737391087,
+            0.7165696652799489,
+            0.7211057842509759,
+            0.7150095719956656,
+            0.7146176839069692
+          ],
+          "aligned_word_cosine_mean": 0.20506122708320618,
+          "within_sample_one_word_shift_auc": 0.5253962702926165,
+          "alignment_drop_mean": 0.01319933868944645,
+          "shift_eligible": 1867
+        },
+        "text_visual": {
+          "sentence_auc": 0.6688376960767297,
+          "word_average_auc": 0.6703690432508466,
+          "sentence_auc_each": [
+            0.6740159549518043,
+            0.6613237727175316,
+            0.674226817137157,
+            0.6629102596359,
+            0.6717116759412558
+          ],
+          "word_auc_each": [
+            0.6755743269121255,
+            0.6631521056525698,
+            0.6753694893606401,
+            0.6644910088077278,
+            0.6732582855211695
+          ],
+          "aligned_word_cosine_mean": 0.18000981211662292,
+          "within_sample_one_word_shift_auc": 0.5018928825836154,
+          "alignment_drop_mean": 0.001041940413415432,
+          "shift_eligible": 1867
+        },
+        "audio_visual": {
+          "sentence_auc": 0.7332175073565083,
+          "word_average_auc": 0.7339036270877868,
+          "sentence_auc_each": [
+            0.74087963670884,
+            0.7385113818243682,
+            0.7316418647791011,
+            0.7261683414670672,
+            0.728886312003165
+          ],
+          "word_auc_each": [
+            0.7415059117437041,
+            0.739406183397314,
+            0.7322279755881836,
+            0.7267274848674108,
+            0.729650579842321
+          ],
+          "aligned_word_cosine_mean": 0.19546006619930267,
+          "within_sample_one_word_shift_auc": 0.5013244153451442,
+          "alignment_drop_mean": 0.0006915589328855276,
+          "shift_eligible": 1867
+        }
+      },
+      "original_sentence_auc_reproduced": true
+    }
+  ]
+}

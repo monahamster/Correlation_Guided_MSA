@@ -1,0 +1,43 @@
+{
+  "id": "mosi_dynamic_seed5576",
+  "split": "dev",
+  "limit": 2,
+  "samples": 2,
+  "checkpoint_sha256": "3751345f43ec2185d9fd4c6bc5e39d95d8dcc79fe3339d6c7195d04b8b507e3c",
+  "selected_epoch_zero_based": 58,
+  "dev_replay_max_abs_diff": 7.152557373046875e-07,
+  "metrics": {
+    "n": 2,
+    "n_nonzero": 2,
+    "n_zero": 0,
+    "mae": 0.13852643966674805,
+    "mse": 0.02382148397124695,
+    "corr": 1.0,
+    "acc7": 1.0,
+    "acc2": 1.0,
+    "f1": 1.0,
+    "acc2_non_zero": 1.0,
+    "f1_non_zero": 1.0,
+    "confusion2": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "confusion2_nonzero": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  "new_training_started": false
+}

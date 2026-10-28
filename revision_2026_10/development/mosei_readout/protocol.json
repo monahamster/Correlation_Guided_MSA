@@ -1,0 +1,24 @@
+{
+  "dataset": "mosei",
+  "pretraining_seed": 5576,
+  "pretraining_objective": "sentence",
+  "pretraining_checkpoint_epoch": 15,
+  "downstream_seeds": [
+    42,
+    2026
+  ],
+  "pilot_seed": 5576,
+  "readouts": [
+    "sentence",
+    "word"
+  ],
+  "variants": [
+    "dynamic",
+    "constant"
+  ],
+  "epochs": 100,
+  "primary": "Mean dev MAE for dynamic; report per-seed readout effects and paired dynamic-minus-constant effects; all secondary metrics retained",
+  "selection": "Each run: earliest minimum sample-weighted dev MAE; no test evaluation",
+  "aggregation": "Two new seeds and all three seeds including development pilot are separate summaries",
+  "queue": "Six simultaneous jobs maximum; remaining two follow on GPU0 andGPU2 when prior jobs complete and devices are available"
+}

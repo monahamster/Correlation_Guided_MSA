@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": {
+    "mosi": {
+      "initialization_data_orders_negative_maps_match_E2b": true,
+      "epochs": 20,
+      "same_gpu_model": true,
+      "same_physical_gpu_index": true
+    },
+    "mosei": {
+      "initialization_data_orders_negative_maps_match_E2b": true,
+      "epochs": 20,
+      "same_gpu_model": true,
+      "same_physical_gpu_index": true
+    }
+  },
+  "training_engine_identical": true,
+  "frozen_sources_unchanged": true
+}

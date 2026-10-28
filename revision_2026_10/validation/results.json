@@ -1,0 +1,9 @@
+{
+  "clean_runs_verified": 78,
+  "summary_rows": 224,
+  "paired_tests": 4,
+  "prediction_hashes_verified": true,
+  "checkpoint_selection_verified": true,
+  "all_values_match_archived_results": true,
+  "new_training_started": false
+}

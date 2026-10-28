@@ -1,0 +1,14 @@
+{
+  "candidate_count": 32,
+  "dataset_counts": {
+    "mosi": 16,
+    "mosei": 16
+  },
+  "distinct_video_per_dataset": true,
+  "candidate_inputs_untruncated": true,
+  "gain_and_loss_selection_valid": true,
+  "q_scale_max_error": 5.960464477539063e-08,
+  "numerical_figures_inspected": true,
+  "media_review_completed": false,
+  "paper_body_changed": false
+}

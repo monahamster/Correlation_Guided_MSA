@@ -1,0 +1,14 @@
+{
+  "scope": "Training-only descriptive split-sensitivity diagnostic; no tuning, no test evaluation",
+  "splits": {
+    "random": "KFold(5,shuffle=True,random_state=5576), video overlap allowed",
+    "group": "GroupKFold(5), no video overlap"
+  },
+  "models": {
+    "ridge": "StandardScaler fit inside fold; Ridge(alpha=1000,solver=svd)",
+    "extra_trees": "200 trees, max_depth=8, min_samples_leaf=5, max_features=1.0, seed=5576, n_jobs=4"
+  },
+  "features": "Existing pooled GLoMo features: thirds means and q10/q50/q90, same as prior simple baselines",
+  "interpretation": "Different fold constructions confound video exclusion and fold composition; a gap is descriptive, not causal proof. Hyperparameters retained from prior diagnostic; Ridge alpha was previously chosen on training group CV, so these are descriptive scores, not an independent nested-CV estimate.",
+  "test_evaluated": false
+}

@@ -1,0 +1,15 @@
+{
+  "protocol": "mosei-cross-sentence_word-dev-20261020",
+  "dataset": "mosei",
+  "seed": 5576,
+  "evaluation_split": "dev",
+  "test_evaluated": false,
+  "best_epoch": 5,
+  "epoch_index": "zero_based",
+  "valid_mae": 0.5211710636471605,
+  "valid_mse": 0.4930694237183989,
+  "reloaded_dev_mae": 0.5211710682374683,
+  "correlation_control": "none",
+  "checkpoint_path": "/data01/lyw/GLoMo_mosei_downstream_cross_20261020/sentence_word/runs/mosei-cross-sentence_word-dev-20261020_mosei_dynamic_seed5576/best_model.pt",
+  "checkpoint_sha256": "2c99c311d6bc09b80076ab4bc259956293aba247dacebb02be60ce642ae9311c"
+}

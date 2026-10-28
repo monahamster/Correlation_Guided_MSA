@@ -1,0 +1,77 @@
+{
+  "summary": [
+    {
+      "label": "Random initialization",
+      "seeds": [
+        5576,
+        42,
+        2026
+      ],
+      "mean": {
+        "text_audio": 0.502647241836431,
+        "text_visual": 0.5116643670697726,
+        "audio_visual": 0.5154573492411331
+      },
+      "sample_std": {
+        "text_audio": 0.01909475300546932,
+        "text_visual": 0.01237756963442353,
+        "audio_visual": 0.02158800066533422
+      }
+    },
+    {
+      "label": "Sentence-only training",
+      "seeds": [
+        5576,
+        42,
+        2026
+      ],
+      "mean": {
+        "text_audio": 0.49686307929551177,
+        "text_visual": 0.5208005302599897,
+        "audio_visual": 0.5148824500175851
+      },
+      "sample_std": {
+        "text_audio": 0.0183451753077311,
+        "text_visual": 0.024164422496878286,
+        "audio_visual": 0.018615243186301134
+      }
+    },
+    {
+      "label": "Word+sentence: cosine of means",
+      "seeds": [
+        5576,
+        42,
+        2026
+      ],
+      "mean": {
+        "text_audio": 0.5132375618862106,
+        "text_visual": 0.507768579390201,
+        "audio_visual": 0.5065795525254985
+      },
+      "sample_std": {
+        "text_audio": 0.013953110989142379,
+        "text_visual": 0.009755622589486276,
+        "audio_visual": 0.006949773106331575
+      }
+    },
+    {
+      "label": "Word+sentence: mean word cosines",
+      "seeds": [
+        5576,
+        42,
+        2026
+      ],
+      "mean": {
+        "text_audio": 0.563568974379785,
+        "text_visual": 0.545736276817358,
+        "audio_visual": 0.671769066363661
+      },
+      "sample_std": {
+        "text_audio": 0.010902174287966889,
+        "text_visual": 0.027672067297709626,
+        "audio_visual": 0.008061110998517449
+      }
+    }
+  ],
+  "scope": "Each seed uses the checkpoint previously selected by sentence validation loss. No selection of last checkpoints from diagnostic results; no test."
+}

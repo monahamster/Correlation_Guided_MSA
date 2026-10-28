@@ -1,0 +1,36 @@
+{
+  "version": "length-pretrain-pilot-v1-20261020",
+  "purpose": "Exploratory isolation of negative-sampling length confound; no downstream or test evaluation",
+  "datasets": [
+    "mosi",
+    "mosei"
+  ],
+  "arms": [
+    "random",
+    "same_length"
+  ],
+  "seed": 5576,
+  "epochs": 20,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "margin": 0.2,
+  "optimizer": "torch.optim.Adam, default betas/eps, weight_decay=0",
+  "model": "unchanged repaired CorrelationModel, 128 hidden / 3 layers / 4 heads / 256 FF / .1 dropout / 64 output",
+  "data": "existing fixed contextual word caches; train and dev only",
+  "eligibility": "exclude singleton length groups independently in train/dev; identical eligible anchors and donor pool for both arms",
+  "negative_sampling": "one nonself donor per anchor, random cyclic permutation globally or within exact retained-word-count group; resampled each epoch with dedicated NumPy RNG",
+  "padding": {
+    "mosi": 58,
+    "mosei": 78
+  },
+  "initialization": "fresh identical state in both arms, no warm start",
+  "stochastic_controls": "identical anchor batch order and fixed padding; dropout RNG reset identically at every step; independent sampler RNG",
+  "loss": "six directed cosine triplet terms summed / 3; margin .2; sample-weighted means",
+  "selection": "minimum eligible-dev same-length triplet loss, mean of five fixed donor maps; earliest tie; identical criterion in both arms",
+  "evaluation": "matched vs random/same-length AUC on eligible dev; all-zero original-mask diagnostic; five donor maps; no sentiment test",
+  "dev_negative_seed": 20261021,
+  "train_negative_seed_offset": 100000,
+  "anchor_order_seed_offset": 200000,
+  "dropout_seed_offset": 300000,
+  "interpretation": "Dev-guided pilot; AUC measures cross-modal pairing, not sentiment relevance or reliability. Compare arms within this protocol, not directly against legacy validation loss. No quantitative success threshold chosen after results."
+}

@@ -1,0 +1,75 @@
+{
+  "version": "mosei-readout-word-replicates-dev-20261020",
+  "seeds": [
+    42,
+    2026
+  ],
+  "shared": {
+    "dev_batch_size": 128,
+    "test_batch_size": 128,
+    "gradient_accumulation_step": 1,
+    "cls_task": "seven",
+    "reg_loss_weight": 1.0,
+    "cls_loss_weight": 1.0,
+    "save_best_by": "valid_mae",
+    "corr_alpha": 0.2,
+    "weight-decay": 0.0001,
+    "adam_epsilon": 1e-08,
+    "schedule": [
+      80,
+      100
+    ],
+    "model": "bert-base-uncased",
+    "dropout_prob": 0.3,
+    "gran_t": 3,
+    "gran_a": 3,
+    "gran_v": 3,
+    "TEXT_DIM": 768,
+    "ACOUSTIC_DIM": 74,
+    "experts_t": 3,
+    "experts_a": 3,
+    "experts_v": 3,
+    "experts_all": 2,
+    "k": 2,
+    "k_all": 2,
+    "attn_dropout": 0.5,
+    "num_heads": 16,
+    "relu_dropout": 0.3,
+    "res_dropout": 0.3,
+    "embed_dropout": 0.2
+  },
+  "datasets": {
+    "mosei": {
+      "max_seq_length": 80,
+      "train_batch_size": 64,
+      "d_l": 192,
+      "layers": 3,
+      "VISUAL_DIM": 35,
+      "learning_rate": 1e-05,
+      "n_epochs": 100,
+      "moe_reliability_lambda": 0.1
+    }
+  },
+  "cache_root": "/data01/lyw/GLoMo_repair_20261019T001/repair_cache",
+  "correlation_checkpoints": {
+    "mosei": "/data01/lyw/GLoMo_length_pretrain_20261020/runs/mosei_same_length/best_correlation.pt"
+  },
+  "decisions": {
+    "optimizer": "transformers.AdamW; one instance for the entire training run",
+    "selection": "minimum sample-weighted validation MAE; earliest epoch on exact tie",
+    "epochs": "fixed budget, zero-based history, no early stopping",
+    "test": "Not evaluated in this development pilot; save selected-checkpoint dev predictions.",
+    "pretraining_seed": 5576,
+    "downstream_seed_scope": "Additional downstream seeds42,2026; pretraining seed remains5576",
+    "constant": "mean of dynamic scales over complete training split, stored as a persistent buffer",
+    "primary_metric": "MAE; other metrics secondary, report all",
+    "robustness": "not enabled before synchronized-input validation",
+    "old_results": "Reuse sentence/sentence pair from /data01/lyw/GLoMo_mosei_downstream_20261020",
+    "cuda_determinism": "warn_only=True: PyTorch 2.0 adaptive max-pool backward has no deterministic CUDA kernel; RNG/order/initialization are controlled, bitwise training reproducibility is not claimed.",
+    "scope": "MOSEI downstream seeds42 and2026; sentence-pretrained frozen scorer; sentence versus word readout; paired dynamic/constant; 100 epochs; dev only",
+    "pretraining_checkpoint_selection": "Fixed sentence-objective seed5576 epoch15 from prior pretraining validation",
+    "aggregation": "Report new seeds42,2026 separately and combined with development seed5576; per-seed paired deltas plus mean/sample SD"
+  },
+  "pretraining_objective": "sentence",
+  "correlation_readout": "word"
+}

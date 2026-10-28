@@ -1,0 +1,60 @@
+{
+  "scope": "MOSI seed5576, 20 epochs; common sentence-level same-length validation selection, five fixed donor maps; no test. Max pooling changes aggregation; word+sentence changes only training objective.",
+  "rows": [
+    {
+      "configuration": "Mean + position",
+      "root": "/data01/lyw/GLoMo_length_pretrain_20261020",
+      "best_epoch": 1,
+      "dev_loss": 0.3998343884944916,
+      "auc": {
+        "text_audio": 0.5005032059086113,
+        "text_visual": 0.4991112734355978,
+        "audio_visual": 0.5002921840759679
+      }
+    },
+    {
+      "configuration": "Mean, no position",
+      "root": "/data01/lyw/GLoMo_position_ablation_20261020",
+      "best_epoch": 6,
+      "dev_loss": 0.3967757046222687,
+      "auc": {
+        "text_audio": 0.5070692313935558,
+        "text_visual": 0.5141993344696048,
+        "audio_visual": 0.5014203392581771
+      }
+    },
+    {
+      "configuration": "Max + position",
+      "root": "/data01/lyw/GLoMo_mosi_pretrain_opt_20261020/max_pool_with_position",
+      "best_epoch": 15,
+      "dev_loss": 0.3999157607555389,
+      "auc": {
+        "text_audio": 0.5024429835240646,
+        "text_visual": 0.5017531044558071,
+        "audio_visual": 0.4982753023293564
+      }
+    },
+    {
+      "configuration": "Max, no position",
+      "root": "/data01/lyw/GLoMo_mosi_pretrain_opt_20261020/max_pool_no_position",
+      "best_epoch": 9,
+      "dev_loss": 0.39942280054092405,
+      "auc": {
+        "text_audio": 0.5038430322214106,
+        "text_visual": 0.49571057544030517,
+        "audio_visual": 0.5027229932635338
+      }
+    },
+    {
+      "configuration": "Word + sentence, no position",
+      "root": "/data01/lyw/GLoMo_mosi_pretrain_opt_20261020/word_sentence_triplet",
+      "best_epoch": 8,
+      "dev_loss": 0.39327006340026854,
+      "auc": {
+        "text_audio": 0.5283053323593865,
+        "text_visual": 0.5190284879474069,
+        "audio_visual": 0.5133836539241945
+      }
+    }
+  ]
+}

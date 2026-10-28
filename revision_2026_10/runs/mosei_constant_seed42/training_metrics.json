@@ -1,0 +1,15 @@
+{
+  "protocol": "mosei-readout-word-replicates-dev-20261020",
+  "dataset": "mosei",
+  "seed": 42,
+  "evaluation_split": "dev",
+  "test_evaluated": false,
+  "best_epoch": 2,
+  "epoch_index": "zero_based",
+  "valid_mae": 0.5304599147610897,
+  "valid_mse": 0.5115148565742407,
+  "reloaded_dev_mae": 0.5304599131322094,
+  "correlation_control": "constant",
+  "checkpoint_path": "/data01/lyw/GLoMo_mosei_readout_replicates_20261020/word/runs/mosei-readout-word-replicates-dev-20261020_mosei_constant_seed42/best_model.pt",
+  "checkpoint_sha256": "d57d6317edf5dadfb1546221f8ffb1ea614567bfba6a960e50e79501885149d6"
+}

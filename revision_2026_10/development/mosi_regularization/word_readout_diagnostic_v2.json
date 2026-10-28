@@ -1,0 +1,1024 @@
+{
+  "scope": "Read-only MOSI dev diagnostic on existing word+sentence checkpoints. Candidate readout changes aggregation only: mean aligned-word cosine versus cosine of mean embeddings. Each AUC observation is an utterance, not an independent token. Five original same-length donor maps. One-word cyclic shift is a separate temporal alignment control. No retraining, labels or test.",
+  "data": {
+    "path": "/data01/lyw/GLoMo_repair_20261019T001/repair_cache/mosi/dev.fixed_contextual_word_v1.pt",
+    "sha256": "1fdec4e5ffc4c58d8714517871216803f4c1c48c5d61121d40dc958b7bac51ef",
+    "total": 229,
+    "eligible": 222,
+    "excluded_ids": [
+      "ZUXBRvtny7o[7]",
+      "aiEXnCPZubE[10]",
+      "atnd_PF-Lbs[20]",
+      "bvLlb-M3UXU[12]",
+      "bvLlb-M3UXU[16]",
+      "bvLlb-M3UXU[17]",
+      "bvLlb-M3UXU[19]"
+    ],
+    "eligible_ids": [
+      "WKA5OygbEKI[0]",
+      "WKA5OygbEKI[1]",
+      "WKA5OygbEKI[2]",
+      "WKA5OygbEKI[3]",
+      "WKA5OygbEKI[4]",
+      "WKA5OygbEKI[5]",
+      "WKA5OygbEKI[6]",
+      "WKA5OygbEKI[7]",
+      "WKA5OygbEKI[8]",
+      "WKA5OygbEKI[9]",
+      "WKA5OygbEKI[10]",
+      "WKA5OygbEKI[11]",
+      "WKA5OygbEKI[12]",
+      "WKA5OygbEKI[13]",
+      "WKA5OygbEKI[14]",
+      "WKA5OygbEKI[15]",
+      "WKA5OygbEKI[16]",
+      "WKA5OygbEKI[17]",
+      "WKA5OygbEKI[18]",
+      "WKA5OygbEKI[19]",
+      "WKA5OygbEKI[20]",
+      "WKA5OygbEKI[21]",
+      "X3j2zQgwYgE[0]",
+      "X3j2zQgwYgE[1]",
+      "X3j2zQgwYgE[2]",
+      "X3j2zQgwYgE[3]",
+      "X3j2zQgwYgE[4]",
+      "X3j2zQgwYgE[5]",
+      "X3j2zQgwYgE[6]",
+      "X3j2zQgwYgE[7]",
+      "X3j2zQgwYgE[8]",
+      "X3j2zQgwYgE[9]",
+      "X3j2zQgwYgE[10]",
+      "ZAIRrfG22O0[0]",
+      "ZAIRrfG22O0[1]",
+      "ZAIRrfG22O0[2]",
+      "ZAIRrfG22O0[3]",
+      "ZAIRrfG22O0[4]",
+      "ZAIRrfG22O0[5]",
+      "ZAIRrfG22O0[6]",
+      "ZAIRrfG22O0[7]",
+      "ZAIRrfG22O0[8]",
+      "ZUXBRvtny7o[0]",
+      "ZUXBRvtny7o[1]",
+      "ZUXBRvtny7o[2]",
+      "ZUXBRvtny7o[3]",
+      "ZUXBRvtny7o[4]",
+      "ZUXBRvtny7o[5]",
+      "ZUXBRvtny7o[6]",
+      "ZUXBRvtny7o[8]",
+      "ZUXBRvtny7o[9]",
+      "ZUXBRvtny7o[10]",
+      "ZUXBRvtny7o[11]",
+      "ZUXBRvtny7o[12]",
+      "ZUXBRvtny7o[13]",
+      "ZUXBRvtny7o[14]",
+      "ZUXBRvtny7o[15]",
+      "ZUXBRvtny7o[16]",
+      "ZUXBRvtny7o[17]",
+      "ZUXBRvtny7o[18]",
+      "ZUXBRvtny7o[19]",
+      "ZUXBRvtny7o[20]",
+      "ZUXBRvtny7o[21]",
+      "ZUXBRvtny7o[22]",
+      "ZUXBRvtny7o[23]",
+      "ZUXBRvtny7o[24]",
+      "ZUXBRvtny7o[25]",
+      "ZUXBRvtny7o[26]",
+      "ZUXBRvtny7o[27]",
+      "ZUXBRvtny7o[28]",
+      "ZUXBRvtny7o[29]",
+      "ZUXBRvtny7o[30]",
+      "ZUXBRvtny7o[31]",
+      "ZUXBRvtny7o[32]",
+      "ZUXBRvtny7o[33]",
+      "_dI--eQ6qVU[0]",
+      "_dI--eQ6qVU[1]",
+      "_dI--eQ6qVU[2]",
+      "_dI--eQ6qVU[3]",
+      "_dI--eQ6qVU[4]",
+      "_dI--eQ6qVU[5]",
+      "_dI--eQ6qVU[6]",
+      "_dI--eQ6qVU[7]",
+      "_dI--eQ6qVU[8]",
+      "_dI--eQ6qVU[9]",
+      "_dI--eQ6qVU[10]",
+      "_dI--eQ6qVU[11]",
+      "_dI--eQ6qVU[12]",
+      "_dI--eQ6qVU[13]",
+      "_dI--eQ6qVU[14]",
+      "_dI--eQ6qVU[15]",
+      "_dI--eQ6qVU[16]",
+      "_dI--eQ6qVU[17]",
+      "_dI--eQ6qVU[18]",
+      "_dI--eQ6qVU[19]",
+      "_dI--eQ6qVU[20]",
+      "_dI--eQ6qVU[21]",
+      "_dI--eQ6qVU[22]",
+      "_dI--eQ6qVU[23]",
+      "_dI--eQ6qVU[24]",
+      "_dI--eQ6qVU[25]",
+      "_dI--eQ6qVU[26]",
+      "_dI--eQ6qVU[27]",
+      "aiEXnCPZubE[0]",
+      "aiEXnCPZubE[1]",
+      "aiEXnCPZubE[2]",
+      "aiEXnCPZubE[3]",
+      "aiEXnCPZubE[4]",
+      "aiEXnCPZubE[5]",
+      "aiEXnCPZubE[6]",
+      "aiEXnCPZubE[7]",
+      "aiEXnCPZubE[8]",
+      "aiEXnCPZubE[9]",
+      "aiEXnCPZubE[11]",
+      "aiEXnCPZubE[12]",
+      "aiEXnCPZubE[13]",
+      "aiEXnCPZubE[14]",
+      "aiEXnCPZubE[15]",
+      "aiEXnCPZubE[16]",
+      "aiEXnCPZubE[17]",
+      "aiEXnCPZubE[18]",
+      "aiEXnCPZubE[19]",
+      "aiEXnCPZubE[20]",
+      "aiEXnCPZubE[21]",
+      "aiEXnCPZubE[22]",
+      "aiEXnCPZubE[23]",
+      "aiEXnCPZubE[24]",
+      "aiEXnCPZubE[25]",
+      "aiEXnCPZubE[26]",
+      "aiEXnCPZubE[27]",
+      "aiEXnCPZubE[28]",
+      "aiEXnCPZubE[29]",
+      "atnd_PF-Lbs[0]",
+      "atnd_PF-Lbs[1]",
+      "atnd_PF-Lbs[2]",
+      "atnd_PF-Lbs[3]",
+      "atnd_PF-Lbs[4]",
+      "atnd_PF-Lbs[5]",
+      "atnd_PF-Lbs[6]",
+      "atnd_PF-Lbs[7]",
+      "atnd_PF-Lbs[8]",
+      "atnd_PF-Lbs[9]",
+      "atnd_PF-Lbs[10]",
+      "atnd_PF-Lbs[11]",
+      "atnd_PF-Lbs[12]",
+      "atnd_PF-Lbs[13]",
+      "atnd_PF-Lbs[14]",
+      "atnd_PF-Lbs[15]",
+      "atnd_PF-Lbs[16]",
+      "atnd_PF-Lbs[17]",
+      "atnd_PF-Lbs[18]",
+      "atnd_PF-Lbs[19]",
+      "bOL9jKpeJRs[0]",
+      "bOL9jKpeJRs[1]",
+      "bOL9jKpeJRs[2]",
+      "bOL9jKpeJRs[3]",
+      "bOL9jKpeJRs[4]",
+      "bOL9jKpeJRs[5]",
+      "bOL9jKpeJRs[6]",
+      "bOL9jKpeJRs[7]",
+      "bOL9jKpeJRs[8]",
+      "bOL9jKpeJRs[9]",
+      "bOL9jKpeJRs[10]",
+      "bOL9jKpeJRs[11]",
+      "bOL9jKpeJRs[12]",
+      "bOL9jKpeJRs[13]",
+      "bOL9jKpeJRs[14]",
+      "bOL9jKpeJRs[15]",
+      "bOL9jKpeJRs[16]",
+      "bOL9jKpeJRs[17]",
+      "bOL9jKpeJRs[18]",
+      "bOL9jKpeJRs[19]",
+      "bOL9jKpeJRs[20]",
+      "bOL9jKpeJRs[21]",
+      "bOL9jKpeJRs[22]",
+      "bOL9jKpeJRs[23]",
+      "bOL9jKpeJRs[24]",
+      "bOL9jKpeJRs[25]",
+      "bOL9jKpeJRs[26]",
+      "bOL9jKpeJRs[27]",
+      "bOL9jKpeJRs[28]",
+      "bOL9jKpeJRs[29]",
+      "bOL9jKpeJRs[30]",
+      "bOL9jKpeJRs[31]",
+      "bOL9jKpeJRs[32]",
+      "bOL9jKpeJRs[33]",
+      "bvLlb-M3UXU[0]",
+      "bvLlb-M3UXU[1]",
+      "bvLlb-M3UXU[2]",
+      "bvLlb-M3UXU[3]",
+      "bvLlb-M3UXU[4]",
+      "bvLlb-M3UXU[5]",
+      "bvLlb-M3UXU[6]",
+      "bvLlb-M3UXU[7]",
+      "bvLlb-M3UXU[8]",
+      "bvLlb-M3UXU[9]",
+      "bvLlb-M3UXU[10]",
+      "bvLlb-M3UXU[11]",
+      "bvLlb-M3UXU[13]",
+      "bvLlb-M3UXU[14]",
+      "bvLlb-M3UXU[15]",
+      "bvLlb-M3UXU[18]",
+      "bvLlb-M3UXU[20]",
+      "bvLlb-M3UXU[21]",
+      "bvLlb-M3UXU[22]",
+      "bvLlb-M3UXU[23]",
+      "bvLlb-M3UXU[24]",
+      "c5xsKMxpXnc[0]",
+      "c5xsKMxpXnc[1]",
+      "c5xsKMxpXnc[2]",
+      "c5xsKMxpXnc[3]",
+      "c5xsKMxpXnc[4]",
+      "c5xsKMxpXnc[5]",
+      "c5xsKMxpXnc[6]",
+      "c5xsKMxpXnc[7]",
+      "c5xsKMxpXnc[8]",
+      "c5xsKMxpXnc[9]",
+      "c5xsKMxpXnc[10]",
+      "c5xsKMxpXnc[11]",
+      "c5xsKMxpXnc[12]",
+      "c5xsKMxpXnc[13]",
+      "c5xsKMxpXnc[14]"
+    ]
+  },
+  "rows": [
+    {
+      "seed": 5576,
+      "family": "word_sentence",
+      "checkpoint": "initial",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5135297459621784,
+          "word_average_auc": 0.48070367664962255,
+          "word_auc_each": [
+            0.4859792224657089,
+            0.5021507994480967,
+            0.46804236669101534,
+            0.4638422205989774,
+            0.4835037740443146
+          ],
+          "aligned_word_cosine_mean": -0.019387850537896156,
+          "within_sample_one_word_shift_auc": 0.48299651002353705,
+          "alignment_drop_mean": -0.0023206048645079136,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5000486973459947,
+          "word_average_auc": 0.5257446635825015,
+          "word_auc_each": [
+            0.5184238292346401,
+            0.5063509455401348,
+            0.5479871763655548,
+            0.549245191137083,
+            0.5067161756350945
+          ],
+          "aligned_word_cosine_mean": 0.013869475573301315,
+          "within_sample_one_word_shift_auc": 0.49766658550442333,
+          "alignment_drop_mean": 0.00020182397565804422,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.4928009090171253,
+          "word_average_auc": 0.5300137975813651,
+          "word_auc_each": [
+            0.554459865270676,
+            0.5127830533235938,
+            0.5313894976057139,
+            0.5145280415550686,
+            0.5369085301517733
+          ],
+          "aligned_word_cosine_mean": 0.010062577202916145,
+          "within_sample_one_word_shift_auc": 0.5322011200389578,
+          "alignment_drop_mean": 0.005902541801333427,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 5576,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5283053323593865,
+          "word_average_auc": 0.5735127018910803,
+          "word_auc_each": [
+            0.5801680058436816,
+            0.5843072802532262,
+            0.5691705218732246,
+            0.5594310526742958,
+            0.5744866488109732
+          ],
+          "aligned_word_cosine_mean": 0.02922450378537178,
+          "within_sample_one_word_shift_auc": 0.5504626247869492,
+          "alignment_drop_mean": 0.0067266798578202724,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5190284879474069,
+          "word_average_auc": 0.5748234721207695,
+          "word_auc_each": [
+            0.5723155588020453,
+            0.562860157454752,
+            0.5685618050482916,
+            0.5967453940426914,
+            0.5736344452560669
+          ],
+          "aligned_word_cosine_mean": 0.024625765159726143,
+          "within_sample_one_word_shift_auc": 0.5267226686145605,
+          "alignment_drop_mean": 0.003249476896598935,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5133836539241945,
+          "word_average_auc": 0.6806387468549631,
+          "word_auc_each": [
+            0.6705624543462382,
+            0.684542650758867,
+            0.6806671536401265,
+            0.6888848307767227,
+            0.678536644752861
+          ],
+          "aligned_word_cosine_mean": 0.05774199962615967,
+          "within_sample_one_word_shift_auc": 0.6442253063874686,
+          "alignment_drop_mean": 0.032389573752880096,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 5576,
+      "family": "word_sentence",
+      "checkpoint": "last",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5040621702783865,
+          "word_average_auc": 0.5763899034169304,
+          "word_auc_each": [
+            0.5983280577875172,
+            0.576657738819901,
+            0.5597962827692557,
+            0.5792143494846198,
+            0.5679530882233585
+          ],
+          "aligned_word_cosine_mean": 0.01844402216374874,
+          "within_sample_one_word_shift_auc": 0.5423666910153396,
+          "alignment_drop_mean": 0.007766461465507746,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5126369612856099,
+          "word_average_auc": 0.5600844087330575,
+          "word_auc_each": [
+            0.5593701809918027,
+            0.5482509536563591,
+            0.5604049995941888,
+            0.5810202093985878,
+            0.5513757000243487
+          ],
+          "aligned_word_cosine_mean": 0.01835036091506481,
+          "within_sample_one_word_shift_auc": 0.5243283824364906,
+          "alignment_drop_mean": 0.005028801038861275,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5171536401266131,
+          "word_average_auc": 0.6991275058842626,
+          "word_auc_each": [
+            0.6765684603522442,
+            0.7055028000973947,
+            0.6974474474474475,
+            0.7242106971836701,
+            0.6919081243405567
+          ],
+          "aligned_word_cosine_mean": 0.0502699613571167,
+          "within_sample_one_word_shift_auc": 0.6628317506695885,
+          "alignment_drop_mean": 0.034169428050518036,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 5576,
+      "family": "sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5070692313935558,
+          "word_average_auc": 0.47932391851310774,
+          "word_auc_each": [
+            0.48786624462300143,
+            0.4975042610177745,
+            0.46743364986608227,
+            0.46272623975326677,
+            0.48108919730541355
+          ],
+          "aligned_word_cosine_mean": 0.011148271150887012,
+          "within_sample_one_word_shift_auc": 0.4926751075399724,
+          "alignment_drop_mean": -0.001577305723913014,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5141993344696048,
+          "word_average_auc": 0.5486689392094798,
+          "word_auc_each": [
+            0.5560628195763331,
+            0.539221654086519,
+            0.5449030111192272,
+            0.5676690203717231,
+            0.5354881908935962
+          ],
+          "aligned_word_cosine_mean": 0.01929198019206524,
+          "within_sample_one_word_shift_auc": 0.49738251765278796,
+          "alignment_drop_mean": -0.0006669011781923473,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5014203392581771,
+          "word_average_auc": 0.5218975732489246,
+          "word_auc_each": [
+            0.5496915834753673,
+            0.4999391283175067,
+            0.527412547682818,
+            0.5035102670237805,
+            0.5289343397451506
+          ],
+          "aligned_word_cosine_mean": 0.0109575679525733,
+          "within_sample_one_word_shift_auc": 0.5287517246976706,
+          "alignment_drop_mean": 0.006294482387602329,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 5576,
+      "family": "sentence",
+      "checkpoint": "last",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5242715688661634,
+          "word_average_auc": 0.4912466520574629,
+          "word_auc_each": [
+            0.5034291047804561,
+            0.4921069718367016,
+            0.4726686145605065,
+            0.49663176690203714,
+            0.49139680220761295
+          ],
+          "aligned_word_cosine_mean": 0.0032846664544194937,
+          "within_sample_one_word_shift_auc": 0.4824689554419284,
+          "alignment_drop_mean": -0.002660523634403944,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5093945296648,
+          "word_average_auc": 0.5296485674864052,
+          "word_auc_each": [
+            0.5374766658550443,
+            0.5137772908043178,
+            0.526438600762925,
+            0.5433000568135703,
+            0.5272502231961691
+          ],
+          "aligned_word_cosine_mean": 0.0057696630246937275,
+          "within_sample_one_word_shift_auc": 0.49176203230257287,
+          "alignment_drop_mean": -0.0002529280027374625,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5353745637529422,
+          "word_average_auc": 0.524981738495252,
+          "word_auc_each": [
+            0.5512133755376998,
+            0.5024957389822254,
+            0.5264588913237562,
+            0.5056204853502151,
+            0.5391202012823635
+          ],
+          "aligned_word_cosine_mean": 0.00800736341625452,
+          "within_sample_one_word_shift_auc": 0.5268849931012094,
+          "alignment_drop_mean": 0.005303969141095877,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "family": "word_sentence",
+      "checkpoint": "initial",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5052917782647512,
+          "word_average_auc": 0.5117563509455401,
+          "word_auc_each": [
+            0.5164962259556855,
+            0.5143860076292509,
+            0.5244501258014772,
+            0.507811865919974,
+            0.4956375294213132
+          ],
+          "aligned_word_cosine_mean": 0.009047088213264942,
+          "within_sample_one_word_shift_auc": 0.5362592322051781,
+          "alignment_drop_mean": 0.003655302105471492,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.4920339258177096,
+          "word_average_auc": 0.5024997970943917,
+          "word_auc_each": [
+            0.5018464410356303,
+            0.4889213537862187,
+            0.5135946757568379,
+            0.5129656683710738,
+            0.4951708465221979
+          ],
+          "aligned_word_cosine_mean": 0.07793878763914108,
+          "within_sample_one_word_shift_auc": 0.4974433893352812,
+          "alignment_drop_mean": 0.00022177294886205345,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5068419771122474,
+          "word_average_auc": 0.4906541676811947,
+          "word_auc_each": [
+            0.45974352731109486,
+            0.5050320590861131,
+            0.5086437789140492,
+            0.4802775748721694,
+            0.49957389822254683
+          ],
+          "aligned_word_cosine_mean": 0.05942036211490631,
+          "within_sample_one_word_shift_auc": 0.4505519032546059,
+          "alignment_drop_mean": -0.008679484948515892,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5106444282119958,
+          "word_average_auc": 0.5652828504179854,
+          "word_auc_each": [
+            0.5552714877039201,
+            0.5637123610096583,
+            0.5801274247220193,
+            0.5614195276357439,
+            0.5658834510185861
+          ],
+          "aligned_word_cosine_mean": 0.0041177719831466675,
+          "within_sample_one_word_shift_auc": 0.5779157535914293,
+          "alignment_drop_mean": 0.007937727496027946,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5018504991477964,
+          "word_average_auc": 0.5197386575764955,
+          "word_auc_each": [
+            0.5191948705462219,
+            0.5142439737034332,
+            0.528629981332684,
+            0.5231921110299489,
+            0.5134323512701892
+          ],
+          "aligned_word_cosine_mean": 0.0592062883079052,
+          "within_sample_one_word_shift_auc": 0.515806346887428,
+          "alignment_drop_mean": 0.0016769941430538893,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.4994927359792225,
+          "word_average_auc": 0.6697792386981577,
+          "word_auc_each": [
+            0.6476747017287557,
+            0.6825744663582501,
+            0.6921110299488678,
+            0.6714552390228066,
+            0.6550807564321077
+          ],
+          "aligned_word_cosine_mean": 0.03999490290880203,
+          "within_sample_one_word_shift_auc": 0.6093255417579743,
+          "alignment_drop_mean": 0.017661038786172867,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "family": "word_sentence",
+      "checkpoint": "last",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.48128398668939215,
+          "word_average_auc": 0.5595406217027838,
+          "word_auc_each": [
+            0.5513148283418554,
+            0.5676690203717232,
+            0.5490017044071098,
+            0.5673443713984255,
+            0.5623731839948056
+          ],
+          "aligned_word_cosine_mean": 0.017755676060914993,
+          "within_sample_one_word_shift_auc": 0.5593498904309715,
+          "alignment_drop_mean": 0.012517043389379978,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5225833942050158,
+          "word_average_auc": 0.5485553120688256,
+          "word_auc_each": [
+            0.5543584124665206,
+            0.5437261585910235,
+            0.5742025809593377,
+            0.5405405405405406,
+            0.5299488677867056
+          ],
+          "aligned_word_cosine_mean": 0.007982220500707626,
+          "within_sample_one_word_shift_auc": 0.5199253307361416,
+          "alignment_drop_mean": 0.002544555813074112,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5530273516760003,
+          "word_average_auc": 0.7078808538267998,
+          "word_auc_each": [
+            0.6836295755214674,
+            0.7131929226523821,
+            0.7246976706436166,
+            0.722952682412142,
+            0.6949314179043908
+          ],
+          "aligned_word_cosine_mean": 0.04762417450547218,
+          "within_sample_one_word_shift_auc": 0.6346278711143576,
+          "alignment_drop_mean": 0.027319785207509995,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "family": "sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.4916565213862512,
+          "word_average_auc": 0.4953453453453454,
+          "word_auc_each": [
+            0.4955157860563267,
+            0.49446067689310935,
+            0.504200146092038,
+            0.48867786705624544,
+            0.4938722506290074
+          ],
+          "aligned_word_cosine_mean": 0.03964722156524658,
+          "within_sample_one_word_shift_auc": 0.5300503205908611,
+          "alignment_drop_mean": 0.0015595692675560713,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.49319860400941484,
+          "word_average_auc": 0.5080634688742798,
+          "word_auc_each": [
+            0.5064118172226282,
+            0.5092524957389822,
+            0.5087655222790358,
+            0.5170237805372941,
+            0.4988637285934583
+          ],
+          "aligned_word_cosine_mean": 0.12002045661211014,
+          "within_sample_one_word_shift_auc": 0.5003652300949598,
+          "alignment_drop_mean": 0.00029288369114510715,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5052998944890836,
+          "word_average_auc": 0.4937789140491843,
+          "word_auc_each": [
+            0.4641465790114439,
+            0.5065132700267836,
+            0.5120931742553364,
+            0.4795268241214187,
+            0.506614722830939
+          ],
+          "aligned_word_cosine_mean": 0.033181872218847275,
+          "within_sample_one_word_shift_auc": 0.4532911289668047,
+          "alignment_drop_mean": -0.007410512305796146,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "family": "sentence",
+      "checkpoint": "last",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.46988474961447935,
+          "word_average_auc": 0.476438600762925,
+          "word_auc_each": [
+            0.47946595243892537,
+            0.4765644022400779,
+            0.4736628520412304,
+            0.4813123934745557,
+            0.471187403619836
+          ],
+          "aligned_word_cosine_mean": 0.009516344405710697,
+          "within_sample_one_word_shift_auc": 0.5369896923950979,
+          "alignment_drop_mean": 0.008315445855259895,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5030882233584937,
+          "word_average_auc": 0.5243608473338204,
+          "word_auc_each": [
+            0.5275140004869735,
+            0.5050320590861131,
+            0.5461610258907557,
+            0.5271893515136759,
+            0.5159077996915835
+          ],
+          "aligned_word_cosine_mean": 0.006831436883658171,
+          "within_sample_one_word_shift_auc": 0.5181397613830047,
+          "alignment_drop_mean": 0.0031614743638783693,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.530764548332116,
+          "word_average_auc": 0.4961894326759192,
+          "word_auc_each": [
+            0.46982793604415224,
+            0.5051538024510998,
+            0.512803343884425,
+            0.48208343478613747,
+            0.5110786462137814
+          ],
+          "aligned_word_cosine_mean": -0.0007670387276448309,
+          "within_sample_one_word_shift_auc": 0.45564483402321243,
+          "alignment_drop_mean": -0.009225651621818542,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 2026,
+      "family": "word_sentence",
+      "checkpoint": "initial",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.4979668858047237,
+          "word_average_auc": 0.5154816979141303,
+          "word_auc_each": [
+            0.5242878013148283,
+            0.5131888645402158,
+            0.5099423748072397,
+            0.5076495414333253,
+            0.5223399074750426
+          ],
+          "aligned_word_cosine_mean": 0.03275351971387863,
+          "within_sample_one_word_shift_auc": 0.51400048697346,
+          "alignment_drop_mean": 0.0014729421818628907,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5005437870302736,
+          "word_average_auc": 0.5067486405324244,
+          "word_auc_each": [
+            0.4971390309228147,
+            0.5213253794334876,
+            0.505214674133593,
+            0.5028406785163542,
+            0.5072234396558721
+          ],
+          "aligned_word_cosine_mean": -0.009014533832669258,
+          "within_sample_one_word_shift_auc": 0.48287476665855045,
+          "alignment_drop_mean": -0.0018594044959172606,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5013716419121824,
+          "word_average_auc": 0.5257040824608392,
+          "word_auc_each": [
+            0.5360766171576983,
+            0.5147715282850418,
+            0.5330939047155264,
+            0.49235045856667475,
+            0.552227903579255
+          ],
+          "aligned_word_cosine_mean": 0.01804644986987114,
+          "within_sample_one_word_shift_auc": 0.5371723074425777,
+          "alignment_drop_mean": 0.004033207893371582,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 2026,
+      "family": "word_sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5007629250872495,
+          "word_average_auc": 0.5519113708302897,
+          "word_auc_each": [
+            0.5610542975407841,
+            0.5546221897573249,
+            0.540641993344696,
+            0.5455320185049914,
+            0.5577063550036523
+          ],
+          "aligned_word_cosine_mean": 0.02304539829492569,
+          "within_sample_one_word_shift_auc": 0.5467697427156886,
+          "alignment_drop_mean": 0.00478628184646368,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5024267510753997,
+          "word_average_auc": 0.5426467007548089,
+          "word_auc_each": [
+            0.5347171495820144,
+            0.5602629656683711,
+            0.5365230094959824,
+            0.5458769580391202,
+            0.5358534209885562
+          ],
+          "aligned_word_cosine_mean": 0.016942931339144707,
+          "within_sample_one_word_shift_auc": 0.4860806752698644,
+          "alignment_drop_mean": -0.0013807177310809493,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5068622676730785,
+          "word_average_auc": 0.6648892135378622,
+          "word_auc_each": [
+            0.6648608067526987,
+            0.6714349484619755,
+            0.6664840516191868,
+            0.6543705868030193,
+            0.6672956740524307
+          ],
+          "aligned_word_cosine_mean": -0.02038472332060337,
+          "within_sample_one_word_shift_auc": 0.6093255417579742,
+          "alignment_drop_mean": 0.018873941153287888,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 2026,
+      "family": "word_sentence",
+      "checkpoint": "last",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.48629575521467416,
+          "word_average_auc": 0.589517896274653,
+          "word_auc_each": [
+            0.61790844898953,
+            0.5899277656034413,
+            0.565842869896924,
+            0.5816289262235208,
+            0.592281470659849
+          ],
+          "aligned_word_cosine_mean": 0.020908141508698463,
+          "within_sample_one_word_shift_auc": 0.5671008846684522,
+          "alignment_drop_mean": 0.011803845874965191,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5141262884506128,
+          "word_average_auc": 0.5559410762113465,
+          "word_auc_each": [
+            0.5395057219381544,
+            0.5591064037009982,
+            0.549042285528772,
+            0.5818318318318318,
+            0.5502191380569759
+          ],
+          "aligned_word_cosine_mean": 0.018902935087680817,
+          "within_sample_one_word_shift_auc": 0.5023942861780699,
+          "alignment_drop_mean": 3.1689265597378835e-05,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5328220112003896,
+          "word_average_auc": 0.7095527960392825,
+          "word_auc_each": [
+            0.6927197467738008,
+            0.7041230419608797,
+            0.7188945702459215,
+            0.7231555880204529,
+            0.7088710331953574
+          ],
+          "aligned_word_cosine_mean": 0.05470317229628563,
+          "within_sample_one_word_shift_auc": 0.6611679246814381,
+          "alignment_drop_mean": 0.03251107037067413,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 2026,
+      "family": "sentence",
+      "checkpoint": "best",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.5050036523009496,
+          "word_average_auc": 0.5159199740280821,
+          "word_auc_each": [
+            0.5241254768281796,
+            0.5186876065254444,
+            0.5076698319941563,
+            0.5091510429348267,
+            0.5199659118578037
+          ],
+          "aligned_word_cosine_mean": -0.012750155292451382,
+          "within_sample_one_word_shift_auc": 0.5029421313205097,
+          "alignment_drop_mean": -0.00028907967498525977,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.4999675351026703,
+          "word_average_auc": 0.5056691826962096,
+          "word_auc_each": [
+            0.4954143332521711,
+            0.5192557422287152,
+            0.5113018423829234,
+            0.5002231961691421,
+            0.5021507994480968
+          ],
+          "aligned_word_cosine_mean": 0.043075382709503174,
+          "within_sample_one_word_shift_auc": 0.486587939290642,
+          "alignment_drop_mean": -0.001220006844960153,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.49330411492573656,
+          "word_average_auc": 0.5289708627546466,
+          "word_auc_each": [
+            0.5402970538105674,
+            0.5166382598815031,
+            0.5372331791250711,
+            0.4948664881097314,
+            0.55581933284636
+          ],
+          "aligned_word_cosine_mean": -0.06229081749916077,
+          "within_sample_one_word_shift_auc": 0.5422246570895219,
+          "alignment_drop_mean": 0.003628550795838237,
+          "shift_eligible": 222
+        }
+      }
+    },
+    {
+      "seed": 2026,
+      "family": "sentence",
+      "checkpoint": "last",
+      "pairs": {
+        "text_audio": {
+          "sentence_auc": 0.4934826718610502,
+          "word_average_auc": 0.507755052349647,
+          "word_auc_each": [
+            0.5265806346887427,
+            0.48658793929064204,
+            0.5042610177745313,
+            0.4948461975489003,
+            0.5264994724454184
+          ],
+          "aligned_word_cosine_mean": 0.0015256196493282914,
+          "within_sample_one_word_shift_auc": 0.4843762681600519,
+          "alignment_drop_mean": -0.002470033708959818,
+          "shift_eligible": 222
+        },
+        "text_visual": {
+          "sentence_auc": 0.5261261261261261,
+          "word_average_auc": 0.5163947731515299,
+          "word_auc_each": [
+            0.5057219381543706,
+            0.5284879474068663,
+            0.4980723967210453,
+            0.5421434948461975,
+            0.5075480886291697
+          ],
+          "aligned_word_cosine_mean": 0.004729645326733589,
+          "within_sample_one_word_shift_auc": 0.4771325379433488,
+          "alignment_drop_mean": -0.004509543534368277,
+          "shift_eligible": 222
+        },
+        "audio_visual": {
+          "sentence_auc": 0.5335402970538106,
+          "word_average_auc": 0.5435922408895382,
+          "word_auc_each": [
+            0.5522076130184238,
+            0.5406825744663583,
+            0.537436084733382,
+            0.5275545816086357,
+            0.5600803506208911
+          ],
+          "aligned_word_cosine_mean": 0.014876028522849083,
+          "within_sample_one_word_shift_auc": 0.5357925493060628,
+          "alignment_drop_mean": 0.006737429648637772,
+          "shift_eligible": 222
+        }
+      }
+    }
+  ]
+}

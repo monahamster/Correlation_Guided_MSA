@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-22T09:51:29.506803",
+  "stage": "posthoc_descriptive_case_analysis",
+  "seeds": [
+    5576,
+    42,
+    2026,
+    2027,
+    3407
+  ],
+  "routing_seed": 5576,
+  "selection": "Four pools: consistent dynamic gain versus both controls; consistent loss versus both; all-model agreement; largest prediction spread. Four candidates per pool per dataset, unique video IDs within each dataset. Candidate review only, not final six cases. All test records retained.",
+  "eligibility": "Valid nonnegative timestamps and 11-character video ID; 3 <= clip seconds <= 25, 5 <= word count <= 60, cache retains every original word and downstream subwords are not truncated; gains/losses require >=4/5 paired seeds versus each control.",
+  "blind_annotation": "Separate worksheet omits labels, model outputs and selection groups. No claim of independent blind annotation by the selecting analyst.",
+  "media_evidence": "Do not annotate voice/facial cues until corresponding media is observed.",
+  "checkpoint_selection": "Existing frozen dev-selected checkpoints; no test selection or retraining.",
+  "timestamp_sources": {
+    "mosi": "Original label CSD intervals by zero-based segment index, label agreement verified",
+    "mosei": "GLoMo PKL metadata, exact video/start/end; no external media synchronization verified yet"
+  }
+}

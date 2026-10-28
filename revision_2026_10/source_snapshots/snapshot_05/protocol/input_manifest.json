@@ -1,0 +1,113 @@
+{
+  "files": [
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/LICENSE",
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+      "bytes": 11356
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/config.json",
+      "sha256": "7160e1553ad2ca51d8c1cb066be533db31826e12d173824c1bb0cb1a4f187d20",
+      "bytes": 570
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/flax_model.msgpack",
+      "sha256": "ea201fabe466ef7182f1f687fb5be4b62a73d3a78883f11264ff7f682cdb54bf",
+      "bytes": 438064459
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/gitattributes",
+      "sha256": "f0edc261ebfcf55ab4408dc897b0ab873161871b341ed1e3a27761a69c268240",
+      "bytes": 491
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/model.onnx",
+      "sha256": "44d7a2896d341c51fb1eba89aea3a590e6af0ce33e25481136f7eeecb62e5f7f",
+      "bytes": 532091246
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/model.safetensors",
+      "sha256": "68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3",
+      "bytes": 440449768
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/pytorch_model.bin",
+      "sha256": "097417381d6c7230bd9e3557456d726de6e83245ec8b24f529f60198a67b203a",
+      "bytes": 440473133
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/readme.md",
+      "sha256": "847b00e6074f286be3dad3cd17b1adaab6395b3e61eff803ea5d9adc0b085cff",
+      "bytes": 95
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/rust_model.ot",
+      "sha256": "afd9aa425fd45c5655d3d43a0d041f9b76729bf475d6c017a0e9304a38f89972",
+      "bytes": 534240408
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/tf_model.h5",
+      "sha256": "a7a17d6d844b5de815ccab5f42cad6d24496db3850a2a43d8258221018ce87d2",
+      "bytes": 536063208
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/tokenizer.json",
+      "sha256": "ce64fce797c24f68df90b40a3f74f579b336a493db14bd583fd520ea0d8c9a98",
+      "bytes": 466062
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/tokenizer_config.json",
+      "sha256": "a025160ef0431f1a392f6f050c1310f4c5d9fb6f275932dbccba73c4d214bf10",
+      "bytes": 48
+    },
+    {
+      "dataset": "shared",
+      "path": "/data01/lyw/GLoMo/BERT_EN/vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "bytes": 231508
+    },
+    {
+      "dataset": "mosei",
+      "path": "/data01/lyw/GLoMo/datasets/mosei.pkl",
+      "sha256": "90701ad5bfa8767ca253af729c1d346e9a8d259ed24f16de113c845ffb60d90e",
+      "bytes": 507823345
+    },
+    {
+      "dataset": "mosei",
+      "path": "/data01/lyw/GLoMo_length_pretrain_20261020/runs/mosei_same_length/best_correlation.pt",
+      "sha256": "2bfb5d27e0fbae49fea8267080269c5b2d6d6a0975acdd1fe8dc947aec566408",
+      "bytes": 7924322
+    },
+    {
+      "dataset": "mosei",
+      "path": "/data01/lyw/GLoMo_repair_20261019T001/repair_cache/mosei/dev.fixed_contextual_word_v1.pt",
+      "sha256": "9243ef921668d7585670b393ae1ac612a5af8e921140260da6d5dced9ec7b2a5",
+      "bytes": 170065679
+    },
+    {
+      "dataset": "mosei",
+      "path": "/data01/lyw/GLoMo_repair_20261019T001/repair_cache/mosei/test.fixed_contextual_word_v1.pt",
+      "sha256": "61459e7ea72dee956755b0a0ccd799b09ac4e5792b387b92df7a8f1223309660",
+      "bytes": 413349563
+    },
+    {
+      "dataset": "mosei",
+      "path": "/data01/lyw/GLoMo_repair_20261019T001/repair_cache/mosei/train.fixed_contextual_word_v1.pt",
+      "sha256": "10ba686063b1d711c0cba634e5844d9daa59fba4e73783f8d005a5bc0dd5523e",
+      "bytes": 1432984996
+    }
+  ],
+  "note": "Hashes freeze current artifacts. Legacy caches lack historical BERT-weight/tokenizer digests; these current hashes do not retroactively prove how the caches were generated."
+}

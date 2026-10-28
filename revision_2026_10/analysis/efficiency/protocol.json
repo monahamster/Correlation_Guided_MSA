@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-22T07:41:41.304344Z",
+  "scope": "Efficiency of existing selected checkpoints, seed5576 representative weights; no training or selection.",
+  "gpu": 0,
+  "execution": "All benchmarks serially on the same idle RTX3090; FP32, existing eval/no_grad path, CPU threads4.",
+  "batch_sizes": [
+    1,
+    32
+  ],
+  "split": "dev",
+  "input_blocks": 5,
+  "block_selection": "Five deterministic evenly-spaced contiguous blocks per batch size from the full dev split; original sequence padding and cache word padding.",
+  "warmup_per_block": 10,
+  "timed_repeats_per_block": 30,
+  "latency": "Synchronized wall time and CUDA events, resident model and one input batch on GPU; no analysis hooks, model loading, tokenization, disk IO or host-to-device transfer in timed model call. Report median/p95 and per-block medians; these are timing repeats, not training seeds.",
+  "memory": "Peak allocated and reserved CUDA bytes of a warmed forward; also resident allocated bytes and incremental peak. Only one input batch resident. Model itself stays resident.",
+  "parameters": "Total registered parameters, trainable parameters, frozen correlation parameters, buffers and FP32 weight bytes. Separate one-time frozen BERT cache generator.",
+  "complexity": "Analytical dense arithmetic FLOPs from actual forward shapes: Linear, Conv1d, QKV/output projections, attention QK/AV products, FFNs, MoE gate projections and actual dispatched expert rows, fusion matmul. One multiply-add=2 FLOPs. Bias, normalization, activation, softmax, pooling, embeddings, indexing, routing comparisons and elementwise scaling excluded and documented. Independent profiler operator totals for cross-check.",
+  "correlation_timing": "Additional independent timing of exact _correlation_signals call at identical inputs; measured separately, not subtracted from end-to-end timing.",
+  "constant": "Benchmark current unoptimized control which still computes correlation features before substituting constants.",
+  "cache": "Rebuild the original fixed_word_features cache in a fresh output directory, batch16, once for each dataset train/dev/test; original caches unchanged. Measure total wall time including hashes, loading, tokenization, encoding, pooling and serialization; record file bytes, GPU peak and generator parameters. Validate IDs, retained words, audio/visual tensors, text replay error against original frozen caches. Operating-system file cache not flushed.",
+  "validation": "Strict source/checkpoint/cache hashes; dev prediction replay agreement; instrumentation equality; FLOP count checks on synthetic Linear and Transformer shapes; all results and code hashed."
+}

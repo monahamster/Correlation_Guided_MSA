@@ -1,0 +1,164 @@
+{
+  "protocol": {
+    "scope": "Training-only descriptive split-sensitivity diagnostic; no tuning, no test evaluation",
+    "splits": {
+      "random": "KFold(5,shuffle=True,random_state=5576), video overlap allowed",
+      "group": "GroupKFold(5), no video overlap"
+    },
+    "models": {
+      "ridge": "StandardScaler fit inside fold; Ridge(alpha=1000,solver=svd)",
+      "extra_trees": "200 trees, max_depth=8, min_samples_leaf=5, max_features=1.0, seed=5576, n_jobs=4"
+    },
+    "features": "Existing pooled GLoMo features: thirds means and q10/q50/q90, same as prior simple baselines",
+    "interpretation": "Different fold constructions confound video exclusion and fold composition; a gap is descriptive, not causal proof. Hyperparameters retained from prior diagnostic; Ridge alpha was previously chosen on training group CV, so these are descriptive scores, not an independent nested-CV estimate.",
+    "test_evaluated": false
+  },
+  "results": {
+    "random": {
+      "constant": {
+        "mae": 1.3184505647326812,
+        "corr": -0.053773639464626606,
+        "pred_std": 0.02031486069864249
+      },
+      "folds": [
+        {
+          "train_samples": 1024,
+          "valid_samples": 257,
+          "overlapping_videos": 52
+        },
+        {
+          "train_samples": 1025,
+          "valid_samples": 256,
+          "overlapping_videos": 50
+        },
+        {
+          "train_samples": 1025,
+          "valid_samples": 256,
+          "overlapping_videos": 49
+        },
+        {
+          "train_samples": 1025,
+          "valid_samples": 256,
+          "overlapping_videos": 49
+        },
+        {
+          "train_samples": 1025,
+          "valid_samples": 256,
+          "overlapping_videos": 52
+        }
+      ],
+      "models": {
+        "a_ridge": {
+          "mae": 1.3219484364240561,
+          "corr": 0.09681227177585446,
+          "pred_std": 0.45276415373343165,
+          "gain_vs_fold_train_mean": -0.003497871691374943
+        },
+        "a_extra_trees": {
+          "mae": 1.2964427881988727,
+          "corr": 0.1512523365096573,
+          "pred_std": 0.22677388363903161,
+          "gain_vs_fold_train_mean": 0.022007776533808476
+        },
+        "v_ridge": {
+          "mae": 1.3004245248128146,
+          "corr": 0.13566764237685683,
+          "pred_std": 0.38771395998918934,
+          "gain_vs_fold_train_mean": 0.01802603991986662
+        },
+        "v_extra_trees": {
+          "mae": 1.2921023060201942,
+          "corr": 0.17173324798859457,
+          "pred_std": 0.2442976921115335,
+          "gain_vs_fold_train_mean": 0.026348258712487027
+        },
+        "av_ridge": {
+          "mae": 1.3087823448176352,
+          "corr": 0.1446603027562601,
+          "pred_std": 0.5693543660566435,
+          "gain_vs_fold_train_mean": 0.009668219915045961
+        },
+        "av_extra_trees": {
+          "mae": 1.2899492190927735,
+          "corr": 0.1803754839574262,
+          "pred_std": 0.2413024214627809,
+          "gain_vs_fold_train_mean": 0.028501345639907694
+        }
+      }
+    },
+    "group": {
+      "constant": {
+        "mae": 1.326558574975744,
+        "corr": -0.16740443727002055,
+        "pred_std": 0.06308841487167482
+      },
+      "folds": [
+        {
+          "train_samples": 1025,
+          "valid_samples": 256,
+          "overlapping_videos": 0
+        },
+        {
+          "train_samples": 1026,
+          "valid_samples": 255,
+          "overlapping_videos": 0
+        },
+        {
+          "train_samples": 1022,
+          "valid_samples": 259,
+          "overlapping_videos": 0
+        },
+        {
+          "train_samples": 1020,
+          "valid_samples": 261,
+          "overlapping_videos": 0
+        },
+        {
+          "train_samples": 1031,
+          "valid_samples": 250,
+          "overlapping_videos": 0
+        }
+      ],
+      "models": {
+        "a_ridge": {
+          "mae": 1.3717871612137789,
+          "corr": -0.037496087872651324,
+          "pred_std": 0.4632629945331578,
+          "gain_vs_fold_train_mean": -0.04522858623803483
+        },
+        "a_extra_trees": {
+          "mae": 1.3159359930201755,
+          "corr": 0.03742431140243595,
+          "pred_std": 0.22591829835845229,
+          "gain_vs_fold_train_mean": 0.010622581955568533
+        },
+        "v_ridge": {
+          "mae": 1.3311542886025105,
+          "corr": 0.03221389383155865,
+          "pred_std": 0.39333245980749604,
+          "gain_vs_fold_train_mean": -0.004595713626766473
+        },
+        "v_extra_trees": {
+          "mae": 1.3174108705815588,
+          "corr": 0.041440918292906095,
+          "pred_std": 0.23409160207750365,
+          "gain_vs_fold_train_mean": 0.009147704394185219
+        },
+        "av_ridge": {
+          "mae": 1.3722466149096675,
+          "corr": 0.004705140882444811,
+          "pred_std": 0.5680784263761752,
+          "gain_vs_fold_train_mean": -0.04568803993392345
+        },
+        "av_extra_trees": {
+          "mae": 1.3144966289451014,
+          "corr": 0.05779642459965835,
+          "pred_std": 0.22205758253073826,
+          "gain_vs_fold_train_mean": 0.01206194603064259
+        }
+      }
+    }
+  },
+  "complete": true,
+  "finished_utc": "2026-10-21T17:03:45.865885Z"
+}

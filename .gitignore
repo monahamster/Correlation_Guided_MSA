@@ -53,3 +53,7 @@ experiments/urfunny_*/
 build/
 dist/
 *.egg-info/
+
+# October revision local reproduction workspaces
+/revision_2026_10/work/
+/revision_2026_10/outputs/

@@ -1,0 +1,15 @@
+{
+  "protocol": "module-ablation-mosi-dev-20261021",
+  "dataset": "mosi",
+  "seed": 2026,
+  "evaluation_split": "dev",
+  "test_evaluated": false,
+  "best_epoch": 60,
+  "epoch_index": "zero_based",
+  "valid_mae": 0.7073468537309805,
+  "valid_mse": 0.9359364072308269,
+  "reloaded_dev_mae": 0.7073468295572627,
+  "correlation_control": "none",
+  "checkpoint_path": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_fusion_only_seed2026/best_model.pt",
+  "checkpoint_sha256": "9d53eade721f86af4eca132d688cf0976092a0f97cc62d3896727a81906f483f"
+}

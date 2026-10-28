@@ -1,0 +1,42 @@
+{
+  "version": "mosi-word-sentence-triplet-v1-20261020",
+  "purpose": "Add aligned-word supervision to the original utterance pairing objective, without sentiment labels.",
+  "datasets": [
+    "mosi"
+  ],
+  "arms": [
+    "random",
+    "same_length"
+  ],
+  "seed": 5576,
+  "epochs": 20,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "margin": 0.2,
+  "optimizer": "torch.optim.Adam, default betas/eps, weight_decay=0",
+  "model": "Same three-layer no-added-position CorrelationModel",
+  "data": "existing fixed contextual word caches; train and dev only",
+  "eligibility": "exclude singleton length groups independently in train/dev; identical eligible anchors and donor pool for both arms",
+  "negative_sampling": "one nonself donor per anchor, random cyclic permutation globally or within exact retained-word-count group; resampled each epoch with dedicated NumPy RNG",
+  "padding": {
+    "mosi": 58,
+    "mosei": 78
+  },
+  "initialization": "fresh identical state in both arms, no warm start",
+  "stochastic_controls": "identical anchor batch order and fixed padding; dropout RNG reset identically at every step; independent sampler RNG",
+  "loss": "For each anchor, average the six directed token cosine triplets over its valid aligned words and divide by 3; mix equally with original six-direction sentence loss. Then average anchors.",
+  "selection": "UNCHANGED: minimum mean dev sentence-level same-length loss over five maps; earliest tie.",
+  "evaluation": "matched vs random/same-length AUC on eligible dev; all-zero original-mask diagnostic; five donor maps; no sentiment test",
+  "dev_negative_seed": 20261021,
+  "train_negative_seed_offset": 100000,
+  "anchor_order_seed_offset": 200000,
+  "dropout_seed_offset": 300000,
+  "interpretation": "Dev-guided pilot; AUC measures cross-modal pairing, not sentiment relevance or reliability. Compare arms within this protocol, not directly against legacy validation loss. No quantitative success threshold chosen after results.",
+  "training_arms": [
+    "same_length"
+  ],
+  "reference_runs": "/data01/lyw/GLoMo_length_pretrain_20261020/runs",
+  "intervention": "Training loss = 0.5 original sentence triplet + 0.5 aligned-word triplet; all other model/training/data settings unchanged.",
+  "checkpoint_loading": "Original masked-mean inference aggregation and unchanged no-position model.",
+  "labels": "No sentiment labels used. Positive words share aligned retained-word indices; negative words use the same index from an equal-length nonself donor."
+}

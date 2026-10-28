@@ -1,0 +1,12 @@
+[
+  {
+    "name": "representation_features.tar.gz",
+    "bytes": 69634897,
+    "sha256": "80a1450e6662af694d2eea886c1df2f4a7befbcd34a3d19a3948ae96a07b1f72"
+  },
+  {
+    "name": "correlation_checkpoints.tar.gz",
+    "bytes": 14473780,
+    "sha256": "3db83c1a587a113163b55135b35215734a98e7b4679088dfd5c44a97a38391a6"
+  }
+]

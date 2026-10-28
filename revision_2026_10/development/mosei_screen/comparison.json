@@ -1,0 +1,184 @@
+{
+  "dataset": "mosei",
+  "split": "dev",
+  "pretraining_seed": 5576,
+  "downstream_seed": 5576,
+  "per_configuration": {
+    "sentence_sentence": {
+      "dynamic": {
+        "metrics": {
+          "mae": 0.5230995945006095,
+          "mse": 0.49549985665254653,
+          "corr": 0.7370135375469511,
+          "acc7": 0.5377207062600321,
+          "acc2": 0.8341359015516319,
+          "f1": 0.8330640877620907,
+          "acc2_non_zero": 0.841225626740947,
+          "f1_non_zero": 0.8364306426628725
+        },
+        "selected_epoch_one_based": 6,
+        "checkpoint_sha256": "3261b4f382653de8e1c0e5f33ec2aae13129608cfafdcab1768d80a32fdf973f"
+      },
+      "constant": {
+        "metrics": {
+          "mae": 0.525012933182167,
+          "mse": 0.4993899336342514,
+          "corr": 0.7402362081408819,
+          "acc7": 0.5446762974852862,
+          "acc2": 0.7795612627073302,
+          "f1": 0.788761409771052,
+          "acc2_non_zero": 0.8293871866295265,
+          "f1_non_zero": 0.8302196449066694
+        },
+        "selected_epoch_one_based": 4,
+        "checkpoint_sha256": "eab66bcc79625abb921c4decf36b28b7623ebcaa449371318b5acbd26e22453f"
+      },
+      "delta_dynamic_minus_constant": {
+        "mae": -0.0019133386815575193,
+        "mse": -0.0038900769817048486,
+        "corr": -0.0032226705939307765,
+        "acc7": -0.006955591225254132,
+        "acc2": 0.05457463884430169,
+        "f1": 0.04430267799103871,
+        "acc2_non_zero": 0.011838440111420545,
+        "f1_non_zero": 0.0062109977562030405
+      }
+    },
+    "sentence_word": {
+      "dynamic": {
+        "metrics": {
+          "mae": 0.5211710682374683,
+          "mse": 0.49306941769689955,
+          "corr": 0.737313869681805,
+          "acc7": 0.545211342964152,
+          "acc2": 0.8271803103263777,
+          "f1": 0.827126334789566,
+          "acc2_non_zero": 0.8384401114206128,
+          "f1_non_zero": 0.8341478724682045
+        },
+        "selected_epoch_one_based": 6,
+        "checkpoint_sha256": "2c99c311d6bc09b80076ab4bc259956293aba247dacebb02be60ce642ae9311c"
+      },
+      "constant": {
+        "metrics": {
+          "mae": 0.5208449577028206,
+          "mse": 0.49555771896120226,
+          "corr": 0.7358348445275164,
+          "acc7": 0.5478865703584804,
+          "acc2": 0.8271803103263777,
+          "f1": 0.8272340932263009,
+          "acc2_non_zero": 0.8447075208913649,
+          "f1_non_zero": 0.8401894925541172
+        },
+        "selected_epoch_one_based": 6,
+        "checkpoint_sha256": "4c2fd8282de369e80e3c62e9f348e3b88adbd4449290ea4f910da29293ac2541"
+      },
+      "delta_dynamic_minus_constant": {
+        "mae": 0.00032611053464770556,
+        "mse": -0.002488301264302717,
+        "corr": 0.00147902515428866,
+        "acc7": -0.002675227394328461,
+        "acc2": 0.0,
+        "f1": -0.00010775843673493934,
+        "acc2_non_zero": -0.0062674094707521055,
+        "f1_non_zero": -0.006041620085912691
+      }
+    },
+    "joint_sentence": {
+      "dynamic": {
+        "metrics": {
+          "mae": 0.5243995430943887,
+          "mse": 0.49603545234124524,
+          "corr": 0.7375112502088572,
+          "acc7": 0.5409309791332263,
+          "acc2": 0.8352059925093633,
+          "f1": 0.8315203217275133,
+          "acc2_non_zero": 0.834958217270195,
+          "f1_non_zero": 0.8278049505615367
+        },
+        "selected_epoch_one_based": 6,
+        "checkpoint_sha256": "a82cdc309d3f484d8ebc4b3f6490705f8e015d2e779f97bb4c135655ad0d0e4c"
+      },
+      "constant": {
+        "metrics": {
+          "mae": 0.5239220726988966,
+          "mse": 0.49495806543011756,
+          "corr": 0.7358768032802303,
+          "acc7": 0.5436062065275549,
+          "acc2": 0.8239700374531835,
+          "f1": 0.8249778856051151,
+          "acc2_non_zero": 0.841225626740947,
+          "f1_non_zero": 0.8375594471540666
+        },
+        "selected_epoch_one_based": 6,
+        "checkpoint_sha256": "c29bb131da06b85a3a173ec552a2e118f91cb5512d203fc5e9134edf4dddd725"
+      },
+      "delta_dynamic_minus_constant": {
+        "mae": 0.0004774703954921744,
+        "mse": 0.0010773869111276868,
+        "corr": 0.0016344469286269092,
+        "acc7": -0.002675227394328572,
+        "acc2": 0.011235955056179803,
+        "f1": 0.006542436122398243,
+        "acc2_non_zero": -0.0062674094707519945,
+        "f1_non_zero": -0.009754496592529915
+      }
+    },
+    "joint_word": {
+      "dynamic": {
+        "metrics": {
+          "mae": 0.5251981338791346,
+          "mse": 0.5004288228067578,
+          "corr": 0.7348194616248951,
+          "acc7": 0.5425361155698234,
+          "acc2": 0.8325307651150348,
+          "f1": 0.8308201498455254,
+          "acc2_non_zero": 0.8433147632311978,
+          "f1_non_zero": 0.8375575891398209
+        },
+        "selected_epoch_one_based": 6,
+        "checkpoint_sha256": "c23389d62930ebeba81cc28d8e3526c375b4421237f234b01f44defae45e77d6"
+      },
+      "constant": {
+        "metrics": {
+          "mae": 0.523009410466094,
+          "mse": 0.49665449833805614,
+          "corr": 0.7358712390514068,
+          "acc7": 0.5345104333868379,
+          "acc2": 0.8261102193686464,
+          "f1": 0.8263788702384659,
+          "acc2_non_zero": 0.8398328690807799,
+          "f1_non_zero": 0.8356909847481621
+        },
+        "selected_epoch_one_based": 6,
+        "checkpoint_sha256": "0e36dd943d938e2497fa1dbabd5040ae97f6de1a8ca3e6f16bcb58168338b905"
+      },
+      "delta_dynamic_minus_constant": {
+        "mae": 0.0021887234130406608,
+        "mse": 0.003774324468701684,
+        "corr": -0.0010517774265117463,
+        "acc7": 0.008025682182985494,
+        "acc2": 0.006420545746388395,
+        "f1": 0.004441279607059534,
+        "acc2_non_zero": 0.0034818941504178857,
+        "f1_non_zero": 0.001866604391658866
+      }
+    }
+  },
+  "factor_effects_mae": {
+    "dynamic": {
+      "readout_change_at_sentence_objective": -0.001928526263141217,
+      "readout_change_at_joint_objective": 0.0007985907847458673,
+      "objective_change_at_sentence_readout": 0.0012999485937792432,
+      "objective_change_at_word_readout": 0.0040270656416663275
+    },
+    "constant": {
+      "readout_change_at_sentence_objective": -0.004167975479346442,
+      "readout_change_at_joint_objective": -0.000912662232802619,
+      "objective_change_at_sentence_readout": -0.0010908604832704505,
+      "objective_change_at_word_readout": 0.0021644527632733723
+    }
+  },
+  "lowest_dynamic_dev_mae_configuration": "sentence_word",
+  "scope": "Single-seed candidate screening; all cells use original fixed100 epochs and earliest min dev MAE; F1 true-label support; zero nonnegative for Acc2, excluded for nonzero; no test evaluation; candidate confirmation uses additional seeds."
+}

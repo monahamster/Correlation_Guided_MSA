@@ -1,0 +1,49 @@
+{
+  "id": "mosi_av_seed2026",
+  "dataset": "mosi",
+  "seed": 2026,
+  "split": "test",
+  "limit": null,
+  "metrics": {
+    "n": 685,
+    "n_nonzero": 655,
+    "n_zero": 30,
+    "mae": 1.4458778154492433,
+    "mse": 2.7880972534971837,
+    "corr": 0.049230533346650646,
+    "acc7": 0.15182481751824817,
+    "acc2": 0.5007299270072992,
+    "f1": 0.4474704498632333,
+    "acc2_non_zero": 0.48244274809160304,
+    "f1_non_zero": 0.43116904076693785,
+    "confusion2": [
+      [
+        80,
+        298
+      ],
+      [
+        44,
+        263
+      ]
+    ],
+    "confusion2_nonzero": [
+      [
+        80,
+        298
+      ],
+      [
+        41,
+        236
+      ]
+    ]
+  },
+  "selected_epoch_zero_based": 52,
+  "checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_av_seed2026/best_model.pt",
+  "checkpoint_sha256": "4161c3896b7faf8bcb08b0956c9488db4f27fe717d5f09bfa20bc63206f6cb2b",
+  "config_sha256": "36e38fb4513c9890a089ac75ba49b063285abf3746270dd6d5b4150cbfc59f7c",
+  "dev_replay_max_abs_diff": null,
+  "test_evaluated": true,
+  "created_utc": "2026-10-22T05:22:15.795901Z",
+  "constant_scales": null,
+  "selection": "Existing earliest minimum dev MAE; no model or threshold selection in evaluator"
+}

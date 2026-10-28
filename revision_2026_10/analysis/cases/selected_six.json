@@ -1,0 +1,2463 @@
+[
+  {
+    "dataset": "mosi",
+    "index": 361,
+    "sample_id": "lXPQBPVc5Cw[28]",
+    "video_id": "lXPQBPVc5Cw",
+    "start_seconds": 164.9675750732422,
+    "end_seconds": 172.56031799316406,
+    "duration": 7.592742919921875,
+    "timestamp_valid": true,
+    "youtube_id_valid": true,
+    "transcript": "but the adults were the adults that were actually attempting to watch it and the people who were my age as well were like what did i just see",
+    "word_count": 29,
+    "subword_count": 29,
+    "all_subwords_retained": true,
+    "model_input_text": "but the adults were the adults that were actually attempting to watch it and the people who were my age as well were like what did i just see",
+    "all_words_retained": true,
+    "kept_word_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "label": -1.2000000476837158,
+    "public_video_url": "https://www.youtube.com/watch?v=lXPQBPVc5Cw&t=164s",
+    "media_status": "not_acquired",
+    "models": {
+      "baseline": {
+        "predictions_by_seed": [
+          -1.4332438707351685,
+          -0.4447305500507355,
+          -1.6411539316177368,
+          -1.394425630569458,
+          -1.6266103982925415
+        ],
+        "prediction_mean": -1.3080328762531281,
+        "prediction_sd": 0.49520038434961083,
+        "mean_absolute_error": 0.4101406276226044,
+        "seed5576_trace": {
+          "t_gates": [
+            0.21964822709560394,
+            0.0,
+            0.7803517580032349
+          ],
+          "t_base_logits": [
+            -0.20147967338562012,
+            -3.3666844367980957,
+            1.0662378072738647
+          ],
+          "t_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "a_gates": [
+            0.0,
+            0.8575345873832703,
+            0.14246545732021332
+          ],
+          "a_base_logits": [
+            -2.2939584255218506,
+            -0.49501943588256836,
+            -2.2899813652038574
+          ],
+          "a_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "v_gates": [
+            0.9539152979850769,
+            0.0,
+            0.0460846908390522
+          ],
+          "v_base_logits": [
+            1.201552152633667,
+            -4.495175361633301,
+            -1.828541874885559
+          ],
+          "v_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "constant": {
+        "predictions_by_seed": [
+          -1.5768330097198486,
+          -0.5211382508277893,
+          -1.6444485187530518,
+          -1.4517312049865723,
+          -1.4638837575912476
+        ],
+        "prediction_mean": -1.3316069483757018,
+        "prediction_sd": 0.4601065556765355,
+        "mean_absolute_error": 0.4031516194343567,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.027911363169550896,
+          "raw_cosine_tv": 0.05709070712327957,
+          "raw_cosine_av": 0.002786582801491022,
+          "q_t": 0.5212504863739014,
+          "q_a": 0.5076744556427002,
+          "q_v": 0.5149693489074707,
+          "s_t": 1.0057005882263184,
+          "s_a": 1.0066330432891846,
+          "s_v": 1.0070469379425049,
+          "t_gates": [
+            0.39679452776908875,
+            0.0,
+            0.6032055020332336
+          ],
+          "t_base_logits": [
+            0.12171697616577148,
+            -4.454227924346924,
+            0.5610664486885071
+          ],
+          "t_rel_bias": [
+            -0.04051973298192024,
+            -0.014683387242257595,
+            -0.061029739677906036
+          ],
+          "a_gates": [
+            0.0,
+            0.821504533290863,
+            0.17849542200565338
+          ],
+          "a_base_logits": [
+            -2.299013137817383,
+            -0.6006696224212646,
+            -2.0469207763671875
+          ],
+          "a_rel_bias": [
+            0.047159116715192795,
+            0.03585122525691986,
+            -0.0444721095263958
+          ],
+          "v_gates": [
+            0.9490194916725159,
+            0.0,
+            0.05098051205277443
+          ],
+          "v_base_logits": [
+            1.2307182550430298,
+            -4.350127220153809,
+            -1.6822235584259033
+          ],
+          "v_rel_bias": [
+            -0.04282720386981964,
+            0.035533029586076736,
+            -0.05387125536799431
+          ]
+        }
+      },
+      "dynamic": {
+        "predictions_by_seed": [
+          -1.4859352111816406,
+          -1.0272102355957031,
+          -1.3106553554534912,
+          -1.3729804754257202,
+          -1.265297770500183
+        ],
+        "prediction_mean": -1.2924158096313476,
+        "prediction_sd": 0.16981054864807107,
+        "mean_absolute_error": 0.16153168678283691,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.027911363169550896,
+          "raw_cosine_tv": 0.05709070712327957,
+          "raw_cosine_av": 0.002786582801491022,
+          "q_t": 0.5212504863739014,
+          "q_a": 0.5076744556427002,
+          "q_v": 0.5149693489074707,
+          "s_t": 1.0042500495910645,
+          "s_a": 1.0015349388122559,
+          "s_v": 1.0029938220977783,
+          "t_gates": [
+            0.2175193876028061,
+            0.0,
+            0.7824805974960327
+          ],
+          "t_base_logits": [
+            0.22671294212341309,
+            -4.579076290130615,
+            1.5273597240447998
+          ],
+          "t_rel_bias": [
+            -0.040467116981744766,
+            -0.01466833334416151,
+            -0.06093278154730797
+          ],
+          "a_gates": [
+            0.0,
+            0.849701464176178,
+            0.15029852092266083
+          ],
+          "a_base_logits": [
+            -2.333550453186035,
+            -0.48331570625305176,
+            -2.1356825828552246
+          ],
+          "a_rel_bias": [
+            0.04691141098737717,
+            0.03565976768732071,
+            -0.04423496127128601
+          ],
+          "v_gates": [
+            0.9471303224563599,
+            0.0,
+            0.05286967381834984
+          ],
+          "v_base_logits": [
+            1.1841216087341309,
+            -4.318069934844971,
+            -1.690507173538208
+          ],
+          "v_rel_bias": [
+            -0.04266051575541496,
+            0.03538580611348152,
+            -0.05363843962550163
+          ]
+        }
+      }
+    },
+    "dynamic_gain": {
+      "baseline": {
+        "mean": 0.24860894083976745,
+        "wins": 4,
+        "losses": 1
+      },
+      "constant": {
+        "mean": 0.24161993265151976,
+        "wins": 5,
+        "losses": 0
+      }
+    },
+    "prediction_mean_spread": 0.039191138744354204,
+    "candidate_group": "consistent_gain",
+    "candidate_id": "mosi_consistent_gain_4",
+    "review_id": "mosi_consistent_gain_2",
+    "media_reference": {
+      "review_id": "mosi_consistent_gain_2",
+      "sample_id": "lXPQBPVc5Cw[28]",
+      "source_path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/lXPQBPVc5Cw/29.mp4",
+      "revision": "3b1d3af2708c9e9e02549c465c8836d7adacbe62",
+      "source_file_metadata": {
+        "type": "file",
+        "oid": "c13fa0f6caa9c3e4e87aa141ed50c17705da49b0",
+        "size": 617059,
+        "lfs": {
+          "oid": "b66171922f8f53a148ba54797eaeb31ec4101cccebd3de21f4083eaae08681f8",
+          "size": 617059,
+          "pointerSize": 131
+        },
+        "xetHash": "3012aa743948694c455017d0c0cb45cefeaa5b9f28ff003da80f873cfbd7962f",
+        "path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/lXPQBPVc5Cw/29.mp4"
+      },
+      "source_url": "https://huggingface.co/datasets/Eureka-Leo/Emotion.Intelligence/blob/3b1d3af2708c9e9e02549c465c8836d7adacbe62/level1/opinion.sentiment.analysis/CMU-MOSI/videos/lXPQBPVc5Cw/29.mp4",
+      "bytes": 617059,
+      "sha256": "b66171922f8f53a148ba54797eaeb31ec4101cccebd3de21f4083eaae08681f8",
+      "status": "downloaded_hash_verified",
+      "local_path": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/clips/mosi_consistent_gain_2.mp4"
+    },
+    "transcript_match": {
+      "dataset": "mosi",
+      "sample_id": "lXPQBPVc5Cw[28]",
+      "candidate_id": "mosi_consistent_gain_4",
+      "normalized_text_similarity": 1.0,
+      "second_best_similarity": 0.35526315789473684,
+      "exact_normalized_text_match": true,
+      "original_transcript": "but the adults were the adults that were actually attempting to watch it and the people who were my age as well were like what did i just see",
+      "start_seconds": 164.9675750732422,
+      "end_seconds": 172.56031799316406,
+      "video_path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/lXPQBPVc5Cw/29.mp4",
+      "source_transcript": "BUT THE ADULTS WERE THE ADULTS THAT WERE ACTUALLY ATTEMPTING TO WATCH IT AND THE PEOPLE WHO WERE MY AGE AS WELL WERE LIKE WHAT DID I JUST SEE",
+      "source_annotation_id": "116",
+      "review_id": "mosi_consistent_gain_2",
+      "group": "consistent_gain"
+    },
+    "media_measurements": {
+      "review_id": "mosi_consistent_gain_2",
+      "video_duration": 7.711995,
+      "container_duration": 7.767,
+      "original_interval_duration": 7.592742919921875,
+      "duration_difference": 0.11925208007812493,
+      "streams": [
+        {
+          "codec": "h264",
+          "type": "video",
+          "width": 640,
+          "height": 480,
+          "sample_rate": null,
+          "duration": "7.766667"
+        },
+        {
+          "codec": "aac",
+          "type": "audio",
+          "width": null,
+          "height": null,
+          "sample_rate": "44100",
+          "duration": "7.711995"
+        }
+      ],
+      "frames": [
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_consistent_gain_2_0.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_consistent_gain_2_1.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_consistent_gain_2_2.jpg"
+      ],
+      "audio": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/audio/mosi_consistent_gain_2.wav",
+      "source_transcript": "BUT THE ADULTS WERE THE ADULTS THAT WERE ACTUALLY ATTEMPTING TO WATCH IT AND THE PEOPLE WHO WERE MY AGE AS WELL WERE LIKE WHAT DID I JUST SEE",
+      "sample_id": "lXPQBPVc5Cw[28]"
+    },
+    "audio_analysis": {
+      "review_id": "mosi_consistent_gain_2",
+      "audio_seconds": 7.7191875,
+      "asr_transcript": "the adults that were actually attempting to watch it and the people who were my age as well were like what did I just see?",
+      "asr_source": "openai/whisper-tiny.en; greedy inference; no human listening claimed",
+      "normalized_similarity_to_source": 0.9238095238095239,
+      "rms_dbfs_p10_p50_p90": [
+        -54.389177322387695,
+        -40.98038864135742,
+        -32.024967956542966
+      ],
+      "waveform_clipping_fraction": 0.0,
+      "audio_sha256": "3fc06d166676560fd4b45428f1224f782294a0c414f0f47f813d9a050340b065"
+    },
+    "observation": {
+      "visible": "前三张关键帧中，说话者先张口讲话，随后视线下移；末帧眉头收拢、嘴部张开。",
+      "text": "以“what did I just see”表达对观影体验的质疑。",
+      "interpretation": "三种模型的平均预测接近；Dynamic的逐种子绝对误差更低，主要区别体现在跨种子的稳定性。",
+      "reason": "来源转录归一化后完全匹配；ASR复现主要内容；采用该获益备选便于联合展示文本与可见表情。"
+    },
+    "gate_interventions": {
+      "t": {
+        "actual": [
+          0.2175193876028061,
+          0.0,
+          0.7824805974960327
+        ],
+        "neutral_scale_one": [
+          0.21750466525554657,
+          0.0,
+          0.7824953198432922
+        ],
+        "zero_bias": [
+          0.21405619382858276,
+          0.0,
+          0.7859438061714172
+        ],
+        "neutral_scale_gate_l1": 2.944469451904297e-05,
+        "zero_bias_gate_l1": 0.006926402449607849,
+        "gate_replay_error": 0.0
+      },
+      "a": {
+        "actual": [
+          0.0,
+          0.849701464176178,
+          0.15029852092266083
+        ],
+        "neutral_scale_one": [
+          0.0,
+          0.8496859073638916,
+          0.15031415224075317
+        ],
+        "zero_bias": [
+          0.0,
+          0.8392106890678406,
+          0.16078932583332062
+        ],
+        "neutral_scale_gate_l1": 3.1188130378723145e-05,
+        "zero_bias_gate_l1": 0.020981580018997192,
+        "gate_replay_error": 0.0
+      },
+      "v": {
+        "actual": [
+          0.9471303224563599,
+          0.0,
+          0.05286967381834984
+        ],
+        "neutral_scale_one": [
+          0.9471287131309509,
+          0.0,
+          0.052871327847242355
+        ],
+        "zero_bias": [
+          0.9465778470039368,
+          0.0,
+          0.053422097116708755
+        ],
+        "neutral_scale_gate_l1": 3.2633543014526367e-06,
+        "zero_bias_gate_l1": 0.001104898750782013,
+        "gate_replay_error": 0.0
+      }
+    }
+  },
+  {
+    "dataset": "mosi",
+    "index": 488,
+    "sample_id": "tStelxIAHjw[1]",
+    "video_id": "tStelxIAHjw",
+    "start_seconds": 19.178911209106445,
+    "end_seconds": 32.66825485229492,
+    "duration": 13.489343643188477,
+    "timestamp_valid": true,
+    "youtube_id_valid": true,
+    "transcript": "um i think the last movie i saw in theatres was toy story 3 and i hated it",
+    "word_count": 18,
+    "subword_count": 18,
+    "all_subwords_retained": true,
+    "model_input_text": "um i think the last movie i saw in theatres was toy story 3 and i hated it",
+    "all_words_retained": true,
+    "kept_word_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "label": -2.0,
+    "public_video_url": "https://www.youtube.com/watch?v=tStelxIAHjw&t=19s",
+    "media_status": "not_acquired",
+    "models": {
+      "baseline": {
+        "predictions_by_seed": [
+          -1.8843731880187988,
+          -1.795997142791748,
+          -1.8486210107803345,
+          -1.4241831302642822,
+          -1.798387885093689
+        ],
+        "prediction_mean": -1.7503124713897704,
+        "prediction_sd": 0.1860077460800016,
+        "mean_absolute_error": 0.2496875286102295,
+        "seed5576_trace": {
+          "t_gates": [
+            0.9729800820350647,
+            0.0,
+            0.02701987884938717
+          ],
+          "t_base_logits": [
+            1.8259506225585938,
+            -3.066267967224121,
+            -1.7578401565551758
+          ],
+          "t_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "a_gates": [
+            0.6584573984146118,
+            0.3415425717830658,
+            0.0
+          ],
+          "a_base_logits": [
+            -1.3913460969924927,
+            -2.047773599624634,
+            -3.2354469299316406
+          ],
+          "a_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "v_gates": [
+            0.9840138554573059,
+            0.0,
+            0.015986178070306778
+          ],
+          "v_base_logits": [
+            2.8339734077453613,
+            -1.7642221450805664,
+            -1.2859421968460083
+          ],
+          "v_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "constant": {
+        "predictions_by_seed": [
+          -1.8903043270111084,
+          -1.7835876941680908,
+          -1.6168766021728516,
+          -1.4938673973083496,
+          -1.7212857007980347
+        ],
+        "prediction_mean": -1.701184344291687,
+        "prediction_sd": 0.15251955313640161,
+        "mean_absolute_error": 0.298815655708313,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.032636307179927826,
+          "raw_cosine_tv": 0.04298662021756172,
+          "raw_cosine_av": 0.06733344495296478,
+          "q_t": 0.518905758857727,
+          "q_a": 0.5249924659729004,
+          "q_v": 0.5275800228118896,
+          "s_t": 1.0057005882263184,
+          "s_a": 1.0066330432891846,
+          "s_v": 1.0070469379425049,
+          "t_gates": [
+            0.8742321729660034,
+            0.0,
+            0.12576784193515778
+          ],
+          "t_base_logits": [
+            1.4097647666931152,
+            -3.5398216247558594,
+            -0.508633553981781
+          ],
+          "t_rel_bias": [
+            -0.04051973298192024,
+            -0.014683387242257595,
+            -0.061029739677906036
+          ],
+          "a_gates": [
+            0.6498719453811646,
+            0.35012805461883545,
+            0.0
+          ],
+          "a_base_logits": [
+            -1.325268030166626,
+            -1.9324365854263306,
+            -2.9184460639953613
+          ],
+          "a_rel_bias": [
+            0.047159116715192795,
+            0.03585122525691986,
+            -0.0444721095263958
+          ],
+          "v_gates": [
+            0.975932240486145,
+            0.0,
+            0.024067722260951996
+          ],
+          "v_base_logits": [
+            2.7661492824554443,
+            -1.7166457176208496,
+            -0.9253280758857727
+          ],
+          "v_rel_bias": [
+            -0.04282720386981964,
+            0.035533029586076736,
+            -0.05387125536799431
+          ]
+        }
+      },
+      "dynamic": {
+        "predictions_by_seed": [
+          -1.6400805711746216,
+          -1.5356818437576294,
+          -1.433382272720337,
+          -1.4848178625106812,
+          -1.3404207229614258
+        ],
+        "prediction_mean": -1.486876654624939,
+        "prediction_sd": 0.11199175636201152,
+        "mean_absolute_error": 0.513123345375061,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.032636307179927826,
+          "raw_cosine_tv": 0.04298662021756172,
+          "raw_cosine_av": 0.06733344495296478,
+          "q_t": 0.518905758857727,
+          "q_a": 0.5249924659729004,
+          "q_v": 0.5275800228118896,
+          "s_t": 1.0037811994552612,
+          "s_a": 1.0049984455108643,
+          "s_v": 1.0055160522460938,
+          "t_gates": [
+            0.7861629128456116,
+            0.0,
+            0.2138371616601944
+          ],
+          "t_base_logits": [
+            0.8951804637908936,
+            -3.7105770111083984,
+            -0.38631269335746765
+          ],
+          "t_rel_bias": [
+            -0.040448226034641266,
+            -0.014661486260592937,
+            -0.060904331505298615
+          ],
+          "a_gates": [
+            0.6590670347213745,
+            0.3409329950809479,
+            0.0
+          ],
+          "a_base_logits": [
+            -1.297280192375183,
+            -1.9451289176940918,
+            -3.1561734676361084
+          ],
+          "a_rel_bias": [
+            0.047073639929294586,
+            0.035783085972070694,
+            -0.04438793286681175
+          ],
+          "v_gates": [
+            0.9768809080123901,
+            0.0,
+            0.023119162768125534
+          ],
+          "v_base_logits": [
+            2.730689525604248,
+            -1.847278356552124,
+            -1.0020077228546143
+          ],
+          "v_rel_bias": [
+            -0.04276779666543007,
+            0.03547478839755058,
+            -0.05377332493662834
+          ]
+        }
+      }
+    },
+    "dynamic_gain": {
+      "baseline": {
+        "mean": -0.2634358167648315,
+        "wins": 1,
+        "losses": 4
+      },
+      "constant": {
+        "mean": -0.21430768966674804,
+        "wins": 0,
+        "losses": 5
+      }
+    },
+    "prediction_mean_spread": 0.2634358167648314,
+    "candidate_group": "consistent_loss",
+    "candidate_id": "mosi_consistent_loss_3",
+    "review_id": "mosi_consistent_loss_1",
+    "media_reference": {
+      "review_id": "mosi_consistent_loss_1",
+      "sample_id": "tStelxIAHjw[1]",
+      "source_path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/tStelxIAHjw/2.mp4",
+      "revision": "3b1d3af2708c9e9e02549c465c8836d7adacbe62",
+      "source_file_metadata": {
+        "type": "file",
+        "oid": "0ca76c3e9f41d85df17e9e59cea394740c56bdb6",
+        "size": 633758,
+        "lfs": {
+          "oid": "22b9cc6b8ccd888feef2f4d07adc8bf9a53f1116ea85d284b95dc542bc141351",
+          "size": 633758,
+          "pointerSize": 131
+        },
+        "xetHash": "793df07ab4f864da8e2b28848937ebdaccc0e3b55db9f71fe3bd6e71457e90f9",
+        "path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/tStelxIAHjw/2.mp4"
+      },
+      "source_url": "https://huggingface.co/datasets/Eureka-Leo/Emotion.Intelligence/blob/3b1d3af2708c9e9e02549c465c8836d7adacbe62/level1/opinion.sentiment.analysis/CMU-MOSI/videos/tStelxIAHjw/2.mp4",
+      "bytes": 633758,
+      "sha256": "22b9cc6b8ccd888feef2f4d07adc8bf9a53f1116ea85d284b95dc542bc141351",
+      "status": "downloaded_hash_verified",
+      "local_path": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/clips/mosi_consistent_loss_1.mp4"
+    },
+    "transcript_match": {
+      "dataset": "mosi",
+      "sample_id": "tStelxIAHjw[1]",
+      "candidate_id": "mosi_consistent_loss_3",
+      "normalized_text_similarity": 1.0,
+      "second_best_similarity": 0.5648854961832062,
+      "exact_normalized_text_match": true,
+      "original_transcript": "um i think the last movie i saw in theatres was toy story 3 and i hated it",
+      "start_seconds": 19.178911209106445,
+      "end_seconds": 32.66825485229492,
+      "video_path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/tStelxIAHjw/2.mp4",
+      "source_transcript": "UM I THINK THE LAST MOVIE I SAW IN THEATRES WAS TOY STORY 3 AND I HATED IT",
+      "source_annotation_id": "120",
+      "review_id": "mosi_consistent_loss_1",
+      "group": "consistent_loss"
+    },
+    "media_measurements": {
+      "review_id": "mosi_consistent_loss_1",
+      "video_duration": 13.749002,
+      "container_duration": 13.8,
+      "original_interval_duration": 13.489343643188477,
+      "duration_difference": 0.25965835681152427,
+      "streams": [
+        {
+          "codec": "h264",
+          "type": "video",
+          "width": 480,
+          "height": 360,
+          "sample_rate": null,
+          "duration": "13.800000"
+        },
+        {
+          "codec": "aac",
+          "type": "audio",
+          "width": null,
+          "height": null,
+          "sample_rate": "44100",
+          "duration": "13.749002"
+        }
+      ],
+      "frames": [
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_consistent_loss_1_0.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_consistent_loss_1_1.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_consistent_loss_1_2.jpg"
+      ],
+      "audio": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/audio/mosi_consistent_loss_1.wav",
+      "source_transcript": "UM I THINK THE LAST MOVIE I SAW IN THEATRES WAS TOY STORY 3 AND I HATED IT",
+      "sample_id": "tStelxIAHjw[1]"
+    },
+    "audio_analysis": {
+      "review_id": "mosi_consistent_loss_1",
+      "audio_seconds": 13.756375,
+      "asr_transcript": "Um, I think the last movie I saw in theaters was Toy Story 3 and I hated it.",
+      "asr_source": "openai/whisper-tiny.en; greedy inference; no human listening claimed",
+      "normalized_similarity_to_source": 0.9824561403508771,
+      "rms_dbfs_p10_p50_p90": [
+        -49.05318984985352,
+        -34.12721061706543,
+        -20.618872833251952
+      ],
+      "waveform_clipping_fraction": 0.0,
+      "audio_sha256": "10c3656dfb060459d2d466724c2dfe7080615a936c305a67f440aac8b949810c"
+    },
+    "observation": {
+      "visible": "说话者面向镜头，前后帧嘴部张开；中间帧视线转向侧方。",
+      "text": "“I hated it”直接表达强烈负向评价。",
+      "interpretation": "Dynamic的平均预测比两种对照更接近零，对负向强度的估计偏弱。",
+      "reason": "本轮可恢复退化候选中排名第一；来源转录完全匹配，ASR吻合。"
+    },
+    "gate_interventions": {
+      "t": {
+        "actual": [
+          0.7861629128456116,
+          0.0,
+          0.2138371616601944
+        ],
+        "neutral_scale_one": [
+          0.7861499190330505,
+          0.0,
+          0.21385008096694946
+        ],
+        "zero_bias": [
+          0.7827038168907166,
+          0.0,
+          0.21729616820812225
+        ],
+        "neutral_scale_gate_l1": 2.5913119316101074e-05,
+        "zero_bias_gate_l1": 0.006918102502822876,
+        "gate_replay_error": 0.0
+      },
+      "a": {
+        "actual": [
+          0.6590670347213745,
+          0.3409329950809479,
+          0.0
+        ],
+        "neutral_scale_one": [
+          0.6590543985366821,
+          0.34094563126564026,
+          0.0
+        ],
+        "zero_bias": [
+          0.6565255522727966,
+          0.34347450733184814,
+          0.0
+        ],
+        "neutral_scale_gate_l1": 2.5272369384765625e-05,
+        "zero_bias_gate_l1": 0.005082994699478149,
+        "gate_replay_error": 0.0
+      },
+      "v": {
+        "actual": [
+          0.9768809080123901,
+          0.0,
+          0.023119162768125534
+        ],
+        "neutral_scale_one": [
+          0.9768795371055603,
+          0.0,
+          0.02312052994966507
+        ],
+        "zero_bias": [
+          0.9766309857368469,
+          0.0,
+          0.02336903102695942
+        ],
+        "neutral_scale_gate_l1": 2.738088369369507e-06,
+        "zero_bias_gate_l1": 0.0004997905343770981,
+        "gate_replay_error": 0.0
+      }
+    }
+  },
+  {
+    "dataset": "mosi",
+    "index": 565,
+    "sample_id": "vyB00TXsimI[14]",
+    "video_id": "vyB00TXsimI",
+    "start_seconds": 147.8863983154297,
+    "end_seconds": 155.5589599609375,
+    "duration": 7.6725616455078125,
+    "timestamp_valid": true,
+    "youtube_id_valid": true,
+    "transcript": "i really love the melodramatic over the top crazy action sort of thing going on",
+    "word_count": 15,
+    "subword_count": 18,
+    "all_subwords_retained": true,
+    "model_input_text": "i really love the melodramatic over the top crazy action sort of thing going on",
+    "all_words_retained": true,
+    "kept_word_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "label": 2.5999999046325684,
+    "public_video_url": "https://www.youtube.com/watch?v=vyB00TXsimI&t=147s",
+    "media_status": "not_acquired",
+    "models": {
+      "baseline": {
+        "predictions_by_seed": [
+          1.9866923093795776,
+          2.007307529449463,
+          2.024024248123169,
+          2.0377278327941895,
+          2.0604920387268066
+        ],
+        "prediction_mean": 2.023248791694641,
+        "prediction_sd": 0.028230319049538544,
+        "mean_absolute_error": 0.5767511129379272,
+        "seed5576_trace": {
+          "t_gates": [
+            0.4149102568626404,
+            0.5850897431373596,
+            0.0
+          ],
+          "t_base_logits": [
+            2.4779491424560547,
+            2.8216521739959717,
+            -2.1876728534698486
+          ],
+          "t_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "a_gates": [
+            0.6599804162979126,
+            0.3400195837020874,
+            0.0
+          ],
+          "a_base_logits": [
+            -1.1264567375183105,
+            -1.7896636724472046,
+            -2.6378121376037598
+          ],
+          "a_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "v_gates": [
+            0.9860290884971619,
+            0.0,
+            0.013970903120934963
+          ],
+          "v_base_logits": [
+            2.594888687133789,
+            -2.076838970184326,
+            -1.6618205308914185
+          ],
+          "v_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "constant": {
+        "predictions_by_seed": [
+          1.993149995803833,
+          2.012580156326294,
+          2.0217676162719727,
+          2.061101198196411,
+          2.0423755645751953
+        ],
+        "prediction_mean": 2.0261949062347413,
+        "prediction_sd": 0.02634953196792398,
+        "mean_absolute_error": 0.5738049983978272,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.050510574132204056,
+          "raw_cosine_tv": 0.012621324509382248,
+          "raw_cosine_av": 0.015536407008767128,
+          "q_t": 0.5157829523086548,
+          "q_a": 0.5165117383003235,
+          "q_v": 0.5070394277572632,
+          "s_t": 1.0057005882263184,
+          "s_a": 1.0066330432891846,
+          "s_v": 1.0070469379425049,
+          "t_gates": [
+            0.1301513910293579,
+            0.8698486089706421,
+            0.0
+          ],
+          "t_base_logits": [
+            1.1933115720748901,
+            3.06709623336792,
+            -2.0366673469543457
+          ],
+          "t_rel_bias": [
+            -0.04051973298192024,
+            -0.014683387242257595,
+            -0.061029739677906036
+          ],
+          "a_gates": [
+            0.594458818435669,
+            0.40554118156433105,
+            0.0
+          ],
+          "a_base_logits": [
+            -1.1770155429840088,
+            -1.5481367111206055,
+            -2.3714113235473633
+          ],
+          "a_rel_bias": [
+            0.047159116715192795,
+            0.03585122525691986,
+            -0.0444721095263958
+          ],
+          "v_gates": [
+            0.9768763184547424,
+            0.0,
+            0.02312367595732212
+          ],
+          "v_base_logits": [
+            2.5115625858306885,
+            -2.030100107192993,
+            -1.2208963632583618
+          ],
+          "v_rel_bias": [
+            -0.04282720386981964,
+            0.035533029586076736,
+            -0.05387125536799431
+          ]
+        }
+      },
+      "dynamic": {
+        "predictions_by_seed": [
+          2.00292706489563,
+          2.0039710998535156,
+          2.0201447010040283,
+          2.0536816120147705,
+          2.0687224864959717
+        ],
+        "prediction_mean": 2.029889392852783,
+        "prediction_sd": 0.029865376754047677,
+        "mean_absolute_error": 0.5701105117797851,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.050510574132204056,
+          "raw_cosine_tv": 0.012621324509382248,
+          "raw_cosine_av": 0.015536407008767128,
+          "q_t": 0.5157829523086548,
+          "q_a": 0.5165117383003235,
+          "q_v": 0.5070394277572632,
+          "s_t": 1.0031565427780151,
+          "s_a": 1.0033023357391357,
+          "s_v": 1.0014078617095947,
+          "t_gates": [
+            0.3559367060661316,
+            0.6440632939338684,
+            0.0
+          ],
+          "t_base_logits": [
+            2.503634452819824,
+            3.0709075927734375,
+            -1.6365240812301636
+          ],
+          "t_rel_bias": [
+            -0.04042305424809456,
+            -0.014652363024652004,
+            -0.060866426676511765
+          ],
+          "a_gates": [
+            0.6221444010734558,
+            0.37785565853118896,
+            0.0
+          ],
+          "a_base_logits": [
+            -1.1122815608978271,
+            -1.5996700525283813,
+            -2.6548376083374023
+          ],
+          "a_rel_bias": [
+            0.04699419438838959,
+            0.03572269529104233,
+            -0.04431302472949028
+          ],
+          "v_gates": [
+            0.9797858595848083,
+            0.0,
+            0.020214155316352844
+          ],
+          "v_base_logits": [
+            2.4298439025878906,
+            -2.2182278633117676,
+            -1.4401463270187378
+          ],
+          "v_rel_bias": [
+            -0.04259306192398071,
+            0.035329852253198624,
+            -0.05355362966656685
+          ]
+        }
+      }
+    },
+    "dynamic_gain": {
+      "baseline": {
+        "mean": 0.00664060115814209,
+        "wins": 3,
+        "losses": 2
+      },
+      "constant": {
+        "mean": 0.003694486618041992,
+        "wins": 2,
+        "losses": 3
+      }
+    },
+    "prediction_mean_spread": 0.006640601158141912,
+    "candidate_group": "agreement",
+    "candidate_id": "mosi_agreement_1",
+    "review_id": "mosi_agreement_1",
+    "media_reference": {
+      "review_id": "mosi_agreement_1",
+      "sample_id": "vyB00TXsimI[14]",
+      "source_path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/vyB00TXsimI/15.mp4",
+      "revision": "3b1d3af2708c9e9e02549c465c8836d7adacbe62",
+      "source_file_metadata": {
+        "type": "file",
+        "oid": "e025e675870148eeff0603d229e232d7f45bcaba",
+        "size": 332045,
+        "lfs": {
+          "oid": "d2131a46bb0de8f6e7ce6fca7f8f19eee566e608197a8a1b6e2de3e11fc8591c",
+          "size": 332045,
+          "pointerSize": 131
+        },
+        "xetHash": "5d226080bcb9706c185886da6080af5f6d3297782188a6e3bc172fb3b88c2a61",
+        "path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/vyB00TXsimI/15.mp4"
+      },
+      "source_url": "https://huggingface.co/datasets/Eureka-Leo/Emotion.Intelligence/blob/3b1d3af2708c9e9e02549c465c8836d7adacbe62/level1/opinion.sentiment.analysis/CMU-MOSI/videos/vyB00TXsimI/15.mp4",
+      "bytes": 332045,
+      "sha256": "d2131a46bb0de8f6e7ce6fca7f8f19eee566e608197a8a1b6e2de3e11fc8591c",
+      "status": "downloaded_hash_verified",
+      "local_path": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/clips/mosi_agreement_1.mp4"
+    },
+    "transcript_match": {
+      "dataset": "mosi",
+      "sample_id": "vyB00TXsimI[14]",
+      "candidate_id": "mosi_agreement_1",
+      "normalized_text_similarity": 1.0,
+      "second_best_similarity": 0.4050632911392405,
+      "exact_normalized_text_match": true,
+      "original_transcript": "i really love the melodramatic over the top crazy action sort of thing going on",
+      "start_seconds": 147.8863983154297,
+      "end_seconds": 155.5589599609375,
+      "video_path": "level1/opinion.sentiment.analysis/CMU-MOSI/videos/vyB00TXsimI/15.mp4",
+      "source_transcript": "I REALLY LOVE THE MELODRAMATIC OVER THE TOP CRAZY ACTION SORT OF THING GOING ON",
+      "source_annotation_id": "338",
+      "review_id": "mosi_agreement_1",
+      "group": "agreement"
+    },
+    "media_measurements": {
+      "review_id": "mosi_agreement_1",
+      "video_duration": 7.531995,
+      "container_duration": 7.569,
+      "original_interval_duration": 7.6725616455078125,
+      "duration_difference": -0.14056664550781228,
+      "streams": [
+        {
+          "codec": "h264",
+          "type": "video",
+          "width": 480,
+          "height": 360,
+          "sample_rate": null,
+          "duration": "7.566667"
+        },
+        {
+          "codec": "aac",
+          "type": "audio",
+          "width": null,
+          "height": null,
+          "sample_rate": "44100",
+          "duration": "7.531995"
+        }
+      ],
+      "frames": [
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_agreement_1_0.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_agreement_1_1.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosi_agreement_1_2.jpg"
+      ],
+      "audio": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/audio/mosi_agreement_1.wav",
+      "source_transcript": "I REALLY LOVE THE MELODRAMATIC OVER THE TOP CRAZY ACTION SORT OF THING GOING ON",
+      "sample_id": "vyB00TXsimI[14]"
+    },
+    "audio_analysis": {
+      "review_id": "mosi_agreement_1",
+      "audio_seconds": 7.5334375,
+      "asr_transcript": "I really love the melodramatic over the top crazy action sort of thing going on.",
+      "asr_source": "openai/whisper-tiny.en; greedy inference; no human listening claimed",
+      "normalized_similarity_to_source": 1.0,
+      "rms_dbfs_p10_p50_p90": [
+        -50.81802825927734,
+        -25.823060035705566,
+        -17.75851879119873
+      ],
+      "waveform_clipping_fraction": 0.0,
+      "audio_sha256": "037de21c081510fa338a81dff7b22b9b2096d9db1affe4bc08c7b9507f7d1675"
+    },
+    "observation": {
+      "visible": "说话者面向镜头；后帧双手抬至身体两侧，眼睛向下。",
+      "text": "“I really love”明确表达喜好。",
+      "interpretation": "三种模型均预测正向，平均值约为+2.03，低于+2.60的标签强度。",
+      "reason": "保留原始预测接近候选第一名；来源转录和ASR均完全匹配。"
+    },
+    "gate_interventions": {
+      "t": {
+        "actual": [
+          0.3559367060661316,
+          0.6440632939338684,
+          0.0
+        ],
+        "neutral_scale_one": [
+          0.3559553623199463,
+          0.6440446376800537,
+          0.0
+        ],
+        "zero_bias": [
+          0.3618662655353546,
+          0.638133704662323,
+          0.0
+        ],
+        "neutral_scale_gate_l1": 3.731250762939453e-05,
+        "zero_bias_gate_l1": 0.011859148740768433,
+        "gate_replay_error": 0.0
+      },
+      "a": {
+        "actual": [
+          0.6221444010734558,
+          0.37785565853118896,
+          0.0
+        ],
+        "neutral_scale_one": [
+          0.6221356391906738,
+          0.3778643310070038,
+          0.0
+        ],
+        "zero_bias": [
+          0.6194910407066345,
+          0.3805089592933655,
+          0.0
+        ],
+        "neutral_scale_gate_l1": 1.7434358596801758e-05,
+        "zero_bias_gate_l1": 0.005306661128997803,
+        "gate_replay_error": 0.0
+      },
+      "v": {
+        "actual": [
+          0.9797858595848083,
+          0.0,
+          0.020214155316352844
+        ],
+        "neutral_scale_one": [
+          0.9797855019569397,
+          0.0,
+          0.020214460790157318
+        ],
+        "zero_bias": [
+          0.9795676469802856,
+          0.0,
+          0.020432380959391594
+        ],
+        "neutral_scale_gate_l1": 6.631016731262207e-07,
+        "zero_bias_gate_l1": 0.0004364382475614548,
+        "gate_replay_error": 0.0
+      }
+    }
+  },
+  {
+    "dataset": "mosei",
+    "index": 1735,
+    "sample_id": "92496_12.702_22.991",
+    "video_id": "92496",
+    "start_seconds": 12.702,
+    "end_seconds": 22.991,
+    "duration": 10.289,
+    "timestamp_valid": true,
+    "youtube_id_valid": false,
+    "transcript": ". it was uhh . it was a pain . to sit through . really it was . it . was . kinda a mystery . that it was . was made you know there . was",
+    "word_count": 37,
+    "subword_count": 38,
+    "all_subwords_retained": true,
+    "model_input_text": ". it was uhh . it was a pain . to sit through . really it was . it . was . kinda a mystery . that it was . was made you know there . was",
+    "all_words_retained": true,
+    "kept_word_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "label": -1.0,
+    "public_video_url": null,
+    "media_status": "not_acquired",
+    "models": {
+      "baseline": {
+        "predictions_by_seed": [
+          -1.6227024793624878,
+          -1.3207736015319824,
+          -1.4200119972229004,
+          -1.1389963626861572,
+          -1.4401878118515015
+        ],
+        "prediction_mean": -1.3885344505310058,
+        "prediction_sd": 0.1770270892763306,
+        "mean_absolute_error": 0.3885344505310059,
+        "seed5576_trace": {
+          "t_gates": [
+            0.0,
+            0.0024067573249340057,
+            0.9975932240486145
+          ],
+          "t_base_logits": [
+            -3.1324591636657715,
+            -1.517735481262207,
+            4.509329795837402
+          ],
+          "t_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "a_gates": [
+            0.33539441227912903,
+            0.0,
+            0.6646056175231934
+          ],
+          "a_base_logits": [
+            1.594199538230896,
+            0.567770779132843,
+            2.2780861854553223
+          ],
+          "a_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "v_gates": [
+            0.0,
+            0.8450515866279602,
+            0.15494845807552338
+          ],
+          "v_base_logits": [
+            -2.933102607727051,
+            -0.28408282995224,
+            -1.980387806892395
+          ],
+          "v_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "constant": {
+        "predictions_by_seed": [
+          -1.6219806671142578,
+          -1.2764418125152588,
+          -1.2160580158233643,
+          -1.439080834388733,
+          -1.5180213451385498
+        ],
+        "prediction_mean": -1.4143165349960327,
+        "prediction_sd": 0.16793468184327814,
+        "mean_absolute_error": 0.4143165349960327,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.11369834095239639,
+          "raw_cosine_tv": 0.2299550324678421,
+          "raw_cosine_av": -0.04654800146818161,
+          "q_t": 0.585913360118866,
+          "q_a": 0.516787588596344,
+          "q_v": 0.5458517670631409,
+          "s_t": 1.0193357467651367,
+          "s_a": 1.018802523612976,
+          "s_v": 1.0206081867218018,
+          "t_gates": [
+            0.0,
+            0.0013372959801927209,
+            0.9986627101898193
+          ],
+          "t_base_logits": [
+            -3.1269898414611816,
+            -2.0618996620178223,
+            4.658457279205322
+          ],
+          "t_rel_bias": [
+            -0.0074926200322806835,
+            0.026537204161286354,
+            -0.07805271446704865
+          ],
+          "a_gates": [
+            0.30921217799186707,
+            0.0,
+            0.6907877922058105
+          ],
+          "a_base_logits": [
+            1.4846585988998413,
+            0.44011303782463074,
+            2.1742238998413086
+          ],
+          "a_rel_bias": [
+            -0.11765817552804947,
+            -0.008505823090672493,
+            -0.003418329870328307
+          ],
+          "v_gates": [
+            0.0,
+            0.8576828837394714,
+            0.14231711626052856
+          ],
+          "v_base_logits": [
+            -2.7028090953826904,
+            -0.30863654613494873,
+            -2.110413074493408
+          ],
+          "v_rel_bias": [
+            -0.1094132587313652,
+            0.11253087967634201,
+            0.11813076585531235
+          ]
+        }
+      },
+      "dynamic": {
+        "predictions_by_seed": [
+          -1.5794156789779663,
+          -1.2264810800552368,
+          -1.1775000095367432,
+          -1.5415618419647217,
+          -1.3918473720550537
+        ],
+        "prediction_mean": -1.3833611965179444,
+        "prediction_sd": 0.18064261591215983,
+        "mean_absolute_error": 0.3833611965179443,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.11369834095239639,
+          "raw_cosine_tv": 0.2299550324678421,
+          "raw_cosine_av": -0.04654800146818161,
+          "q_t": 0.585913360118866,
+          "q_a": 0.516787588596344,
+          "q_v": 0.5458517670631409,
+          "s_t": 1.01718270778656,
+          "s_a": 1.0033575296401978,
+          "s_v": 1.0091702938079834,
+          "t_gates": [
+            0.0,
+            0.0012730639427900314,
+            0.9987269043922424
+          ],
+          "t_base_logits": [
+            -3.2878472805023193,
+            -1.8614531755447388,
+            4.907969951629639
+          ],
+          "t_rel_bias": [
+            -0.007474701851606369,
+            0.026480263099074364,
+            -0.07788790017366409
+          ],
+          "a_gates": [
+            0.32296520471572876,
+            0.0,
+            0.6770347952842712
+          ],
+          "a_base_logits": [
+            1.574867844581604,
+            0.4152393043041229,
+            2.202538013458252
+          ],
+          "a_rel_bias": [
+            -0.11587438732385635,
+            -0.008377927355468273,
+            -0.0033664347138255835
+          ],
+          "v_gates": [
+            0.0,
+            0.8633354902267456,
+            0.13666453957557678
+          ],
+          "v_base_logits": [
+            -2.753929376602173,
+            -0.31752854585647583,
+            -2.1663451194763184
+          ],
+          "v_rel_bias": [
+            -0.10818798840045929,
+            0.11126716434955597,
+            0.11680964380502701
+          ]
+        }
+      }
+    },
+    "dynamic_gain": {
+      "baseline": {
+        "mean": 0.005173254013061524,
+        "wins": 4,
+        "losses": 1
+      },
+      "constant": {
+        "mean": 0.03095533847808838,
+        "wins": 4,
+        "losses": 1
+      }
+    },
+    "prediction_mean_spread": 0.03095533847808829,
+    "review_id": "mosei_consistent_gain_2",
+    "media_reference": {
+      "review_id": "mosei_consistent_gain_2",
+      "sample_id": "92496_12.702_22.991",
+      "source_path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Slight Negative/92496_1.mp4",
+      "revision": "3b1d3af2708c9e9e02549c465c8836d7adacbe62",
+      "source_file_metadata": {
+        "type": "file",
+        "oid": "86f2dece274ae6f27966bd1de1473ad87e36bceb",
+        "size": 671051,
+        "lfs": {
+          "oid": "77de2b56a2f3ce736457959842ae2bd786e19637d7a1752debbeff3c82ce62e2",
+          "size": 671051,
+          "pointerSize": 131
+        },
+        "xetHash": "888967cb37a482ae64b6175a9a45fd8fc01eadd8ef986b61f88673a39313a5c3",
+        "path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Slight Negative/92496_1.mp4"
+      },
+      "source_url": "https://huggingface.co/datasets/Eureka-Leo/Emotion.Intelligence/blob/3b1d3af2708c9e9e02549c465c8836d7adacbe62/level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Slight%20Negative/92496_1.mp4",
+      "bytes": 671051,
+      "sha256": "77de2b56a2f3ce736457959842ae2bd786e19637d7a1752debbeff3c82ce62e2",
+      "status": "downloaded_hash_verified",
+      "local_path": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/clips/mosei_consistent_gain_2.mp4"
+    },
+    "transcript_match": {
+      "dataset": "mosei",
+      "sample_id": "92496_12.702_22.991",
+      "candidate_id": null,
+      "normalized_text_similarity": 0.9534883720930233,
+      "second_best_similarity": null,
+      "exact_normalized_text_match": false,
+      "original_transcript": ". it was uhh . it was a pain . to sit through . really it was . it . was . kinda a mystery . that it was . was made you know there . was",
+      "start_seconds": 12.702,
+      "end_seconds": 22.991,
+      "video_path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Slight Negative/92496_1.mp4",
+      "source_transcript": "It was (uhh) it was a pain to sit through really it was it was kinda a mystery that it was was made you know",
+      "source_annotation_id": "398",
+      "review_id": "mosei_consistent_gain_2",
+      "group": "consistent_gain"
+    },
+    "media_measurements": {
+      "review_id": "mosei_consistent_gain_2",
+      "video_duration": 10.306,
+      "container_duration": 14.752,
+      "original_interval_duration": 10.289,
+      "duration_difference": 0.01699999999999946,
+      "streams": [
+        {
+          "codec": "h264",
+          "type": "video",
+          "width": 480,
+          "height": 360,
+          "sample_rate": null,
+          "duration": "10.364974"
+        },
+        {
+          "codec": "aac",
+          "type": "audio",
+          "width": null,
+          "height": null,
+          "sample_rate": "32000",
+          "duration": "10.306000"
+        }
+      ],
+      "frames": [
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_consistent_gain_2_0.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_consistent_gain_2_1.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_consistent_gain_2_2.jpg"
+      ],
+      "audio": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/audio/mosei_consistent_gain_2.wav",
+      "source_transcript": "It was (uhh) it was a pain to sit through really it was it was kinda a mystery that it was was made you know",
+      "sample_id": "92496_12.702_22.991"
+    },
+    "audio_analysis": {
+      "review_id": "mosei_consistent_gain_2",
+      "audio_seconds": 10.306,
+      "asr_transcript": "It was it was a pain to sit through really it was It's kind of a mystery that it was was made, you know",
+      "asr_source": "openai/whisper-tiny.en; greedy inference; no human listening claimed",
+      "normalized_similarity_to_source": 0.95,
+      "rms_dbfs_p10_p50_p90": [
+        -63.613525390625,
+        -42.222564697265625,
+        -30.57627182006836
+      ],
+      "waveform_clipping_fraction": 0.0,
+      "audio_sha256": "ffb1292f4af98d833f3064773433d64e4692b5af217b3bd6a1a5b5cc767aea6c"
+    },
+    "observation": {
+      "visible": "片段照明不均；前帧说话者头部偏向侧方，中帧低头，后帧转向镜头，面部局部高亮。",
+      "text": "“a pain to sit through”给出负向观影评价。",
+      "interpretation": "Dynamic相对Baseline和Constant均有小幅逐种子误差改善；保留改善幅度的实际大小。",
+      "reason": "本轮获益候选第一名的ASR只返回一个词，未通过音轨内容核验；采用第二名，其主要话语可由ASR复现。"
+    },
+    "gate_interventions": {
+      "t": {
+        "actual": [
+          0.0,
+          0.0012730639427900314,
+          0.9987269043922424
+        ],
+        "neutral_scale_one": [
+          0.0,
+          0.0012708246940746903,
+          0.9987291693687439
+        ],
+        "zero_bias": [
+          0.0,
+          0.0011470398167148232,
+          0.9988529682159424
+        ],
+        "neutral_scale_gate_l1": 4.504225216805935e-06,
+        "zero_bias_gate_l1": 0.00025208794977515936,
+        "gate_replay_error": 0.0
+      },
+      "a": {
+        "actual": [
+          0.32296520471572876,
+          0.0,
+          0.6770347952842712
+        ],
+        "neutral_scale_one": [
+          0.32304757833480835,
+          0.0,
+          0.6769524812698364
+        ],
+        "zero_bias": [
+          0.34803900122642517,
+          0.0,
+          0.6519609689712524
+        ],
+        "neutral_scale_gate_l1": 0.0001646876335144043,
+        "zero_bias_gate_l1": 0.05014762282371521,
+        "gate_replay_error": 0.0
+      },
+      "v": {
+        "actual": [
+          0.0,
+          0.8633354902267456,
+          0.13666453957557678
+        ],
+        "neutral_scale_one": [
+          0.0,
+          0.8633413910865784,
+          0.13665857911109924
+        ],
+        "zero_bias": [
+          0.0,
+          0.8639881014823914,
+          0.13601189851760864
+        ],
+        "neutral_scale_gate_l1": 1.1861324310302734e-05,
+        "zero_bias_gate_l1": 0.0013052523136138916,
+        "gate_replay_error": 0.0
+      }
+    }
+  },
+  {
+    "dataset": "mosei",
+    "index": 3585,
+    "sample_id": "h1ZZHUU4j0k_96.5918367347_99.7968253968",
+    "video_id": "h1ZZHUU4j0k",
+    "start_seconds": 96.5918367347,
+    "end_seconds": 99.7968253968,
+    "duration": 3.204988662100007,
+    "timestamp_valid": true,
+    "youtube_id_valid": true,
+    "transcript": ". it makes hard choices . so much easier . it",
+    "word_count": 11,
+    "subword_count": 11,
+    "all_subwords_retained": true,
+    "model_input_text": ". it makes hard choices . so much easier . it",
+    "all_words_retained": true,
+    "kept_word_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "label": 1.3333333730697632,
+    "public_video_url": "https://www.youtube.com/watch?v=h1ZZHUU4j0k&t=96s",
+    "media_status": "not_acquired",
+    "models": {
+      "baseline": {
+        "predictions_by_seed": [
+          1.4894756078720093,
+          1.2568484544754028,
+          1.3197563886642456,
+          1.5645740032196045,
+          1.5558745861053467
+        ],
+        "prediction_mean": 1.4373058080673218,
+        "prediction_sd": 0.14085467608657004,
+        "mean_absolute_error": 0.13999719619750978,
+        "seed5576_trace": {
+          "t_gates": [
+            0.9948434829711914,
+            0.0,
+            0.00515644159168005
+          ],
+          "t_base_logits": [
+            5.022830009460449,
+            -3.584296226501465,
+            -0.23950886726379395
+          ],
+          "t_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "a_gates": [
+            0.0,
+            0.0743405818939209,
+            0.9256594181060791
+          ],
+          "a_base_logits": [
+            -0.8805328011512756,
+            0.14314132928848267,
+            2.6649906635284424
+          ],
+          "a_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "v_gates": [
+            0.0,
+            0.9348101019859314,
+            0.0651899054646492
+          ],
+          "v_base_logits": [
+            -6.136556625366211,
+            2.1675310134887695,
+            -0.4955076575279236
+          ],
+          "v_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "constant": {
+        "predictions_by_seed": [
+          1.4189435243606567,
+          1.2482208013534546,
+          1.3662816286087036,
+          1.175244927406311,
+          1.0649967193603516
+        ],
+        "prediction_mean": 1.2547375202178954,
+        "prediction_sd": 0.14297623173097823,
+        "mean_absolute_error": 0.12601921558380128,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.18854035437107086,
+          "raw_cosine_tv": -0.03643312677741051,
+          "raw_cosine_av": 0.15152870118618011,
+          "q_t": 0.5380268096923828,
+          "q_a": 0.5850172638893127,
+          "q_v": 0.5287739038467407,
+          "s_t": 1.0193357467651367,
+          "s_a": 1.018802523612976,
+          "s_v": 1.0206081867218018,
+          "t_gates": [
+            0.997048556804657,
+            0.0,
+            0.002951483242213726
+          ],
+          "t_base_logits": [
+            5.290294170379639,
+            -3.117866039276123,
+            -0.46163737773895264
+          ],
+          "t_rel_bias": [
+            -0.0074926200322806835,
+            0.026537204161286354,
+            -0.07805271446704865
+          ],
+          "a_gates": [
+            0.0,
+            0.07479134202003479,
+            0.9252086877822876
+          ],
+          "a_base_logits": [
+            -0.9493893980979919,
+            -0.1354992389678955,
+            2.3747305870056152
+          ],
+          "a_rel_bias": [
+            -0.11765817552804947,
+            -0.008505823090672493,
+            -0.003418329870328307
+          ],
+          "v_gates": [
+            0.0,
+            0.9329695105552673,
+            0.06703047454357147
+          ],
+          "v_base_logits": [
+            -5.98110818862915,
+            1.9552500247955322,
+            -0.6835750341415405
+          ],
+          "v_rel_bias": [
+            -0.1094132587313652,
+            0.11253087967634201,
+            0.11813076585531235
+          ]
+        }
+      },
+      "dynamic": {
+        "predictions_by_seed": [
+          1.4532660245895386,
+          1.186530351638794,
+          1.397039771080017,
+          1.0128800868988037,
+          1.0450706481933594
+        ],
+        "prediction_mean": 1.2189573764801025,
+        "prediction_sd": 0.20023101491827647,
+        "mean_absolute_error": 0.18783161640167237,
+        "seed5576_trace": {
+          "raw_cosine_ta": 0.18854035437107086,
+          "raw_cosine_tv": -0.03643312677741051,
+          "raw_cosine_av": 0.15152870118618011,
+          "q_t": 0.5380268096923828,
+          "q_a": 0.5850172638893127,
+          "q_v": 0.5287739038467407,
+          "s_t": 1.0076053142547607,
+          "s_a": 1.0170034170150757,
+          "s_v": 1.005754828453064,
+          "t_gates": [
+            0.9965136647224426,
+            0.0,
+            0.0034863734617829323
+          ],
+          "t_base_logits": [
+            5.367089748382568,
+            -3.286139488220215,
+            -0.21856069564819336
+          ],
+          "t_rel_bias": [
+            -0.007404323201626539,
+            0.026230935007333755,
+            -0.07715453952550888
+          ],
+          "a_gates": [
+            0.0,
+            0.06965045630931854,
+            0.9303495287895203
+          ],
+          "a_base_logits": [
+            -0.9795872569084167,
+            -0.05785056948661804,
+            2.5291409492492676
+          ],
+          "a_rel_bias": [
+            -0.1174502968788147,
+            -0.00849186908453703,
+            -0.0034122192300856113
+          ],
+          "v_gates": [
+            0.0,
+            0.9428054690361023,
+            0.05719452723860741
+          ],
+          "v_base_logits": [
+            -6.077764987945557,
+            2.0899875164031982,
+            -0.7179378867149353
+          ],
+          "v_rel_bias": [
+            -0.10782183706760406,
+            0.11089058220386505,
+            0.11641430854797363
+          ]
+        }
+      }
+    },
+    "dynamic_gain": {
+      "baseline": {
+        "mean": -0.0478344202041626,
+        "wins": 1,
+        "losses": 4
+      },
+      "constant": {
+        "mean": -0.061812400817871094,
+        "wins": 0,
+        "losses": 5
+      }
+    },
+    "prediction_mean_spread": 0.21834843158721928,
+    "review_id": "mosei_consistent_loss_1",
+    "media_reference": {
+      "review_id": "mosei_consistent_loss_1",
+      "sample_id": "h1ZZHUU4j0k_96.5918367347_99.7968253968",
+      "source_path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Moderate Positive/h1ZZHUU4j0k_18.mp4",
+      "revision": "3b1d3af2708c9e9e02549c465c8836d7adacbe62",
+      "source_file_metadata": {
+        "type": "file",
+        "oid": "b4bee08638ade14165324c86cb76bda5dc66d570",
+        "size": 1137512,
+        "lfs": {
+          "oid": "ae70189538e4a78433caa4b88ba5bc4ab844da957e42079b56f6f0407f0187b8",
+          "size": 1137512,
+          "pointerSize": 132
+        },
+        "xetHash": "f4eb5bb4bdfdd95cf5fd02bfa37fa3aeaf22e697eeb7ad9eaba3d5dffc1638d1",
+        "path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Moderate Positive/h1ZZHUU4j0k_18.mp4"
+      },
+      "source_url": "https://huggingface.co/datasets/Eureka-Leo/Emotion.Intelligence/blob/3b1d3af2708c9e9e02549c465c8836d7adacbe62/level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Moderate%20Positive/h1ZZHUU4j0k_18.mp4",
+      "bytes": 1137512,
+      "sha256": "ae70189538e4a78433caa4b88ba5bc4ab844da957e42079b56f6f0407f0187b8",
+      "status": "downloaded_hash_verified",
+      "local_path": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/clips/mosei_consistent_loss_1.mp4"
+    },
+    "transcript_match": {
+      "dataset": "mosei",
+      "sample_id": "h1ZZHUU4j0k_96.5918367347_99.7968253968",
+      "candidate_id": null,
+      "normalized_text_similarity": 0.967741935483871,
+      "second_best_similarity": 0.5066666666666667,
+      "exact_normalized_text_match": false,
+      "original_transcript": ". it makes hard choices . so much easier . it",
+      "start_seconds": 96.5918367347,
+      "end_seconds": 99.7968253968,
+      "video_path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Moderate Positive/h1ZZHUU4j0k_18.mp4",
+      "source_transcript": "It makes hard choices so much easier",
+      "source_annotation_id": "804",
+      "review_id": "mosei_consistent_loss_1",
+      "group": "consistent_loss"
+    },
+    "media_measurements": {
+      "review_id": "mosei_consistent_loss_1",
+      "video_duration": 3.208005,
+      "container_duration": 5.225,
+      "original_interval_duration": 3.204988662100007,
+      "duration_difference": 0.0030163378999930046,
+      "streams": [
+        {
+          "codec": "h264",
+          "type": "video",
+          "width": 1280,
+          "height": 720,
+          "sample_rate": null,
+          "duration": "3.216000"
+        },
+        {
+          "codec": "aac",
+          "type": "audio",
+          "width": null,
+          "height": null,
+          "sample_rate": "44100",
+          "duration": "3.208005"
+        }
+      ],
+      "frames": [
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_consistent_loss_1_0.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_consistent_loss_1_1.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_consistent_loss_1_2.jpg"
+      ],
+      "audio": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/audio/mosei_consistent_loss_1.wav",
+      "source_transcript": "It makes hard choices so much easier",
+      "sample_id": "h1ZZHUU4j0k_96.5918367347_99.7968253968"
+    },
+    "audio_analysis": {
+      "review_id": "mosei_consistent_loss_1",
+      "audio_seconds": 3.2075625,
+      "asr_transcript": "It makes hard choices so much easier.",
+      "asr_source": "openai/whisper-tiny.en; greedy inference; no human listening claimed",
+      "normalized_similarity_to_source": 1.0,
+      "rms_dbfs_p10_p50_p90": [
+        -40.43023834228516,
+        -28.846454620361328,
+        -13.391857910156247
+      ],
+      "waveform_clipping_fraction": 0.00035073361781726777,
+      "audio_sha256": "2e1237bce920f582ea23ec27bcc3dbe495af539121c3e80204e8cff132be235a"
+    },
+    "observation": {
+      "visible": "说话者在户外，先向一侧伸臂，中帧双手靠近胸前，末帧面向镜头讲话。",
+      "text": "“makes hard choices so much easier”包含正向评价。",
+      "interpretation": "三者平均预测均为正；Dynamic的五种子平均绝对误差高于两种对照。",
+      "reason": "本轮可恢复退化候选排名第一；ASR与来源转录归一化后完全匹配。"
+    },
+    "gate_interventions": {
+      "t": {
+        "actual": [
+          0.9965136647224426,
+          0.0,
+          0.0034863734617829323
+        ],
+        "neutral_scale_one": [
+          0.9965117573738098,
+          0.0,
+          0.0034882044419646263
+        ],
+        "zero_bias": [
+          0.9962627291679382,
+          0.0,
+          0.0037372892256826162
+        ],
+        "neutral_scale_gate_l1": 3.7383288145065308e-06,
+        "zero_bias_gate_l1": 0.0005018513184040785,
+        "gate_replay_error": 0.0
+      },
+      "a": {
+        "actual": [
+          0.0,
+          0.06965045630931854,
+          0.9303495287895203
+        ],
+        "neutral_scale_one": [
+          0.0,
+          0.06965595483779907,
+          0.9303440451622009
+        ],
+        "zero_bias": [
+          0.0,
+          0.06998032331466675,
+          0.9300196766853333
+        ],
+        "neutral_scale_gate_l1": 1.0982155799865723e-05,
+        "zero_bias_gate_l1": 0.0006597191095352173,
+        "gate_replay_error": 0.0
+      },
+      "v": {
+        "actual": [
+          0.0,
+          0.9428054690361023,
+          0.05719452723860741
+        ],
+        "neutral_scale_one": [
+          0.0,
+          0.9428071975708008,
+          0.0571928396821022
+        ],
+        "zero_bias": [
+          0.0,
+          0.9431025981903076,
+          0.056897398084402084
+        ],
+        "neutral_scale_gate_l1": 3.416091203689575e-06,
+        "zero_bias_gate_l1": 0.0005942583084106445,
+        "gate_replay_error": 0.0
+      }
+    }
+  },
+  {
+    "dataset": "mosei",
+    "index": 58,
+    "sample_id": "0K7dCp80n9c_8.482_18.322",
+    "video_id": "0K7dCp80n9c",
+    "start_seconds": 8.482,
+    "end_seconds": 18.322,
+    "duration": 9.84,
+    "timestamp_valid": true,
+    "youtube_id_valid": true,
+    "transcript": ". rust out is a water softener resin cleaner . specifically designed for well water . or water that is iron bearing .",
+    "word_count": 23,
+    "subword_count": 24,
+    "all_subwords_retained": true,
+    "model_input_text": ". rust out is a water softener resin cleaner . specifically designed for well water . or water that is iron bearing .",
+    "all_words_retained": true,
+    "kept_word_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "label": 0.0,
+    "public_video_url": "https://www.youtube.com/watch?v=0K7dCp80n9c&t=8s",
+    "media_status": "not_acquired",
+    "models": {
+      "baseline": {
+        "predictions_by_seed": [
+          0.4849338233470917,
+          0.4300173223018646,
+          0.2071981430053711,
+          0.11707223206758499,
+          0.2608760595321655
+        ],
+        "prediction_mean": 0.30001951605081556,
+        "prediction_sd": 0.15387532036689375,
+        "mean_absolute_error": 0.30001951605081556,
+        "seed5576_trace": {
+          "t_gates": [
+            0.6584524512290955,
+            0.34154748916625977,
+            0.0
+          ],
+          "t_base_logits": [
+            1.809330701828003,
+            1.1529251337051392,
+            -0.14804401993751526
+          ],
+          "t_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "a_gates": [
+            0.0,
+            0.06319625675678253,
+            0.9368036985397339
+          ],
+          "a_base_logits": [
+            -1.3183685541152954,
+            -0.013124644756317139,
+            2.6831040382385254
+          ],
+          "a_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "v_gates": [
+            0.0,
+            0.8333162665367126,
+            0.16668379306793213
+          ],
+          "v_base_logits": [
+            -5.764530658721924,
+            1.4570472240447998,
+            -0.15226739645004272
+          ],
+          "v_rel_bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "constant": {
+        "predictions_by_seed": [
+          0.36877068877220154,
+          0.44401806592941284,
+          0.2349289208650589,
+          0.2981373965740204,
+          0.2558009922504425
+        ],
+        "prediction_mean": 0.32033121287822724,
+        "prediction_sd": 0.08601611299649971,
+        "mean_absolute_error": 0.32033121287822724,
+        "seed5576_trace": {
+          "raw_cosine_ta": -0.02014613337814808,
+          "raw_cosine_tv": -0.010004865005612373,
+          "raw_cosine_av": 0.05375849828124046,
+          "q_t": 0.49246224761009216,
+          "q_a": 0.5084030628204346,
+          "q_v": 0.5109384059906006,
+          "s_t": 1.0193357467651367,
+          "s_a": 1.018802523612976,
+          "s_v": 1.0206081867218018,
+          "t_gates": [
+            0.5231565237045288,
+            0.4768434464931488,
+            0.0
+          ],
+          "t_base_logits": [
+            1.540966272354126,
+            1.4142439365386963,
+            -0.29450780153274536
+          ],
+          "t_rel_bias": [
+            -0.0074926200322806835,
+            0.026537204161286354,
+            -0.07805271446704865
+          ],
+          "a_gates": [
+            0.0,
+            0.06202337145805359,
+            0.937976598739624
+          ],
+          "a_base_logits": [
+            -1.4050413370132446,
+            -0.2536972761154175,
+            2.4574289321899414
+          ],
+          "a_rel_bias": [
+            -0.11765817552804947,
+            -0.008505823090672493,
+            -0.003418329870328307
+          ],
+          "v_gates": [
+            0.0,
+            0.8367627859115601,
+            0.16323718428611755
+          ],
+          "v_base_logits": [
+            -5.585409641265869,
+            1.3394755125045776,
+            -0.3004608154296875
+          ],
+          "v_rel_bias": [
+            -0.1094132587313652,
+            0.11253087967634201,
+            0.11813076585531235
+          ]
+        }
+      },
+      "dynamic": {
+        "predictions_by_seed": [
+          0.41078901290893555,
+          0.4078071117401123,
+          0.24404364824295044,
+          0.2569984495639801,
+          0.23080402612686157
+        ],
+        "prediction_mean": 0.310088449716568,
+        "prediction_sd": 0.09104397848948473,
+        "mean_absolute_error": 0.310088449716568,
+        "seed5576_trace": {
+          "raw_cosine_ta": -0.02014613337814808,
+          "raw_cosine_tv": -0.010004865005612373,
+          "raw_cosine_av": 0.05375849828124046,
+          "q_t": 0.49246224761009216,
+          "q_a": 0.5084030628204346,
+          "q_v": 0.5109384059906006,
+          "s_t": 0.9984924793243408,
+          "s_a": 1.001680612564087,
+          "s_v": 1.002187728881836,
+          "t_gates": [
+            0.5589504241943359,
+            0.44104960560798645,
+            0.0
+          ],
+          "t_base_logits": [
+            1.7002043724060059,
+            1.4299699068069458,
+            -0.42258232831954956
+          ],
+          "t_rel_bias": [
+            -0.007337357848882675,
+            0.025993699207901955,
+            -0.07645674794912338
+          ],
+          "a_gates": [
+            0.0,
+            0.058816228061914444,
+            0.9411837458610535
+          ],
+          "a_base_logits": [
+            -1.3859584331512451,
+            -0.19567418098449707,
+            2.5720431804656982
+          ],
+          "a_rel_bias": [
+            -0.11568071693181992,
+            -0.008363925851881504,
+            -0.0033608083613216877
+          ],
+          "v_gates": [
+            0.0,
+            0.8536397814750671,
+            0.14636026322841644
+          ],
+          "v_base_logits": [
+            -5.6924591064453125,
+            1.436381220817566,
+            -0.33256104588508606
+          ],
+          "v_rel_bias": [
+            -0.10743942111730576,
+            0.11049728840589523,
+            0.1160014271736145
+          ]
+        }
+      }
+    },
+    "dynamic_gain": {
+      "baseline": {
+        "mean": -0.01006893366575241,
+        "wins": 3,
+        "losses": 2
+      },
+      "constant": {
+        "mean": 0.01024276316165924,
+        "wins": 3,
+        "losses": 2
+      }
+    },
+    "prediction_mean_spread": 0.020311696827411685,
+    "review_id": "mosei_agreement_1",
+    "media_reference": {
+      "review_id": "mosei_agreement_1",
+      "sample_id": "0K7dCp80n9c_8.482_18.322",
+      "source_path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Neutral/0K7dCp80n9c_2.mp4",
+      "revision": "3b1d3af2708c9e9e02549c465c8836d7adacbe62",
+      "source_file_metadata": {
+        "type": "file",
+        "oid": "b39eaea1c5b7af3f3929bf0c4eb7df980b9676f6",
+        "size": 1370937,
+        "lfs": {
+          "oid": "ffa622c0a55e738c45303622fbbd991a403ece3a55377a25cbe2176cf6fa499a",
+          "size": 1370937,
+          "pointerSize": 132
+        },
+        "xetHash": "de74f80e2a6c99f1f4cad164f8934a0b63aac84bd37de93390951aa84514a40f",
+        "path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Neutral/0K7dCp80n9c_2.mp4"
+      },
+      "source_url": "https://huggingface.co/datasets/Eureka-Leo/Emotion.Intelligence/blob/3b1d3af2708c9e9e02549c465c8836d7adacbe62/level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Neutral/0K7dCp80n9c_2.mp4",
+      "bytes": 1370937,
+      "sha256": "ffa622c0a55e738c45303622fbbd991a403ece3a55377a25cbe2176cf6fa499a",
+      "status": "downloaded_hash_verified",
+      "local_path": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/clips/mosei_agreement_1.mp4"
+    },
+    "transcript_match": {
+      "dataset": "mosei",
+      "sample_id": "0K7dCp80n9c_8.482_18.322",
+      "candidate_id": null,
+      "normalized_text_similarity": 1.0,
+      "second_best_similarity": 0.291970802919708,
+      "exact_normalized_text_match": true,
+      "original_transcript": ". rust out is a water softener resin cleaner . specifically designed for well water . or water that is iron bearing .",
+      "start_seconds": 8.482,
+      "end_seconds": 18.322,
+      "video_path": "level1/sentiment.intensity.analysis/CMU-MOSEI/videos/Neutral/0K7dCp80n9c_2.mp4",
+      "source_transcript": "Rust Out is a water softener resin cleaner, specifically designed for well water, or water that is iron bearing.",
+      "source_annotation_id": "453",
+      "review_id": "mosei_agreement_1",
+      "group": "agreement"
+    },
+    "media_measurements": {
+      "review_id": "mosei_agreement_1",
+      "video_duration": 9.861995,
+      "container_duration": 10.1,
+      "original_interval_duration": 9.84,
+      "duration_difference": 0.02199500000000043,
+      "streams": [
+        {
+          "codec": "h264",
+          "type": "video",
+          "width": 1280,
+          "height": 720,
+          "sample_rate": null,
+          "duration": "9.950977"
+        },
+        {
+          "codec": "aac",
+          "type": "audio",
+          "width": null,
+          "height": null,
+          "sample_rate": "44100",
+          "duration": "9.861995"
+        }
+      ],
+      "frames": [
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_agreement_1_0.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_agreement_1_1.jpg",
+        "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/frames/mosei_agreement_1_2.jpg"
+      ],
+      "audio": "/data01/lyw/GLoMo_case_analysis_20261022/media_recovery_20261023/audio/mosei_agreement_1.wav",
+      "source_transcript": "Rust Out is a water softener resin cleaner, specifically designed for well water, or water that is iron bearing.",
+      "sample_id": "0K7dCp80n9c_8.482_18.322"
+    },
+    "audio_analysis": {
+      "review_id": "mosei_agreement_1",
+      "audio_seconds": 9.8615,
+      "asr_transcript": "The rust out is a water softener resin cleaner specifically designed for well water or water that is iron bearing.",
+      "asr_source": "openai/whisper-tiny.en; greedy inference; no human listening claimed",
+      "normalized_similarity_to_source": 0.9837837837837838,
+      "rms_dbfs_p10_p50_p90": [
+        -45.165297698974605,
+        -21.25432014465332,
+        -14.453471374511718
+      ],
+      "waveform_clipping_fraction": 0.0,
+      "audio_sha256": "76d3110d2380e30795b20992806a138cc00fedf7bdce522e6b223e02753ee73e"
+    },
+    "observation": {
+      "visible": "说话者坐在桌前，手持瓶装产品，先看向产品，随后抬头朝向镜头并用手指示瓶身。",
+      "text": "话语主要介绍树脂清洁剂的用途。",
+      "interpretation": "三种模型给出接近的轻微正向预测，标签为中性。",
+      "reason": "本轮可恢复预测接近候选排名第一；来源转录完全匹配，ASR吻合。"
+    },
+    "gate_interventions": {
+      "t": {
+        "actual": [
+          0.5589504241943359,
+          0.44104960560798645,
+          0.0
+        ],
+        "neutral_scale_one": [
+          0.5589380264282227,
+          0.44106200337409973,
+          0.0
+        ],
+        "zero_bias": [
+          0.5671504735946655,
+          0.4328495264053345,
+          0.0
+        ],
+        "neutral_scale_gate_l1": 2.47955322265625e-05,
+        "zero_bias_gate_l1": 0.016400128602981567,
+        "gate_replay_error": 0.0
+      },
+      "a": {
+        "actual": [
+          0.0,
+          0.058816228061914444,
+          0.9411837458610535
+        ],
+        "neutral_scale_one": [
+          0.0,
+          0.058816708624362946,
+          0.94118332862854
+        ],
+        "zero_bias": [
+          0.0,
+          0.05909380689263344,
+          0.9409062266349792
+        ],
+        "neutral_scale_gate_l1": 8.977949619293213e-07,
+        "zero_bias_gate_l1": 0.0005550980567932129,
+        "gate_replay_error": 0.0
+      },
+      "v": {
+        "actual": [
+          0.0,
+          0.8536397814750671,
+          0.14636026322841644
+        ],
+        "neutral_scale_one": [
+          0.0,
+          0.8536412715911865,
+          0.14635877311229706
+        ],
+        "zero_bias": [
+          0.0,
+          0.854326069355011,
+          0.14567391574382782
+        ],
+        "neutral_scale_gate_l1": 2.9802322387695312e-06,
+        "zero_bias_gate_l1": 0.0013726353645324707,
+        "gate_replay_error": 0.0
+      }
+    }
+  }
+]

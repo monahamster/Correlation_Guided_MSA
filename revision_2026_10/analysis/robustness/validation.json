@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "conditions": 570,
+  "metrics_recomputed": true,
+  "max_metric_diff": 0.0,
+  "paired_labels_and_ids": true,
+  "frozen_correlation_scores_match_across_guided_models": true,
+  "max_q_diff": 0.0,
+  "constant_scales_and_bias_invariant": true,
+  "dynamic_scales_match_formula": true,
+  "evaluation_sources_unchanged": true,
+  "created_utc": "2026-10-22T05:58:42.289567Z"
+}

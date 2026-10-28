@@ -1,0 +1,16 @@
+{
+  "completed_utc": "2026-10-22T05:57:48.108722Z",
+  "max_actual_gate_replay_error": 0.0,
+  "changed_top2_statistics": [
+    {
+      "id": "mosi_baseline_seed2027",
+      "condition": "audio_0.1_seed90402",
+      "modality": "a",
+      "old_top2": 0.00145985401459854,
+      "new_top2": 0.0
+    }
+  ],
+  "old_control_max_switch": 0.00145985401459854,
+  "new_control_max_switch": 0.0,
+  "reason": "Use original CUDA topk tie handling for fixed-feature counterfactuals; original evaluation predictions and actual gates unchanged."
+}

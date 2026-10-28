@@ -1,0 +1,470 @@
+[
+  {
+    "run": "mosi_baseline_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_constant_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_dynamic_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_fusion_only_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_moe_only_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_t_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_a_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_v_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_ta_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_tv_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_av_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_baseline_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_constant_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_dynamic_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_fusion_only_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_moe_only_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_t_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_a_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_v_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_ta_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_tv_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_av_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_baseline_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_constant_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_dynamic_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_fusion_only_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_moe_only_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_t_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_a_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_v_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_ta_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_tv_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_av_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_baseline_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_constant_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_dynamic_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_fusion_only_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_moe_only_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_t_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_a_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_v_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_ta_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_tv_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_av_seed5576",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_baseline_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_constant_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_dynamic_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_fusion_only_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_moe_only_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_t_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_a_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_v_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_ta_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_tv_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_av_seed42",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_baseline_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_constant_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_dynamic_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_fusion_only_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_moe_only_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_t_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_a_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_v_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_ta_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_tv_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_av_seed2026",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_baseline_seed2027",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_constant_seed2027",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_dynamic_seed2027",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_baseline_seed2027",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_constant_seed2027",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_dynamic_seed2027",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_baseline_seed3407",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_constant_seed3407",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosi_dynamic_seed3407",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_baseline_seed3407",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_constant_seed3407",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  },
+  {
+    "run": "mosei_dynamic_seed3407",
+    "protocol_valid": true,
+    "nonpath_arguments_unchanged": true,
+    "source_manifest_valid": true
+  }
+]

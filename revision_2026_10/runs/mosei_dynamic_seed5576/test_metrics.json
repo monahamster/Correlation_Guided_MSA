@@ -1,0 +1,49 @@
+{
+  "id": "mosei_dynamic_seed5576",
+  "dataset": "mosei",
+  "seed": 5576,
+  "split": "test",
+  "limit": null,
+  "metrics": {
+    "n": 4643,
+    "n_nonzero": 3620,
+    "n_zero": 1023,
+    "mae": 0.5444755668830324,
+    "mse": 0.5394664216540634,
+    "corr": 0.7498357604573765,
+    "acc7": 0.530906741331036,
+    "acc2": 0.8388972646995477,
+    "f1": 0.8382791940804522,
+    "acc2_non_zero": 0.8475138121546961,
+    "f1_non_zero": 0.8440539935578049,
+    "confusion2": [
+      [
+        954,
+        391
+      ],
+      [
+        357,
+        2941
+      ]
+    ],
+    "confusion2_nonzero": [
+      [
+        954,
+        391
+      ],
+      [
+        161,
+        2114
+      ]
+    ]
+  },
+  "selected_epoch_zero_based": 5,
+  "checkpoint": "/data01/lyw/GLoMo_mosei_downstream_cross_20261020/sentence_word/runs/mosei-cross-sentence_word-dev-20261020_mosei_dynamic_seed5576/best_model.pt",
+  "checkpoint_sha256": "2c99c311d6bc09b80076ab4bc259956293aba247dacebb02be60ce642ae9311c",
+  "config_sha256": "3988e20d80eccbeaa0423a0e4a528de6bd46598117ef600cc71231ef418c5010",
+  "dev_replay_max_abs_diff": null,
+  "test_evaluated": true,
+  "created_utc": "2026-10-22T05:22:13.802436Z",
+  "constant_scales": null,
+  "selection": "Existing earliest minimum dev MAE; no model or threshold selection in evaluator"
+}

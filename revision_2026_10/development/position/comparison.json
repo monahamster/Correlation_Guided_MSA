@@ -1,0 +1,397 @@
+{
+  "scope": "Single training seed 5576; means over five fixed negative maps, not five training seeds. No test evaluation. Best checkpoints selected by same-length validation triplet loss.",
+  "rows": [
+    {
+      "dataset": "mosi",
+      "configuration": "with_position_3layers",
+      "checkpoint": "initial",
+      "epoch": 0,
+      "split": "train",
+      "n": 1273,
+      "loss": 0.399944531917572,
+      "auc": {
+        "text_audio": 0.49942315132897963,
+        "text_visual": 0.5000760862656577,
+        "audio_visual": 0.5005295184473713
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "with_position_3layers",
+      "checkpoint": "initial",
+      "epoch": 0,
+      "split": "dev",
+      "n": 222,
+      "loss": 0.39980989694595337,
+      "auc": {
+        "text_audio": 0.5005275545816087,
+        "text_visual": 0.5022806590374158,
+        "audio_visual": 0.5024186348510673
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "with_position_3layers",
+      "checkpoint": "best",
+      "epoch": 1,
+      "split": "train",
+      "n": 1273,
+      "loss": 0.39975363612174986,
+      "auc": {
+        "text_audio": 0.5021218997006532,
+        "text_visual": 0.5007809795443341,
+        "audio_visual": 0.5003617337301585
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "with_position_3layers",
+      "checkpoint": "best",
+      "epoch": 1,
+      "split": "dev",
+      "n": 222,
+      "loss": 0.3998343884944916,
+      "auc": {
+        "text_audio": 0.5005032059086113,
+        "text_visual": 0.4991112734355978,
+        "audio_visual": 0.5002921840759679
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "with_position_3layers",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "train",
+      "n": 1273,
+      "loss": 0.39959765076637266,
+      "auc": {
+        "text_audio": 0.5043303143603108,
+        "text_visual": 0.5026241431038876,
+        "audio_visual": 0.5007841883730559
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "with_position_3layers",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "dev",
+      "n": 222,
+      "loss": 0.3999759674072266,
+      "auc": {
+        "text_audio": 0.501805859913968,
+        "text_visual": 0.4998214430646863,
+        "audio_visual": 0.4988556123691259
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_3layers",
+      "checkpoint": "initial",
+      "epoch": 0,
+      "split": "train",
+      "n": 1273,
+      "loss": 0.39951141476631163,
+      "auc": {
+        "text_audio": 0.49793956171102155,
+        "text_visual": 0.503507990292059,
+        "audio_visual": 0.5007969002714545
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_3layers",
+      "checkpoint": "initial",
+      "epoch": 0,
+      "split": "dev",
+      "n": 222,
+      "loss": 0.3999038577079773,
+      "auc": {
+        "text_audio": 0.5135297459621784,
+        "text_visual": 0.5000486973459947,
+        "audio_visual": 0.4928009090171253
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_3layers",
+      "checkpoint": "best",
+      "epoch": 6,
+      "split": "train",
+      "n": 1273,
+      "loss": 0.3353940427303314,
+      "auc": {
+        "text_audio": 0.6178799021800906,
+        "text_visual": 0.6364486534952476,
+        "audio_visual": 0.5634363223367184
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_3layers",
+      "checkpoint": "best",
+      "epoch": 6,
+      "split": "dev",
+      "n": 222,
+      "loss": 0.3967757046222687,
+      "auc": {
+        "text_audio": 0.5070692313935558,
+        "text_visual": 0.5141993344696048,
+        "audio_visual": 0.5014203392581771
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_3layers",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "train",
+      "n": 1273,
+      "loss": 0.07775144726037979,
+      "auc": {
+        "text_audio": 0.9270403059741602,
+        "text_visual": 0.9383383450712699,
+        "audio_visual": 0.9022491421011287
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_3layers",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "dev",
+      "n": 222,
+      "loss": 0.4210668385028839,
+      "auc": {
+        "text_audio": 0.5242715688661634,
+        "text_visual": 0.5093945296648,
+        "audio_visual": 0.5353745637529422
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "with_position_3layers",
+      "checkpoint": "initial",
+      "epoch": 0,
+      "split": "train",
+      "n": 16264,
+      "loss": 0.4004203140735626,
+      "auc": {
+        "text_audio": 0.5002231691901626,
+        "text_visual": 0.500760697688823,
+        "audio_visual": 0.49998675513943686
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "with_position_3layers",
+      "checkpoint": "initial",
+      "epoch": 0,
+      "split": "dev",
+      "n": 1867,
+      "loss": 0.4002756655216217,
+      "auc": {
+        "text_audio": 0.50060966425863,
+        "text_visual": 0.5032099536131881,
+        "audio_visual": 0.4992263509452507
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "with_position_3layers",
+      "checkpoint": "best",
+      "epoch": 15,
+      "split": "train",
+      "n": 16264,
+      "loss": 0.1972210645675659,
+      "auc": {
+        "text_audio": 0.7662088596144434,
+        "text_visual": 0.8081430672978491,
+        "audio_visual": 0.7906491749421558
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "with_position_3layers",
+      "checkpoint": "best",
+      "epoch": 15,
+      "split": "dev",
+      "n": 1867,
+      "loss": 0.280175918340683,
+      "auc": {
+        "text_audio": 0.6938911360135686,
+        "text_visual": 0.6725380548867096,
+        "audio_visual": 0.7128285684695335
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "with_position_3layers",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "train",
+      "n": 16264,
+      "loss": 0.16986738741397858,
+      "auc": {
+        "text_audio": 0.7977056234453214,
+        "text_visual": 0.8425354249267316,
+        "audio_visual": 0.8120003426916286
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "with_position_3layers",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "dev",
+      "n": 1867,
+      "loss": 0.28023128509521483,
+      "auc": {
+        "text_audio": 0.6969723632831272,
+        "text_visual": 0.6621647542279303,
+        "audio_visual": 0.729631186259015
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "without_position_3layers",
+      "checkpoint": "initial",
+      "epoch": 0,
+      "split": "train",
+      "n": 16264,
+      "loss": 0.40192848443984985,
+      "auc": {
+        "text_audio": 0.5009510274881571,
+        "text_visual": 0.5022642292332684,
+        "audio_visual": 0.49750106170590574
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "without_position_3layers",
+      "checkpoint": "initial",
+      "epoch": 0,
+      "split": "dev",
+      "n": 1867,
+      "loss": 0.40196547508239744,
+      "auc": {
+        "text_audio": 0.5007842351971161,
+        "text_visual": 0.5072925610976768,
+        "audio_visual": 0.49846328803286816
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "without_position_3layers",
+      "checkpoint": "best",
+      "epoch": 15,
+      "split": "train",
+      "n": 16264,
+      "loss": 0.16712939143180847,
+      "auc": {
+        "text_audio": 0.7851245071331636,
+        "text_visual": 0.8576086032444499,
+        "audio_visual": 0.8240635806082327
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "without_position_3layers",
+      "checkpoint": "best",
+      "epoch": 15,
+      "split": "dev",
+      "n": 1867,
+      "loss": 0.2965481400489807,
+      "auc": {
+        "text_audio": 0.6449947772162117,
+        "text_visual": 0.6731776128048141,
+        "audio_visual": 0.7243472667814025
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "without_position_3layers",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "train",
+      "n": 16264,
+      "loss": 0.14310304820537567,
+      "auc": {
+        "text_audio": 0.8093261242529499,
+        "text_visual": 0.8860511812411975,
+        "audio_visual": 0.8461197662178336
+      }
+    },
+    {
+      "dataset": "mosei",
+      "configuration": "without_position_3layers",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "dev",
+      "n": 1867,
+      "loss": 0.30364827513694764,
+      "auc": {
+        "text_audio": 0.6294779884263915,
+        "text_visual": 0.6660221551607156,
+        "audio_visual": 0.7262163090281433
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_1layer",
+      "checkpoint": "best",
+      "epoch": 2,
+      "split": "train",
+      "n": 1273,
+      "loss": 0.3951445400714874,
+      "auc": {
+        "text_audio": 0.5137106463383253,
+        "text_visual": 0.5206422717520021,
+        "audio_visual": 0.5054320533603534
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_1layer",
+      "checkpoint": "best",
+      "epoch": 2,
+      "split": "dev",
+      "n": 222,
+      "loss": 0.40178035497665404,
+      "auc": {
+        "text_audio": 0.5013472932391851,
+        "text_visual": 0.49642480318155996,
+        "audio_visual": 0.48993993993993995
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_1layer",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "train",
+      "n": 1273,
+      "loss": 0.14867362678050994,
+      "auc": {
+        "text_audio": 0.8544943657287221,
+        "text_visual": 0.8924586354209026,
+        "audio_visual": 0.7755596474978234
+      }
+    },
+    {
+      "dataset": "mosi",
+      "configuration": "without_position_1layer",
+      "checkpoint": "last",
+      "epoch": 20,
+      "split": "dev",
+      "n": 222,
+      "loss": 0.4351678192615509,
+      "auc": {
+        "text_audio": 0.5022197873549226,
+        "text_visual": 0.5042975407840273,
+        "audio_visual": 0.49651813976138304
+      }
+    }
+  ]
+}

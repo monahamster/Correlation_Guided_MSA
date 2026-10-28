@@ -1,0 +1,74 @@
+{
+  "seed42_sentence_dynamic": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed42_sentence_constant": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed42_word_dynamic": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed42_word_constant": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed2026_sentence_dynamic": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed2026_sentence_constant": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed2026_word_dynamic": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed2026_word_constant": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed5576_sentence_dynamic": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed5576_sentence_constant": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed5576_word_dynamic": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  },
+  "seed5576_word_constant": {
+    "backbone_initialization_sha256": true,
+    "routing_initialization_sha256": true,
+    "samples": true,
+    "input_sha256": true
+  }
+}

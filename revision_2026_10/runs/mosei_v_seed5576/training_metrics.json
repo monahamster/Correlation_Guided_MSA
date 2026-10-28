@@ -1,0 +1,15 @@
+{
+  "protocol": "modality-ablation-mosei-dev-20261021",
+  "dataset": "mosei",
+  "seed": 5576,
+  "evaluation_split": "dev",
+  "test_evaluated": false,
+  "best_epoch": 2,
+  "epoch_index": "zero_based",
+  "valid_mae": 0.7500801066015416,
+  "valid_mse": 1.012214554510632,
+  "reloaded_dev_mae": 0.7500800980900805,
+  "correlation_control": "none",
+  "checkpoint_path": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_v_seed5576/best_model.pt",
+  "checkpoint_sha256": "c44430f572b618160508e20b94b0b2775367bc8fe20209816761e92e85df4e55"
+}

@@ -1,0 +1,8 @@
+{
+  "device": "NVIDIA GeForce RTX 3090",
+  "candidate_count": 32,
+  "modality_replays": 96,
+  "max_actual_gate_replay_error": 0.0,
+  "boundary_ties": 0,
+  "prediction_intervention_performed": false
+}

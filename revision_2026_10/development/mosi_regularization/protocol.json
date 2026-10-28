@@ -1,0 +1,25 @@
+{
+  "version": "mosi-regularization-v1-20261020",
+  "reference": "/data01/lyw/GLoMo_mosi_pretrain_opt_20261020/word_sentence_triplet",
+  "seeds": [
+    5576,
+    42,
+    2026
+  ],
+  "epochs": 20,
+  "arms": {
+    "dropout_03": {
+      "dropout": 0.3,
+      "weight_decay": 0.0
+    },
+    "weight_decay_1e3": {
+      "dropout": 0.1,
+      "weight_decay": 0.001
+    }
+  },
+  "primary": "Mean across three seeds of selected same-length sentence validation loss; lower is better. Report all per-seed changes and three AUCs.",
+  "selection": "Original sentence dev loss over five fixed negative maps, earliest tie.",
+  "budget": "Six runs only; do not add regularization values based on these outcomes.",
+  "unchanged": "Word/sentence triplets mixed .5/.5, no position addition, model tensor schema, initialization seed, data, order, negative maps, padding, learning rate, 20 epochs; no labels.",
+  "scope": "Development experiments; no test use and no downstream MOSI run."
+}

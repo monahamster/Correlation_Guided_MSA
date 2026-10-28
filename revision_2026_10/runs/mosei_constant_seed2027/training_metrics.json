@@ -1,0 +1,15 @@
+{
+  "protocol": "main-five-seed-extension-mosei-dev-20261022",
+  "dataset": "mosei",
+  "seed": 2027,
+  "evaluation_split": "dev",
+  "test_evaluated": false,
+  "best_epoch": 2,
+  "epoch_index": "zero_based",
+  "valid_mae": 0.5365833896822697,
+  "valid_mse": 0.5194685595631281,
+  "reloaded_dev_mae": 0.5365833874075305,
+  "correlation_control": "constant",
+  "checkpoint_path": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosei/runs/main-five-seed-extension-mosei-dev-20261022_mosei_constant_seed2027/best_model.pt",
+  "checkpoint_sha256": "baa8fdafb75f1e0836ee0b9204b814d6b7d40b79d2378ffe97b21aa6092fa9be"
+}

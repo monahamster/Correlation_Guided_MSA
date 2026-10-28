@@ -1,0 +1,25 @@
+{
+  "dataset": "mosei",
+  "pretraining_seed": 5576,
+  "downstream_seed": 5576,
+  "epochs": 100,
+  "reference": "/data01/lyw/GLoMo_mosei_downstream_20261020",
+  "factors": {
+    "pretraining_objective": [
+      "sentence",
+      "word_sentence"
+    ],
+    "readout": [
+      "sentence",
+      "word"
+    ],
+    "guidance": [
+      "dynamic",
+      "constant"
+    ]
+  },
+  "selection": "Minimum sample-weighted dev MAE, earliest tie; primary candidate comparison uses dynamic dev MAE and paired constant control; report all metrics and all cells. Multiseed confirmation follows candidate screening.",
+  "test_evaluation": false,
+  "model": "Fusion and MoE guidance both enabled; correlation encoder frozen, with existing MOSEI positional encoding",
+  "shared_training": "Original MOSEI hyperparameters, data and RNG controls unchanged"
+}

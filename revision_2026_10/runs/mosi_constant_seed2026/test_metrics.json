@@ -1,0 +1,53 @@
+{
+  "id": "mosi_constant_seed2026",
+  "dataset": "mosi",
+  "seed": 2026,
+  "split": "test",
+  "limit": null,
+  "metrics": {
+    "n": 685,
+    "n_nonzero": 655,
+    "n_zero": 30,
+    "mae": 0.7417063701435598,
+    "mse": 1.104967850811354,
+    "corr": 0.7639203503726751,
+    "acc7": 0.46131386861313867,
+    "acc2": 0.8145985401459854,
+    "f1": 0.8142369579725667,
+    "acc2_non_zero": 0.8351145038167939,
+    "f1_non_zero": 0.8354063254459076,
+    "confusion2": [
+      [
+        320,
+        58
+      ],
+      [
+        69,
+        238
+      ]
+    ],
+    "confusion2_nonzero": [
+      [
+        320,
+        58
+      ],
+      [
+        50,
+        227
+      ]
+    ]
+  },
+  "selected_epoch_zero_based": 62,
+  "checkpoint": "/data01/lyw/GLoMo_mosi_downstream_word_replicates_20261020/runs/mosi-word-downstream-v3-replicates-dev-20261020_mosi_constant_seed2026/best_model.pt",
+  "checkpoint_sha256": "10f8d7629e3393c9ef6a28d425a860106a6a478c34564f2a7fc8fb80835bf099",
+  "config_sha256": "45fc8cc8649f197003ea3c97ce77f1e4bf0372c9e57574fa8152af7f63b40c82",
+  "dev_replay_max_abs_diff": null,
+  "test_evaluated": true,
+  "created_utc": "2026-10-22T05:21:19.237596Z",
+  "constant_scales": [
+    1.0057005882263184,
+    1.0066330432891846,
+    1.0070469379425049
+  ],
+  "selection": "Existing earliest minimum dev MAE; no model or threshold selection in evaluator"
+}

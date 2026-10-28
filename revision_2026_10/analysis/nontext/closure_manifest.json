@@ -1,0 +1,11 @@
+{
+  "findings_zh.txt": "1579b5442d4673dd2b1efd4144c5db0f2c15de3dca38e126300b797adb7f77e4",
+  "STATUS.json": "420ff1216d05abf3f9df0916e8057e2c892354d18e7aed1ae2662e9c6803c1f2",
+  "analysis.json": "c409ddfdc95f1522ec24b4720d25444136f70aeff4c493a56a7a98bcd1705abb",
+  "cv_results.json": "c7d22f417379bce478c6a381f429f1f1c8f4fa592324a609805a2b214e896357",
+  "cv_predictions.npz": "f82abdd9d8184d1e286326dee866fabb6c2b71cb079879b4d13217a986aa477c",
+  "protocol.json": "9e7fc27c5b78aa1b80e0dffa15619b2aca8b1cbf52d787c0c9d22d4e697499b0",
+  "source_manifest.json": "c510c2307fdc5a08034d82df72941c08273a560c3c9603a28a8ce2e426e12743",
+  "scripts/split_check.py": "bff8f3bd93a49d4979d7e3263d90f3dd898ee7c0227c11afe0dbe1fe80476785",
+  "scripts/analyze.py": "c7244086b40d4e8272a02dc867785331019948fd880cc5af25ea32c1fbfa9274"
+}

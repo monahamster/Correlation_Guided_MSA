@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "unique_models": 78,
+  "test_samples": {
+    "mosi": 685,
+    "mosei": 4643
+  },
+  "input_order_verified": true,
+  "all_metrics_recomputed": true,
+  "paired_t_test_independently_verified": true,
+  "frozen_execution_files_unchanged": true
+}

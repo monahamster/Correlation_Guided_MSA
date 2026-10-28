@@ -1,0 +1,76 @@
+{
+  "version": "final-evaluation-preparation-20261022",
+  "scope": "Clean MOSI/MOSEI evaluation of all 78 selected checkpoints; five-seed main, three-seed module and modality ablations",
+  "pretraining_seed": 5576,
+  "existing_downstream_seeds": [
+    5576,
+    42,
+    2026,
+    2027,
+    3407
+  ],
+  "main_downstream_seeds": [
+    5576,
+    42,
+    2026,
+    2027,
+    3407
+  ],
+  "ablation_downstream_seeds": [
+    5576,
+    42,
+    2026
+  ],
+  "selection": "Minimum sample-weighted dev MAE within the fixed epoch budget; earliest exact tie. No retraining on train+dev, test-based checkpoint selection or threshold tuning.",
+  "budgets": {
+    "mosi": 70,
+    "mosei": 100
+  },
+  "dimensions": {
+    "mosi": [
+      768,
+      74,
+      47
+    ],
+    "mosei": [
+      768,
+      74,
+      35
+    ]
+  },
+  "primary_metric": "MAE, computed on unclipped regression output",
+  "secondary_metrics": {
+    "mse": "Unclipped squared regression error",
+    "corr": "Pearson r; null if prediction or label variance is zero",
+    "acc7": "Compare numpy.round(clip(x,-3,3)) for both prediction and label; round half to even",
+    "acc2": "All samples; prediction >=0 and label >=0",
+    "f1": "True-support weighted binary F1 under acc2 convention",
+    "acc2_non_zero": "Remove label==0; prediction >0 and label >0",
+    "f1_non_zero": "True-support weighted binary F1 under nonzero convention",
+    "confusion": "Rows true, columns predicted; negative then nonnegative for all, negative then positive for nonzero; counts retained"
+  },
+  "storage": "Per-sample ids, labels, regression predictions; checkpoint/config hash, selected epoch, full scalar metrics and both confusion matrices. Metrics stored as fractions; presentation percentages explicitly labeled.",
+  "reporting": "Per-seed results, mean and sample SD (ddof=1). Main table five downstream seeds when complete; ablations three. Fixed pretraining checkpoint; seed variability describes downstream training only. Preserve provenance that first three seeds were used in development; report new two-seed paired differences separately as well.",
+  "significance": {
+    "primary_pairs": [
+      "dynamic-baseline",
+      "dynamic-constant"
+    ],
+    "unit": "paired downstream-seed MAE difference",
+    "primary_test": "Two-sided paired t test and 95% t interval after all five planned seeds finish",
+    "multiple_comparisons": "Holm adjustment across four primary tests: two pairs x two datasets",
+    "sensitivity": "Exact two-sided sign-flip test over paired seed differences; with five seeds minimum two-sided p is 0.0625, report resolution without replacing it with instance resampling",
+    "cdml": "Requires comparable per-seed or per-instance outputs; published aggregate scores alone cannot support a paired test"
+  },
+  "reuse": "78 unique checkpoints: 30 main, 24 module, 42 modality table rows; shared checkpoints evaluated once.",
+  "remaining": [
+    "Clean test evaluation and paired statistics",
+    "Synchronized progressive corruption of main and correlation inputs, score response and routing statistics",
+    "Parameter counts, compute/memory/latency plus cache generation/storage costs",
+    "Original-GLoMo reproduction protocol comparison and baseline-gap explanation",
+    "Multimodal success/failure cases with verified original media",
+    "External baseline literature and any additional-language feasibility decision"
+  ],
+  "exclusions": "MOSI nontext fit diagnostics are analysis only, not substituted for frozen ablations. Modality ablation does not replace gradual-corruption robustness evaluation.",
+  "test_evaluated": false
+}

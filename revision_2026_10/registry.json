@@ -1,0 +1,3125 @@
+{
+  "runs": [
+    {
+      "id": "mosi_baseline_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "baseline",
+          "id": "mosi_baseline_seed5576"
+        },
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "baseline",
+          "id": "mosi_baseline_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 49,
+      "checkpoint_sha256": "c323d4b934bc27fade56b0117c360b96b37aa9e73f68b2d32be9101a448f3f33",
+      "config_sha256": "a1d5e0cde2c779eeb84b2ac314ad24562ae6ef3437b0de3848b34f4a6f860749",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_baseline_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_constant_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_02",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "constant",
+          "id": "mosi_constant_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 61,
+      "checkpoint_sha256": "e74f771518bb7beab4ac4038087e191f7e8600f7e0c7b837c259f5ef2df32a5e",
+      "config_sha256": "2a21e81b1d051dd2f8e465249bc137d99429a4f7fd4a3d02d9321bdb33d078df",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosi_downstream_word_20261020/runs/mosi-word-downstream-v3-dev-20261020_mosi_constant_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_dynamic_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_02",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "dynamic",
+          "id": "mosi_dynamic_seed5576"
+        },
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "full",
+          "id": "mosi_dynamic_seed5576"
+        },
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "tav",
+          "id": "mosi_dynamic_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 58,
+      "checkpoint_sha256": "3751345f43ec2185d9fd4c6bc5e39d95d8dcc79fe3339d6c7195d04b8b507e3c",
+      "config_sha256": "dfa15564f6598ff771310aa7c207d9f479014c43f3490f70173b406335b9eecf",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosi_downstream_word_20261020/runs/mosi-word-downstream-v3-dev-20261020_mosi_dynamic_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_fusion_only_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "fusion_only",
+          "id": "mosi_fusion_only_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 47,
+      "checkpoint_sha256": "8bd2fe9eb5801c086f81d0ed7d64e86813bb3167fe4c0dd7295cc39384b238e9",
+      "config_sha256": "ce02bacd69cdff813554235d5cff6637ddc6df6528b47f8f26cbda8a67295453",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_fusion_only_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_moe_only_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "moe_only",
+          "id": "mosi_moe_only_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 51,
+      "checkpoint_sha256": "1bbc198b7a5db7d8d0363b1bfb4203ec7bf7f7089a6c97cc468a896a5744aed8",
+      "config_sha256": "2819a97c0640da6d6e14b05eb31214121723f5ab9fdb789f45aca6a7fac68175",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_moe_only_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_t_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "t",
+          "id": "mosi_t_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 49,
+      "checkpoint_sha256": "57a31bbe839611c10de13f4ba62e192087f5f95b5218407b86705fb82d39f692",
+      "config_sha256": "f4c68ee53d378ab28496171bdf40989e7e8ff2e95e3fcf73518df4da08df37eb",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_t_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_a_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "a",
+          "id": "mosi_a_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 66,
+      "checkpoint_sha256": "1d2e37817db60847846d6bf6c93794be0bace7240030b535363d8e007db7feb0",
+      "config_sha256": "928ab6a62121306f825af1557edea4795288df5f600f55526618213284d4747b",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_a_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_v_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "v",
+          "id": "mosi_v_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 48,
+      "checkpoint_sha256": "7ca393ed7b803de1e9fbbcff91db452bc55f0673e8dfa17f87f705f4161aa5c2",
+      "config_sha256": "d29cd16aa5610bae8a15e3701f66ca7faf067da9d07266bbc21ec5e6ed1b9c12",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_v_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_ta_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "ta",
+          "id": "mosi_ta_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 39,
+      "checkpoint_sha256": "a1547b516a54f48af8595b16319cd0516fcfb0602cf27c992f8b640dc0f9411c",
+      "config_sha256": "8f81984613846f48a0521dbc8984a8a4e2c8797516a5ec45a4cf400b4b49ef67",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_ta_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_tv_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "tv",
+          "id": "mosi_tv_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 55,
+      "checkpoint_sha256": "d686dd16670333fe73e99c4d1384287e71a1b04fb2c6eb3a263a614e41e464d8",
+      "config_sha256": "8aa3d64168d49dede006c98dfd30cf7c026505bfd62e7c8bc486722d5a871efa",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_tv_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_av_seed5576",
+      "dataset": "mosi",
+      "seed": 5576,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 5576,
+          "variant": "av",
+          "id": "mosi_av_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 63,
+      "checkpoint_sha256": "da83c5eed38bb08458e5141d16e0439f0a709568e326ebe1d7901eaffb65a727",
+      "config_sha256": "afe981801799f37d9f06f454e8425a11b49a05b218cb1342d05f463dd0de49c5",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_av_seed5576/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_baseline_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "baseline",
+          "id": "mosi_baseline_seed42"
+        },
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "baseline",
+          "id": "mosi_baseline_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 45,
+      "checkpoint_sha256": "f88d079eadc04060954680e9ffff80c7c11afa9f4a45347410ac0c65d1fc7460",
+      "config_sha256": "62a4bf982f875964646fc0069bf51712229bde6f9d61f3a89a6d5c75401287e3",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_baseline_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_constant_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_04",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "constant",
+          "id": "mosi_constant_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 51,
+      "checkpoint_sha256": "6e41976a18c33154f7c201766f8bb31adcb6f9c149931c39a3a09787f7dd0f0a",
+      "config_sha256": "cfd345433024a4be753260f44d0cd8e509e762b81c2b185c9d620f575a2dea22",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosi_downstream_word_replicates_20261020/runs/mosi-word-downstream-v3-replicates-dev-20261020_mosi_constant_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_dynamic_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_04",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "dynamic",
+          "id": "mosi_dynamic_seed42"
+        },
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "full",
+          "id": "mosi_dynamic_seed42"
+        },
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "tav",
+          "id": "mosi_dynamic_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 66,
+      "checkpoint_sha256": "44c9d4a9db3d9905358e4f0102eac8549462429c66142c10a7802ab398382745",
+      "config_sha256": "54d2916077b5bf4f82e42494d75a5dba24c6441ca7c0fc3bc3498e3728971eb5",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosi_downstream_word_replicates_20261020/runs/mosi-word-downstream-v3-replicates-dev-20261020_mosi_dynamic_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_fusion_only_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "fusion_only",
+          "id": "mosi_fusion_only_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 62,
+      "checkpoint_sha256": "0b337577a01c1067433ab6cde5c21c6d8e0343d863a597b8ce8c13ff70d157b8",
+      "config_sha256": "b320c7d2f89d23b97ebbcbe5f5a0fc12817bf01c87e30e9059c04836a008acc7",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_fusion_only_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_moe_only_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "moe_only",
+          "id": "mosi_moe_only_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 46,
+      "checkpoint_sha256": "0170734bee2a5b590ed101bb6f7d1f3f0535927f5730f56c199e1ee678931e51",
+      "config_sha256": "2a961ac5250e5dda4484cceefec8a2b94593ee7233efc289e646a480510cdaae",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_moe_only_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_t_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "t",
+          "id": "mosi_t_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 56,
+      "checkpoint_sha256": "161991ec48a163a40235a028c6bf47b69d9416eaaf4d70bcc32477679dafb4ff",
+      "config_sha256": "787be0426657dfafdce254a33eaa8baf633d5e160119b585e479889bdf662c15",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_t_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_a_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "a",
+          "id": "mosi_a_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 66,
+      "checkpoint_sha256": "78f1573986dff591cf14d89c5c9f6f35cddce2beac74556aac9bc15a95ceb74d",
+      "config_sha256": "d0ee8797614bcba190affff36580ab16cd6bef36a4aaee2fdb50ca260d482b97",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_a_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_v_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "v",
+          "id": "mosi_v_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 27,
+      "checkpoint_sha256": "c0a1f54e4b6fd15464f431bc4917e0785a126fb4609404500d75b88c2448d747",
+      "config_sha256": "2bd96be9291db15952ef78f3cebe1240698e7ce15748f45f677d603796e34c69",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_v_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_ta_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "ta",
+          "id": "mosi_ta_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 45,
+      "checkpoint_sha256": "4bcea6170bed36679c53c618c833178360559d1f41afaa670a33ab2f4dfa7a85",
+      "config_sha256": "56ef0a91e86c7eb592a456bcf098fe935dbedad45b9f7ea2595165ec41a79b37",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_ta_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_tv_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "tv",
+          "id": "mosi_tv_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 41,
+      "checkpoint_sha256": "77f0c13fdd703b89d28e26c3074403bebf6f3ba292441fd30fdd11c6687a6cbd",
+      "config_sha256": "044c6126ab55c3e7810e1e85bbca6aac5c520ed5782bfc7c456790e7ca23c7d0",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_tv_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_av_seed42",
+      "dataset": "mosi",
+      "seed": 42,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 42,
+          "variant": "av",
+          "id": "mosi_av_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 39,
+      "checkpoint_sha256": "8eb979c305f642178d442759871d41ad0277ebe3e45feb3df060060bb958d45d",
+      "config_sha256": "2d5ff69ada885930b5e4a21d2a4798594443fe727e21672e5cdbf18a7ecfe0b7",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_av_seed42/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_baseline_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "baseline",
+          "id": "mosi_baseline_seed2026"
+        },
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "baseline",
+          "id": "mosi_baseline_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 60,
+      "checkpoint_sha256": "daa284ef2c3185f1da4f395f3c6e342615ff3684502ce2e8b4d98a0da97fae38",
+      "config_sha256": "b345acf158263f858e91f09b16d51ae503f6e345d332161b18ece4d736f80888",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_baseline_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_constant_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_04",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "constant",
+          "id": "mosi_constant_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 62,
+      "checkpoint_sha256": "10f8d7629e3393c9ef6a28d425a860106a6a478c34564f2a7fc8fb80835bf099",
+      "config_sha256": "45fc8cc8649f197003ea3c97ce77f1e4bf0372c9e57574fa8152af7f63b40c82",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosi_downstream_word_replicates_20261020/runs/mosi-word-downstream-v3-replicates-dev-20261020_mosi_constant_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_dynamic_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_04",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "dynamic",
+          "id": "mosi_dynamic_seed2026"
+        },
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "full",
+          "id": "mosi_dynamic_seed2026"
+        },
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "tav",
+          "id": "mosi_dynamic_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 66,
+      "checkpoint_sha256": "a89c2bc989ba608571949c5b4018391a4a55fb4a72cb26b54f4b4ebe9376537a",
+      "config_sha256": "a273b25e29ad252f03166f0be80d4db998f5aaba648cb662a0c510f45705b017",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosi_downstream_word_replicates_20261020/runs/mosi-word-downstream-v3-replicates-dev-20261020_mosi_dynamic_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_fusion_only_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "fusion_only",
+          "id": "mosi_fusion_only_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 60,
+      "checkpoint_sha256": "9d53eade721f86af4eca132d688cf0976092a0f97cc62d3896727a81906f483f",
+      "config_sha256": "37bed71ef798d274b5745110e4c5b7cff75f60fb00687520e7f6907821bff420",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_fusion_only_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_moe_only_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_01",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "moe_only",
+          "id": "mosi_moe_only_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 48,
+      "checkpoint_sha256": "04d9e2341fe87352c5feaacc5f685de3d978fb7b493672050d3d630cddc9d52c",
+      "config_sha256": "2216a63afacc756fccb1bd490c4708a563b2d17749c34924007f36ffe2755bae",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosi/runs/module-ablation-mosi-dev-20261021_mosi_moe_only_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_t_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "t",
+          "id": "mosi_t_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 58,
+      "checkpoint_sha256": "5c295996ce0de5d5bb13fb826d80fa3c5c3ad088dd93931eabc2e28c485c32f1",
+      "config_sha256": "dc449eba3319c1a05bdc6d6ad4e9cf048ac4574e6bb6eeae4296de3b0af2ac7e",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_t_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_a_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "a",
+          "id": "mosi_a_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 44,
+      "checkpoint_sha256": "5b71085c3d26cc75f274d081b8429077a6e3c9b176f807a88401dfe107e852ff",
+      "config_sha256": "5431ea052803fbfda0875da5eb518adfc7c81b9147628942def8a212777f1fc1",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_a_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_v_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "v",
+          "id": "mosi_v_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 52,
+      "checkpoint_sha256": "358b3b36dbf84ec8130f14ed52d18b51a8115ca8127b3910f195b3138f59f3a7",
+      "config_sha256": "31e7c9a801c86b7bac251d4551e7a5d58320e23134017ec584f65d0b8acd71a7",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_v_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_ta_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "ta",
+          "id": "mosi_ta_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 58,
+      "checkpoint_sha256": "7ad0fceeb52334927c4ff76e996aabf69c1acecf7d262122eda698e8940eff10",
+      "config_sha256": "b0fe321bbd0d9cce9e016d556ca61304c9a75f1c0ce5b6401e4aedc7493470fe",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_ta_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_tv_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "tv",
+          "id": "mosi_tv_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 65,
+      "checkpoint_sha256": "7d718344844cfe2a0f52d822a44e7628e41d7198453d26bee9a13e0cfd468e9a",
+      "config_sha256": "91936784845d9fb2d0d6894169c3ae104636973ba40560c25da9c05923c35a97",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_tv_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_av_seed2026",
+      "dataset": "mosi",
+      "seed": 2026,
+      "snapshot": "snapshot_03",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosi",
+          "seed": 2026,
+          "variant": "av",
+          "id": "mosi_av_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 52,
+      "checkpoint_sha256": "4161c3896b7faf8bcb08b0956c9488db4f27fe717d5f09bfa20bc63206f6cb2b",
+      "config_sha256": "36e38fb4513c9890a089ac75ba49b063285abf3746270dd6d5b4150cbfc59f7c",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi/runs/modality-ablation-mosi-dev-20261021_mosi_av_seed2026/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosei_baseline_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "baseline",
+          "id": "mosei_baseline_seed5576"
+        },
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "baseline",
+          "id": "mosei_baseline_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "8f66baa1c27a61f31f7cd1ec6b3f16f18dc092a2ed6e424f8abda59339de679a",
+      "config_sha256": "76f0f08aa052e22d0032c999cca39f78de1785a03ac08e3366db5928feddc450",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_baseline_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_constant_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_06",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "constant",
+          "id": "mosei_constant_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "4c2fd8282de369e80e3c62e9f348e3b88adbd4449290ea4f910da29293ac2541",
+      "config_sha256": "b32a8395a7f9436ca33341f88c726b080f2afec5763672f5db6a981eec8a13cb",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosei_downstream_cross_20261020/sentence_word/runs/mosei-cross-sentence_word-dev-20261020_mosei_constant_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_dynamic_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_06",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "dynamic",
+          "id": "mosei_dynamic_seed5576"
+        },
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "full",
+          "id": "mosei_dynamic_seed5576"
+        },
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "tav",
+          "id": "mosei_dynamic_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "2c99c311d6bc09b80076ab4bc259956293aba247dacebb02be60ce642ae9311c",
+      "config_sha256": "3988e20d80eccbeaa0423a0e4a528de6bd46598117ef600cc71231ef418c5010",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosei_downstream_cross_20261020/sentence_word/runs/mosei-cross-sentence_word-dev-20261020_mosei_dynamic_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_fusion_only_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "fusion_only",
+          "id": "mosei_fusion_only_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "6d08db527c7977fe3c1b21bcd2c6bf507c4bf7014bd7cffb2d927bbf7d155b24",
+      "config_sha256": "11213280ea539c1f60de53b3adc45af1b26754b5298c8318bd05a340e43a5b3b",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_fusion_only_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_moe_only_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "moe_only",
+          "id": "mosei_moe_only_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 3,
+      "checkpoint_sha256": "c37d95f96583d41104a3c57da4dd830232c74f5054b9dc6c1c66b03435ead234",
+      "config_sha256": "c6d434d10a9a2621c769b557873a473841c7f7060eac2e71b43e299c54d1ae24",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_moe_only_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_t_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "t",
+          "id": "mosei_t_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 1,
+      "checkpoint_sha256": "1ffbe2fe55731254b897953208305fd257321343f147c518c1f4b54b3f01b7e7",
+      "config_sha256": "a3e82142afce03ab23fc1f967d587f8b195e08fdce48fa2851bd604c711e8f34",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_t_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_a_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "a",
+          "id": "mosei_a_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 67,
+      "checkpoint_sha256": "74da4d8880ba514f991544d9f39cfe33cf8e83f0c145148dd8154a80f928d609",
+      "config_sha256": "a3bc185c43b765969d72ef162633460524b2e9875ad039d389c092ed25e618aa",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_a_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_v_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "v",
+          "id": "mosei_v_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "c44430f572b618160508e20b94b0b2775367bc8fe20209816761e92e85df4e55",
+      "config_sha256": "98f6aa1a32407316b74fd9bcebf7c0b94e12e4df0dbc167a03a3e36d16dc7a2c",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_v_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_ta_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "ta",
+          "id": "mosei_ta_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "ce3f694b951e336135e2181c3ee842fdd110724d61c57bf59193fe4c475eb844",
+      "config_sha256": "8daa38d89fb1c2f0c9acb6a2e81a5ca28667b37682d21c07d6dde36bf2ae0b7a",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_ta_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_tv_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "tv",
+          "id": "mosei_tv_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "946e8fd028f2cf2f5cc715a3be6b24e28732663e1219071dfbe15c264844f395",
+      "config_sha256": "3b45ef532c42c33a971356e3aa92800da238c2022196d26557a7f5db589e5cb0",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_tv_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_av_seed5576",
+      "dataset": "mosei",
+      "seed": 5576,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 5576,
+          "variant": "av",
+          "id": "mosei_av_seed5576"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "0170efc6aaa39616de372d5aff6243d717e50625e1ef6829a2d2fd25ad472025",
+      "config_sha256": "8bb5f90c5f44f6b355488c024efd5ec387984c945d7eecee82a02e90dced81b9",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_av_seed5576/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_baseline_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "baseline",
+          "id": "mosei_baseline_seed42"
+        },
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "baseline",
+          "id": "mosei_baseline_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "0864411b8d7037dc8210b4963cb8594dd30beb5d80598f26e7ce8f86fe30f183",
+      "config_sha256": "f89f5c248b8622613a004a03641d0bd0470e9bd236937be0d72385733454602b",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_baseline_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_constant_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_08",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "constant",
+          "id": "mosei_constant_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "d57d6317edf5dadfb1546221f8ffb1ea614567bfba6a960e50e79501885149d6",
+      "config_sha256": "bdb5ad8bc223c14e8488754af00e90f8930c93dd25cf47c39d72c45002feb36a",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosei_readout_replicates_20261020/word/runs/mosei-readout-word-replicates-dev-20261020_mosei_constant_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_dynamic_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_08",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "dynamic",
+          "id": "mosei_dynamic_seed42"
+        },
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "full",
+          "id": "mosei_dynamic_seed42"
+        },
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "tav",
+          "id": "mosei_dynamic_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "bfc86ca0d56284717ca1393aff0a3d22df48fd95a485f69c7a3b4c1b1af37a8b",
+      "config_sha256": "8fe17813125011e59c2e7e0cf78a8e70eaa9916f6f548c33b4f0f0e9d3208aec",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosei_readout_replicates_20261020/word/runs/mosei-readout-word-replicates-dev-20261020_mosei_dynamic_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_fusion_only_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "fusion_only",
+          "id": "mosei_fusion_only_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "272989fbd4ad53349a26df179ceb8d25117fb9ff9a4a0666810db46530f2a8bb",
+      "config_sha256": "0356f38a74d2be51c1cc6fd2f7c83038bf98b06945d99b63fe7e0fd347e11e25",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_fusion_only_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_moe_only_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "moe_only",
+          "id": "mosei_moe_only_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "17c3cd4561e143513f6cb4b2f174b285cd4c7316fb44a72871e959c320adc1b0",
+      "config_sha256": "26df68c9c517c6d0748c871311f7c726ece465cd1634f2dee8e26ad02f128dbc",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_moe_only_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_t_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "t",
+          "id": "mosei_t_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "98050287d50fe92f7637869378721c88a9704a5d9ee73fe77f6ce15dce034804",
+      "config_sha256": "3d1e867f74b32b19ce65b6a938ccbd21cd32f49ca76b3ed8f44ef99a1d17206e",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_t_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_a_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "a",
+          "id": "mosei_a_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "013e7bcf4be7c97791248e6986500fc643396d123e13615a9aa7c86b29736e2c",
+      "config_sha256": "afc14b8000e817b28ed26ba66ebfc2bcc915c1333e6d0cbaf4cd9093648f5d06",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_a_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_v_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "v",
+          "id": "mosei_v_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 0,
+      "checkpoint_sha256": "5b85d022c2fbf157903721234419dee02b8a4928cc99e2658fd05a11caee0119",
+      "config_sha256": "0c49f8c7c15a82f1ab13ca6e264f49a1458bef0c74b12158026020e2510f35aa",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_v_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_ta_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "ta",
+          "id": "mosei_ta_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "d32213be4d23518f01649bb8beaf3b63421ed31fc8826652ac02382744f1448b",
+      "config_sha256": "c446cebfa0df0afa5b2c8501bea426ca3a4e40c0e7e3cce59a0b19f15acffe96",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_ta_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_tv_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "tv",
+          "id": "mosei_tv_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 5,
+      "checkpoint_sha256": "bb07b46cf65b02941cbb3ab7f536714e554849bd836191b2b5b271902a4e81ec",
+      "config_sha256": "9275eca44cd15e14f3100f82feed951472b67f2c3b5407dc12ccee1035e80e75",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_tv_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_av_seed42",
+      "dataset": "mosei",
+      "seed": 42,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 42,
+          "variant": "av",
+          "id": "mosei_av_seed42"
+        }
+      ],
+      "best_epoch_zero_based": 3,
+      "checkpoint_sha256": "0ae7a6e5b9aa9aef24628639ef43ccb03cf8e0bb0f287861406a41de1c6ba55c",
+      "config_sha256": "444b34760963e80a4da428c74b35112d95bfacb3b2d2cd7efb61f40153e0eaaa",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_av_seed42/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_baseline_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "baseline",
+          "id": "mosei_baseline_seed2026"
+        },
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "baseline",
+          "id": "mosei_baseline_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "ae499d3de7c88b6d4e3e3456ce320ce9cb071c4c2a86265a9fa0c184e9efb74a",
+      "config_sha256": "594967363bfdf7a6c92e592141695816c82effbdeb27bfc2ad5149dac3b2c4ab",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_baseline_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_constant_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_08",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "constant",
+          "id": "mosei_constant_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "d4254f038a6ebf1a9fee204bb8bef6b6595b99f3fdf3bb96b568ddd7a6de7a72",
+      "config_sha256": "12ae575742c916b09e9bf102e58b9862769b3196cc95f2c0a8f78d6caff6644a",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosei_readout_replicates_20261020/word/runs/mosei-readout-word-replicates-dev-20261020_mosei_constant_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_dynamic_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_08",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "dynamic",
+          "id": "mosei_dynamic_seed2026"
+        },
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "full",
+          "id": "mosei_dynamic_seed2026"
+        },
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "tav",
+          "id": "mosei_dynamic_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "b53758e07b2a8e5647b250728b11020e548debfb72d0092289404c51d1a3ce75",
+      "config_sha256": "c5781de1950be252d75a106543f27f1b4b604d9455b2ae705ea786145a37ff0a",
+      "original_checkpoint": "/data01/lyw/GLoMo_mosei_readout_replicates_20261020/word/runs/mosei-readout-word-replicates-dev-20261020_mosei_dynamic_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_fusion_only_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "fusion_only",
+          "id": "mosei_fusion_only_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "fa353bf9e820561c7269dd3655a247b9acb18a2d34cc3d6a5a3364a781c2f55e",
+      "config_sha256": "2167a4e3070962905c441d56a5e4401c0c3d32fd4803d210753218b80cde8ca8",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_fusion_only_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_moe_only_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_05",
+      "memberships": [
+        {
+          "table": "module",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "moe_only",
+          "id": "mosei_moe_only_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "2a350f32d3cf15d2857f3aeddf189d508e9d59b52d9f2e5a03bc410df2a8d624",
+      "config_sha256": "205a3cb318ab221060fa9e94439ba4578b3781f028fc251ebbf38e10f32514d3",
+      "original_checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_moe_only_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_t_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "t",
+          "id": "mosei_t_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "b09515cd365231bfb234ce705187646010da72550a2f4a2874ce78125ee46e87",
+      "config_sha256": "bdedfc0051cf76615ea18ffe8efe37821170b425e80c4244c1fda0f602e13a25",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_t_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_a_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "a",
+          "id": "mosei_a_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 71,
+      "checkpoint_sha256": "fc0c9552c6138f7f2831d225c2f320aefd385f9948f08fd0ee6bb8c7458b3281",
+      "config_sha256": "124bc011607834aeff7d7a6e363f808e5dbf43582c3c14bfeb820e340d53c0bc",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_a_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_v_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "v",
+          "id": "mosei_v_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "163bfa69c54126e08bd00d0b2084dccc0b4eebbfd8e2fa89c238c33543a213b7",
+      "config_sha256": "8b28105abafa8a0af9202824b2820ebe35d29aec4601879f0c6f4bc336355126",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_v_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_ta_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "ta",
+          "id": "mosei_ta_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "383a5389a4e379b16e6d22a813a0b8e2f041b9118f4ce5e2c6d1db149557debd",
+      "config_sha256": "cd8f42ca81d47562500aeea81bd958f243a8f872c85bc1f0d8f5387f7e128d78",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_ta_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_tv_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "tv",
+          "id": "mosei_tv_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "86887fd1e631705866be2e452550aed23ba5984ac624f19f8fa43f724a541e3d",
+      "config_sha256": "f1a5e077b8d9234acba0ea40644db14eec3a589f11cff04a21991c04600ce1de",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_tv_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_av_seed2026",
+      "dataset": "mosei",
+      "seed": 2026,
+      "snapshot": "snapshot_07",
+      "memberships": [
+        {
+          "table": "modality",
+          "dataset": "mosei",
+          "seed": 2026,
+          "variant": "av",
+          "id": "mosei_av_seed2026"
+        }
+      ],
+      "best_epoch_zero_based": 0,
+      "checkpoint_sha256": "6438c328d973d28b9b4e0aedc6c4813b571c289c61367876f07eb73fc69873e3",
+      "config_sha256": "ad7f8291d5bdcaedb9a62f2b120dbdf0703b51efa54721014e7d5e203a54ad73",
+      "original_checkpoint": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei/runs/modality-ablation-mosei-dev-20261021_mosei_av_seed2026/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosi_baseline_seed2027",
+      "dataset": "mosi",
+      "seed": 2027,
+      "snapshot": "snapshot_09",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 2027,
+          "variant": "baseline",
+          "id": "mosi_baseline_seed2027"
+        }
+      ],
+      "best_epoch_zero_based": 51,
+      "checkpoint_sha256": "789bdb5f8454698be27c5a8894d818db9e2125388918ee71bd610d19ad250d55",
+      "config_sha256": "9cdbd9fc43556dbe6a3051506320e7d23415d49801a10d1db97f90025219fa3c",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosi/runs/main-five-seed-extension-mosi-dev-20261022_mosi_baseline_seed2027/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_constant_seed2027",
+      "dataset": "mosi",
+      "seed": 2027,
+      "snapshot": "snapshot_09",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 2027,
+          "variant": "constant",
+          "id": "mosi_constant_seed2027"
+        }
+      ],
+      "best_epoch_zero_based": 67,
+      "checkpoint_sha256": "27f4ba945e23ce906fa23ef005fc8ac1267ad0d81ee13b4f065fe779952e95f7",
+      "config_sha256": "dd1554dbe150043675d8f6a21e347353b4d5d6871032144221a0c8f3584c42e7",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosi/runs/main-five-seed-extension-mosi-dev-20261022_mosi_constant_seed2027/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_dynamic_seed2027",
+      "dataset": "mosi",
+      "seed": 2027,
+      "snapshot": "snapshot_09",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 2027,
+          "variant": "dynamic",
+          "id": "mosi_dynamic_seed2027"
+        }
+      ],
+      "best_epoch_zero_based": 67,
+      "checkpoint_sha256": "00a57d385e96ff1d78b5005f6b756345edb76f62e638a37bf6e93a394a4296c7",
+      "config_sha256": "79c0a2c804ddccfce05d0bb8074f9871466055dd19199a92e5f8ed7e0a17e94f",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosi/runs/main-five-seed-extension-mosi-dev-20261022_mosi_dynamic_seed2027/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosei_baseline_seed2027",
+      "dataset": "mosei",
+      "seed": 2027,
+      "snapshot": "snapshot_10",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 2027,
+          "variant": "baseline",
+          "id": "mosei_baseline_seed2027"
+        }
+      ],
+      "best_epoch_zero_based": 24,
+      "checkpoint_sha256": "f4585ef506dbae5d96eb806255f00646f21744a8b2ee95d4af2348072213fcd1",
+      "config_sha256": "88e18ca4124387863bafe7f362766a891d774807a776c94e278caa4e0fb951ff",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosei/runs/main-five-seed-extension-mosei-dev-20261022_mosei_baseline_seed2027/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_constant_seed2027",
+      "dataset": "mosei",
+      "seed": 2027,
+      "snapshot": "snapshot_10",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 2027,
+          "variant": "constant",
+          "id": "mosei_constant_seed2027"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "baa8fdafb75f1e0836ee0b9204b814d6b7d40b79d2378ffe97b21aa6092fa9be",
+      "config_sha256": "89c2649e053874187bbafa661ac6a84a4d1f5e917a93a7497be22886e683c128",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosei/runs/main-five-seed-extension-mosei-dev-20261022_mosei_constant_seed2027/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_dynamic_seed2027",
+      "dataset": "mosei",
+      "seed": 2027,
+      "snapshot": "snapshot_10",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 2027,
+          "variant": "dynamic",
+          "id": "mosei_dynamic_seed2027"
+        }
+      ],
+      "best_epoch_zero_based": 2,
+      "checkpoint_sha256": "8bcbec466e03496485758778cb715882f89b4e6ff52dffe1c959fc59cb3163c1",
+      "config_sha256": "9edec1ed2b889b81949e538deb92624cfbdec0d7a9b18b83e09aaa90c556ba42",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosei/runs/main-five-seed-extension-mosei-dev-20261022_mosei_dynamic_seed2027/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosi_baseline_seed3407",
+      "dataset": "mosi",
+      "seed": 3407,
+      "snapshot": "snapshot_09",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 3407,
+          "variant": "baseline",
+          "id": "mosi_baseline_seed3407"
+        }
+      ],
+      "best_epoch_zero_based": 62,
+      "checkpoint_sha256": "ff7bfa4aae696964bdde1ff8148ebcbd42b2fc5d584b590ee566a460e6c1c6e0",
+      "config_sha256": "1dcf1a73973cc8566ad59401c05b224fd42bf6821532c603a9cda0aa1415543d",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosi/runs/main-five-seed-extension-mosi-dev-20261022_mosi_baseline_seed3407/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_constant_seed3407",
+      "dataset": "mosi",
+      "seed": 3407,
+      "snapshot": "snapshot_09",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 3407,
+          "variant": "constant",
+          "id": "mosi_constant_seed3407"
+        }
+      ],
+      "best_epoch_zero_based": 65,
+      "checkpoint_sha256": "8c8ac1f7619b1d776560a13f4f66b40937c80127315c92ab421947576024be58",
+      "config_sha256": "21f354333441ba331ea9848572f3d1b28bf5fcf11bc032d437c9813e362bbf97",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosi/runs/main-five-seed-extension-mosi-dev-20261022_mosi_constant_seed3407/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosi_dynamic_seed3407",
+      "dataset": "mosi",
+      "seed": 3407,
+      "snapshot": "snapshot_09",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosi",
+          "seed": 3407,
+          "variant": "dynamic",
+          "id": "mosi_dynamic_seed3407"
+        }
+      ],
+      "best_epoch_zero_based": 69,
+      "checkpoint_sha256": "e0cf4d69bd15d543ab52db6896bf3a8a44e089ce5f4821d4ae8aebd47cce07b6",
+      "config_sha256": "3a235c90e82301e08f63410a8e0bad208273f6c7245589c136832e4a4a6318b8",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosi/runs/main-five-seed-extension-mosi-dev-20261022_mosi_dynamic_seed3407/best_model.pt",
+      "samples": {
+        "train": 1281,
+        "dev": 229,
+        "test": 685
+      }
+    },
+    {
+      "id": "mosei_baseline_seed3407",
+      "dataset": "mosei",
+      "seed": 3407,
+      "snapshot": "snapshot_10",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 3407,
+          "variant": "baseline",
+          "id": "mosei_baseline_seed3407"
+        }
+      ],
+      "best_epoch_zero_based": 3,
+      "checkpoint_sha256": "0ff3a88e46d63f3d12a2d45289eaf1a1850cd86a53f84c2857af3eb195ad6d84",
+      "config_sha256": "99a9ca98dbbd4fc73eaed88fbb34ea4d30df8d23a38c8e053abb91ed6e830e4a",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosei/runs/main-five-seed-extension-mosei-dev-20261022_mosei_baseline_seed3407/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_constant_seed3407",
+      "dataset": "mosei",
+      "seed": 3407,
+      "snapshot": "snapshot_10",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 3407,
+          "variant": "constant",
+          "id": "mosei_constant_seed3407"
+        }
+      ],
+      "best_epoch_zero_based": 1,
+      "checkpoint_sha256": "e85a39bf2ab7e0f8f695a1f78005eaf76fb8bd151854dc448c351e8ff3dd8b27",
+      "config_sha256": "02500574b8bc95758efe3da387dc1d4b579889b79e3d3749ed0d5542b64775e4",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosei/runs/main-five-seed-extension-mosei-dev-20261022_mosei_constant_seed3407/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    },
+    {
+      "id": "mosei_dynamic_seed3407",
+      "dataset": "mosei",
+      "seed": 3407,
+      "snapshot": "snapshot_10",
+      "memberships": [
+        {
+          "table": "main",
+          "dataset": "mosei",
+          "seed": 3407,
+          "variant": "dynamic",
+          "id": "mosei_dynamic_seed3407"
+        }
+      ],
+      "best_epoch_zero_based": 1,
+      "checkpoint_sha256": "d75cc57f97681746116ee888b05228e4985295b6099dc452fa44b25976d879a6",
+      "config_sha256": "25010778e37151b12b0d082cb901dfa6630de5bc736aded1d1210ef22ba557e5",
+      "original_checkpoint": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosei/runs/main-five-seed-extension-mosei-dev-20261022_mosei_dynamic_seed3407/best_model.pt",
+      "samples": {
+        "train": 16265,
+        "dev": 1869,
+        "test": 4643
+      }
+    }
+  ],
+  "snapshots": {
+    "snapshot_01": {
+      "original_root": "/data01/lyw/GLoMo_module_ablation_20261021/mosi",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "f2c23b082e9190dab2420ec6c53560eeb084f12ea73cfd7ee858ca6645c52404",
+        "Correlation_Guided_MSA/formal_protocol.py": "fadb8127b41ebbfee2c0321d83acccea8e96f3a3c11b81180f3c4165e500c7a0",
+        "Correlation_Guided_MSA/main_cgmsa.py": "789d71d00d5d16eb3f39736d1e6183f4c8c0dd39b51c51cc926214556daa90bc",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "1ccf77d28642741adc4c85d8757e86d2370441cc4f1c1c949705ce60d68b4327",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "24b04e77c2267fd11f884e502c3dc955d9c40c4a473b24552a3550d3f29ec858",
+        "protocol/protocol.json": "a803bbc14d4cc59c1b7778d3e132e614e5f882a43f70096d9895887829dd5690",
+        "scripts/run_formal.py": "9733278792c9206ca4dbd7f0e50d76d93df6c9512559a357b88a6a26793e787d"
+      },
+      "runs": [
+        "mosi_baseline_seed5576",
+        "mosi_fusion_only_seed5576",
+        "mosi_moe_only_seed5576",
+        "mosi_baseline_seed42",
+        "mosi_fusion_only_seed42",
+        "mosi_moe_only_seed42",
+        "mosi_baseline_seed2026",
+        "mosi_fusion_only_seed2026",
+        "mosi_moe_only_seed2026"
+      ]
+    },
+    "snapshot_02": {
+      "original_root": "/data01/lyw/GLoMo_mosi_downstream_word_20261020",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "f2c23b082e9190dab2420ec6c53560eeb084f12ea73cfd7ee858ca6645c52404",
+        "Correlation_Guided_MSA/formal_protocol.py": "facdda050e65e09242a1e274b0e993fe503837e91c704e03e6a290ed5200d3b8",
+        "Correlation_Guided_MSA/main_cgmsa.py": "0b26a10272a66d3350494025d69c25ffef38fde54a0ce0e5c1bfe91a49baaf9f",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "1ccf77d28642741adc4c85d8757e86d2370441cc4f1c1c949705ce60d68b4327",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "scripts/collect_pair.py": "00d6a5a59cf8e5a7c1caad452a53df21502034d4e1a70ccd4b58e870ceded2d4",
+        "scripts/run_formal.py": "008b3231f079dbeff6b8606f658f794991a8ad1c454c08fa6aa055be3de4ce74",
+        "tests/check_dev_only.py": "4eefbc152ee8e9ede4f739cda38041beb23150eaea83ba3fc493b99d9bb3a405",
+        "tests/check_inputs.py": "95303ebf055854243666ab98cac8bd10aac0df5d9712a8aa5e59bd2d86db7b8e",
+        "tests/check_launcher.py": "5e2ece1375f7d49398daafa9c091e59ab2d1509d4a292312026a50129b4d16a5",
+        "tests/check_word_integration.py": "b6f348356d228e3052bd5047f712839503eab1401247915b7fdca035471d889a",
+        "tests/inspect_init.py": "dae61ff03800c14782bde1a702497d9f80679aaeea790f212390ed700f542b5f",
+        "tests/smoke_models.py": "040664fa2be8b28e251d6839bc293f50af2d0fb4428bd8582c801454661ad157",
+        "tests/test_protocol.py": "45cac842d903bbebfe39628cdf145b10f13ccd0aa1a5b7e3f823911f0826ed85",
+        "protocol/protocol.json": "826d9b983be705bd72cb53f3812483cc03f707a7e01e458d7494d894d8cf592b",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "24b04e77c2267fd11f884e502c3dc955d9c40c4a473b24552a3550d3f29ec858"
+      },
+      "runs": [
+        "mosi_constant_seed5576",
+        "mosi_dynamic_seed5576"
+      ]
+    },
+    "snapshot_03": {
+      "original_root": "/data01/lyw/GLoMo_modality_ablation_20261021/mosi",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "6d982aaca77648981b341a21ce5f2df523a1e4cb7b7add238f38b93e4282d39e",
+        "Correlation_Guided_MSA/formal_protocol.py": "816dd644a49b125161db2e0966bf1ac982810e0ae93c9c6f33de38af0c53033c",
+        "Correlation_Guided_MSA/main_cgmsa.py": "7169e5d85070cd7ef24678b4571886e49e202144f7756d66ec2c9608bee8cbc2",
+        "Correlation_Guided_MSA/modality_subset.py": "370546a945ed5ebd402483b0d8b85d72cbcbe8d718050eeee7c70f76e7a5a23d",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "1ccf77d28642741adc4c85d8757e86d2370441cc4f1c1c949705ce60d68b4327",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "24b04e77c2267fd11f884e502c3dc955d9c40c4a473b24552a3550d3f29ec858",
+        "protocol/protocol.json": "d6380303895363c9e63e3c864cdb91d7d0255a2574837015a5a384516a8667a8",
+        "scripts/run_formal.py": "4bbca97be2e80fbd8177999aa17217d9c6cd63732c7fe4a7b8f4431d2269eb0d"
+      },
+      "runs": [
+        "mosi_t_seed5576",
+        "mosi_a_seed5576",
+        "mosi_v_seed5576",
+        "mosi_ta_seed5576",
+        "mosi_tv_seed5576",
+        "mosi_av_seed5576",
+        "mosi_t_seed42",
+        "mosi_a_seed42",
+        "mosi_v_seed42",
+        "mosi_ta_seed42",
+        "mosi_tv_seed42",
+        "mosi_av_seed42",
+        "mosi_t_seed2026",
+        "mosi_a_seed2026",
+        "mosi_v_seed2026",
+        "mosi_ta_seed2026",
+        "mosi_tv_seed2026",
+        "mosi_av_seed2026"
+      ]
+    },
+    "snapshot_04": {
+      "original_root": "/data01/lyw/GLoMo_mosi_downstream_word_replicates_20261020",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "f2c23b082e9190dab2420ec6c53560eeb084f12ea73cfd7ee858ca6645c52404",
+        "Correlation_Guided_MSA/formal_protocol.py": "1e6fbc5c240e4115376f6a571d7326a413fe7c802ca30ecc9b34645161d0f9b9",
+        "Correlation_Guided_MSA/main_cgmsa.py": "0b26a10272a66d3350494025d69c25ffef38fde54a0ce0e5c1bfe91a49baaf9f",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "1ccf77d28642741adc4c85d8757e86d2370441cc4f1c1c949705ce60d68b4327",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "24b04e77c2267fd11f884e502c3dc955d9c40c4a473b24552a3550d3f29ec858",
+        "protocol/protocol.json": "5cca8596962e27f0a3c77ebc0e690615dd129b28a7256da8148c8a3d7f672e40",
+        "scripts/collect_replicates.py": "c15e4a6dd3fe7b36df5747e14f6c4f363a9d3204e55549fd18eb5412d55919b4",
+        "scripts/run_formal.py": "a4357b5a77d918ff8c576dae18424d67b41a692d463ed5a45c771f49e8ab15b1",
+        "scripts/summarize_replicates.py": "f0ab9edac5a6756e1641712b30fb564c3bd711f911f0be0df0d3dc8a7ed1d6f7",
+        "tests/check_dev_only.py": "4eefbc152ee8e9ede4f739cda38041beb23150eaea83ba3fc493b99d9bb3a405",
+        "tests/check_inputs.py": "95303ebf055854243666ab98cac8bd10aac0df5d9712a8aa5e59bd2d86db7b8e",
+        "tests/check_launcher.py": "9129133f066c8202cad8625dbe9ea039c27349903728d6ec54d5b7db4c7f3400",
+        "tests/check_replication_launchers.py": "783518c8a57b3ccf732e9edfd4aea6fad81b805a82fd35591f9c3b1d318801ba",
+        "tests/check_word_integration.py": "b6f348356d228e3052bd5047f712839503eab1401247915b7fdca035471d889a",
+        "tests/inspect_init.py": "dae61ff03800c14782bde1a702497d9f80679aaeea790f212390ed700f542b5f",
+        "tests/smoke_models.py": "040664fa2be8b28e251d6839bc293f50af2d0fb4428bd8582c801454661ad157",
+        "tests/test_protocol.py": "45cac842d903bbebfe39628cdf145b10f13ccd0aa1a5b7e3f823911f0826ed85"
+      },
+      "runs": [
+        "mosi_constant_seed42",
+        "mosi_dynamic_seed42",
+        "mosi_constant_seed2026",
+        "mosi_dynamic_seed2026"
+      ]
+    },
+    "snapshot_05": {
+      "original_root": "/data01/lyw/GLoMo_module_ablation_20261021/mosei",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "f2c23b082e9190dab2420ec6c53560eeb084f12ea73cfd7ee858ca6645c52404",
+        "Correlation_Guided_MSA/formal_protocol.py": "ecbb0a7d303428aad2ac963638836dab3be8b7aad487100afc885667ded0c528",
+        "Correlation_Guided_MSA/main_cgmsa.py": "789d71d00d5d16eb3f39736d1e6183f4c8c0dd39b51c51cc926214556daa90bc",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "ec8b6c677b104b73b08e397d0e38d7e33581cf940b9087cb363496bbf951e8bb",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "5d09bd06af6adae1373e00dc83c4cef1ccba46ae98c9f1acb5aedb34e19c82e0",
+        "protocol/protocol.json": "f460bf353a289bbd9575000bdc8e927bc19bf4695b25d9d4694feef1c334bb11",
+        "scripts/run_formal.py": "bc128ff8cd90b855192144086232b52273ad00b908445f782c42b160b28a6d61"
+      },
+      "runs": [
+        "mosei_baseline_seed5576",
+        "mosei_fusion_only_seed5576",
+        "mosei_moe_only_seed5576",
+        "mosei_baseline_seed42",
+        "mosei_fusion_only_seed42",
+        "mosei_moe_only_seed42",
+        "mosei_baseline_seed2026",
+        "mosei_fusion_only_seed2026",
+        "mosei_moe_only_seed2026"
+      ]
+    },
+    "snapshot_06": {
+      "original_root": "/data01/lyw/GLoMo_mosei_downstream_cross_20261020/sentence_word",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "f2c23b082e9190dab2420ec6c53560eeb084f12ea73cfd7ee858ca6645c52404",
+        "Correlation_Guided_MSA/formal_protocol.py": "a43780b03f9c34f3a7ad56d6569ee558e9962ba581eb62b457e96c11caf8c239",
+        "Correlation_Guided_MSA/main_cgmsa.py": "0b26a10272a66d3350494025d69c25ffef38fde54a0ce0e5c1bfe91a49baaf9f",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "ec8b6c677b104b73b08e397d0e38d7e33581cf940b9087cb363496bbf951e8bb",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "5d09bd06af6adae1373e00dc83c4cef1ccba46ae98c9f1acb5aedb34e19c82e0",
+        "protocol/protocol.json": "f573c21394c5d29346a1edb574ad86f0825a25ed9f708bc2a21d34af8a2ddc95",
+        "scripts/run_formal.py": "b198cef2165c8730a1c2871a7ed35751fcb93f37ea7f6e79a12ec260606e7a08",
+        "tests/check_dev_only.py": "24ef583b42bdad51919199b747ca654c59e36e1b63c1b00c96fa4c73980864ad",
+        "tests/check_inputs.py": "95303ebf055854243666ab98cac8bd10aac0df5d9712a8aa5e59bd2d86db7b8e",
+        "tests/check_launcher.py": "aa1ae3ef953189b9f089e123c370be3f22e0305a630bae704322e37b3493438d",
+        "tests/inspect_init.py": "dae61ff03800c14782bde1a702497d9f80679aaeea790f212390ed700f542b5f",
+        "tests/smoke_models.py": "12452d642e9c593841688a61045a5543591abce90bc320c2235e2c0e336d6391",
+        "tests/test_protocol.py": "45cac842d903bbebfe39628cdf145b10f13ccd0aa1a5b7e3f823911f0826ed85"
+      },
+      "runs": [
+        "mosei_constant_seed5576",
+        "mosei_dynamic_seed5576"
+      ]
+    },
+    "snapshot_07": {
+      "original_root": "/data01/lyw/GLoMo_modality_ablation_20261021/mosei",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "6d982aaca77648981b341a21ce5f2df523a1e4cb7b7add238f38b93e4282d39e",
+        "Correlation_Guided_MSA/formal_protocol.py": "8e8e46c4ddc84620ff6e1bfc45671faeaa111ab5c55abc93a370b60c876e4e64",
+        "Correlation_Guided_MSA/main_cgmsa.py": "7169e5d85070cd7ef24678b4571886e49e202144f7756d66ec2c9608bee8cbc2",
+        "Correlation_Guided_MSA/modality_subset.py": "370546a945ed5ebd402483b0d8b85d72cbcbe8d718050eeee7c70f76e7a5a23d",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "ec8b6c677b104b73b08e397d0e38d7e33581cf940b9087cb363496bbf951e8bb",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "5d09bd06af6adae1373e00dc83c4cef1ccba46ae98c9f1acb5aedb34e19c82e0",
+        "protocol/protocol.json": "3f7ee13697b6f27061f3a945f44783ee1414df4f86a5f48b6a942ea5025c572e",
+        "scripts/run_formal.py": "f7f5b22c22688943b8f999a77a5c92e6a309b9abbf307843a8195311baae8101"
+      },
+      "runs": [
+        "mosei_t_seed5576",
+        "mosei_a_seed5576",
+        "mosei_v_seed5576",
+        "mosei_ta_seed5576",
+        "mosei_tv_seed5576",
+        "mosei_av_seed5576",
+        "mosei_t_seed42",
+        "mosei_a_seed42",
+        "mosei_v_seed42",
+        "mosei_ta_seed42",
+        "mosei_tv_seed42",
+        "mosei_av_seed42",
+        "mosei_t_seed2026",
+        "mosei_a_seed2026",
+        "mosei_v_seed2026",
+        "mosei_ta_seed2026",
+        "mosei_tv_seed2026",
+        "mosei_av_seed2026"
+      ]
+    },
+    "snapshot_08": {
+      "original_root": "/data01/lyw/GLoMo_mosei_readout_replicates_20261020/word",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "f2c23b082e9190dab2420ec6c53560eeb084f12ea73cfd7ee858ca6645c52404",
+        "Correlation_Guided_MSA/formal_protocol.py": "1f0ee0f0e87a83c8f72a4baa6104b9f6c740ad8fa594e9e888e6c0175ef39878",
+        "Correlation_Guided_MSA/main_cgmsa.py": "0b26a10272a66d3350494025d69c25ffef38fde54a0ce0e5c1bfe91a49baaf9f",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "ec8b6c677b104b73b08e397d0e38d7e33581cf940b9087cb363496bbf951e8bb",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "5d09bd06af6adae1373e00dc83c4cef1ccba46ae98c9f1acb5aedb34e19c82e0",
+        "protocol/protocol.json": "34e51e243c36a2d89c89effe50f681675c38cf8ed6454ec91267c87bc23aa2eb",
+        "scripts/run_formal.py": "afe32ef40210186753f41e46446bb7d8c8509bfa7ad4e147c824a8c99cb1c018",
+        "tests/check_dev_only.py": "24ef583b42bdad51919199b747ca654c59e36e1b63c1b00c96fa4c73980864ad",
+        "tests/check_inputs.py": "95303ebf055854243666ab98cac8bd10aac0df5d9712a8aa5e59bd2d86db7b8e",
+        "tests/check_launcher.py": "aa1ae3ef953189b9f089e123c370be3f22e0305a630bae704322e37b3493438d",
+        "tests/inspect_init.py": "dae61ff03800c14782bde1a702497d9f80679aaeea790f212390ed700f542b5f",
+        "tests/smoke_models.py": "12452d642e9c593841688a61045a5543591abce90bc320c2235e2c0e336d6391",
+        "tests/test_protocol.py": "45cac842d903bbebfe39628cdf145b10f13ccd0aa1a5b7e3f823911f0826ed85"
+      },
+      "runs": [
+        "mosei_constant_seed42",
+        "mosei_dynamic_seed42",
+        "mosei_constant_seed2026",
+        "mosei_dynamic_seed2026"
+      ]
+    },
+    "snapshot_09": {
+      "original_root": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosi",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "f2c23b082e9190dab2420ec6c53560eeb084f12ea73cfd7ee858ca6645c52404",
+        "Correlation_Guided_MSA/formal_protocol.py": "3323d661b901a58191c6945ed568497c0630bf087e07c76363551456fd22f3a3",
+        "Correlation_Guided_MSA/main_cgmsa.py": "0b26a10272a66d3350494025d69c25ffef38fde54a0ce0e5c1bfe91a49baaf9f",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "1ccf77d28642741adc4c85d8757e86d2370441cc4f1c1c949705ce60d68b4327",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "24b04e77c2267fd11f884e502c3dc955d9c40c4a473b24552a3550d3f29ec858",
+        "protocol/protocol.json": "a113feae497a716b021d688e9ca6f77a18e72ca4f0f83fb7087ad33050fabd8c",
+        "scripts/collect_replicates.py": "c15e4a6dd3fe7b36df5747e14f6c4f363a9d3204e55549fd18eb5412d55919b4",
+        "scripts/run_formal.py": "a90372ff853e27d171a28ffb3b461db3be197baaceba4ab3eb2c7d8f330c9fc1",
+        "scripts/summarize_replicates.py": "f0ab9edac5a6756e1641712b30fb564c3bd711f911f0be0df0d3dc8a7ed1d6f7",
+        "tests/check_dev_only.py": "4eefbc152ee8e9ede4f739cda38041beb23150eaea83ba3fc493b99d9bb3a405",
+        "tests/check_inputs.py": "95303ebf055854243666ab98cac8bd10aac0df5d9712a8aa5e59bd2d86db7b8e",
+        "tests/check_launcher.py": "9129133f066c8202cad8625dbe9ea039c27349903728d6ec54d5b7db4c7f3400",
+        "tests/check_replication_launchers.py": "783518c8a57b3ccf732e9edfd4aea6fad81b805a82fd35591f9c3b1d318801ba",
+        "tests/check_word_integration.py": "b6f348356d228e3052bd5047f712839503eab1401247915b7fdca035471d889a",
+        "tests/inspect_init.py": "dae61ff03800c14782bde1a702497d9f80679aaeea790f212390ed700f542b5f",
+        "tests/smoke_models.py": "040664fa2be8b28e251d6839bc293f50af2d0fb4428bd8582c801454661ad157",
+        "tests/test_protocol.py": "45cac842d903bbebfe39628cdf145b10f13ccd0aa1a5b7e3f823911f0826ed85"
+      },
+      "runs": [
+        "mosi_baseline_seed2027",
+        "mosi_constant_seed2027",
+        "mosi_dynamic_seed2027",
+        "mosi_baseline_seed3407",
+        "mosi_constant_seed3407",
+        "mosi_dynamic_seed3407"
+      ]
+    },
+    "snapshot_10": {
+      "original_root": "/data01/lyw/GLoMo_main_seed_extension_20261022/mosei",
+      "files": {
+        "Correlation_Guided_MSA/MoE.py": "963a6f67abd402298788ff3f4ccbe4258b4ac539c4df72f236e82bc07c99968a",
+        "Correlation_Guided_MSA/aligned_word_readout.py": "37ac8f3d7f63cad2ea6ffd18136b51da1e8bbbb3c74fb5e7e1b892596922e754",
+        "Correlation_Guided_MSA/analysis/plot_confusion.py": "6ba40bdb2390fe65759e066566ddb46e638172a509c965d9134df71a864cf0f4",
+        "Correlation_Guided_MSA/analysis/plot_tsne.py": "4e6cee0bcaa1352046eaad5d29c0ed193d4c9a0056c61a36ee168fe60cd3b532",
+        "Correlation_Guided_MSA/analysis/select_cases.py": "603203068387c2127670f933b8bcb2140963237c65fd0c2530b24d8d5b6db175",
+        "Correlation_Guided_MSA/correlation_guided_msa_model.py": "f2c23b082e9190dab2420ec6c53560eeb084f12ea73cfd7ee858ca6645c52404",
+        "Correlation_Guided_MSA/formal_protocol.py": "37e84fc7d64da0022c014030e4818ecda819870049b52dbfaecea83baf9c3a20",
+        "Correlation_Guided_MSA/main_cgmsa.py": "0b26a10272a66d3350494025d69c25ffef38fde54a0ce0e5c1bfe91a49baaf9f",
+        "Correlation_Guided_MSA/modality_text_aug.py": "53708cb70dc7e88da4e209ec71cc7faa5d3c5867e8a867f4befed3bc60b46c7b",
+        "Correlation_Guided_MSA/modules/multihead_attention.py": "8de25d1dff55d298b9249220bff5cc9354d5ffc8b6a80e49b76ff4680aab23af",
+        "Correlation_Guided_MSA/modules/position_embedding.py": "4ad096fd5f398112634bb90441759667dede02bfc67bbb58ed1c1a395cb4ae6e",
+        "Correlation_Guided_MSA/modules/transformer.py": "abee736e165c6ca22d4a47ce0e4fb1c8b576617b19fe58e13df840ff7aa9489e",
+        "Correlation_Pretraining/modality_correlation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "Correlation_Pretraining/modality_correlation/correlation_loss.py": "0bdefb1ed7f2fbdc3b1be6002d4a6faa79d906c157420138a8933b34f85d78c5",
+        "Correlation_Pretraining/modality_correlation/correlation_models.py": "ec8b6c677b104b73b08e397d0e38d7e33581cf940b9087cb363496bbf951e8bb",
+        "Correlation_Pretraining/modality_correlation/correlation_train.py": "6bd22c15935b04f7564a9ddcc100c798a06958a3a872819e513de96c5c6a6123",
+        "Correlation_Pretraining/modality_correlation/fixed_word_features.py": "e6bc059755983d81ed54a8de2ae230bc59b20e9767319123b10f1c76c86f6bb8",
+        "Correlation_Pretraining/modality_correlation/glomo_dataset.py": "7790fc44b5fcc5bc47f01d33c6221d17e998d7a72f8c1b5a52e88d639879ab08",
+        "Correlation_Pretraining/modality_correlation/main_correlation_glomo.py": "534d8b5c5f3598de346a3a4dee983df2dc42c049eae5e28cee15abb3615be3ee",
+        "Correlation_Pretraining/modality_correlation/repair_pretrain.py": "231730a41a194525faf083d4e635e3b060e4d35d58ef632878ecea23fe9188ae",
+        "protocol/environment.json": "23c3ed89bf538dfe9ae57a1beaeeae512e6651613aedb00614612775d0f7e8a5",
+        "protocol/input_manifest.json": "5d09bd06af6adae1373e00dc83c4cef1ccba46ae98c9f1acb5aedb34e19c82e0",
+        "protocol/protocol.json": "2a188c44e3e5bece9a76150fe6cf9bf4612916f19d2a61a5e5b9279ddd465065",
+        "scripts/run_formal.py": "f2091169a814989d0f55242c94ac90bc2c9a838aaebacfc1ff62918eab71bc0f",
+        "tests/check_dev_only.py": "24ef583b42bdad51919199b747ca654c59e36e1b63c1b00c96fa4c73980864ad",
+        "tests/check_inputs.py": "95303ebf055854243666ab98cac8bd10aac0df5d9712a8aa5e59bd2d86db7b8e",
+        "tests/check_launcher.py": "aa1ae3ef953189b9f089e123c370be3f22e0305a630bae704322e37b3493438d",
+        "tests/inspect_init.py": "dae61ff03800c14782bde1a702497d9f80679aaeea790f212390ed700f542b5f",
+        "tests/smoke_models.py": "12452d642e9c593841688a61045a5543591abce90bc320c2235e2c0e336d6391",
+        "tests/test_protocol.py": "45cac842d903bbebfe39628cdf145b10f13ccd0aa1a5b7e3f823911f0826ed85"
+      },
+      "runs": [
+        "mosei_baseline_seed2027",
+        "mosei_constant_seed2027",
+        "mosei_dynamic_seed2027",
+        "mosei_baseline_seed3407",
+        "mosei_constant_seed3407",
+        "mosei_dynamic_seed3407"
+      ]
+    }
+  },
+  "tables": {
+    "main": [
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "baseline",
+        "id": "mosi_baseline_seed5576"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "constant",
+        "id": "mosi_constant_seed5576"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "dynamic",
+        "id": "mosi_dynamic_seed5576"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "baseline",
+        "id": "mosi_baseline_seed42"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "constant",
+        "id": "mosi_constant_seed42"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "dynamic",
+        "id": "mosi_dynamic_seed42"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "baseline",
+        "id": "mosi_baseline_seed2026"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "constant",
+        "id": "mosi_constant_seed2026"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "dynamic",
+        "id": "mosi_dynamic_seed2026"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "baseline",
+        "id": "mosei_baseline_seed5576"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "constant",
+        "id": "mosei_constant_seed5576"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "dynamic",
+        "id": "mosei_dynamic_seed5576"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "baseline",
+        "id": "mosei_baseline_seed42"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "constant",
+        "id": "mosei_constant_seed42"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "dynamic",
+        "id": "mosei_dynamic_seed42"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "baseline",
+        "id": "mosei_baseline_seed2026"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "constant",
+        "id": "mosei_constant_seed2026"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "dynamic",
+        "id": "mosei_dynamic_seed2026"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 2027,
+        "variant": "baseline",
+        "id": "mosi_baseline_seed2027"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 2027,
+        "variant": "constant",
+        "id": "mosi_constant_seed2027"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 2027,
+        "variant": "dynamic",
+        "id": "mosi_dynamic_seed2027"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 2027,
+        "variant": "baseline",
+        "id": "mosei_baseline_seed2027"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 2027,
+        "variant": "constant",
+        "id": "mosei_constant_seed2027"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 2027,
+        "variant": "dynamic",
+        "id": "mosei_dynamic_seed2027"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 3407,
+        "variant": "baseline",
+        "id": "mosi_baseline_seed3407"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 3407,
+        "variant": "constant",
+        "id": "mosi_constant_seed3407"
+      },
+      {
+        "table": "main",
+        "dataset": "mosi",
+        "seed": 3407,
+        "variant": "dynamic",
+        "id": "mosi_dynamic_seed3407"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 3407,
+        "variant": "baseline",
+        "id": "mosei_baseline_seed3407"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 3407,
+        "variant": "constant",
+        "id": "mosei_constant_seed3407"
+      },
+      {
+        "table": "main",
+        "dataset": "mosei",
+        "seed": 3407,
+        "variant": "dynamic",
+        "id": "mosei_dynamic_seed3407"
+      }
+    ],
+    "module": [
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "baseline",
+        "id": "mosi_baseline_seed5576"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "fusion_only",
+        "id": "mosi_fusion_only_seed5576"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "moe_only",
+        "id": "mosi_moe_only_seed5576"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "full",
+        "id": "mosi_dynamic_seed5576"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "baseline",
+        "id": "mosi_baseline_seed42"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "fusion_only",
+        "id": "mosi_fusion_only_seed42"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "moe_only",
+        "id": "mosi_moe_only_seed42"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "full",
+        "id": "mosi_dynamic_seed42"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "baseline",
+        "id": "mosi_baseline_seed2026"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "fusion_only",
+        "id": "mosi_fusion_only_seed2026"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "moe_only",
+        "id": "mosi_moe_only_seed2026"
+      },
+      {
+        "table": "module",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "full",
+        "id": "mosi_dynamic_seed2026"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "baseline",
+        "id": "mosei_baseline_seed5576"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "fusion_only",
+        "id": "mosei_fusion_only_seed5576"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "moe_only",
+        "id": "mosei_moe_only_seed5576"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "full",
+        "id": "mosei_dynamic_seed5576"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "baseline",
+        "id": "mosei_baseline_seed42"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "fusion_only",
+        "id": "mosei_fusion_only_seed42"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "moe_only",
+        "id": "mosei_moe_only_seed42"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "full",
+        "id": "mosei_dynamic_seed42"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "baseline",
+        "id": "mosei_baseline_seed2026"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "fusion_only",
+        "id": "mosei_fusion_only_seed2026"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "moe_only",
+        "id": "mosei_moe_only_seed2026"
+      },
+      {
+        "table": "module",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "full",
+        "id": "mosei_dynamic_seed2026"
+      }
+    ],
+    "modality": [
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "t",
+        "id": "mosi_t_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "a",
+        "id": "mosi_a_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "v",
+        "id": "mosi_v_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "ta",
+        "id": "mosi_ta_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "tv",
+        "id": "mosi_tv_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "av",
+        "id": "mosi_av_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 5576,
+        "variant": "tav",
+        "id": "mosi_dynamic_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "t",
+        "id": "mosi_t_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "a",
+        "id": "mosi_a_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "v",
+        "id": "mosi_v_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "ta",
+        "id": "mosi_ta_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "tv",
+        "id": "mosi_tv_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "av",
+        "id": "mosi_av_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 42,
+        "variant": "tav",
+        "id": "mosi_dynamic_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "t",
+        "id": "mosi_t_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "a",
+        "id": "mosi_a_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "v",
+        "id": "mosi_v_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "ta",
+        "id": "mosi_ta_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "tv",
+        "id": "mosi_tv_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "av",
+        "id": "mosi_av_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosi",
+        "seed": 2026,
+        "variant": "tav",
+        "id": "mosi_dynamic_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "t",
+        "id": "mosei_t_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "a",
+        "id": "mosei_a_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "v",
+        "id": "mosei_v_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "ta",
+        "id": "mosei_ta_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "tv",
+        "id": "mosei_tv_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "av",
+        "id": "mosei_av_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 5576,
+        "variant": "tav",
+        "id": "mosei_dynamic_seed5576"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "t",
+        "id": "mosei_t_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "a",
+        "id": "mosei_a_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "v",
+        "id": "mosei_v_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "ta",
+        "id": "mosei_ta_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "tv",
+        "id": "mosei_tv_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "av",
+        "id": "mosei_av_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 42,
+        "variant": "tav",
+        "id": "mosei_dynamic_seed42"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "t",
+        "id": "mosei_t_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "a",
+        "id": "mosei_a_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "v",
+        "id": "mosei_v_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "ta",
+        "id": "mosei_ta_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "tv",
+        "id": "mosei_tv_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "av",
+        "id": "mosei_av_seed2026"
+      },
+      {
+        "table": "modality",
+        "dataset": "mosei",
+        "seed": 2026,
+        "variant": "tav",
+        "id": "mosei_dynamic_seed2026"
+      }
+    ]
+  },
+  "epochs": {
+    "mosi": 70,
+    "mosei": 100
+  },
+  "source_commit": "b0647922e3235f7ed85c3399d74b7d98852e5b79"
+}

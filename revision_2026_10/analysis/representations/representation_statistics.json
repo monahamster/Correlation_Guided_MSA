@@ -1,0 +1,363 @@
+{
+  "per_seed": [
+    {
+      "dataset": "mosi",
+      "variant": "baseline",
+      "seed": 42,
+      "silhouette_3class": 0.17459049422249856,
+      "silhouette_2class_nonzero": 0.4601390851995635
+    },
+    {
+      "dataset": "mosi",
+      "variant": "baseline",
+      "seed": 2026,
+      "silhouette_3class": 0.15901331931869936,
+      "silhouette_2class_nonzero": 0.4217808769037032
+    },
+    {
+      "dataset": "mosi",
+      "variant": "baseline",
+      "seed": 2027,
+      "silhouette_3class": 0.10764430777459319,
+      "silhouette_2class_nonzero": 0.39409476028251
+    },
+    {
+      "dataset": "mosi",
+      "variant": "baseline",
+      "seed": 3407,
+      "silhouette_3class": 0.18200300365069963,
+      "silhouette_2class_nonzero": 0.42016963688555053
+    },
+    {
+      "dataset": "mosi",
+      "variant": "baseline",
+      "seed": 5576,
+      "silhouette_3class": 0.17151255051563857,
+      "silhouette_2class_nonzero": 0.43979840968141115
+    },
+    {
+      "dataset": "mosi",
+      "variant": "dynamic",
+      "seed": 42,
+      "silhouette_3class": 0.13980148340363777,
+      "silhouette_2class_nonzero": 0.4219906569454465
+    },
+    {
+      "dataset": "mosi",
+      "variant": "dynamic",
+      "seed": 2026,
+      "silhouette_3class": 0.1542268007956367,
+      "silhouette_2class_nonzero": 0.4067477704843803
+    },
+    {
+      "dataset": "mosi",
+      "variant": "dynamic",
+      "seed": 2027,
+      "silhouette_3class": 0.13927279358652445,
+      "silhouette_2class_nonzero": 0.39230526943168825
+    },
+    {
+      "dataset": "mosi",
+      "variant": "dynamic",
+      "seed": 3407,
+      "silhouette_3class": 0.14124616021421366,
+      "silhouette_2class_nonzero": 0.41093450212314053
+    },
+    {
+      "dataset": "mosi",
+      "variant": "dynamic",
+      "seed": 5576,
+      "silhouette_3class": 0.1488808034109876,
+      "silhouette_2class_nonzero": 0.41621246830489567
+    },
+    {
+      "dataset": "mosei",
+      "variant": "baseline",
+      "seed": 42,
+      "silhouette_3class": 0.06631511455368122,
+      "silhouette_2class_nonzero": 0.3175133443426687
+    },
+    {
+      "dataset": "mosei",
+      "variant": "baseline",
+      "seed": 2026,
+      "silhouette_3class": 0.06630802354739776,
+      "silhouette_2class_nonzero": 0.32161692857501134
+    },
+    {
+      "dataset": "mosei",
+      "variant": "baseline",
+      "seed": 2027,
+      "silhouette_3class": 0.025076736294127655,
+      "silhouette_2class_nonzero": 0.24077636697590174
+    },
+    {
+      "dataset": "mosei",
+      "variant": "baseline",
+      "seed": 3407,
+      "silhouette_3class": 0.0656778016223817,
+      "silhouette_2class_nonzero": 0.31735208352508587
+    },
+    {
+      "dataset": "mosei",
+      "variant": "baseline",
+      "seed": 5576,
+      "silhouette_3class": 0.05299294849909999,
+      "silhouette_2class_nonzero": 0.3165497736040723
+    },
+    {
+      "dataset": "mosei",
+      "variant": "dynamic",
+      "seed": 42,
+      "silhouette_3class": 0.06425074552066072,
+      "silhouette_2class_nonzero": 0.31488767938883055
+    },
+    {
+      "dataset": "mosei",
+      "variant": "dynamic",
+      "seed": 2026,
+      "silhouette_3class": 0.06426191338650943,
+      "silhouette_2class_nonzero": 0.31991294879852067
+    },
+    {
+      "dataset": "mosei",
+      "variant": "dynamic",
+      "seed": 2027,
+      "silhouette_3class": 0.07640787887630635,
+      "silhouette_2class_nonzero": 0.33059556589339434
+    },
+    {
+      "dataset": "mosei",
+      "variant": "dynamic",
+      "seed": 3407,
+      "silhouette_3class": 0.06672640391480938,
+      "silhouette_2class_nonzero": 0.3057502514905053
+    },
+    {
+      "dataset": "mosei",
+      "variant": "dynamic",
+      "seed": 5576,
+      "silhouette_3class": 0.04961182367297549,
+      "silhouette_2class_nonzero": 0.3143740205223973
+    }
+  ],
+  "summary": {
+    "mosi_baseline": {
+      "silhouette_3class": {
+        "mean": 0.15895273509642585,
+        "sample_sd": 0.02985867436341439
+      },
+      "silhouette_2class_nonzero": {
+        "mean": 0.42719655379054766,
+        "sample_sd": 0.024588884675343068
+      }
+    },
+    "mosi_dynamic": {
+      "silhouette_3class": {
+        "mean": 0.14468560828220003,
+        "sample_sd": 0.006588191301839802
+      },
+      "silhouette_2class_nonzero": {
+        "mean": 0.4096381334579103,
+        "sample_sd": 0.011250218446511008
+      }
+    },
+    "mosei_baseline": {
+      "silhouette_3class": {
+        "mean": 0.05527412490333766,
+        "sample_sd": 0.017811322983032875
+      },
+      "silhouette_2class_nonzero": {
+        "mean": 0.302761699404548,
+        "sample_sd": 0.03470699652324186
+      }
+    },
+    "mosei_dynamic": {
+      "silhouette_3class": {
+        "mean": 0.06425175307425227,
+        "sample_sd": 0.009594567843570557
+      },
+      "silhouette_2class_nonzero": {
+        "mean": 0.3171040932187296,
+        "sample_sd": 0.009099244663453437
+      }
+    }
+  },
+  "projections": {
+    "mosi_baseline": {
+      "pca_variance_2d": [
+        0.917510453672569,
+        0.07805541547608959
+      ],
+      "pca_variance_50d": 0.9998889531671564,
+      "n": 685
+    },
+    "mosi_dynamic": {
+      "pca_variance_2d": [
+        0.8674265859507279,
+        0.12540826317306009
+      ],
+      "pca_variance_50d": 0.9998988328231684,
+      "n": 685
+    },
+    "mosei_baseline": {
+      "pca_variance_2d": [
+        0.6438675021563133,
+        0.2722143130085883
+      ],
+      "pca_variance_50d": 0.9907767412008458,
+      "n": 4643
+    },
+    "mosei_dynamic": {
+      "pca_variance_2d": [
+        0.643759249300481,
+        0.2724810527933402
+      ],
+      "pca_variance_50d": 0.9902723240193863,
+      "n": 4643
+    }
+  },
+  "replay": [
+    {
+      "id": "mosi_baseline_seed42",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "2100853e0cde624b8a9cbc45ada7956c030876a6cec18df489190cf3decdaf41"
+    },
+    {
+      "id": "mosi_baseline_seed2026",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "c5ee5ed46ca8e1fc6b8340da2fcf60178b5d44c20a51d7f4e96cd183f50ba201"
+    },
+    {
+      "id": "mosi_baseline_seed2027",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "f1539b913c1273d3f716378f095533fd0f25b6297637651c31c32f0236c1bb63"
+    },
+    {
+      "id": "mosi_baseline_seed3407",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "74a4afe4ef97503022715e2d229de55ad63d4e960ca64c80ee4273e1930878f7"
+    },
+    {
+      "id": "mosi_baseline_seed5576",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "1cb47c3607860e9b29335a64ac78bb8c86e9b417726b435fd074998bdb20863c"
+    },
+    {
+      "id": "mosi_dynamic_seed42",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "fd3df6bc58cf89539ebb2d95b97adffae8b2fdce9ac2f9859dc6962fbaedacbb"
+    },
+    {
+      "id": "mosi_dynamic_seed2026",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "5ed0899ab09182444d2019b7512e707e7d4e0e225f5be1858d31a49045ea0ade"
+    },
+    {
+      "id": "mosi_dynamic_seed2027",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "dec52bffb945fb257d12bdf2d8fee4951dd51a604dbb9d4c12409ca87a86e131"
+    },
+    {
+      "id": "mosi_dynamic_seed3407",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "9fe60a3b0a6f0a3c3995ce2d097bba4b0046c76c3d98c583b234d999b84d7d56"
+    },
+    {
+      "id": "mosi_dynamic_seed5576",
+      "max_prediction_error": 0.0,
+      "n": 685,
+      "dimension": 96,
+      "sha256": "b8885101a09e1731aad27c218d0edfe23b01756b639a6c56179d94548beadc05"
+    },
+    {
+      "id": "mosei_baseline_seed42",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "d0d0e2d6e4a6da81536fa9f94729a1ceb1b20bca9ee734e234f72c3e3dcf2024"
+    },
+    {
+      "id": "mosei_baseline_seed2026",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "8fd80bd13d80b71f40d81c60edd3e22712766755feeb2725905cd6e42b20ea74"
+    },
+    {
+      "id": "mosei_baseline_seed2027",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "bc470a957d60b779c8027321e13e11ba500936d429d398df82f414a619629c0e"
+    },
+    {
+      "id": "mosei_baseline_seed3407",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "809daad2dbed81e355726afee94597cddac2dcf6861e0e6b113559e8550744ea"
+    },
+    {
+      "id": "mosei_baseline_seed5576",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "0fb3692df7cf3860782a0402f318ce82fadb4c12dc60be069d91fa0a1352533c"
+    },
+    {
+      "id": "mosei_dynamic_seed42",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "30f5a3e0f1185a6104695aa25123631d188d0a31404d426562db199ba708d80f"
+    },
+    {
+      "id": "mosei_dynamic_seed2026",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "6c999d6bf7cca571371008447c944823cf4093e999cf6c4ac545e33fdc49118d"
+    },
+    {
+      "id": "mosei_dynamic_seed2027",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "947fb6e6b7478c8b764caf3ef1f9ad296c68eb4f45f07b6edef9e6b96aaf7d9c"
+    },
+    {
+      "id": "mosei_dynamic_seed3407",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "7387ad0a7cfa1f177fa80fa991910afea266fc9c8dc795d9f89cfb65b8784537"
+    },
+    {
+      "id": "mosei_dynamic_seed5576",
+      "max_prediction_error": 0.0,
+      "n": 4643,
+      "dimension": 384,
+      "sha256": "d87a33eea75d154116a40ec294b8962f37f4e0307a231b2a2fed94a17f5e9086"
+    }
+  ],
+  "interpretation": "Silhouettes use raw full-dimensional representations; projection coordinates fitted independently per trained model; colors are ground-truth sign classes."
+}

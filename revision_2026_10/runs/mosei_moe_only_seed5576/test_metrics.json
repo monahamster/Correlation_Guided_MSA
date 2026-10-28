@@ -1,0 +1,49 @@
+{
+  "id": "mosei_moe_only_seed5576",
+  "dataset": "mosei",
+  "seed": 5576,
+  "split": "test",
+  "limit": null,
+  "metrics": {
+    "n": 4643,
+    "n_nonzero": 3620,
+    "n_zero": 1023,
+    "mae": 0.5450293744944231,
+    "mse": 0.5444319630696884,
+    "corr": 0.7547945890415049,
+    "acc7": 0.5306913633426664,
+    "acc2": 0.817790221839328,
+    "f1": 0.8222893213511595,
+    "acc2_non_zero": 0.8546961325966851,
+    "f1_non_zero": 0.8541838519179334,
+    "confusion2": [
+      [
+        1060,
+        285
+      ],
+      [
+        561,
+        2737
+      ]
+    ],
+    "confusion2_nonzero": [
+      [
+        1060,
+        285
+      ],
+      [
+        241,
+        2034
+      ]
+    ]
+  },
+  "selected_epoch_zero_based": 3,
+  "checkpoint": "/data01/lyw/GLoMo_module_ablation_20261021/mosei/runs/module-ablation-mosei-dev-20261021_mosei_moe_only_seed5576/best_model.pt",
+  "checkpoint_sha256": "c37d95f96583d41104a3c57da4dd830232c74f5054b9dc6c1c66b03435ead234",
+  "config_sha256": "c6d434d10a9a2621c769b557873a473841c7f7060eac2e71b43e299c54d1ae24",
+  "dev_replay_max_abs_diff": null,
+  "test_evaluated": true,
+  "created_utc": "2026-10-22T05:22:54.561520Z",
+  "constant_scales": null,
+  "selection": "Existing earliest minimum dev MAE; no model or threshold selection in evaluator"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "complete_verified",
+  "model_jobs": 6,
+  "batch_scenarios": 12,
+  "timing_calls_per_scenario": 150,
+  "cache_datasets": 2,
+  "flop_profiler_max_residual": 0,
+  "instrumentation_max_prediction_error": 0.0,
+  "alternative_batch_max_prediction_error": 3.0338764190673828e-05,
+  "original_cache_inputs_preserved": true,
+  "cache_numeric_replay_recorded": true,
+  "visual_review_passed": true,
+  "completed_utc": "2026-10-22T08:24:29.293102Z"
+}

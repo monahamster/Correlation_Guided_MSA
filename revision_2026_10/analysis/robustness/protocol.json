@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-22T05:36:07.403689Z",
+  "datasets": [
+    "mosi",
+    "mosei"
+  ],
+  "variants": [
+    "baseline",
+    "constant",
+    "dynamic"
+  ],
+  "training_seeds": [
+    5576,
+    42,
+    2026,
+    2027,
+    3407
+  ],
+  "corruption_seeds": [
+    90401,
+    90402,
+    90403
+  ],
+  "audio_noise_std": [
+    0,
+    0.1,
+    0.3,
+    0.5
+  ],
+  "visual_word_mask_probability": [
+    0,
+    0.2,
+    0.4,
+    0.6
+  ],
+  "conditions": "One modality corrupted at a time; clean once per checkpoint. 19 conditions per model, 570 dataset passes.",
+  "perturbation": "Gaussian additive audio noise in existing normalized feature units; Bernoulli zeroing of complete aligned visual word vectors. Feature-level corruption, not waveform or raw-frame corruption.",
+  "pairing": "SHA256(dataset|sample_id|kind|corruption_seed) first 8 little-endian bytes seed NumPy default_rng. Same base noise/uniforms across severity, training seeds and variants. Masks nested across severity.",
+  "synchronization": "Perturb each retained word once; copy exactly to downstream subwords and frozen correlation branch word inputs. Text, CLS/SEP/padding, attention/validity masks unchanged.",
+  "selection": "Existing minimum-dev-MAE checkpoints. No retraining, test-time tuning, severity or seed selection.",
+  "metrics": "Reuse frozen final evaluation metrics. Average three corruption replicates within each training seed then report mean and sample SD across five training seeds. Paired degradation from clean. Do not count corruptions as independent trained models.",
+  "routing": "Capture actual eval gates and q/s/cosines; reconstruct gates from base logits plus reliability bias to verify hooks. Compare gate mass, entropy, top1/top2 changes vs clean. Offline fixed-feature counterfactual holds reliability bias at clean values to isolate its contribution to routing.",
+  "preflight": "All six dataset/variant types, seed5576, first64 dev samples, clean and maximum severity at corruption_seed90401. Check uninstrumented vs instrumented predictions, saved dev replay, synchronization, gates and invariant text/padding/masks.",
+  "sources": "Original training/model/cache/checkpoint files unchanged; standalone evaluation scripts only.",
+  "test_evaluation_already_performed": true
+}

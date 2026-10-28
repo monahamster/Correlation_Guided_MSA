@@ -1,0 +1,9 @@
+{
+  "datasets_dir": "/path/to/datasets",
+  "bert_dir": "/path/to/BERT_EN",
+  "cache_root": "/path/to/repair_cache",
+  "correlation_checkpoints": {
+    "mosi": "/path/to/mosi/best_correlation.pt",
+    "mosei": "/path/to/mosei/best_correlation.pt"
+  }
+}

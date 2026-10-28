@@ -1,0 +1,4 @@
+{
+  "reason": "Current-GPU repeat on the two largest-difference batches is bitwise identical to the rebuilt features; historical feature RMSE on full MOSI train is 5.1346e-7, maximum difference 1.8311e-4. Exact historical generation runtime settings are not in cache metadata. Validate IDs/maps/audio/visual exactly, record text max/RMSE/relative L2, and require relative L2<1e-4 and max difference<0.01. Original caches remain the inputs to all trained-model evaluations. This changes only offline cache verification, not generation code.",
+  "diagnostic": "cache_device_diagnostic.json"
+}
